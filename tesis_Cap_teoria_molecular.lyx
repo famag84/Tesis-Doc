@@ -245,14 +245,28 @@ key "Yameen2009,Yameen2009a,Yameen2009c,Yameen2010,Perez-Mitta2015"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Wrap figure
-lines 0
-placement o
-overhang 0col%
-width "50col%"
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/Cap_teoria/canal_reservorios.png
+	lyxscale 3
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figuras/Cap_teoria/canal_solo.png
+	lyxscale 3
+	scale 5
+
+\end_inset
+
 
 \end_layout
 
@@ -272,6 +286,10 @@ name "fig:Esquema-del-nanocanal"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
