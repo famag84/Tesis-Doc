@@ -1,0 +1,527 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+% Poniendo la fecha! NO esta por defecto!
+%\date{\today}
+% Se define un comando \mathcolor{color}{variables}
+% Permite poner colores dentro de una ecuacion. TRE - MEN - DO
+\usepackage{color}
+\newcommand*{\mathcolor}{}
+\def\mathcolor#1#{\mathcoloraux{#1}}
+\newcommand*{\mathcoloraux}[3]{%
+  \protect\leavevmode
+  \begingroup
+    \color#1{#2}#3%
+  \endgroup
+}
+\usepackage[table]{xcolor}
+\definecolor{purple}{cmyk}{0.41,0.9,0,0}
+\definecolor{purple1}{rgb}{0.5,0,0.5}
+%Color institucional UNLP: C:100 M:20 Y:40 K:50
+\definecolor{verde_unlp}{cmyk}{1.0, 0.2, 0.4, 0.5}
+
+% \@addtoreset{equation}{part}
+%\@addtoreset{equation}{section}
+%\usepackage[toc,page]{appendix}
+\end_preamble
+\options listtotoc
+\use_default_options true
+\begin_modules
+theorems-ams
+figs-within-sections
+\end_modules
+\begin_includeonly
+tesis_Cap_paper_PMEP.lyx
+tesis_apendice_capa_polimerica_homogenea.lyx
+tesis_Pol_chem_potential_completo_1.lyx
+tesis_Cap_teoria_molecular.lyx
+\end_includeonly
+\maintain_unincluded_children true
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref true
+\pdf_title "Estudio de las Propiedades de Nanocanales de estado Sólido"
+\pdf_author "Facundo M. Gilles"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=blue, plainpages=false, pdfpagelabels"
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+colorbox{red}{
+\end_layout
+
+\end_inset
+
+las unidades son correctas
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_caratula.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "66page%"
+height_special "none"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align right
+"La verdad surge más fácilmente del error que de la confusión." Francis Bacon
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_agradecimientos.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_resumen.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_introducion.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_Cap_teoria_molecular.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_modelo_RIS_conformaciones_de_cadena.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Propiedades de Transporte G y alpha?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_Cap_Propiedades_de_transporte.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_Cap_paper_PMEP.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_Pol_chem_potential_completo_1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "PhD_bibliografia"
+options "bibtotoc,plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_cuadros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_apendiceA_Soluciones_de_Bulk.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_apendice_capa_polimerica_homogenea.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_apendice_Discretizacion_poisson.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_apendice_Aprox_campo_medio.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_apendice_metodo_variacional.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Pasos para Obtener la Ecuación (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GRAL_P_expression"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Using (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:f_1"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:f_2"
+
+\end_inset
+
+), we get a useful relation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta q_{P}\psi(r)+\mbox{ln}\left(f_{2}(r)\right)+\beta\mu_{A^{--}}=\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\label{eq:elec_field_and_fraction_charge_pol}
+\end{equation}
+
+\end_inset
+
+Working on expression:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\Bigg\{ f_{1}(r)\left[\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right]+f_{2}(r)\left[\mbox{ln}\left(f_{2}(r)\right)+\beta\mu_{A^{--}}\right]\\
++\left(1-f_{1}(r)-f_{2}(r)\right)\left[\mbox{ln}\left(1-f_{1}(r)-f_{2}(r)\right)+\beta\mu_{AH_{2}}\right]\Bigg\}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+using (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:f_1"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:elec_field_and_fraction_charge_pol"
+
+\end_inset
+
+) will appear 
+\begin_inset Formula $\psi(r)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\Bigg\{ f_{1}(r)\left[\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right]+f_{2}(r)\left[\mbox{ln}(f_{1}(r))+\beta\mu_{AH^{-}}-q_{P}\psi(r)\beta\right]\\
++\left(1-f_{1}(r)-f_{2}(r)\right)\left[\mbox{ln}(f_{1}(r))+\beta\mu_{AH^{-}}+q_{P}\psi(r)\beta\right]\Bigg\}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+simplifying and rearranging, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Bigg\{\left[1-\left(f_{1}(r)+2f_{2}(r)\right)\right]\beta q_{P}\psi(r)+\left(\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right)\Bigg\}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+f_{1}(r)\left[\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right]+f_{2}(r)\left[\mbox{ln}\left(f_{2}(r)\right)+\beta\mu_{A^{--}}\right]\\
++\left(1-f_{1}(r)-f_{2}(r)\right)\left[\mbox{ln}\left(1-f_{1}(r)-f_{2}(r)\right)+\beta\mu_{AH_{2}}\right]=\\
+\left[1-\left(f_{1}(r)+2f_{2}(r)\right)\right]\beta q_{P}\psi(r)+\left(\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right)\label{eq:usefull_eq_A}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:usefull_eq_A"
+
+\end_inset
+
+) results in eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GRAL_P_expression"
+
+\end_inset
+
+).
+\end_layout
+
+\end_body
+\end_document

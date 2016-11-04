@@ -1,0 +1,1017 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage{color} %black, white, red, green, blue, cyan, magenta, yellow
+%Mas colores! 68 standard colors dvips
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\definecolor{darkgreen}{cmyk}{0.5, 0, 1, 0.5}
+% Se define un comando util: \mathcolor{color}{variables}
+\newcommand*{\mathcolor}{}
+\def\mathcolor#1#{\mathcoloraux{#1}}
+\newcommand*{\mathcoloraux}[3]{%
+  \protect\leavevmode
+  \begingroup
+    \color#1{#2}#3%
+  \endgroup
+}
+\end_preamble
+\use_default_options true
+\master tesis_Doc_FMG.lyx
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Potencial Químico de Cadenas Poliméricas
+\end_layout
+
+\end_inset
+
+Potencial Químico de Cadenas Poliméricas Dentro y Fuera del Nanocanal
+\end_layout
+
+\begin_layout Standard
+Para incorporar el potencial químico de las cadenas poliméricas es necesario
+ discriminar dentro del canal la densidad de monómeros 
+\begin_inset Formula $\left\langle \rho_{P}(r)\right\rangle $
+\end_inset
+
+ de la densidad de cadenas 
+\begin_inset Formula $\rho_{PC}(r)$
+\end_inset
+
+.
+ Además vamos a escribir la probabilidad de conformaciones de forma más
+ general como 
+\begin_inset Formula $P(r,\alpha)$
+\end_inset
+
+, queriendo representar la probabilidad de una conformación 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ en la capa 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Para determinar la capa en dónde está ubicada una conformación vamos a
+ elegir la capa más externa que contenga al menos un monómero.
+ 
+\end_layout
+
+\begin_layout Standard
+A continuación se escribe la energía libre del sistema considerando la entropía
+ de mezcla de las cadenas poliméricas (entropía traslacional de las cadenas),
+ el potencial químico de las cadenas y la entropía conformacional, sin considera
+r las interacciones de Van der Waals porque estamos siempre en la condición
+ de buen solvente) queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather}
+\omega=\beta\int_{0}^{R}dr\left(\frac{r}{R}\right)\left[\left\langle \rho_{q}(r)\right\rangle \Psi(r)-\frac{1}{2}\xi\left(\nabla_{r}\Psi(r)\right)^{2}\right]\nonumber \\
++\int_{0}^{R}dr\left(\frac{r}{R}\right)\left\langle \rho_{P}(r)\right\rangle \Big\{\sum_{e=0}^{1}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}\right)\right]+\beta\pi(r)v_{p}\Big\}\nonumber \\
++\sum_{i=w,K^{+},Cl^{-},H^{+},OH^{-}}\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{i}(r)\left[\mbox{ln}\left(\rho_{i}(r)v_{w}\right)-1-\beta\Delta\mu_{i}+\beta\pi(r)v_{i}\right]\nonumber \\
++\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{PC}(r)\left[\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-1-\beta\Delta\mu_{P}\right]\nonumber \\
++\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{PC}(r)\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)\nonumber \\
+-\left(\int_{0}^{R}q(r)\sum_{\alpha}P(r,\alpha)\left(\frac{r}{R}\right)dr-1\right)-\int_{0}^{R}dr\left(\frac{r}{R}\right)\beta\pi(r)\label{eq:pol_chem_free_energy-PAH}
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\beta\Delta\mu_{pol}=\beta\left(\mu_{pol}-\mu_{pol}^{0}\right)$
+\end_inset
+
+, es el potencial químico respecto del estado de referencia diluido (ampliar).
+ Recordar que la densidad de carga se escribe como: 
+\begin_inset Formula $\mathcolor{brown}{\rho_{q}(r)=\sum_{i}\rho_{i}(r)q_{i}+\left\langle \rho_{P}(r)\right\rangle \left(\sum_{e}f_{e}(r)q_{e}\right)}$
+\end_inset
+
+.
+ Ahora la concentración de monómeros 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left\langle \rho_{P}(r)\right\rangle $
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ va a depender de la concentración de cadenas en todas las capas del nanocanal(v
+er figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Graf_discretizacion"
+
+\end_inset
+
+ para un detalle de la discretización).
+ Para considerar todas las contribuciones hay que sumar sobre todas las
+ configuraciones 
+\begin_inset Formula $(r,\alpha)$
+\end_inset
+
+.
+ Es decir, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\langle \rho_{P}(r)\right\rangle =\left(2\pi L\right)\int_{0}^{R}dr'r'\rho_{PC}(r')\sum_{\alpha}P(r',\alpha)n(r;r',\alpha)\label{eq:monomer_chain}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La probabilidad de la conformación 
+\begin_inset Formula $(r,\alpha)$
+\end_inset
+
+ (que ahora se escribe como 
+\begin_inset Formula $P(r,\alpha)$
+\end_inset
+
+) debe estar normalizada, es decir, debe cumplir con la condición: 
+\begin_inset Formula $\int_{0}^{R}\Sigma_{\alpha}P(r,\alpha)dr=1$
+\end_inset
+
+.
+ Esta condición se impuso mediante un multiplicador de Lagrange que llamaremos
+ 
+\begin_inset Formula $q$
+\end_inset
+
+ y que asegura la normalización global.
+ Escribimos todo el sistema en función de 
+\begin_inset Formula $\rho_{PC}(r)$
+\end_inset
+
+ usando la expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:monomer_chain"
+
+\end_inset
+
+ (en la versión digital, ver términos en azul en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:free_energy-PAH-1"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+\omega=\beta\int_{0}^{R}dr\left(\frac{r}{R}\right)\Bigg[\Bigg(\sum_{i}\rho_{i}(r)q_{i}+\mathcolor{blue}{\Big(\left(2\pi L\right)\int_{0}^{R}dr'r'\rho_{PC}(r')\sum_{\alpha}P(r',\alpha)n(r;r',\alpha)\Big)}\\
+\Big(\sum_{e}f_{e}(r)q_{e}\Big)\Bigg)\Psi(r)-\frac{1}{2}\xi\left(\nabla_{r}\Psi(r)\right)^{2}\Bigg]\\
++\int_{0}^{R}dr\left(\frac{r}{R}\right)\mathcolor{blue}{\left(\left(2\pi L\right)\int_{0}^{R}dr'r'\rho_{PC}(r')\sum_{\alpha}P(r',\alpha)n(r;r',\alpha)\right)}\\
+\Big\{\sum_{e=0}^{1}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}\right)\right]+\beta\pi(r)v_{p}\Big\}\\
++\sum_{i=w,K^{+},Cl^{-},H^{+},OH^{-}}\int dr\left(\frac{r}{R}\right)\rho_{i}(r)\left[\mbox{ln}\left(\rho_{i}(r)v_{w}\right)-1-\beta\Delta\mu_{i}+\beta\pi(r)v_{i}\right]\\
++\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{PC}(r)\left[\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-1-\beta\Delta\mu_{P}\right]\\
++\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{PC}(r)\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)\\
+-\int_{0}^{R}dr\left(\frac{r}{R}\right)q(r)\left(\sum_{\alpha}P(r,\alpha)-1\right)-\int_{0}^{R}dr\left(\frac{r}{R}\right)\beta\pi(r)\label{eq:free_energy-PAH-1}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta que 
+\begin_inset Formula $r$
+\end_inset
+
+ es un parámetro "mudo", donde aparece 
+\begin_inset Formula $\left\langle \rho_{P}(r)\right\rangle $
+\end_inset
+
+ invierto las integrales en 
+\begin_inset Formula $r$
+\end_inset
+
+ y 
+\begin_inset Formula $r'$
+\end_inset
+
+.
+ Luego reorganizando los términos queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+\omega=\mathcolor{blue}{\left(2\pi L\right)\int_{0}^{R}dr'r'\rho_{PC}(r')\sum_{\alpha}P(r',\alpha)}\Bigg[\int_{0}^{R}dr\left(\frac{r}{R}\right)n(r;r',\alpha)\Big\{\beta\left(\sum_{e}f_{e}(r)q_{e}\right)\Psi(r)\\
++\sum_{e=0}^{1}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}\right)\right]+\beta\pi(r)v_{p}\Big\}\Bigg]\\
+\mathcolor{red}{+\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{PC}(r)\left[\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-1-\beta\Delta\mu_{P}\right]}\\
+\mathcolor{red}{+\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{PC}(r)\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)}\\
+-\int_{0}^{R}dr\left(\frac{r}{R}\right)q(r)\left(\sum_{\alpha}P(r,\alpha)-1\right)-\int dr\left(\frac{r}{R}\right)\beta\pi(r)\\
++\int_{0}^{R}dr\left(\frac{r}{R}\right)\sum_{i}\rho_{i}(r)q_{i}\beta\Psi(r)-\frac{1}{2}\xi\beta\int_{0}^{R}dr\left(\frac{r}{R}\right)\left(\nabla_{r}\Psi(r)\right)^{2}\\
++\sum_{i=w,K^{+},Cl^{-},H^{+},OH^{-}}\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{i}(r)\left[\mbox{ln}\left(\rho_{i}(r)v_{w}\right)-1-\beta\Delta\mu_{i}+\beta\pi(r)v_{i}\right]\\
+\label{eq:free_energy-PAH-1-1}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la integral de azul (primera integral en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:free_energy-PAH-1-1"
+
+\end_inset
+
+) se puede invertir las 
+\begin_inset Formula $r$
+\end_inset
+
+ con las 
+\begin_inset Formula $r'$
+\end_inset
+
+ por que son todos índices (variables) mudas.
+ Es decir están contraídas en la integral.
+ Esto permite agrupar las integrales donde aparece 
+\begin_inset Formula $\rho_{PC}(r)$
+\end_inset
+
+, integrales rojas y azules.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+\omega=\mathcolor{red}{\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{PC}(r)}\\
+\Bigg[\mathcolor{green}{\left(2\pi L\right)\sum_{\alpha}P(r,\alpha)\int_{0}^{R}dr'r'n(r';r,\alpha)\Big\{\beta\left(\sum_{e}f_{e}(r')q_{e}\right)\Psi(r')}\\
+\mathcolor{green}{+\sum_{e=0}^{1}f_{e}(r')\left[\mbox{ln}\left(f_{e}(r')\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}\right)\right]+\beta\pi(r')v_{p}\Big\}}\\
+\mathcolor{red}{+\left[\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-1-\beta\Delta\mu_{P}\right]}\mathcolor{red}{+\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)}\Bigg]\\
+-\int_{0}^{R}dr\left(\frac{r}{R}\right)q(r)\left(\sum_{\alpha}P(r,\alpha)-1\right)-\int dr\left(\frac{r}{R}\right)\beta\pi(r)\\
++\int_{0}^{R}dr\left(\frac{r}{R}\right)\sum_{i}\rho_{i}(r)q_{i}\beta\Psi(r)-\frac{1}{2}\xi\beta\int_{0}^{R}dr\left(\frac{r}{R}\right)\left(\nabla_{r}\Psi(r)\right)^{2}\\
++\sum_{i=w,K^{+},Cl^{-},H^{+},OH^{-}}\int_{0}^{R}dr\left(\frac{r}{R}\right)\rho_{i}(r)\left[\mbox{ln}\left(\rho_{i}(r)v_{w}\right)-1-\beta\Delta\mu_{i}+\beta\pi(r)v_{i}\right]\\
+\label{eq:free_energy-PAH-1-1-1}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La expresión de la energía libre 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:free_energy-PAH-1-1-1"
+
+\end_inset
+
+, considera la entropía traslacional de cadenas poliméricas, es importante
+ por que nos permitirá a través de su optimización relacionar las propiedades
+ en el seno de la solución con las propiedades del sistema en el interior
+ del nanocanal.
+ 
+\end_layout
+
+\begin_layout Standard
+Si ahora optimizamos la energía libre en función de la probabilidad de una
+ conformación 
+\begin_inset Formula $P(r,\alpha)$
+\end_inset
+
+, se obtiene la expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:minimizacion_respecto_de_Pralpha"
+
+\end_inset
+
+ desde donde es posible identificar el factor de Boltzmann 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:factor_de_boltzmann"
+
+\end_inset
+
+, una expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:funcion_de_particion-1"
+
+\end_inset
+
+ para la función de partición que llamaremos 
+\begin_inset Formula $Q$
+\end_inset
+
+ y otra expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:expresion_multiplicador_de_lagrange"
+
+\end_inset
+
+ para el multiplicador de Lagrange 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+0 & = & \left(2\pi L\right)\rho_{PC}(r)\int_{0}^{R}dr'r'n(r';r,\alpha)\Big\{\beta\left(\sum_{e}f_{e}(r')q_{e}\right)\Psi(r')\nonumber \\
+ &  & +\sum_{e=0}^{1}f_{e}(r')\left[\mbox{ln}\left(f_{e}(r')\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}\right)\right]+\beta\pi(r')v_{p}\Big\}\nonumber \\
+ &  & +\mbox{ln}\left(P(r,\alpha)\right)+1-\left(\frac{R}{2}\right)q\label{eq:minimizacion_respecto_de_Pralpha}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q=\frac{2}{R}\left[1-\mbox{ln}\left(Q\right)\right]\label{eq:expresion_multiplicador_de_lagrange}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+P(r,\alpha) & = & \frac{1}{Q}\mbox{exp}\Bigg\{-\left(2\pi L\right)\rho_{PC}(r)\int_{0}^{R}dr'r'n(r';r,\alpha)\Big\{\beta\left(\sum_{e}f_{e}(r')q_{e}\right)\Psi(r')\nonumber \\
+ &  & +\sum_{e=0}^{1}f_{e}(r')\left[\mbox{ln}\left(f_{e}(r')\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}\right)\right]+\beta\pi(r')v_{p}\Big\}\Bigg\}\label{eq:probabilidad_conformacion}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es interesante observar que ahora el factor de Boltzmann incorpora la densidad
+ de cadenas en 
+\begin_inset Formula $r$
+\end_inset
+
+ para pesar la probabilidad de una dada conformación 
+\begin_inset Formula $(r,\alpha)$
+\end_inset
+
+.
+ Esto es porque a mayor densidad de cadenas en un dado layer 
+\begin_inset Formula $r$
+\end_inset
+
+ del nanocanal, se espera que la probabilidad de una configuración 
+\begin_inset Formula $(r,\alpha)$
+\end_inset
+
+ sea menor.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather}
+Factor\_de\_Boltzmann=\nonumber \\
+-\left(2\pi L\right)\mathcolor{red}{\rho_{PC}(r)}\int_{0}^{R}dr'r'n(r';r,\alpha)\Big\{\beta\left(\sum_{e}f_{e}(r')q_{e}\right)\Psi(r')\nonumber \\
++\sum_{e=0}^{1}f_{e}(r')\left[\mbox{ln}\left(f_{e}(r')\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}\right)\right]+\beta\pi(r')v_{p}\Big\}\label{eq:factor_de_boltzmann}
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q=\int_{0}^{R}rdr\sum_{\alpha}exp\{Factor\_de\_Boltzmann\}\label{eq:funcion_de_particion-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si realizamos la optimización de la energía libre respecto de la densidad
+ de cadenas 
+\begin_inset Formula $\rho_{PC}(r)$
+\end_inset
+
+ obtenemos una expresión para el potencial químico, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather}
+\beta\Delta\mu_{P}=\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)+\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r,\alpha)\right)\nonumber \\
++\sum_{\alpha}P(r,\alpha)\Bigg[\left(2\pi L\right)\int_{0}^{R}dr'r'n(r';r,\alpha)\Big\{\beta\left(\sum_{e}f_{e}(r')q_{e}\right)\Psi(r')\nonumber \\
++\sum_{e=0}^{1}f_{e}(r')\left[\mbox{ln}\left(f_{e}(r')\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}\right)\right]+\beta\pi(r')v_{p}\Big\}\Bigg]\label{eq:chemPot_intermedio}
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si usamos 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:factor_de_boltzmann"
+
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chemPot_intermedio"
+
+\end_inset
+
+, se obtiene la expresión general 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:expresion_general_chempot"
+
+\end_inset
+
+ para el potencial químico de las cadenas de un polielectrolito 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boxed{\beta\Delta\mu_{P}=\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-\sum_{\alpha}P(r,\alpha)\left[\mbox{ln}\left(Q\right)-\rho_{PC}(r)\right]}\label{eq:expresion_general_chempot}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el problema que estamos considerando el único lugar donde se posicionan
+ las cadenas es en el layer 
+\begin_inset Formula $r_{N}$
+\end_inset
+
+ (más próximo a la pared del nanocanal).
+ Por la condición de normalización global, ahora 
+\begin_inset Formula $\sum_{\alpha}P(R,\alpha)=1$
+\end_inset
+
+.
+ Por lo tanto se puede escribir
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\Delta\mu_{P}=\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-\mbox{ln}\left(Q\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como consideramos que todas las cadenas están adsorvidas en la superficie
+ interna del nanocanal, es posible definir una densidad superficial de cadenas
+ 
+\begin_inset Formula $\sigma_{pol}$
+\end_inset
+
+ cuya relación con la densidad 
+\begin_inset Formula $\rho_{PC}(R)$
+\end_inset
+
+ es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho_{PC}(R)=\rho_{PC}=\frac{\sigma_{pol}}{\delta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Si se quiere puede considerarse el número total de cadenas calculado como
+ densidad en volumen y como densidad en superficie e igualar ambos resultados.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+(2\pi)\int_{0}^{R}\rho_{PC}(r)rdr\delta_{z}=(2\pi R)\rho_{PC}(R)\delta\delta_{z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\rho_{PC}(R)\delta\left(2\pi R\right)\delta_{z}=\mbox{Es el número de cadenas en el layer de radio R. =}\sigma\left(2\pi R\right)\delta_{z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y por lo tanto la expresión para el potencial químico del polímero dentro
+ del nanocanal es OJO REVEER LAS DEDUCCIONES! (BUSCAR APUNTES YA ESTA TODO
+ HECHO!)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boxed{\beta\Delta\mu_{P}=\mbox{ln}\left(\frac{\sigma_{pol}v_{w}}{\delta}\right)-\mbox{ln}\left(Q\right)}\label{eq:expresion_final_chempot}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $Q$
+\end_inset
+
+ ahora se escribe como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+Q & = & \int_{0}^{R}rdr\sum_{\alpha}exp\{-\left(2\pi L\right)\mathcolor{red}{\frac{\sigma_{pol}}{\delta}}\int_{0}^{R}dr'r'n(r';R,\alpha)\Big\{\beta\left(\sum_{e}f_{e}(r')q_{e}\right)\Psi(r')\nonumber \\
+ &  & +\sum_{e=0}^{1}f_{e}(r')\left[\mbox{ln}\left(f_{e}(r')\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}\right)\right]+\beta\pi(r')v_{p}\Big\}\label{eq:funcion_de_particion_nanocanal}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Para el sistema de monolayes la densidad de cadenas poliméricas se reduce
+ a una densidad superficial se puede escribir como 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\rho_{PC}(r)=\sigma_{pol}\delta_{(r-R)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+entonces por ejemplo para calcular el número total de cadenas
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mbox{\#total\_cadenas}=\int_{0}^{L}\int_{0}^{R}\int_{0}^{2\pi}\rho_{PC}(r)rd\theta drdz=2\pi\int_{0}^{L}\sigma_{pol}(z)R(z)dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+si cilindro con densidad de cadenas homogénea entonces 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mbox{\#total\_cadenas}=\int_{0}^{L}\int_{0}^{R}\int_{0}^{2\pi}\rho_{PC}(r)rd\theta drdz=2\pi RL\sigma_{pol}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+si bullet-like con densidad de cadenas homogéneas 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mbox{\#total\_cadenas}=\int_{0}^{L}\int_{0}^{R}\int_{0}^{2\pi}\rho_{PC}(r)rd\theta drdz=2\pi\sigma_{pol}\int_{0}^{L}R(z)dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+las configuraciones generadas tienen al menos un monómero en la capa más
+ próxima a la pared del canal.(hay un gráfico de eso, mostrar!)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Concretamente la probabilidad de una distribución se puede expresar en términos
+ de la probabilidad de encontrar un monómero en la capa 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+.
+ Como se muestra en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:descomposicion_probabilidad"
+
+\end_inset
+
+.
+ La diferencia es que ahora hay que pesar el exponente con la densidad de
+ cadenas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(\alpha)=\frac{1}{Q}\left[\prod_{j=1}p(r_{j})^{N_{(r_{j},\alpha)}}\right]^{\frac{\sigma_{pol}}{\delta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Subsubsection*
+\begin_inset Formula $n(r;r',\alpha)$
+\end_inset
+
+ Sobre la definición de esta magnitud: 
+\end_layout
+
+\begin_layout Plain Layout
+Las propiedades de 
+\begin_inset Formula $n(r;r',\alpha)$
+\end_inset
+
+ son tres:
+\end_layout
+
+\begin_layout Enumerate
+La suma sobre todos los layers 
+\begin_inset Formula $r$
+\end_inset
+
+, debería dar el número total de monómeros de la cadena polimérica 
+\begin_inset Formula $\left(r',\alpha\right)$
+\end_inset
+
+ que será 
+\begin_inset Formula $N_{mon}$
+\end_inset
+
+ por que considero todas las cadenas igual de largas.
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{R}n(r;r',\alpha)rdr=\frac{N_{mon}(r',\alpha)}{2\pi L}=\frac{N_{mon}}{2\pi L}\label{eq:prop_1n}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La suma sobre l
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+a variable contínua de la conformación 
+\begin_inset Formula $r'$
+\end_inset
+
+, es el número total de monómeros en 
+\begin_inset Formula $\ensuremath{r}$
+\end_inset
+
+, debido a todas las conformaciones 
+\begin_inset Formula $\ensuremath{\alpha}$
+\end_inset
+
+.
+ (cómo si estuviera la misma conformación 
+\begin_inset Formula $\ensuremath{\alpha}$
+\end_inset
+
+ en todas las posiciones)
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{gather*}
+\int_{0}^{R}n(r;r',\alpha)\left(2\pi r'\right)dr'=n(r;\alpha)
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Entonces 
+\begin_inset Formula 
+\begin{gather*}
+\int_{0}^{R}\left(\int_{0}^{R}n(r;r',\alpha)rdr\right)\left(2\pi r'\right)dr'=\frac{N_{mon}}{2\pi L}\left(\pi R^{2}L\right)=N_{mon}\frac{R^{2}}{2}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La suma sobre la
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ variable discreta de las conformaciones 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, es el número de monómeros en 
+\begin_inset Formula $\ensuremath{r}$
+\end_inset
+
+ debido a todas las conformaciones 
+\begin_inset Formula $\left\{ \alpha\right\} $
+\end_inset
+
+ posicionadas en 
+\begin_inset Formula $\ensuremath{r'}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\[
+\sum_{\alpha}n(r;r',\alpha)=n(r;r')
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Colapsando todos los índices
+\begin_inset Formula 
+\[
+\sum_{\alpha}\int_{0}^{R}\left(\int_{0}^{R}n(r;r',\alpha)rdr\right)\left(2\pi r'\right)dr'=\frac{N_{mon}}{2\pi L}\left(\pi R^{2}L\right)N_{\alpha's}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Al momento de programarlo esto podría traer inconsistencias.
+ En el programa actual la magnitud 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $n(r;r',\alpha)$
+\end_inset
+
+ se re define para contener el jacobiano de las coordenadas: 
+\begin_inset Formula $n(r;r',\alpha)=rr'n(r;r',\alpha)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

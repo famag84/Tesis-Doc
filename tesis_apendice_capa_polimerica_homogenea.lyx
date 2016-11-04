@@ -1,0 +1,782 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\master tesis_Doc_FMG.lyx
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Modelo de Capa Polimérica Homogénea
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Modelo-de-Capa-homogenea"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el desarrollo de un modelo sencillo considero una capa homogénea de
+ polímero en contacto con una solución con concentración de sal y pH fijo.
+ La energía libre para la capa homogénea de polímero se escribe: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\beta F & = & \beta\rho_{q}\Psi^{P}+\sum_{i=w,K^{+},Cl^{-},H^{+},OH^{-}}\rho_{i}\left[\mbox{ln}\left(\rho_{i}v_{w}\right)-1+\beta(\mu_{i}^{0}-\mu_{i})\right]\nonumber \\
+ &  & +\rho_{P}\Big\{\sum_{e=0}^{-2}f_{e}\left[\mbox{ln}\left(f_{e}\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\Big\}\nonumber \\
+ &  & +\beta\pi\left[\rho_{P}v_{p}+\sum_{i=w,K^{+},Cl^{-},H^{+},OH^{-}}\rho_{i}v_{i}-1\right]\label{eq:capa_homogenea}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dónde conocemos las relaciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho_{q}=\rho_{H^{+}}+\rho_{K^{+}}-\rho_{OH^{-}}-\rho_{Cl^{-}}-\rho_{pmep}\left(f_{-1}+2f_{-2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\Delta G_{1}=\beta\left(\mu_{-1}^{0}+\mu_{H^{+}}^{0}-\mu_{0}^{0}\right)=-\mbox{ln}\left(K_{1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\Delta G_{2}=\beta\left(\mu_{-2}^{0}+\mu_{H^{+}}^{0}-\mu_{-1}^{0}\right)=-\mbox{ln}\left(K_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De la minimización de la expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:capa_homogenea"
+
+\end_inset
+
+ se obtienen las expresiones para cada fracción de volumen 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\Delta\mu_{K\text{⁺}}=\mbox{ln}\left(\phi_{K\text{⁺}}\right)+\beta\Psi^{P}+\beta\pi v_{K\text{⁺}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\Delta\mu_{H\text{⁺}}=\mbox{ln}\left(\phi_{H\text{⁺}}\right)+\beta\Psi^{P}+\beta\pi v_{H\text{⁺}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\Delta\mu_{Cl^{-}}=\mbox{ln}\left(\phi_{Cl^{-}}\right)+\beta\Psi^{P}+\beta\pi v_{Cl^{-}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\Delta\mu_{OH^{-}}=\mbox{ln}\left(\phi_{OH^{-}}\right)+\beta\Psi^{P}+\beta\pi v_{OH^{-}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0=\mbox{ln}\left(\phi_{w}\right)+\beta\pi v_{w}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se usó que 
+\begin_inset Formula $\Delta\mu_{w}=0$
+\end_inset
+
+, y la expresión para los grados de disociación
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mbox{ln}\left(\frac{f_{-1}}{f_{0}}\right)=\beta\Psi^{p}+\mbox{ln}\left(K_{1}\right)-\beta\Delta\mu_{H^{+}}\label{eq:f_1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mbox{ln}\left(\frac{f_{-2}}{f_{0}}\right)=\beta\Psi^{p}+\mbox{ln}\left(K_{1}K_{2}\right)-2\beta\Delta\mu_{H^{+}}\label{eq:f_2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta las expresiones de bulk
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{ln}\left(\rho_{w}^{b}v_{w}\right)=-\beta\pi^{b}v_{w}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta\Delta\mu_{K\text{⁺}}=\mbox{ln}\left(\rho_{K\text{⁺}}^{b}\right)-\frac{v_{K\text{⁺}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)\label{eq:capahomogeneao_muK}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta\Delta\mu_{H\text{⁺}}=\mbox{ln}\left(\rho_{H\text{⁺}}^{b}\right)-\frac{v_{H\text{⁺}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)\label{eq:capahomogenea_muH}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\Delta\mu_{Cl\text{⁻}}=\mbox{ln}\left(\rho_{Cl\text{⁻}}^{b}\right)-\frac{v_{Cl\text{⁻}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\Delta\mu_{OH\text{⁻}}=\mbox{ln}\left(\rho_{OH\text{⁻}}^{b}\right)-\frac{v_{OH\text{⁻}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos escribir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{ln}\left(\frac{\phi_{w}}{\phi_{w}^{b}}\right)=-\beta\left(\pi-\pi^{b}\right)v_{w}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{ln}\left(\frac{\rho_{K^{+}}v_{w}}{\left(\rho_{w}v_{w}\right)^{\nicefrac{v_{k^{+}}}{v_{w}}}}\right)=-\beta\Psi^{p}+\beta\Delta\mu_{K^{+}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Redefiniendo todos los potenciales como potenciales químicos de intercambio,
+ y usando las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:f_1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:f_2"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:capahomogeneao_muK"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:capahomogenea_muH"
+
+\end_inset
+
+, podemos escribir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{ln}\left(K_{1}\right)=\mbox{ln}\left(\frac{f_{-1}}{f_{0}}\frac{\rho_{K\text{⁺}}}{\rho_{w}^{\nicefrac{v_{K\text{⁺}}}{v_{w}}}}\frac{\rho_{H\text{⁺}}^{b}}{\rho_{w}^{b}}\frac{\left(\rho_{w}^{b}\right)^{\nicefrac{v_{K\text{⁺}}}{v_{w}}}}{\rho_{K\text{⁺}}^{b}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{ln}\left(K_{2}\right)=\mbox{ln}\left(\frac{f_{-2}}{f_{-1}}\frac{\rho_{K\text{⁺}}}{\rho_{w}^{\nicefrac{v_{K\text{⁺}}}{v_{w}}}}\frac{\rho_{H\text{⁺}}^{b}}{\rho_{w}^{b}}\frac{\left(\rho_{w}^{b}\right)^{\nicefrac{v_{K\text{⁺}}}{v_{w}}}}{\rho_{K\text{⁺}}^{b}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+(CHEQUEAR QUE EL FACTOR MULTIPLICATIVO SEA EL MISMO!)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Desde donde derivamos la dependencia de las constantes de equilibrio químico
+ con el estado de carga de los monómeros y la fracción de volumen de polímero,
+ ver ecuaciones siguientes.
+ Para la primera transición aproximamos 
+\begin_inset Formula $f_{-2}=0$
+\end_inset
+
+, y por lo tanto 
+\begin_inset Formula $f_{0}=1-f_{-1}$
+\end_inset
+
+.
+ Para la segunda transición aproximamos 
+\begin_inset Formula $f_{0}=0$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $f_{-1}=1-f_{-2}$
+\end_inset
+
+.
+ Además usamos las aproximaciones generales: 
+\begin_inset Formula $\phi_{v}^{b}=1$
+\end_inset
+
+, queriendo significar que en bulk la solución es aproximadamente agua pura.
+ Dentro del poro el volumen puede estar ocupado por moléculas de agua o
+ monómeros del polímero por ello se asume 
+\begin_inset Formula $\phi_{w}=1-\phi_{p}$
+\end_inset
+
+.
+ El número de contra iones es igual al número de cargas en la capa polimérica
+ homogénea, es decir pedimos electroneutralidad local.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+pKa_{1}^{app}\left(f_{-1}\right)=pKa_{1}^{bulk}+\mbox{log}\left(\frac{f_{-1}}{\left(1-f_{-1}\right)}\right)+\mbox{log}\left(\frac{f_{-1}\phi_{p}}{\left(1-\phi_{p}\right)^{\nicefrac{v_{K^{+}}}{v_{w}}}}\frac{v_{w}}{C_{salt}v_{p}}\right)\label{eq:pKapp_1_capahomogenea}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+pKa_{2}^{app}\left(f_{-2}\right)=pKa_{2}^{bulk}+\mbox{log}\left(\frac{f_{-2}}{\left(1-f_{-2}\right)}\right)+\mbox{log}\left(\frac{\left(1+f_{-2}\right)\phi_{p}}{\left(1-\phi_{p}\right)^{\nicefrac{v_{K^{+}}}{v_{w}}}}\frac{v_{w}}{C_{salt}v_{p}}\right)\label{eq:pkaapp_2_capa_homogenea}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En las últimas expresiones, las constantes de equilibrio de bulk 
+\begin_inset Formula $pKa_{i}^{bulk}$
+\end_inset
+
+ con 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+ , corresponden a las definiciones termodinámicas de las constantes de equilibri
+o de las transiciones; 
+\begin_inset Formula $f_{e}$
+\end_inset
+
+, con 
+\begin_inset Formula $e=-1,-2$
+\end_inset
+
+ son los grados de disociación dentro de la interfase polimérica uniforme,
+ 
+\begin_inset Formula $\phi_{P}$
+\end_inset
+
+ es la fracción de volumen de polímero, 
+\begin_inset Formula $C_{salt}$
+\end_inset
+
+ la concentración de sal, 
+\begin_inset Formula $v_{w}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{p}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{K\text{⁺}}$
+\end_inset
+
+ son los volúmenes considerados para las distintas especies (ver Cuadro
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Tabla-de-volúmenes"
+
+\end_inset
+
+).
+ Estas ecuaciones son importantes por que ofrecen una relación analítica
+ entre las constantes de equilibrio aparentes y la concentración de sal,
+ además predicen correctamente el ancho de las transiciones (ecuaciones
+ (18) y (19) del paper!).
+ La dependencia de las constantes de equilibrio aparente con la concentración
+ de sal descripta por este modelo analítico es compatible con los valores
+ de 
+\begin_inset Formula $pKa^{app}$
+\end_inset
+
+ que predice la teoría molecular.
+\end_layout
+
+\begin_layout Standard
+Para calcular el ancho de transición del primer equilibrio químico, consideramos
+ los valores de pH donde 
+\begin_inset Formula $\left\langle f_{-1}\right\rangle =\frac{1}{11}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left\langle f_{-1}\right\rangle =\frac{10}{11}$
+\end_inset
+
+, (ver figura).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/example_of_width_definition_es.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+El gráfico muestra una curva de transición ácido-base ideal.
+ Definimos el ancho de la transición (
+\begin_inset Formula $\Delta$
+\end_inset
+
+) como la diferencia de valores de pH donde el grado de disociación es 
+\begin_inset Formula $\nicefrac{1}{11}$
+\end_inset
+
+ (estado "apagado") y 
+\begin_inset Formula $\nicefrac{10}{11}$
+\end_inset
+
+ (estado encendido).
+ Esta definición asegura 
+\begin_inset Formula $\Delta=2$
+\end_inset
+
+ para la curva ácido-base ideal.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ancho_transicion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+pH\left(\left\langle f_{-1}\right\rangle =\frac{1}{11}\right)=pKa_{1}^{bulk}+\mbox{log}\left(\frac{\frac{1}{11}}{\left(1-\frac{1}{11}\right)}\right)+\mbox{log}\left(\frac{\frac{1}{11}\phi_{p}^{A}}{\left(1-\phi_{p}^{A}\right)^{\nicefrac{v_{K\text{⁺}}}{v_{w}}}}\frac{v_{w}}{C_{s}v_{p}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+pH\left(\left\langle f_{-1}\right\rangle =\frac{10}{11}\right)=pKa_{1}^{bulk}+\mbox{log}\left(\frac{\frac{10}{11}}{\left(1-\frac{10}{11}\right)}\right)+\mbox{log}\left(\frac{\frac{10}{11}\phi_{p}^{B}}{\left(1-\phi_{p}^{B}\right)^{\nicefrac{v_{K\text{⁺}}}{v_{w}}}}\frac{v_{w}}{C_{s}v_{p}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\phi_{p}^{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $\phi_{p}^{B}$
+\end_inset
+
+ son las fracciones de volumen de polímero cuando 
+\begin_inset Formula $\left\langle f_{-1}\right\rangle =\frac{1}{11}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left\langle f_{-1}\right\rangle =\frac{10}{11}$
+\end_inset
+
+, respectivamente.
+ El ancho de la primera transición está dado por,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+pH\left(\left\langle f_{-1}\right\rangle =\frac{10}{11}\right)-pH\left(\left\langle f_{-1}\right\rangle =\frac{1}{11}\right)=2+\mbox{log}\left(10\frac{\phi_{p}^{B}}{\phi_{p}^{A}}\frac{\left(1-\phi_{p}^{A}\right)^{\nicefrac{v_{K\text{⁺}}}{v_{w}}}}{\left(1-\phi_{p}^{B}\right)^{\nicefrac{v_{K\text{⁺}}}{v_{w}}}}\right)\label{eq:ancho_1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con el objetivo de estimar el valor de 
+\begin_inset Formula $\phi_{p}^{A}$
+\end_inset
+
+, determinamos la altura de la capa polimérica (
+\begin_inset Formula $h=5.4nm$
+\end_inset
+
+) como la distancia desde la pared del nanocanal hasta el punto donde la
+ densidad de monómeros es un 36.7% del máximo (ver figura).
+ Habiendo estimado la altura calculamos la fracción de volumen de la capa
+ homogénea equivalente: 
+\begin_inset Formula $\phi_{p}^{A}=\frac{\sigma Nv_{p}}{h}=0.1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/polymer_distribution_AUX1_es.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Estimación de la fracción de volumen de la capa polimérica homogénea equivalente
+ a partir de la distribución in-homogénea de polímero que devuelve la teoría
+ molecular.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SI_S2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El ancho de la segunda transición fue calculado asumiendo que no hay cambios
+ conformacionales en la capa polimérica.
+ El cálculo del segundo ancho de transición es directo,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+pKa_{2}^{app}\left(\frac{10}{11}\right)-pKa_{2}^{app}\left(\frac{1}{11}\right)=2+\mbox{log}\left(\frac{21}{12}\right)\label{eq:ancho_2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/SI_fig3_pKa_app_0.01M_es.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación de los resultados de la teoría molecular con los obtenidos con
+ el modelo simple de capa polimérica homogénea.
+ Con concentración de sal 
+\begin_inset Formula $C_{salt}=0.01M$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SI_S3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

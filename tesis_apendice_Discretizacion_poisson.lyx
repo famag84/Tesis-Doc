@@ -1,0 +1,338 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\master tesis_Doc_FMG.lyx
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Discretización-Poisson"
+
+\end_inset
+
+Discretización de la Ecuación de Poisson
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/discretization_nanochannel.png
+	lyxscale 20
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de la discretización del volumen del nanocanal.
+ Debido a la simetría cilíndrica sólo se considera la discretización en
+ la dirección radial.
+ Cada capa 
+\begin_inset Formula $j$
+\end_inset
+
+ tiene sus bordes entre 
+\begin_inset Formula $\left[\left(j-1\right)\times\delta,j\times\delta\right]$
+\end_inset
+
+ con 
+\begin_inset Formula $j\in\left[1,dimR\right]$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Graf_discretizacion"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(Quizas sea mejor mostrar las layers por afuera del poro, para explicar
+ las condiciones de contorno del potencial electrostático?)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando 
+\begin_inset Formula $\xi(r)=\xi$
+\end_inset
+
+ y coordenadas cilíndricas en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:equ_potential"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{1}{r}\frac{\partial\psi(r)}{\partial r}+\frac{\partial^{2}\psi(r)}{\partial r^{2}}\right)=-\frac{1}{\xi}\left\langle \rho_{q}(r)\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para escribir las ecuaciones discretizadas observar que la primera derivada
+ se calcula como el promedio entre las derivadas por derecha y por izquierda,
+ mientras que la segunda derivada es la diferencia entre ellas.
+ En ecuaciones: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\Psi(r)}{\partial r}=\frac{\left(\frac{\partial\Psi}{\partial r}\right)_{rigth}+\left(\frac{\partial\Psi}{\partial r}\right)_{left}}{2}=\frac{1}{2\delta}\left[\Psi(r_{j+1})-\Psi(r_{j-1})\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial^{2}\Psi(r)}{\partial r^{2}}=\frac{\left(\frac{\partial\Psi}{\partial r}\right)_{rigth}-\left(\frac{\partial\Psi}{\partial r}\right)_{left}}{r_{j+1}-r_{j}}=\frac{1}{\delta\text{²}}\left[\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con estas consideraciones la ecuación (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:equ_potential"
+
+\end_inset
+
+) discretizada queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})+\frac{1}{2\left(j-\nicefrac{1}{2}\right)}\left(\Psi(r_{j+1})-\Psi(r_{j-1})\right)=-\frac{\delta^{2}}{\xi}\left\langle \rho_{q}(r_{j})\right\rangle \label{eq:discret_poisson}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $r_{j}=\left(j-\nicefrac{1}{2}\right)\delta$
+\end_inset
+
+.
+ es el radio evaluado en el centro de la layer 
+\begin_inset Formula $j$
+\end_inset
+
+ y 
+\begin_inset Formula $j=1,...,N$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\xi$
+\end_inset
+
+ se obtiene en el programa a partir de la longitud de Bjerrum 
+\begin_inset Formula $l_{B}$
+\end_inset
+
+, según la ecuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+4\pi l_{b}=\beta\frac{e^{2}}{\xi_{0}\xi}=\beta\frac{e^{2}}{\xi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+las unidades son correctas, porque el potencial electrostático está definido
+ como: 
+\begin_inset Formula $\Psi(r)=\beta e\psi(r)$
+\end_inset
+
+, si multiplicamos la expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:discret_poisson"
+
+\end_inset
+
+ por la magnitud 
+\begin_inset Formula $\beta e$
+\end_inset
+
+ y usando la definición del potencial nos queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})+\frac{1}{2\left(j-\nicefrac{1}{2}\right)}\left(\Psi(r_{j+1})-\Psi(r_{j-1})\right)=-\delta^{2}\boxed{\frac{\beta e}{\xi}e}\left\langle \rho_{q}(r_{j})\right\rangle \label{eq:discret_poisson-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+la segunda carga viene del hecho de que la densidad de carga nunca fue multiplic
+ada por la carga fundamental.
+ Por lo tanto la expresion 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:discret_poisson-1"
+
+\end_inset
+
+, incorpora naturalmente la longitud de Bjerrum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})+\frac{1}{2\left(j-\nicefrac{1}{2}\right)}\left(\Psi(r_{j+1})-\Psi(r_{j-1})\right)=-\delta^{2}\left(4\pi l_{b}\right)\left\langle \rho_{q}(r_{j})\right\rangle \label{eq:discret_poisson-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando el mismo razonamiento con las condiciones de contorno queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(r_{N})=\Psi(r_{N-1})+l_{B}\sigma_{q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
