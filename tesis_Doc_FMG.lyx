@@ -35,12 +35,6 @@
 theorems-ams
 figs-within-sections
 \end_modules
-\begin_includeonly
-tesis_Cap_paper_PMEP.lyx
-tesis_apendice_capa_polimerica_homogenea.lyx
-tesis_Pol_chem_potential_completo_1.lyx
-tesis_Cap_teoria_molecular.lyx
-\end_includeonly
 \maintain_unincluded_children true
 \language spanish
 \language_package default
@@ -245,7 +239,7 @@ LatexCommand tableofcontents
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "tesis_introducion.lyx"
+filename "tesis_introduccion.lyx"
 
 \end_inset
 

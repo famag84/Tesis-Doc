@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass book
 \use_default_options true
 \master tesis_Doc_FMG.lyx
@@ -10,16 +12,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -110,7 +112,7 @@ PH_{2}\rightleftharpoons PH^{-}+H^{+}, & K_{1}=\frac{\left[PH^{-}\right]\left[H^
 \begin_inset Formula 
 \[
 \begin{array}{cc}
-PH^{-}\rightleftharpoons P{}^{--}+H^{+}, & K_{2}=\frac{\left[P{}^{--}\right]\left[H^{+}\right]}{\left[PH^{-}\right]}\end{array}
+PH^{-}\rightleftharpoons P{}^{--}+H^{+}, & K_{2}=\frac{\left[P^{--}\right]\left[H^{+}\right]}{\left[PH^{-}\right]}\end{array}
 \]
 
 \end_inset
@@ -119,16 +121,17 @@ PH^{-}\rightleftharpoons P{}^{--}+H^{+}, & K_{2}=\frac{\left[P{}^{--}\right]\lef
 \end_layout
 
 \begin_layout Standard
-from equilibrium constant definition its posible to relate 
+A partir de las definiciones de las constantes de equilibrio es posible
+ relacionar los valores de 
 \begin_inset Formula $pH$
 \end_inset
 
- values with 
+ con los valores de 
 \begin_inset Formula $pK_{i}=-log\left(K_{i}\right)$
 \end_inset
 
 .
- This relations are called Henderson-Hasselbach.
+ Estas relaciones se llaman relaciones de Henderson-Hasselbach.
 \end_layout
 
 \begin_layout Standard
@@ -154,7 +157,8 @@ pH=pK_{2}+log\left(\frac{\left[P^{2-}\right]}{\left[PH^{-}\right]}\right)
 \end_layout
 
 \begin_layout Standard
-the fraction of polymer in differents states are defined as,
+Las fracciones de disociación para los distintos estados del polímero están
+ definidas como,
 \end_layout
 
 \begin_layout Standard
@@ -191,7 +195,7 @@ f_{2}=\frac{\left[P^{2-}\right]}{\left[PH_{2}\right]+\left[PH^{-}\right]+\left[H
 \end_layout
 
 \begin_layout Standard
-the last expression written as a function of equilibrium constant are
+Estas expresiones pueden escribirse en términos de las constantes de equilibrio,
 \end_layout
 
 \begin_layout Standard
@@ -228,9 +232,9 @@ f_{2}=\frac{K_{1}K_{2}}{[H^{+}]^{2}+[H^{+}]K_{1}+K_{1}K_{2}}
 \end_layout
 
 \begin_layout Standard
-The thermodynamic links the Gibbs free energy of a chemical equilibrium
- with the equilibrium constants.
- It es by definition 
+La termodinámica permite relacionar el cambio en la energía libre de Gibbs
+ con con las constantes de equilibrio químico.
+ Por definición, 
 \end_layout
 
 \begin_layout Standard
@@ -256,21 +260,21 @@ The thermodynamic links the Gibbs free energy of a chemical equilibrium
 \end_layout
 
 \begin_layout Standard
-The relation between thermodynamic definition (
+La relación entre la definición termodinámica (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:theoretical_K"
 
 \end_inset
 
-) and experimental chemical equilibrium constant (
+) y la constante de equilibrio que se obtiene de forma experimental (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:experimental_K"
 
 \end_inset
 
-) es determined as follow:
+) se escribe:
 \end_layout
 
 \begin_layout Standard
@@ -315,16 +319,15 @@ K_{1}^{theo}=\frac{\phi_{H^{+}}}{\phi_{\omega}}\frac{f_{1}}{f_{0}}
 \end_layout
 
 \begin_layout Standard
-Writing last expressions in bulk conditions, 
+La última expresión escrita en término de las propiedades en solución, 
 \begin_inset Formula $\phi_{H^{+}}^{b}=[H^{+}]0.602v_{\omega}$
 \end_inset
 
-, and 
+, en donde 
 \begin_inset Formula $\phi_{\omega}=1$
 \end_inset
 
-, we get the desire relation.
- 
+, se obtiene la relación buscada:
 \end_layout
 
 \begin_layout Standard
@@ -339,14 +342,14 @@ K_{1}^{theo}=0.602v_{\omega}K_{1}^{exp}
 \end_layout
 
 \begin_layout Standard
-In therm of pKa
+En términos del pKa
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-pK_{1}^{theo}=pK^{exp}-log_{10}\left(0.602v_{\omega}\right)
-\]
+\begin{equation}
+pK_{1}^{theo}=pK^{exp}-log_{10}\left(0.602v_{\omega}\right)\label{eq:relacion_teo_exp_pKs}
+\end{equation}
 
 \end_inset
 
@@ -354,19 +357,27 @@ pK_{1}^{theo}=pK^{exp}-log_{10}\left(0.602v_{\omega}\right)
 \end_layout
 
 \begin_layout Standard
-Simmetry on the equations of degree of dissociation.
- The main idea es to write neutral species on the left and charged species
- on the rigth, in this way the expression of the degree of dissociation
- has always the same structure and the coupling with protons o oxydriles
- es obvious.
- For example,
+Simetría en las ecuaciones del grado de disociación
+\end_layout
+
+\begin_layout Standard
+Elegimos escribir siempre los estados de carga neutra como reactivos (a
+ la izquierda del equilibrio químico) y las especies cargadas como productos
+ (a la derecha del equilibrio químico).
+ De esta forma la expresión del grado de disociación tiene siempre la misma
+ estructura y el acoplamiento con protones y oxidrilos es obvia.
+ Por ejemplo, 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <row topspace="0.2cm" bottomspace="0.2cm">
@@ -405,18 +416,22 @@ B\rightleftharpoons BH^{+}+OH^{-}, & K_{b1}=\frac{\left[BH^{+}\right]\left[OH^{-
 \end_layout
 
 \begin_layout Standard
-in this way the expresion for 
+la expresión para 
 \begin_inset Formula $f_{1}$
 \end_inset
 
-es always
+siempre es
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
@@ -464,12 +479,8 @@ f_{b1}=\frac{\left[BH^{+}\right]}{\left[B\right]+\left[BH^{+}\right]}=\frac{K_{1
 \end_layout
 
 \begin_layout Standard
-With the last expression it es easy to see the charge of the molecule state
- 
-\begin_inset Formula $1$
-\end_inset
-
-, if the coupling es with 
+Con las últimas expresiones es fácil ver la carga del estado 1 del monómero.
+ Si el acoplamiento es con el ion 
 \begin_inset Formula $OH^{-}$
 \end_inset
 
@@ -477,26 +488,35 @@ With the last expression it es easy to see the charge of the molecule state
 \begin_inset Formula $H^{+}$
 \end_inset
 
-) then molecule es charged positively (negatively).
+) entonces el monomero está cargado positivamente (negativamente).
 \end_layout
 
 \begin_layout Standard
-NOTE: Chemists thinks in groups that molecule loose to be charged if it
- es an acid molecule then it loose 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+NOTE: Los químicos piensan en los grupos que la molécula pierde para estar
+ cargada.
+ Si el compuesto es un ácido entonces el compuesto pierde un proton 
 \begin_inset Formula $H^{+}$
 \end_inset
 
- groups if it es a basic molecule then it loose 
+ , si el compuesto es una base entonces pierde grupos 
 \begin_inset Formula $OH^{-}$
 \end_inset
 
- groups.
- 
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 CONCLUSION: Write things in completely symmetric equations with charged
  groups on the right of the chemical equilibrium.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -664,7 +684,7 @@ Aca figura con el flujo del campo en una superficie con carga superficial
 \end_layout
 
 \begin_layout Standard
-esto esta perfecto la comparación con el modelo teórico de schoch solo funciona
+esto esta perfecto la comparación con el modelo teórico de Schoch solo funciona
  para determinadas condiciones (ver 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -672,7 +692,7 @@ key "Schoch2008a"
 
 \end_inset
 
-och renaud 2005 applied physics 253311)
+)
 \end_layout
 
 \end_body

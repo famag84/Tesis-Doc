@@ -680,10 +680,10 @@ El equilibrio químico presente en cada una de las unidades monoméricas tiene
  dos contribuciones a la energía libre del sistema.
  Una contribución entrópica caracterizada por la multiplicidad de estados
  accesibles a cada monómero y una contribución energética correspondiente
- al potencial químico standar o energía propia del monómero en el estado
+ al potencial químico estándar o energía propia del monómero en el estado
  correspondiente.
- Por otro lado cada equilibrio químico tiene asociado una constante de equilibri
-o que caracteriza el balance entre las especies involucradas.
+ Cada equilibrio químico tiene asociado una constante de equilibrio que
+ caracteriza el balance entre las especies involucradas.
  Por ejemplo en una reacción simple:
 \end_layout
 
@@ -705,7 +705,15 @@ La constante de equilibrio se escribe como la fracción de la actividad de
 \emph on
 actividad
 \emph default
- se define como 
+ es una propiedad intensiva adimensional que depende de la elección del
+ estado normal se define como 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Levine_Fisicoquimica4ta"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -716,32 +724,24 @@ a_{i}=e^{\left(\mu_{i}-\mu_{i}^{0}\right)/k_{B}T}
 
 \end_inset
 
-es una propiedad intensiva adimensional que depende de la elección del estado
- normal
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Levine_Fisicoquimica4ta"
-
-\end_inset
-
-.
- En el contexto de este trabajo usaremos que las actividades de los reactivos
- y los productos puede aproximarse por la concentración molar de las especies.
- Típicamente escribiremos la concentración molar como el símbolo que representa
- a la especie encerrado entre corchetes, por ejemplo, la concentración molar
+En este trabajo las actividades de los reactivos y los productos se aproximan
+ con la concentración molar de las especies.
+ Escribiremos la concentración molar como el símbolo que representa a la
+ especie encerrado entre corchetes, por ejemplo, la concentración molar
  de la especie A se escribe 
 \begin_inset Formula $\left[A\right]$
 \end_inset
 
 .
- Para caracterizar el equilibrio de la reacción
+ La constante de equilibrio que caracterizar a la reacción
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:reaccion_de_juguete"
 
 \end_inset
 
-, se define la constante de equilibrio de la reacción como,
+, se define como la fracción de las concentraciones en equilibrio de los
+ productos sobre los reactivos,
 \end_layout
 
 \begin_layout Standard
@@ -756,18 +756,23 @@ K=\frac{\left[A\right]\left[B\right]}{\left[AB\right]}
 \end_layout
 
 \begin_layout Standard
-Donde las concentraciones molares son las del equilibrio.
- La transformación de los reactivos en los productos implica un cambio en
- la energía libre del sistema que puede cuantificarse en términos de los
- potenciales químicos de las especies involucradas.
+La transformación de los reactivos en los productos implica un cambio en
+ la energía libre del sistema.
+ El cambio en la energía libre del sistema, 
+\begin_inset Formula $\Delta G$
+\end_inset
+
+, puede cuantificarse en términos de los potenciales químicos de las especies
+ involucradas.
  En el equilibrio se puede escribir,
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\Delta G=\mu_{A}+\mu_{B}-\mu_{AB}=-k_{B}T\text{ln}\left(K\right)
-\]
+\begin{align*}
+\Delta G & =\mu_{A}+\mu_{B}-\mu_{AB}\\
+ & =-k_{B}T\text{ln}\left(K\right)
+\end{align*}
 
 \end_inset
 
@@ -888,9 +893,9 @@ De forma muy general podemos escribir la energía química como:
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{multline}
-F_{chem}(r)=k_{B}T\left\langle \rho_{P}(r)\right\rangle \Big\{\sum_{e=0}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\mu_{_{e}}^{0}\right]\Big\}\label{eq:Uchem_general-1}
-\end{multline}
+\begin{align}
+F_{chem}(r) & =k_{B}T\left\langle \rho_{P}(r)\right\rangle \Big\{\sum_{e=0}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\mu_{_{e}}^{0}\right]\Big\}\label{eq:Uchem_general-1}
+\end{align}
 
 \end_inset
 
@@ -1042,10 +1047,17 @@ donde
  químico.
  De hecho las definiciones teóricas y experimentales de estas cantidades
  están relacionadas mediante un factor multiplicativo (como se explica en
- 
+ el apéndice 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Soluciones-de-Bulk"
+
+\end_inset
+
+, ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:relacion_teo_exp_pKs"
 
 \end_inset
 
@@ -1053,19 +1065,26 @@ reference "chap:Soluciones-de-Bulk"
 \end_layout
 
 \begin_layout Standard
-ACA HAY QUE CONTAR COMO REEMPLAZAR EN LA EXPRESIÓN 
+La información que proviene de las constantes de equilibrio se puede incorporar
+ en la ecuación 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Uchem_general"
 
 \end_inset
 
- LA INFORMACION QUE PROVENIENE DE LAS CONSTANTES DE EQUILIBRIO.
- ESTO PERMITE ADELANTE ENCONTRAR EXPRESIONES MAS AGRADABLES.
+.
+ 
 \end_layout
 
 \begin_layout Standard
-A continuación se ejemplifican dos polielectrolitos puntuales: PMEP y PAH.
+DE FORMA TAL QUE SE PUEDEN ENCONTRAR EXPRESIONES MAS AGRADABLES.
+ EXPLICAR MEJOR!
+\end_layout
+
+\begin_layout Standard
+A continuación se usan las expresiones generales en dos casos particulares
+ de polielectrolitos: PAH y PMEP.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1077,7 +1096,17 @@ Primer Caso:
 \end_layout
 
 \begin_layout Standard
-Considérese ahora el equilibrio químico presente en las unidades del polímero
+El PAH es un polielectrolito con dos estados de carga.
+ El estado neutro con carga nula y el estado 
+\begin_inset Formula $1$
+\end_inset
+
+ con carga 
+\begin_inset Formula $1e$
+\end_inset
+
+.
+ Considérese ahora el equilibrio químico presente en las unidades del polímero
  de PAH.
  La reacción de bulk se escribe cómo, 
 \end_layout
@@ -1102,8 +1131,8 @@ B\rightleftharpoons BH^{+}+OH^{-}, & K_{b}=\frac{\left[BH^{+}\right]\left[OH^{-}
 
 \end_inset
 
-este equilibrio es diferente del primer caso (PMEP) por que ahora el acoplamient
-o se produce con la densidad de oxidrilos 
+en este equilibrio el acoplamiento se produce con la densidad de oxidrilos
+ 
 \begin_inset Formula $OH^{-}$
 \end_inset
 
@@ -1121,11 +1150,11 @@ f_{1}(r)\left[\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{BH^{+}}\right]\Big\}
 
 \end_inset
 
-la idea principal es la misma, considerando la condición 
+considerando la condición 
 \begin_inset Formula $f_{0}(r)+f_{1}(r)=1$
 \end_inset
 
-, ahora sólo tenemos un estado independiente.
+, sólo tenemos un estado independiente.
  El valor de la constante de equilibrio para la poliallylamina 
 \begin_inset Formula $pK_{b}$
 \end_inset
@@ -1181,11 +1210,7 @@ En el caso del monómero poliprótico 2-(methacryloyloxy) ethyl phosphate
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Para el PMEP el segundo término de la energía libre (
+ La energía química del PMEP en la energía libre (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:simple_FreeE"
@@ -1201,23 +1226,6 @@ reference "eq:simple_FreeE"
 U_{chem}(r)=k_{B}T\left\langle \rho_{p}(r)\right\rangle \Big\{ f_{0}(r)\left[\mbox{ln}\left(f_{0}(r)\right)+\beta\mu_{AH_{2}}^{0}\right]+\\
 f_{-1}(r)\left[\mbox{ln}\left(f_{-1}(r)\right)+\beta\mu_{AH^{-}}\right]+f_{-2}(r)\left[\mbox{ln}\left(f_{-2}(r)\right)+\beta\mu_{A^{--}}^{0}\right]\Big\}
 \end{multline}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-short form 
-\begin_inset Formula $\Big\{\sum_{e=0}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\mu_{_{e}}^{0}\right]\Big\}$
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -1344,7 +1352,7 @@ reference "eq:simple_FreeE"
 \begin{flalign}
 -TS_{mix}(r) & =k_{B}T\sum_{i=w,OH\text{⁻},H\text{⁺}}\rho_{i}(r)\left[\mbox{ln}\left(\rho_{i}(r)v_{w}\right)-1\right]\nonumber \\
  & +k_{B}T\rho_{Cl\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{Cl\text{⁻}}(r)v_{w}\right)-1+\beta\mu_{Cl^{-}}^{0}\right]\nonumber \\
- & +k_{B}T\rho_{K^{+}}(r)\left[\mbox{ln}\left(\rho_{K^{+}}(r)v_{w}\right)-1+\beta\mu_{K^{+}}^{0}\right]
+ & +k_{B}T\rho_{K^{+}}(r)\left[\mbox{ln}\left(\rho_{K^{+}}(r)v_{w}\right)-1+\beta\mu_{K^{+}}^{0}\right]\label{eq:entropia_traslacional}
 \end{flalign}
 
 \end_inset
@@ -1366,7 +1374,11 @@ donde
 \end_inset
 
 .
- La expresión para la entropía configuracional del polímero se obtiene luego
+ 
+\end_layout
+
+\begin_layout Standard
+La expresión para la entropía configuracional del polímero se obtiene luego
  de realizar la aproximación de campo medio cuyos detalles formales se encuentra
 n en 
 \begin_inset CommandInset ref
@@ -1388,6 +1400,42 @@ reference "chap:Aproximación-MF"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Si las cadenas poliméricas se encuentran libres dentro del nanocanal entonces
+ se debe incorporar el término traslacional del polímero en la expresión
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:entropia_traslacional"
+
+\end_inset
+
+.
+ Esto incorporar un índice más a la descripción de las configuraciones de
+ cadenas 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Una configuración de cadena quedará identificada con el par 
+\begin_inset Formula $\left(\alpha,r\right)$
+\end_inset
+
+ indicando conformación 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y posición dentro del nanocanal 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Foot
 status open
 
@@ -1411,8 +1459,6 @@ key "terrell_introduction"
 \end_layout
 
 \begin_layout Standard
-
-\emph on
 Todos estos términos constituyen la Energía Libre del sistema donde el número
  de partículas es constante.
  Sin embargo el sistema se encuentra en equilibrio termodinámico con un
@@ -1424,25 +1470,29 @@ Todos estos términos constituyen la Energía Libre del sistema donde el número
 \begin_inset Formula $Csalt$
 \end_inset
 
+, concentración de polímero 
+\begin_inset Formula $C_{pol}$
+\end_inset
+
 , temperatura 
 \begin_inset Formula $T$
 \end_inset
 
 .
- La interacción del sistema con un entorno bien definido se traduce en un
- intercambio de partículas hasta que se alcanza la condición de equilibrio.
- Esta condición de equilibrio termodinámico implica que el potencial químico
- de cada una de las especies químicas, 
-\begin_inset Formula $\mu_{i},i=w,OH^{-},H^{+},Cl^{-},K^{+}$
-\end_inset
-
-, debe ser el mismo dentro del sistema y en el bulk.
  Se hace necesario realizar las transformaciones de Legendre para usar el
  ensamble estadístico adecuado en la descripción del sistema.
+ 
 \end_layout
 
 \begin_layout Subsection
 Restricciones del Entorno
+\end_layout
+
+\begin_layout Standard
+Las restricciones del entorno sobre la energía libre del sistema se incorporan
+ mediante multiplicadores de Lagrange, cuyo significado fisicoquímico mostraremo
+s en cada caso.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1450,10 +1500,31 @@ Intercambio de partículas con el entorno: Potencial Químico
 \end_layout
 
 \begin_layout Standard
-Consideremos un ensamble semi-Gran-canónico donde el número de iones dentro
+El intercambio de partículas con el entorno, se produce hasta alcanzar la
+ condición de equilibrio termodinámico.
+ En todo momento el número total de partículas de una determinada especie
+ es constante.
+ El multiplicador de Lagrange que impone esta condición se identifica con
+ el potencial químico de cada una de las especies que se intercambian con
+ el entorno, 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=especie\_que\_se\_intercambian=w,OH^{-},H^{+},Cl^{-},K^{+}$
+\end_inset
+
+.
+ Consideremos un ensamble semi-Gran-canónico donde el número de iones dentro
  del nanocanal es variable pero el número de cadenas poliméricas es constante.
- Las expresiones que deben utilizarse son, (Citas acá explicando esto?)
- 
+ Las expresiones que deben incorporarse a la expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:simple_FreeE"
+
+\end_inset
+
+ son, 
 \end_layout
 
 \begin_layout Standard
@@ -1931,7 +2002,11 @@ En el caso del PAH el número total de hidronios
 \end_inset
 
 .
- Para el PAH podemos escribir, 
+ 
+\end_layout
+
+\begin_layout Standard
+Para el PAH escribimos, 
 \end_layout
 
 \begin_layout Standard
@@ -2083,7 +2158,7 @@ reference "eq:packing_condition"
 
 \end_inset
 
-) o condición de llenado, electroneutralidad (
+) o condición de llenado, electroneutralidad global (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:electroneutrality_condition"
@@ -2139,8 +2214,8 @@ reference "eq:norm_constraint"
 \end_layout
 
 \begin_layout Standard
-Estas condiciones se imponen sobre la energía libre a través de multiplicadores
- de Lagrange, 
+Estas condiciones se imponen sobre la energía libre a través de los multiplicado
+res de Lagrange, 
 \begin_inset Formula $\pi(r)$
 \end_inset
 
@@ -2149,7 +2224,7 @@ Estas condiciones se imponen sobre la energía libre a través de multiplicadore
 \end_inset
 
 , y 
-\begin_inset Formula $q=\sigma\left(1+ln\left(\frac{1}{Q}\right)\right)$
+\begin_inset Formula $q=\sigma\left(1-ln\left(Q\right)\right)$
 \end_inset
 
 .
@@ -2189,8 +2264,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-Si escribimos la energía libre con las restricciones y las transformadas
- de Legendre, se obtiene la expresión (
+Cuando el sistema se encuentra en equilibrio termodinámico con su entorno,
+ sus variables de estado deben minimizar la funcional que se obtiene luego
+ de escribir la energía libre del sistema considerando todas las restricciones,
+ expresión (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:gral_energy_complete"
@@ -2198,8 +2275,6 @@ reference "eq:gral_energy_complete"
 \end_inset
 
 ).
- Cuando el sistema se encuentra en equilibrio termodinámico con su entorno,
- las variables de estado del sistema minimizan la funcional obtenida.
  
 \begin_inset Note Comment
 status collapsed
@@ -2867,10 +2942,19 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename caricaturas_PAH_adsorption/PAH_chemEq.png
+	lyxscale 20
+	scale 20
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Dibujo con los estados del PAH
+Equilibrio químico presente en los monómeros de PAH.
 \end_layout
 
 \end_inset
