@@ -253,28 +253,35 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figuras/Cap_teoria/canal_reservorios.png
-	lyxscale 3
-	scale 20
+	filename figuras/Cap_teoria/CANAL_3d_V01.png
+	lyxscale 20
+	scale 25
 
 \end_inset
 
 
 \begin_inset Graphics
 	filename figuras/Cap_teoria/canal_solo.png
-	lyxscale 3
-	scale 5
+	lyxscale 20
+	scale 25
 
 \end_inset
 
 
-\end_layout
+\begin_inset Graphics
+	filename figuras/Cap_teoria/canal_solo_vB.png
+	lyxscale 20
+	scale 25
 
-\begin_layout Plain Layout
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Esquema del nanocanal para mostrar dimensiones
+Esquema del dispositivo experimental y detalle del nanocanal con simetría
+ cilíndrica.
+ Mostrar las dimensiones dimensiones
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Esquema-del-nanocanal"
@@ -532,7 +539,7 @@ donde
 \end_inset
 
 .
- A lo largo de este trabajo vamos a considera unicamente la condición de
+ A lo largo de este trabajo vamos a considera únicamente la condición de
  buen solvente, esto significa que para un monómero del polímero le da lo
  mismo tener como vecino (interacción inmediata) una molécula de solvente
  u otro monómero.
@@ -1005,7 +1012,7 @@ La magnitud
 \begin_inset Formula 
 \begin{equation}
 \begin{array}{cc}
-AH_{n}\rightleftharpoons AH_{n-1}^{-}+H^{+}, & K_{1}=\frac{\left[AH^{-}\right]\left[H^{+}\right]}{\left[AH_{2}\right]}\end{array}\label{eq:equliibrio_1}
+AH_{n}\rightleftharpoons AH_{n-1}^{-}+H^{+}, & K_{1}=\frac{\left[AH^{-}\right]\left[H^{+}\right]}{\left[AH_{2}\right]}\end{array}\label{eq:equlibrio_1}
 \end{equation}
 
 \end_inset
@@ -2228,43 +2235,7 @@ res de Lagrange,
 \end_inset
 
 .
- El significado de cada uno de ellos está relacionado con algún tipo de
- fuerza generalizada 
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-(buscar bibliografía al respecto)
-\end_layout
-
-\end_inset
-
-.
- La presión osmótica del sistema estará dada por 
-\begin_inset Formula $\pi(r)$
-\end_inset
-
-, 
-\begin_inset Formula $\lambda$
-\end_inset
-
- representa una contribución al potencial electrostático 
-\begin_inset Formula $\Psi(r)$
-\end_inset
-
- y finalmente 
-\begin_inset Formula $q$
-\end_inset
-
- está relacionada con la función de partición del sistema 
-\begin_inset Formula $Q$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Cuando el sistema se encuentra en equilibrio termodinámico con su entorno,
+ Cuando el sistema se encuentra en equilibrio termodinámico con su entorno,
  sus variables de estado deben minimizar la funcional que se obtiene luego
  de escribir la energía libre del sistema considerando todas las restricciones,
  expresión (
@@ -2414,12 +2385,18 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-Donde redefinimos el potencial electrostático con un corrimiento dado por
- 
+Redefinimos el potencial electrostático como 
+\begin_inset Formula $\Psi(r)=\Psi^{*}(r)+\lambda$
+\end_inset
+
+.
+ El multiplicador de Lagrange
 \begin_inset Formula $\lambda$
 \end_inset
 
- y la densidad local de carga dentro del nanocanal se escribe como, 
+ representa la contribución global al potencial electrostático que asegura
+ electroneutralidad.
+ Dentro del nanocanal la densidad de carga local se escribe como, 
 \end_layout
 
 \begin_layout Standard
@@ -2499,28 +2476,6 @@ reference "chap:Método-Variacional"
 \end_inset
 
 ).
- Mediante cálculos analíticos es posible obtener expresiones para las variables
- de estado del sistema: 
-\begin_inset Formula $P(\alpha)$
-\end_inset
-
-, 
-\begin_inset Formula $\rho_{i}(r)$
-\end_inset
-
-, 
-\begin_inset Formula $i=Cl^{-},\:OH^{-},K^{+}$
-\end_inset
-
-, 
-\begin_inset Formula $H_{3}O^{+}$
-\end_inset
-
-, 
-\begin_inset Formula $f_{e}(r)$
-\end_inset
-
-.
  La aparición de las derivadas del potencial electrostático (
 \begin_inset Formula $\Psi(r)$
 \end_inset
@@ -2541,7 +2496,37 @@ reference "chap:Discretización-Poisson"
 
 \end_inset
 
-) y resuelta mediante cálculo numérico.
+) y resuelta de forma autoconsistente mediante cálculo numérico.
+ Para el resto de las variables de estado 
+\begin_inset Formula $P(\alpha)$
+\end_inset
+
+, 
+\begin_inset Formula $\rho_{i}(r)$
+\end_inset
+
+, 
+\begin_inset Formula $i=Cl^{-},\:OH^{-},K^{+}$
+\end_inset
+
+, 
+\begin_inset Formula $H_{3}O^{+}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{e}(r)$
+\end_inset
+
+, se obtienen expresiones en función de los valores de bulk y los campos:
+ presión osmótica
+\begin_inset Formula $\pi(r)$
+\end_inset
+
+ y potencial electrostático 
+\begin_inset Formula $\Psi(r)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2571,7 +2556,7 @@ reference "eq:rho_minimization"
 
 ), que relacionan las densidades de las distintas especies químicas con
  el potencial electrostático local, la presión osmótica local y el potencial
- químico global de la especie.
+ químico de la especie.
  
 \end_layout
 
@@ -2651,7 +2636,7 @@ Si reescribimos todos los potenciales químicos
 \begin_inset Formula $w$
 \end_inset
 
- y el resto de las especies 
+ y moléculas de la especie 
 \begin_inset Formula $i$
 \end_inset
 
@@ -2659,9 +2644,9 @@ Si reescribimos todos los potenciales químicos
 \begin_inset Formula $\Delta\mu_{i}^{*}=\Delta\mu_{i}-\Delta\mu_{w}$
 \end_inset
 
- ), entonces el potencial químico de intercambio de las moléculas de solvente
- es cero.
- Con esta definición de la expresión para el solvente, ecuación (
+ ), el potencial químico de intercambio de las moléculas de solvente es
+ cero.
+ Con esta definición en la ecuación (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:rho_w_minimization-1"
@@ -2693,7 +2678,19 @@ reference "eq:rho_w_minimization-1"
 \end_layout
 
 \begin_layout Standard
-Las mismas expresiones obtenidas desde la teoría pueden escribirse para
+La expresión (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rho_w_minimization-1"
+
+\end_inset
+
+) permite entender el significado de la presión osmótica como la fuerza
+ que el solvente tiene que hacer para mantener su potencial químico constante
+ en el sistema (condición de equilibrio).
+ Aquellos lugares donde la densidad del solvente decrece la presión osmótica
+ deberá incrementarse.
+ Las mismas expresiones obtenidas desde la teoría pueden escribirse para
  el bulk, 
 \end_layout
 
@@ -2776,19 +2773,7 @@ De forma explícita:
 \end_layout
 
 \begin_layout Standard
-La expresión (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:rho_w_minimization-1"
-
-\end_inset
-
-) permite entender el significado de la presión osmótica como la fuerza
- que el solvente tiene que hacer para mantener el potencial químico del
- solvente constante en el sistema en equilibrio (condición de equilibrio).
- Aquellos lugares donde la densidad del solvente decrece la presión osmótica
- deberá incrementarse.
- Como en (
+Como en (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:rho_w_minimization-1"
@@ -2852,8 +2837,8 @@ reference "eq:rho_minimization-5"
 \end_layout
 
 \begin_layout Standard
-Una vez que conocemos los valores del potencial eléctrico y la presión osmótica,
- las ecuaciones 
+Conocidos el potencial electrostático y la presión osmótica, las ecuaciones
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:solvet_vol_frac_with_bulk_value"
@@ -2868,7 +2853,7 @@ reference "eq:vol_frac_with_bulk_values"
 \end_inset
 
  nos permiten calcular las fracciones de volumen de todas las especies químicas
- presentes dentro del nanocanal.
+ dentro del nanocanal.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2880,18 +2865,17 @@ Expresiones para el grado de disociación:
 \end_layout
 
 \begin_layout Standard
-De manera general la expresión que se obtiene para el grado de disociación
- 
+La expresión general que se obtiene para el grado de disociación 
 \begin_inset Formula $f_{e}(r)$
 \end_inset
 
- de los monómeros en las cadenas poliméricas es: 
+ del estado de los monómeros es 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
--\beta\left(\mu_{_{e}}^{0}-\mu_{0}^{0}-e\mu_{H^{+}}\right)=-\beta\left(q_{e}-q_{0}\right)\Psi(r)+\mbox{ln}\left(\frac{f_{j}(r)}{1-\sum_{e=1}^{m_{e}}f_{e}(r)}\right)\;,e=1,...,m_{e}
+-\beta\left(\mu_{_{e}}^{0}-\mu_{0}^{0}-e\mu_{H^{+}}\right)=-\beta\left(q_{e}-q_{0}\right)\Psi(r)+\mbox{ln}\left(\frac{f_{j}(r)}{1-\sum_{e=1}^{m_{e}}f_{e}(r)}\right)\;,e=1,...,m_{e}\label{eq:gral_dissos}
 \end{equation}
 
 \end_inset
@@ -2900,12 +2884,31 @@ De manera general la expresión que se obtiene para el grado de disociación
 \end_layout
 
 \begin_layout Standard
-Una vez que se conocen los equilibrios químicos presentes en los monómeros
- de las cadenas poliméricas que funcionalizan el interior del nanocanal,
- es posible escribir de forma explícita las expresiones para los potenciales
- químicos.
- A continuación se presentan los dos ejemplos explorados durante el transcurso
- de este trabajo.
+La ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gral_dissos"
+
+\end_inset
+
+ es importante por que es una relación general para cualquier equilibrio
+ químico de la forma (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:equlibrio_1"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:equilibrio_n"
+
+\end_inset
+
+).
+ A continuación se presentan dos ejemplos de polielectrolitos explorados
+ durante el transcurso de este trabajo.
 \end_layout
 
 \begin_layout Paragraph
@@ -3053,7 +3056,7 @@ Para la implementación numérica se utilizó la siguiente expresión,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boxed{{f_{1}(r)=\frac{1}{1+\nicefrac{e^{\beta\Delta\mu_{OH^{-}}}e^{\beta q_{1}\psi(r)}}{K_{b}}}}}\label{eq:f1_PAH_program}
+\boxed{{f_{1}(r)=\frac{1}{1+e^{\beta\Delta\mu_{OH^{-}}}e^{\beta q_{1}\psi(r)}\frac{1}{K_{b}}}}}\label{eq:f1_PAH_program}
 \end{equation}
 
 \end_inset
@@ -3092,9 +3095,17 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig_Cap_paper_PMEP/monomer_cartoon_H.png
+	lyxscale 20
+	scale 30
+
+\end_inset
+
 
 \end_layout
 
@@ -3175,11 +3186,20 @@ las expresiones explícitas son,
 
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 NOTA: A la izquierda el potencial químico del protón 
 \begin_inset Formula $H^{+}$
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
  
 \end_layout
 
@@ -3213,7 +3233,7 @@ K_{i}=e^{-\beta\Delta G_{i}},i=1,2
 
 \end_inset
 
-con estas ecuaciones es posible es posible derivar 
+con estas ecuaciones: 
 \begin_inset Formula $-\mbox{ln}\left(K_{1}\right)=\beta\Delta G_{1}=\beta\left(\mu_{-1}^{0}+\mu_{H^{+}}^{0}-\mu_{0}^{0}\right)$
 \end_inset
 
@@ -3236,9 +3256,9 @@ reference "eq:fs_minimization-2"
 
 \end_inset
 
-, muestran a la derecha como el potencial eléctrico y los grados de disociación
- están acoplados, de forma tal de mantener constante el potencial químico
- de los protones.
+, muestran en los términos de la derecha como el potencial eléctrico y los
+ grados de disociación están acoplados, de forma tal de mantener constante
+ el potencial químico de los protones.
  Es posible encontrar una expresión explícita para los grados de disociación,
  
 \begin_inset Formula $f_{-1}(r)$
@@ -3277,15 +3297,15 @@ Las expresiones para los grados de disociación vienen de escribir primero,
 \end_inset
 
 Se relaciona cada grado de disociación con la forma: 
-\begin_inset Formula $f_{0}(r)=\nicefrac{1}{X}$
+\begin_inset Formula $f_{0}(r)=\frac{1}{X}$
 \end_inset
 
 , 
-\begin_inset Formula $f_{-1}(r)=\nicefrac{K_{1}e^{-\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-1}\Psi(r)}}{X}$
+\begin_inset Formula $f_{-1}(r)=\frac{1}{X}K_{1}e^{-\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-1}\Psi(r)}$
 \end_inset
 
  y 
-\begin_inset Formula $f_{-2}(r)=\nicefrac{K_{1}K_{2}e^{-2\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-2}\Psi(r)}}{X}$
+\begin_inset Formula $f_{-2}(r)=\frac{1}{X}K_{1}K_{2}e^{-2\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-2}\Psi(r)}$
 \end_inset
 
 .
@@ -3409,9 +3429,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-Ahora es posible escribir las expresiones para los grados de disociación
- en términos de los valores de bulk.
- usando las ecuaciones 
+Usando las ecuaciones 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:rho_s_bulk-1"
@@ -3425,7 +3443,9 @@ reference "eq:rho_H_bulk-2"
 
 \end_inset
 
-.
+, es posible escribir las expresiones para los grados de disociación en
+ términos de los valores de bulk.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3462,6 +3482,10 @@ f_{-2}(r)=f_{0}(r)\left(\frac{\left(\phi_{w}^{b}\right)^{\frac{v_{h^{+}}}{v_{w}}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Creo que estas expresiones son mejores para escribir el programa por que
  la dependencia con la carga del monómero y los valores de bulk (input del
  programa) es explícita.
@@ -3498,6 +3522,11 @@ reference "eq:f2_mario"
 ), estas expresiones son mejores para las comunicaciones científicas.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
@@ -3528,6 +3557,11 @@ f_{-2}(r)=f_{0}(r)\left(\frac{\phi_{w}(r)^{\frac{v_{H^{+}}}{v_{w}}}}{\phi_{H^{+}
 
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 En todos los casos es necesario resolver el valor del potencial químico
  del agua 
 \begin_inset Formula $\Delta\mu_{w}$
@@ -3574,6 +3608,11 @@ reference "eq:rho_s_bulk-1"
 .
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Optimización con respecto a la probabilidad de las conformaciones poliméricas:
  
@@ -3584,8 +3623,11 @@ Optimización con respecto a la probabilidad de las conformaciones poliméricas:
 \end_layout
 
 \begin_layout Standard
-Para la función probabilidad de conformaciones de polímero encontramos que,
- 
+Para la función probabilidad de conformaciones 
+\begin_inset Formula $P(\alpha)$
+\end_inset
+
+ de polímero encontramos que, 
 \end_layout
 
 \begin_layout Standard
@@ -3646,11 +3688,11 @@ Si sabemos el grado de disociación independiente (
 \end_inset
 
 ), el potencial eléctrico (
-\begin_inset Formula $\psi(r)$
+\begin_inset Formula $\Psi(r)$
 \end_inset
 
-) y la presión osmótica o la fracción de volumen del solvente (
-\begin_inset Formula $\phi_{w}(r)$
+) y la presión osmótica (
+\begin_inset Formula $\pi(r)$
 \end_inset
 
 ), es posible calcular la probabilidad de la conformación 
@@ -4177,7 +4219,7 @@ reference "eq:PAH"
  Mirando las expresiones 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:equliibrio_1"
+reference "eq:equlibrio_1"
 
 \end_inset
 
@@ -4538,7 +4580,7 @@ La expresión para la probabilidad de conformación
 
 \begin_layout Standard
 Al hacerlo se simplifican los términos con el potencial electrostático (ver
- apuntes DONDE!!!).
+ apuntes DONDE!!!??).
  y queda la expresión:
 \end_layout
 
