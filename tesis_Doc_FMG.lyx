@@ -35,6 +35,9 @@
 theorems-ams
 figs-within-sections
 \end_modules
+\begin_includeonly
+tesis_Cap_teoria_molecular.lyx
+\end_includeonly
 \maintain_unincluded_children true
 \language spanish
 \language_package default
