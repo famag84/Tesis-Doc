@@ -94,7 +94,8 @@ Brushes Polipróticos
 
 \end_inset
 
-Efectos de Confinamiento en Nanocanales Modificados Con Brushes Polipróticos
+Adsorción de Polielectrolitos Débiles: Efectos de la Fuerza Iónica en la
+ Carga Superficial de Nanocanales Modificados
 \end_layout
 
 \begin_layout Standard
@@ -130,10 +131,6 @@ Cuales son mis hipótesis?
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -141,9 +138,74 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="bottom">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="middle" width="20text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(A)
 \begin_inset Graphics
-	filename fig_Cap_paper_PMEP/fig1_system_2016.png
-	lyxscale 40
+	filename caricaturas_PAH_adsorption/scheme_1.png
+	lyxscale 10
+	scale 5
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/caricaturas/PAH_chemEq.png
+	lyxscale 20
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(B)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/caricaturas/wall_ChemEq.png
+	lyxscale 20
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(C)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/caricaturas/dissos_wall_polymer.png
+	lyxscale 20
 	width 50page%
 
 \end_inset
@@ -155,120 +217,13 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Esquema de una sección del nanocanal modificado con un poliácido débil (poly(2-(
-methacryloyloxy)- ethyl-phosphate)), PMEP, anclado a la pared interna del
- nanocanal.
- La solución dentro del nanocanal contiene moléculas de agua, cationes (círculos
- azules) y aniones (círculos rojos) provenientes de la sal 
-\begin_inset Formula $KCl$
-\end_inset
-
-, aniones 
-\begin_inset Formula $OH-$
-\end_inset
-
- y cationes 
-\begin_inset Formula $H_{3}O+$
-\end_inset
-
-.
- Cada monómero de PMEP tiene tres estados químicos posibles: 
-\begin_inset Formula $PMEPH_{2}$
-\end_inset
-
- (
-\begin_inset Formula $AH_{2}$
-\end_inset
-
- ), 
-\begin_inset Formula $PMEPH^{−}$
-\end_inset
-
- (
-\begin_inset Formula $AH^{−}$
-\end_inset
-
- ), 
-\begin_inset Formula $PMEP^{2−}$
-\end_inset
-
- (
-\begin_inset Formula $A^{2−}$
-\end_inset
-
- ).
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:fig1_PMEP_esquema"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename fig_Cap_paper_PMEP/fig2_geometries_comparition.png
-	lyxscale 40
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Los paneles (a), (b), y (c) muestran esquemas con las geometrías exploradas.
- Estos esquemas no están en escala, recordar que 
-\begin_inset Formula $L=12\mu m$
-\end_inset
-
- y 
-\begin_inset Formula $D\leq600nm$
-\end_inset
-
-.
- Localmente cada geometría puede ser aproximada por cilindros debido a la
- relación de aspecto del nanocanal.
- El panel (d) muestra una vista transversal del nanocanal.
- Todas las geometrías exploradas tienen simetría cilíndrica, es decir, las
- inhomogeneidades se encuentran únicamente en la dirección radial 
-\begin_inset Formula $\hat{r}$
-\end_inset
-
- y en la dirección del eje principal del nanocanal 
-\begin_inset Formula $\hat{z}$
-\end_inset
-
-.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:fig_2PMEP"
-
-\end_inset
-
-
+El sistema en estudio es un nanocanal cilíndrico modificado con una capa
+ de PAH.
+ A) Muestra una vista longitudinal y transversal del nanocanal cilíndrico.
+ B) Muestra los equilibrios químicos del monómero de PAH y del grupo carboxilato
+ presente en la pared del nanocanal.
+ C) Gráfico del grado de disociación promedio del polímero y la pared como
+ función del pH de la solución.
 \end_layout
 
 \end_inset
@@ -282,16 +237,359 @@ name "fig:fig_2PMEP"
 \end_layout
 
 \begin_layout Section
-\begin_inset Argument 1
-status collapsed
+Resultados
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
-Conductancia de Nanocanales
+\align center
+(A)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_10_19_csalt_0.1_sigmaq_0.1_sigmaeff_vs_D.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(B)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_10_19_csalt_0.01_sigmaq_0.1_sigmaeff_vs_D.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(C)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_10_19_csalt_0.0001_sigmaq_0.1_sigmaeff_vs_D.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Densidad de carga efectiva en la superficie del nanocanal, definida como
+ 
+\begin_inset Formula $\sigma_{eff}=N\sigma_{pol}f_{1}+\sigma_{wall}$
+\end_inset
+
+ en función del diámetro del nanocanal.
+ Las curvas pertenecen a distintos valores de la concentración de polímero
+ en solución, desde 
+\begin_inset Formula $C_{pol}=10^{-7}M$
+\end_inset
+
+ hasta 
+\begin_inset Formula $C_{pol}=1M$
+\end_inset
+
+.
+ (A)
+\begin_inset Formula $C_{salt}=10^{-1}M$
+\end_inset
+
+, (B)
+\begin_inset Formula $C_{salt}=10^{-2}M$
+\end_inset
+
+ y (C) 
+\begin_inset Formula $C_{salt}=10^{-4}M$
+\end_inset
+
+.
+ El eje de la derecha muestra la densidad de polímero adsorvido en la superficie.
+ Otros parámetros: 
+\begin_inset Formula $N=50$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{q}=0.1$
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
-Conductancia de Nanocanales con geometrías Cilíndricas y No-Cilíndricas
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+(A)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_19_csalt_0.00001_sigmaq_0.1_D_6_sigmapol_vs_pH.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(B)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_26_csalt_0.1_sigmaq_0.1_D_6_sigmapol_vs_pH_D6.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(C)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_26_csalt_1.0_sigmaq_0.1_D_6_sigmapol_vs_pH.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Densidad superficial de polímero (número de cadenas por nm2) en función
+ del pH de la solución.
+ La concentración de polímero en solución fija el potencial químico del
+ polímero.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_avpol_vs_r_cpol_1M_D20.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fracción de volumen ocupada por el polímero en función de la distancia al
+ centro del nanocanal.
+ Las curvas corresponden a los valores de concentración de sal 
+\begin_inset Formula $C_{salt}=1.0M$
+\end_inset
+
+, 
+\begin_inset Formula $C_{salt}=0.1M$
+\end_inset
+
+, 
+\begin_inset Formula $C_{salt}=0.01M$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{salt}=0.001M$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+(A1)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_csalt_0.001_sigmaq_0.1_D_10_potenz_vs_r.eps
+	lyxscale 80
+	width 50text%
+
+\end_inset
+
+ (A2)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_csalt_0.001_sigmaq_0.1_D_100_potenz_vs_r.eps
+	lyxscale 80
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(B1)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_csalt_1.0_sigmaq_0.1_D_10_potenz_vs_r.eps
+	lyxscale 80
+	width 50text%
+
+\end_inset
+
+ (B2)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_csalt_1.0_sigmaq_0.1_D_100_potenz_vs_r.eps
+	lyxscale 80
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Potencial electrostático dentro del nanocanal en función de la distancia
+ al centro del nanocanal.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_poro_conico_rectificacion.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Corriente iónica en función del voltaje aplicado.
+ Entre los extremos de un nanocanal cónico largo (
+\begin_inset Formula $L\gg D$
+\end_inset
+
+),modificado con una capa de PAH.
+ La distribución de PAH es no uniforme y sigue las predicciones hechas por
+ la teoría molecular.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
