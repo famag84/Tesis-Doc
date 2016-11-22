@@ -356,7 +356,7 @@ pK_{1}^{theo}=pK^{exp}-log_{10}\left(0.602v_{\omega}\right)\label{eq:relacion_te
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Simetría en las ecuaciones del grado de disociación
 \end_layout
 
@@ -365,7 +365,15 @@ Elegimos escribir siempre los estados de carga neutra como reactivos (a
  la izquierda del equilibrio químico) y las especies cargadas como productos
  (a la derecha del equilibrio químico).
  De esta forma la expresión del grado de disociación tiene siempre la misma
- estructura y el acoplamiento con protones y oxidrilos es obvia.
+ estructura y el acoplamiento con protones 
+\begin_inset Formula $H^{+}$
+\end_inset
+
+y oxidrilos 
+\begin_inset Formula $OH^{-}$
+\end_inset
+
+, es explícita.
  Por ejemplo, 
 \begin_inset Separator latexpar
 \end_inset
@@ -470,7 +478,7 @@ siempre es
 \begin_layout Standard
 \begin_inset Formula 
 \[
-f_{b1}=\frac{\left[BH^{+}\right]}{\left[B\right]+\left[BH^{+}\right]}=\frac{K_{1}}{[OH^{-}]+K_{1}}
+f_{b1}=\frac{\left[eBH^{+}\right]}{\left[B\right]+\left[BH^{+}\right]}=\frac{K_{1}}{[OH^{-}]+K_{1}}
 \]
 
 \end_inset
@@ -488,12 +496,12 @@ Con las últimas expresiones es fácil ver la carga del estado 1 del monómero.
 \begin_inset Formula $H^{+}$
 \end_inset
 
-) entonces el monomero está cargado positivamente (negativamente).
+) entonces el monómero está cargado positivamente (negativamente).
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 NOTE: Los químicos piensan en los grupos que la molécula pierde para estar
@@ -525,6 +533,10 @@ Relaciones entre las variables de bulk experimentales y las variables de
 \end_layout
 
 \begin_layout Standard
+La concentración molar de sal en bulk
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \left[C_{salt}\right]=\frac{mol}{dm^{3}}
@@ -536,7 +548,8 @@ Relaciones entre las variables de bulk experimentales y las variables de
 \end_layout
 
 \begin_layout Standard
-then 
+La fracción de volumen ocupado por los iones debido a la sal se calcula
+ como:
 \begin_inset Formula 
 \[
 \phi_{ion}=C_{salt}\frac{6.02\times10^{23}\#}{mol}\frac{1dm^{3}}{10^{24}nm^{3}}=C_{salt}\times0.602\times v_{ion}
@@ -548,7 +561,7 @@ then
 \end_layout
 
 \begin_layout Standard
-Relación con el pH,
+Relación con el pH:
 \end_layout
 
 \begin_layout Standard
@@ -567,9 +580,9 @@ Condiciones de contorno
 \end_layout
 
 \begin_layout Standard
-El compartamiento del potencial electrostatico en el centro del canal y
+El comportamiento del potencial electrostático en el centro del canal y
  en pared cargada tiene las siguientes propiedades.
- En el centro del canal por cuestiones de simetría el campo electrostatico
+ En el centro del canal por cuestiones de simetría el campo electrostático
  debe ser cero (no hay ninguna dirección privilegiada, simetría angular).
  Por lo tanto es apropiada la condición de contorno: 
 \end_layout
@@ -586,7 +599,7 @@ El compartamiento del potencial electrostatico en el centro del canal y
 \end_layout
 
 \begin_layout Standard
-En cambio sobre la pared del nanocanal puede haber una distribucion de carga
+En cambio sobre la pared del nanocanal puede haber una distribución de carga
  que asumimos homogénea en la dirección angular 
 \begin_inset Formula $\hat{\theta}$
 \end_inset
@@ -596,7 +609,7 @@ En cambio sobre la pared del nanocanal puede haber una distribucion de carga
 \begin_inset Formula $E$
 \end_inset
 
- a traves de esta superficie se calcula utilización la regla de gauss: 
+ a través de esta superficie se calcula utilización la regla de gauss: 
 \end_layout
 
 \begin_layout Standard
@@ -611,15 +624,15 @@ E_{2}-E_{1}=\frac{\sigma_{q}}{\xi}
 \end_layout
 
 \begin_layout Standard
-Como el campo electrico en 2 debe ser cero (es una condicion que exigimos
- a priori pero podria no ser cierta ya que el sustrato del nanocanal no
- es un metal sino que es un polimero).
+Como el campo eléctrico en 2 debe ser cero (es una condición que exigimos
+ a priori pero podría no ser cierta ya que el sustrato del nanocanal no
+ es un metal sino que es un polímero).
  
 \begin_inset Formula $E_{2}=0$
 \end_inset
 
 .
- Ademas como 
+ Además como 
 \begin_inset Formula $E_{1}=-\frac{\partial\Psi}{\partial r}=-\frac{\Psi_{N}-\Psi_{N-1}}{\delta}$
 \end_inset
 
@@ -634,7 +647,7 @@ E_{1}=-\frac{\sigma_{q}}{\xi}=-\frac{\Psi_{N}-\Psi_{N-1}}{\delta}
 
 \end_inset
 
-y por lo tanto nuestra condicion de contorno es
+y por lo tanto nuestra condición de contorno es
 \end_layout
 
 \begin_layout Standard

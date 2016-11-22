@@ -112,19 +112,27 @@ En este trabajo se exploran las propiedades estructurales de nanocanales
 \end_layout
 
 \begin_layout Standard
-El desarrollo de las computadoras durante el siglo XX ha permitido desarrollar
- distintas estrategias numérico/computacionales para la comprensión del
- comportamiento macroscópico de sistemas complejos y su conexión con las
- propiedades microscópicas.
- Estos avances han permitido a los investigadores diseñar los sistemas en
- escalas cada vez más pequeñas.
- Las técnicas experimentales también se han desarrollado permitiendo medir
- cada vez con mayor detalle.
+El desarrollo de las computadoras durante el siglo XX permitió desarrollar
+ distintas estrategias numérico/computacionales para resolver ecuaciones
+ sin solución analítica (cálculo numérico), simular la evolución temporal
+ de sistemas de pocas partículas (dinámica molecular) y predecir propiedades
+ termodinámicas encontrando las configuraciones de equilibrio (Métodos Monte
+ Carlo).
+ Estas técnicas computacionales mejoraron lo suficiente como para poder
+ predecir el comportamiento macroscópico y su conexión con las propiedades
+ microscópicas de sistemas complejos.
+ 
+\end_layout
+
+\begin_layout Standard
+En paralelo las técnicas experimentales se desarrollaron permitiendo tener
+ mayor control del detalle molecular.
  El acceso a nueva información hace necesario el desarrollo de nuevas herramient
 as teórico/computacionales.
  Estas herramientas deben explicar desde los aspectos fundamentales el comportam
 iento de sistemas complejos y predecir las respuestas macroscópicas que
  se obtienen experimentalmente.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -154,14 +162,13 @@ En este trabajo se utiliza un enfoque teórico que combina viejos y fructíferos
  diferenciales[links a sundials/métodos numéricos].
  El objetivo es obtener las propiedades macroscópicas del sistema en estado
  de equilibrio.
- Para ello se escribe la energía libre del sistema (
+ Para ello se escribe la energía libre del sistema, 
 \begin_inset Formula $A$
 \end_inset
 
-) donde se incorpora el detalle molecular de cada una de las especies y
- las interacciones relevantes.
- Además, se incorporan las condiciones que impone el entorno sobre la energía
- libre del sistema, por ejemplo el 
+, teniendo en cuenta todas las interacciones relevantes.
+ Se consideran las condiciones que impone el entorno sobre la energía libre
+ del sistema, por ejemplo el 
 \begin_inset Formula $pH$
 \end_inset
 
@@ -190,7 +197,8 @@ ones de masa y de carga, el potencial electrostático, etc).
 \end_layout
 
 \begin_layout Standard
-El sistema que quiero abordar se representa gráficamente en la figura 
+El sistema que se investigó en este trabajo se representa gráficamente en
+ la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Esquema-del-nanocanal"
@@ -714,7 +722,7 @@ donde
 \end_inset
 
  numera todos los estados de carga del monómero en cuestión.
- Por ello la densidad de carga media se escribe como, 
+ La densidad de carga promedio se escribe como, 
 \end_layout
 
 \begin_layout Standard
@@ -818,7 +826,7 @@ a_{i}=e^{\left(\mu_{i}-\mu_{i}^{0}\right)/k_{B}T}
 
 \end_inset
 
-En este trabajo las actividades de los reactivos y los productos se aproximan
+Típicamente las actividades de los reactivos y la de los productos se aproximan
  con la concentración molar de las especies.
  Escribiremos la concentración molar como el símbolo que representa a la
  especie encerrado entre corchetes, por ejemplo, la concentración molar
@@ -955,7 +963,7 @@ Para nombrar los estados químicos de una unidad monomérica utilizaremos
 \end_layout
 
 \begin_layout Standard
-Asumimos equilibrio químico local por ello escribimos la fracción de disociación
+Como asumimos equilibrio químico local escribimos la fracción de disociación
  dependiente de la coordenada radial: 
 \begin_inset Formula $f_{q}(r)$
 \end_inset
@@ -978,11 +986,7 @@ Asumimos equilibrio químico local por ello escribimos la fracción de disociaci
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-De forma muy general podemos escribir la energía química como:
+ De forma muy general podemos escribir la energía química como:
 \end_layout
 
 \begin_layout Standard
@@ -1172,8 +1176,85 @@ reference "eq:Uchem_general"
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+colorbox{red}{
+\end_layout
+
+\end_inset
+
 DE FORMA TAL QUE SE PUEDEN ENCONTRAR EXPRESIONES MAS AGRADABLES.
- EXPLICAR MEJOR!
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+colorbox{red}{
+\end_layout
+
+\end_inset
+
+ACA QUIERO PONER LAS EXPRESIONES GENERALES PERO EN TERMINOS 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+colorbox{red}{
+\end_layout
+
+\end_inset
+
+DE LAS CONSTANTES DE EQUILIBRIO.!
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1463,7 +1544,23 @@ donde
 \end_inset
 
  son el volumen y el potencial químico standard de las especies, 
-\begin_inset Formula $i=Cl^{-},K^{+},w,H^{+},OH^{-}$
+\begin_inset Formula $i=Cl^{-}$
+\end_inset
+
+, 
+\begin_inset Formula $K^{+}$
+\end_inset
+
+, 
+\begin_inset Formula $w$
+\end_inset
+
+, 
+\begin_inset Formula $H^{+}$
+\end_inset
+
+, 
+\begin_inset Formula $OH^{-}$
 \end_inset
 
 .
@@ -3142,7 +3239,7 @@ Para la implementación numérica se utilizó la siguiente expresión,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boxed{{f_{1}(r)=\frac{1}{1+e^{\beta\Delta\mu_{OH^{-}}}e^{\beta q_{1}\psi(r)}\frac{1}{K_{b}}}}}\label{eq:f1_PAH_program}
+f_{1}(r)=\frac{1}{1+e^{\beta\Delta\mu_{OH^{-}}}e^{\beta q_{1}\psi(r)}\frac{1}{K_{b}}}\label{eq:f1_PAH_program}
 \end{equation}
 
 \end_inset
@@ -3464,7 +3561,7 @@ f_{0}(r)=\frac{1}{1+K_{1}e^{-\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-1}\Psi(r)}+K_{
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boxed{f_{-1}(r)=f_{0}(r)K_{1}exp\left\{ -\beta\Delta\mu_{H^{+}}\right\} exp\left\{ -\beta q_{-1}\Psi(r)\right\} }\label{eq:f1_muH}
+f_{-1}(r)=f_{0}(r)K_{1}exp\left\{ -\beta\Delta\mu_{H^{+}}\right\} exp\left\{ -\beta q_{-1}\Psi(r)\right\} \label{eq:f1_muH}
 \end{equation}
 
 \end_inset
@@ -3475,7 +3572,7 @@ f_{0}(r)=\frac{1}{1+K_{1}e^{-\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-1}\Psi(r)}+K_{
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boxed{f_{-2}(r)=f_{0}(r)K_{1}K_{2}exp\left\{ -2\beta\Delta\mu_{H^{+}}\right\} exp\left\{ -2\beta q_{-1}\Psi(r)\right\} }\label{eq:f2_muH}
+f_{-2}(r)=f_{0}(r)K_{1}K_{2}exp\left\{ -2\beta\Delta\mu_{H^{+}}\right\} exp\left\{ -2\beta q_{-1}\Psi(r)\right\} \label{eq:f2_muH}
 \end{equation}
 
 \end_inset
@@ -3484,6 +3581,10 @@ f_{0}(r)=\frac{1}{1+K_{1}e^{-\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-1}\Psi(r)}+K_{
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -3507,6 +3608,11 @@ status open
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3720,7 +3826,8 @@ Para la función probabilidad de conformaciones
 \begin_inset Formula 
 \begin{eqnarray*}
 0 & = & \sigma\left[\mbox{ln}\left(P(\alpha)\right)+1\right]-\sigma\left(1+\mbox{ln}\left(\frac{1}{Q}\right)\right)\\
- &  & +\sigma\int dr\frac{Z(r)}{Z(R)}\left\{ \sum_{e}\beta q_{e}f_{e}(r)n_{p}(r;\alpha)\Psi(r)+\beta n_{p}(r;\alpha)v_{p}\pi(r)+\sum_{e}f_{e}(r)\left[\mbox{ln}(f_{e}(r))+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\right\} 
+ &  & +\sigma\int dr\frac{Z(r)}{Z(R)}\Bigg\{\sum_{e}\beta q_{e}f_{e}(r)n_{p}(r;\alpha)\Psi(r)+\beta n_{p}(r;\alpha)v_{p}\pi(r)\\
+ &  & +\sum_{e}f_{e}(r)\left[\mbox{ln}(f_{e}(r))+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\Bigg\}
 \end{eqnarray*}
 
 \end_inset
@@ -3855,7 +3962,7 @@ Es importante observar que
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boxed{p(r_{j})=e^{-\left(\beta\left(\sum_{e=1}^{m_{e}}q_{e}f_{e}(r_{j})\right)\Psi(r_{j})+\beta\pi(r_{j})v_{p}+\sum_{e=1}^{m_{e}}f_{e}(r_{j})\left[\mbox{ln}\left(f_{e}(r_{j})\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\right)}}\label{eq:probability_of_layer_rj}
+p(r_{j})=e^{-\left(\beta\left(\sum_{e=1}^{m_{e}}q_{e}f_{e}(r_{j})\right)\Psi(r_{j})+\beta\pi(r_{j})v_{p}+\sum_{e=1}^{m_{e}}f_{e}(r_{j})\left[\mbox{ln}\left(f_{e}(r_{j})\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\right)}\label{eq:probability_of_layer_rj}
 \end{equation}
 
 \end_inset
@@ -3863,7 +3970,7 @@ Es importante observar que
 acomodando la expresión nos queda, 
 \begin_inset Formula 
 \begin{equation}
-\boxed{p(r_{j})=e^{-\left(\beta\left(\sum_{e=1}^{m_{e}}q_{e}f_{e}(r_{j})\right)\Psi(r_{j})+\sum_{e=1}^{m_{e}}f_{e}(r_{j})\left[\mbox{ln}\left(f_{e}(r_{j})\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\right)}\frac{1}{\phi_{w}(r)^{\nicefrac{v_{p}}{v_{w}}}}}\label{eq:probability_of_layer_rj-1}
+p(r_{j})=e^{-\left(\beta\left(\sum_{e=1}^{m_{e}}q_{e}f_{e}(r_{j})\right)\Psi(r_{j})+\sum_{e=1}^{m_{e}}f_{e}(r_{j})\left[\mbox{ln}\left(f_{e}(r_{j})\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\right)}\frac{1}{\phi_{w}(r)^{\nicefrac{v_{p}}{v_{w}}}}\label{eq:probability_of_layer_rj-1}
 \end{equation}
 
 \end_inset
@@ -3879,7 +3986,7 @@ Y ahora sí teniendo las expresiones obtenidas al minimizar la energía con
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\boxed{p(r_{j})=e^{-\left(\left[\mbox{ln}\left(f_{0}(r_{j})\right)+\beta\left(\mu_{0}^{0}-\mu_{OH^{-}}\right)\right]\right)}\frac{1}{\phi_{w}(r)^{\nicefrac{v_{p}}{v_{w}}}}}
+p(r_{j})=e^{-\left(\left[\mbox{ln}\left(f_{0}(r_{j})\right)+\beta\left(\mu_{0}^{0}-\mu_{OH^{-}}\right)\right]\right)}\frac{1}{\phi_{w}(r)^{\nicefrac{v_{p}}{v_{w}}}}
 \]
 
 \end_inset
@@ -4782,7 +4889,31 @@ La expresión para la probabilidad de conformación
 
 \begin_layout Standard
 Al hacerlo se simplifican los términos con el potencial electrostático (ver
- apuntes DONDE!!!??).
+ apuntes 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+colorbox{red}{
+\end_layout
+
+\end_inset
+
+DONDE!!!??
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+).
  y queda la expresión:
 \end_layout
 
@@ -4802,6 +4933,10 @@ Al hacerlo se simplifican los términos con el potencial electrostático (ver
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Depués de haber contado las expresiones generales en los equilibrios químicos
  se detallan las expresiones para las especies químicas exploradas PAH y
  PMEP.
@@ -4814,6 +4949,11 @@ Expresiones para el PAH
 
 \begin_layout Subsection*
 Expresiones para el PMEP
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

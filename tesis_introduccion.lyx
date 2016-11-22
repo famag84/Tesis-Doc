@@ -146,6 +146,35 @@ reference "fig:resistencias en serie"
 \end_layout
 
 \begin_layout Enumerate
+Qué significa hacer ciencia con una computadora?Cómo se hace ciencia con
+ una computadora? Buenas prácticas? Open-source? Quién checkea los algoritmos?
+ Experimentos vs teoria, y las simulaciones? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Reproducibilidad
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Los sistemas complejos, la biología y las propiedades emergentes.
+ (el rol de la compu)
+\end_layout
+
+\begin_layout Enumerate
+Un sistema biológico de interés, la célula
+\end_layout
+
+\begin_layout Enumerate
+Los nanocanales
+\end_layout
+
+\begin_layout Enumerate
+La Materia Blanda
+\end_layout
+
+\begin_layout Enumerate
 Qué es la nanotecnología, la materia blanda, la iontrónica?
 \end_layout
 
@@ -200,6 +229,13 @@ Resumen de avances de los últimos años.
 \begin_layout Enumerate
 La contribución de esta tesis.
  
+\end_layout
+
+\begin_layout Standard
+Motivación: Cuál es el problema, con qué está relacionado.
+ Por qué es difícil.
+ Cuál es la dificultad.
+ Quienes se beneficiarían con la solución? 3 años es mucho tiempo!
 \end_layout
 
 \end_body

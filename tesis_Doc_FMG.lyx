@@ -37,6 +37,8 @@ figs-within-sections
 \end_modules
 \begin_includeonly
 tesis_Cap_teoria_molecular.lyx
+tesis_apendiceA_Soluciones_de_Bulk.lyx
+tesis_Cap_paper_PMEP.lyx
 \end_includeonly
 \maintain_unincluded_children true
 \language spanish
@@ -271,7 +273,7 @@ filename "tesis_modelo_RIS_conformaciones_de_cadena.lyx"
 
 \begin_layout Standard
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Propiedades de Transporte G y alpha?
@@ -306,6 +308,16 @@ filename "tesis_Cap_paper_PMEP.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "tesis_Pol_chem_potential_completo_1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_conclusiones.lyx"
 
 \end_inset
 
@@ -396,21 +408,21 @@ reference "eq:GRAL_P_expression"
 \end_layout
 
 \begin_layout Standard
-Using (
+Usando la ecuación (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:f_1"
 
 \end_inset
 
-) and (
+) y (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:f_2"
 
 \end_inset
 
-), we get a useful relation
+), se obtiene la relación 
 \end_layout
 
 \begin_layout Standard
@@ -421,7 +433,7 @@ reference "eq:f_2"
 
 \end_inset
 
-Working on expression:
+Trabajando con la expresión se obtiene: 
 \end_layout
 
 \begin_layout Standard
@@ -437,21 +449,21 @@ Working on expression:
 \end_layout
 
 \begin_layout Standard
-using (
+usando (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:f_1"
 
 \end_inset
 
-) and (
+) y (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:elec_field_and_fraction_charge_pol"
 
 \end_inset
 
-) will appear 
+) aparece el potencial electrostático 
 \begin_inset Formula $\psi(r)$
 \end_inset
 
@@ -471,7 +483,7 @@ reference "eq:elec_field_and_fraction_charge_pol"
 \end_layout
 
 \begin_layout Standard
-simplifying and rearranging, 
+simplicando y reordenando términos,
 \end_layout
 
 \begin_layout Standard
@@ -486,7 +498,7 @@ simplifying and rearranging,
 \end_layout
 
 \begin_layout Standard
-Then:
+Entonces: 
 \end_layout
 
 \begin_layout Standard
@@ -503,14 +515,14 @@ f_{1}(r)\left[\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right]+f_{2}(r)\l
 \end_layout
 
 \begin_layout Standard
-Equations (
+Las ecuaciones (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:usefull_eq_A"
 
 \end_inset
 
-) results in eq.(
+) permiten escribir la ecuación (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:GRAL_P_expression"
