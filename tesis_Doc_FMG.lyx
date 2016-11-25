@@ -297,6 +297,16 @@ filename "tesis_Cap_Propiedades_de_transporte.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
+filename "tesis_Cap_adsorption.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
 filename "tesis_Cap_paper_PMEP.lyx"
 
 \end_inset
