@@ -874,7 +874,7 @@ Una expresión que se obtiene por recurrencia es la siguiente
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\sum_{n=1}^{j}\text{ln}\left(K_{n}\right)=\beta\left(\mu\text{⁰}_{AH_{m}}-\mu\text{⁰}_{AH_{m-j}^{j-}}-j\mu\text{⁰}_{H^{+}}\right)\label{eq:energia_constantes_de_equilibrio}
+\sum_{n=1}^{j}\text{ln}\left(K_{n}\right)=\beta\left(\mu\text{⁰}_{AH_{m}}-\mu\text{⁰}_{AH_{m-j}^{j-}}-\left(n_{H^{+},0}-n_{H^{+},j}\right)\mu_{H^{+}}^{0}\right)\label{eq:energia_constantes_de_equilibrio}
 \end{equation}
 
 \end_inset
@@ -885,6 +885,46 @@ Una expresión que se obtiene por recurrencia es la siguiente
 \begin_layout Standard
 donde 
 \begin_inset Formula $\beta=\nicefrac{1}{k_{B}T}$
+\end_inset
+
+ y 
+\begin_inset Formula $n_{H^{+},j}$
+\end_inset
+
+ representa el número de protones en el estado 
+\begin_inset Formula $j$
+\end_inset
+
+ (
+\begin_inset Formula $AH_{m-j}^{j-}$
+\end_inset
+
+, 
+\begin_inset Formula $j=0$
+\end_inset
+
+ representa el estado 
+\begin_inset Formula $AH_{m}$
+\end_inset
+
+).
+ O lo que es lo mismo,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta\left(\mu_{0}^{0}-\mu_{e}^{0}\right)=\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)+\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\label{eq:la_posta_en_mus}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con 
+\begin_inset Formula $e\ge1$
 \end_inset
 
 .
@@ -1190,7 +1230,7 @@ reference "subsec:Chemical-equilibria"
 \end_layout
 
 \begin_layout Subsection
-Contribuciones entrópicas 
+Contribuciones Entrópicas 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1335,13 +1375,24 @@ donde
 \end_layout
 
 \begin_layout Standard
-En el capítulo zaraza consideramos un nanocanal modificado con un cepillo
- polimérico.
- En ese caso no hay contribución de las cadenas del polímero a la entropía
- de mezcla.
- En el capítulo PAH en cambio, se consideran cadenas libres y por lo tanto
- se debe considerar el término de entropía traslacional debida a las cadenas
- poliméricas.
+En el capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Efectos-de-Confinamiento"
+
+\end_inset
+
+ consideramos un nanocanal modificado con un cepillo polimérico, en ese
+ caso no hay contribución de las cadenas del polímero a la entropía de mezcla.
+ En el capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Adsorción-de-Polielectrolitos"
+
+\end_inset
+
+ en cambio, se consideran cadenas libres y por lo tanto se debe considerar
+ el término de entropía traslacional debida a las cadenas poliméricas.
  En analogía con los términos anteriores la entropía de mezcla de cadenas
  libres se escribe, 
 \end_layout
@@ -1360,6 +1411,17 @@ donde
 
  es la densidad de cadenas en 
 \begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+.
+ En esta introducción teórica nos ocuparemos de cadenas ancladas a la superficie
+ interna del nanocanal.
+ Los detalles sobre la descripción teórica de cadenas libres se desarrollaron
+ en el capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Adsorción-de-Polielectrolitos"
+
 \end_inset
 
 .
@@ -1386,48 +1448,6 @@ reference "chap:Aproximación-MF"
 
 \end_inset
 
-.
- Puede escribirse de forma general la entropía conformacional de cadenas
- poliméricas libres como,
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
--TS_{pol}=\int k_{B}T\rho_{PC}(\boldsymbol{r})\sum_{\alpha}P(\boldsymbol{r},\alpha)\mbox{ln}\left(P(\boldsymbol{r};\alpha)\right)d\boldsymbol{r}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-donde 
-\begin_inset Formula $P(r,\alpha)$
-\end_inset
-
- es la función densidad de probabilidad de la configuración 
-\begin_inset Formula $(\boldsymbol{r},\alpha)$
-\end_inset
-
-.
- Una configuración de cadena quedará identificada con el par 
-\begin_inset Formula $\left(\boldsymbol{r},\alpha\right)$
-\end_inset
-
- indicando la conformación 
-\begin_inset Formula $\alpha$
-\end_inset
-
- cuya posición dentro del nanocanal es 
-\series bold
-
-\begin_inset Formula $r$
-\end_inset
-
-
-\series default
 .
  En el caso de brushes poliméricos las cadenas están pegadas por un extremo
  a la pared del nanocanal, la entropía configuracional se escribe,
@@ -1487,11 +1507,53 @@ key "terrell_introduction"
 
 \end_inset
 
+Puede escribirse de forma general la entropía conformacional de cadenas
+ poliméricas libres como,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-TS_{pol}=\int k_{B}T\rho_{PC}(\boldsymbol{r})\sum_{\alpha}P(\boldsymbol{r},\alpha)\mbox{ln}\left(P(\boldsymbol{r};\alpha)\right)d\boldsymbol{r}
+\end{equation}
+
+\end_inset
+
 
 \end_layout
 
+\begin_layout Standard
+donde 
+\begin_inset Formula $P(r,\alpha)$
+\end_inset
+
+ es la función densidad de probabilidad de la configuración 
+\begin_inset Formula $(\boldsymbol{r},\alpha)$
+\end_inset
+
+.
+ Una configuración de cadena quedará identificada con el par 
+\begin_inset Formula $\left(\boldsymbol{r},\alpha\right)$
+\end_inset
+
+ indicando la conformación 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ cuya posición dentro del nanocanal es 
+\series bold
+
+\begin_inset Formula $r$
+\end_inset
+
+
+\series default
+.
+ 
+\end_layout
+
 \begin_layout Subsubsection
-Equilibrio Químico
+Equilibrio químico
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Chemical-equilibria"
@@ -1700,8 +1762,15 @@ reference "eq:energia_constantes_de_equilibrio"
 \begin_inset Formula $e$
 \end_inset
 
+ junto con la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:la_posta_en_mus"
+
+\end_inset
+
 : 
-\begin_inset Formula $\sum_{n=1}^{j}\text{ln}\left(K_{n}\right)=\beta\left(\mu_{0}^{0}-\mu_{j}^{0}-j\mu_{H\text{⁺}}^{0}\right)$
+\begin_inset Formula $\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)+\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}=\beta\left(\mu_{0}^{0}-\mu_{e}^{0}\right)$
 \end_inset
 
 .
@@ -1709,9 +1778,10 @@ reference "eq:energia_constantes_de_equilibrio"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{align}
-F_{chem}(\boldsymbol{r}) & =k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{m}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-e\beta\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}\label{eq:Uchem_general-2}
-\end{align}
+\begin{multline}
+F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{m}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]\label{eq:Uchem_general-2}\\
++\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
+\end{multline}
 
 \end_inset
 
@@ -1903,7 +1973,7 @@ El PAH es un polielectrolito con dos estados de carga.
 \end_inset
 
  (donde 
-\begin_inset Formula $e=????$
+\begin_inset Formula $e=\text{−}1.602\text{×}10^{\text{−}19}C$
 \end_inset
 
  es la carga fundamental).
@@ -1987,9 +2057,10 @@ mientras que la contribución a la energía libre en términos de la constante
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{ f_{1}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{1}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\text{ln}\left(K_{b}\right)-\beta\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
-\]
+\begin{multline*}
+F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{ f_{1}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{1}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\text{ln}\left(K_{b}\right)-\beta\mu_{H^{+}}^{0}\right]\\
++\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
+\end{multline*}
 
 \end_inset
 
@@ -1998,7 +2069,7 @@ F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangl
 
 \begin_layout Standard
 El valor de la constante de equilibrio para la poliallylamina 
-\begin_inset Formula $pK_{b}=????$
+\begin_inset Formula $pK_{b}=3.4$
 \end_inset
 
  se obtiene de la referencia
@@ -2184,7 +2255,7 @@ la contribución a la energía libre en términos de las constantes de equilibri
 \begin_layout Standard
 \begin_inset Formula 
 \[
-F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{2}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-e\beta\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
+F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{2}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
 \]
 
 \end_inset
@@ -3470,6 +3541,31 @@ En el caso del PMEP, el número total de protones en el sistema debe tener
 \end_layout
 
 \begin_layout Standard
+Es de utilidad dejar la expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:semiGranCanonical_ensamble"
+
+\end_inset
+
+ expresada en términos de los grados de disociación independientes,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+A=\int\left[-TS_{mix}(\boldsymbol{r})-TS_{pol}(\boldsymbol{r})+F_{chem}(\boldsymbol{r})+U_{wall}(\boldsymbol{r})+U_{elec}(\boldsymbol{r})+U_{inter}(\boldsymbol{r})\right]d\boldsymbol{r}\\
+-\int\Bigg[\mu_{w}\rho_{w}(\boldsymbol{r})+\mu_{Cl^{-}}\rho_{Cl^{-}}(\boldsymbol{r})+\mu_{K^{+}}\rho_{K^{+}}(\boldsymbol{r})\\
++\mu_{OH^{-}}\left(\rho_{OH^{-}}(\boldsymbol{r})+\left[\sum_{e=1}^{m}\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)f_{e}(\boldsymbol{r})+n_{0,OH^{-}}\right]\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\\
++\mu_{H^{+}}\left(\rho_{H^{+}}(\boldsymbol{r})+\left[\sum_{e=1}^{m}\left(n_{e,H^{+}}-n_{0,H^{+}}\right)f_{e}(\boldsymbol{r})+n_{0,H^{+}}\right]\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\Bigg]d\boldsymbol{r}\label{eq:semiGranCanonical_ensamble-1}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status collapsed
 
@@ -3560,16 +3656,16 @@ Restricciones a la energía libre: Empaquetamiento, Electroneutralidad y
 \begin_layout Standard
 Las interacciones de volumen excluido son incorporadas en la teoría de forma
  explícita de dos formas.
- Por un lado las interacciones de volumen excluido entre segmentos de una
- misma cadena, interacciones intramoleculares, se incorporan de forma exacta
- al considerar solo conformaciones que no se superponen con sigo misma (
+ Por un lado las interacciones repulsivas entre segmentos de una misma cadena,
+ interacciones intramoleculares, se incorporan de forma exacta al considerar
+ solo conformaciones que no se superponen con sigo misma (
 \emph on
 self-avoiding
 \emph default
 ).
- Por otro lado las interacciones repulsivas entre moléculas son modeladas
- como volumen excluido y se incorporan a través de la condición de incomprensibi
-lidad (condición de empaquetamiento), ecuación 
+ Por otro lado las interacciones de volumen excluido entre moléculas se
+ incorporan a través de la condición de incomprensibilidad (condición de
+ empaquetamiento), ecuación 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:packing_condition"
@@ -3591,16 +3687,7 @@ reference "eq:packing_condition"
 \end_layout
 
 \begin_layout Standard
-Además incorporamos a la teoría la condición de electroneutralidad con la
- ecuación 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:electroneutrality_condition"
-
-\end_inset
-
-.
- Formalmente debemos incorporar también la normalización de la probabilidad
+Formalmente debemos incorporar también la normalización de la probabilidad
  de las conformaciones de cadena 
 \begin_inset Formula $P(\boldsymbol{r},\alpha)$
 \end_inset
@@ -3625,7 +3712,7 @@ reference "eq:norm_constraint"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\sigma_{q}f_{wall}+\int d\boldsymbol{r}\left\langle \rho_{q}(\boldsymbol{r})\right\rangle =0\label{eq:electroneutrality_condition}
+\sum_{\alpha}P(\boldsymbol{r,}\alpha)=1\qquad\text{para cada \ensuremath{\boldsymbol{r}}}\label{eq:norm_constraint}
 \end{equation}
 
 \end_inset
@@ -3636,7 +3723,7 @@ reference "eq:norm_constraint"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\sum_{\alpha}P(\boldsymbol{r,}\alpha)=1\qquad\text{para cada \ensuremath{\boldsymbol{r}}}\label{eq:norm_constraint}
+\sigma_{q}f_{wall}+\int d\boldsymbol{r}\left\langle \rho_{q}(\boldsymbol{r})\right\rangle =0\label{eq:electroneutrality_condition}
 \end{equation}
 
 \end_inset
@@ -3665,20 +3752,28 @@ IDEA: no hace falta integrar en todo el espacio para sacar la constante
 \end_inset
 
 .
- Estas condiciones se imponen sobre la energía libre a través de los multiplicad
-ores de Lagrange, 
+ Estas condiciones junto con la condición de electroneutralidad ecuación
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:electroneutrality_condition"
+
+\end_inset
+
+, se imponen sobre la energía libre a través de los multiplicadores de Lagrange,
+ 
 \begin_inset Formula $\pi(\boldsymbol{r})$
 \end_inset
 
 , 
-\begin_inset Formula $\lambda$
-\end_inset
-
-, y 
 \begin_inset Formula $Z(\boldsymbol{r})$
 \end_inset
 
+, y 
+\begin_inset Formula $\lambda$
+\end_inset
 
+ 
 \begin_inset Note Note
 status collapsed
 
@@ -3740,7 +3835,11 @@ Cuando el sistema se encuentra en equilibrio termodinámico con su entorno,
 \end_inset
 
  el diámetro del nanocanal.
- Definida como la energía libre del sistema en el ensamble gran canónico
+ Esta funcional 
+\begin_inset Formula $\omega$
+\end_inset
+
+ está definida como la energía libre del sistema en el ensamble gran canónico
  más las restricciones 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3748,11 +3847,7 @@ reference "eq:restricciones"
 
 \end_inset
 
-, 
-\begin_inset Formula $\omega$
-\end_inset
-
- representa la energía total por unidad de área y energía térmica 
+ y representa la energía total por unidad de área y energía térmica 
 \begin_inset Formula $k_{B}T$
 \end_inset
 
@@ -3809,16 +3904,18 @@ Ecuacion completa funcional sin ordenar
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline}
-\omega=\int_{0}^{R}\rho_{Cl\text{⁻}}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{Cl\text{⁻}}(\boldsymbol{r})v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{K^{+}}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{K^{+}}(\boldsymbol{r})v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
-+\int_{0}^{R}\rho_{OH\text{⁻}}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{OH\text{⁻}}(\boldsymbol{r})v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{H\text{⁺}}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{H\text{⁺}}(\boldsymbol{r})v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
-+\int_{0}^{R}\rho_{w}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{w}(\boldsymbol{r})v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{PC}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{PC}(\boldsymbol{r})v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
-+\int_{0}^{R}\rho_{PC}(\boldsymbol{r})\sum_{\alpha}P(\boldsymbol{r},\alpha)\mbox{ln}\left(P(\boldsymbol{r};\alpha)\right)\left(\frac{r}{R}\right)dr\\
-+\int_{0}^{R}\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{m}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-e\beta\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}\left(\frac{r}{R}\right)dr\\
--\int_{0}^{R}\beta\chi_{wall}(\boldsymbol{r})\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta\left[\left\langle \rho_{q}(\boldsymbol{r})\right\rangle \Psi(\boldsymbol{r})-\frac{1}{2}\varepsilon\left(\nabla_{r}\Psi(\boldsymbol{r})\right)^{2}\right]\left(\frac{r}{R}\right)dr\\
-+\frac{1}{2}\int_{0}^{R}\int_{0}^{R}d\boldsymbol{r}'\left(2\pi r'\right)\chi(\boldsymbol{r}-\boldsymbol{r}')\left\langle \phi_{p}(\boldsymbol{r})\right\rangle \left\langle \phi_{p}(\boldsymbol{r}')\right\rangle \left(\frac{r}{R}\right)dr\\
--\int_{0}^{R}\beta\Bigg[\mu_{w}\rho_{w}(\boldsymbol{r})+\mu_{Cl^{-}}\rho_{Cl^{-}}(\boldsymbol{r})+\mu_{K^{+}}\rho_{K^{+}}(\boldsymbol{r})+\mu_{OH^{-}}\left(\rho_{OH^{-}}(\boldsymbol{r})+\sum_{e}n_{e,OH^{-}}f_{e}(\boldsymbol{r})\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\\
-+\mu_{H^{+}}\left(\rho_{H^{+}}(\boldsymbol{r})+\sum_{e}n_{e,H^{+}}f_{e}(\boldsymbol{r})\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\Bigg]\left(\frac{r}{R}\right)dr\\
-+\int_{0}^{R}\beta\pi(\boldsymbol{r})\left[\left\langle \phi_{P}(\boldsymbol{r})\right\rangle +\sum_{i}\phi_{i}(\boldsymbol{r})-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta\lambda\left[\sigma_{q}f_{wall}+\int d\boldsymbol{r}\beta\left\langle \rho_{q}(\boldsymbol{r})\right\rangle \right]\left(\frac{r}{R}\right)dr\\
+\omega=\int_{0}^{R}\rho_{Cl\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{Cl\text{⁻}}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{K^{+}}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{K^{+}}(\boldsymbol{r})v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{OH\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{OH\text{⁻}}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{H\text{⁺}}(r)\left[\mbox{ln}\left(\rho_{H\text{⁺}}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{w}(r)\left[\mbox{ln}\left(\rho_{w}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{PC}(r)\left[\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{PC}(r)\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\left\langle \rho_{P}(r)\right\rangle \Big\{\sum_{e=1}^{m}f_{e}(r)\Bigg[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\beta\mu_{H^{+}}^{0}\\
+-\left(n_{OH^{-},0}-n_{OH^{-},e}\right)\beta\mu_{OH^{-}}^{0}\Bigg]+\mbox{ln}\left(f_{0}(r)\right)+\beta\mu_{0}^{0}\Big\}\left(\frac{r}{R}\right)dr\\
+-\int_{0}^{R}\beta\chi_{wall}(r)\left\langle \rho_{P}(r)\right\rangle \left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta\left[\left\langle \rho_{q}(r)\right\rangle \Psi(r)-\frac{1}{2}\varepsilon\left(\nabla_{r}\Psi(r)\right)^{2}\right]\left(\frac{r}{R}\right)dr\\
++\frac{1}{2}\int_{0}^{R}\int_{0}^{R}dr'\left(2\pi r'\right)\chi(r-r')\left\langle \phi_{p}(r)\right\rangle \left\langle \phi_{p}(r')\right\rangle \left(\frac{r}{R}\right)dr\\
+-\int_{0}^{R}\beta\Bigg[\mu_{w}\rho_{w}(r)+\mu_{Cl^{-}}\rho_{Cl^{-}}(r)+\mu_{K^{+}}\rho_{K^{+}}(r)\\
++\mu_{OH^{-}}\left(\rho_{OH^{-}}(r)+\left[\sum_{e=1}^{m}\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)f_{e}(r)+n_{0,OH^{-}}\right]\left\langle \rho_{p}(r)\right\rangle \right)\\
++\mu_{H^{+}}\left(\rho_{H^{+}}(r)+\left[\sum_{e=1}^{m}\left(n_{e,H^{+}}-n_{0,H^{+}}\right)f_{e}(r)+n_{0,H^{+}}\right]\left\langle \rho_{p}(r)\right\rangle \right)\Bigg]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\beta\pi(r)\left[\left\langle \phi_{P}(r)\right\rangle +\sum_{i}\phi_{i}(r)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta\lambda\left[\sigma_{q}f_{wall}+\int dr\beta\left\langle \rho_{q}(r)\right\rangle \right]\left(\frac{r}{R}\right)dr\\
 +\int_{0}^{R}\beta Z(r)\left(\sum_{\alpha}P(r,\alpha)-1\right)\left(\frac{r}{R}\right)dr\label{eq:Energia_libre_completa}
 \end{multline}
 
@@ -3829,7 +3926,8 @@ Ecuacion completa funcional sin ordenar
 
 \begin_layout Standard
 El siguiente paso es reorganizar los términos para la posterior minimización
- analística de la funcional El multiplicador de Lagrange 
+ analítica de la funcional.
+ El multiplicador de Lagrange 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -3847,8 +3945,18 @@ ico.
 \end_inset
 
 .
- Luego de reorganizar los términos no es posible diferenciar entre las contribuc
-iones de las energías a la funciona
+ Luego de reorganizar los términos redujimos la expresión al caso de cadenas
+ ancladas a la superficie del nanocanal (ver capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Adsorción-de-Polielectrolitos"
+
+\end_inset
+
+ para el caso de cadenas libres).
+ En la expresión reordenada los términos provenientes de distintas contribucione
+s se mezclan y ya no es posible diferenciar entre las distintas contribuciones.
+ 
 \begin_inset Note Note
 status collapsed
 
@@ -3869,10 +3977,11 @@ status collapsed
 +\int_{0}^{R}\rho_{OH\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{OH\text{⁻}}(r)v_{w}\right)-1-\beta\mu_{OH^{-}}+\beta\pi(r)v_{OH^{-}}\right]\left(\frac{r}{R}\right)dr\\
 +\int_{0}^{R}\rho_{H\text{⁺}}(r)\left[\mbox{ln}\left(\rho_{H\text{⁺}}(r)v_{w}\right)-1-\beta\mu_{H^{+}}+\beta\pi(r)v_{H^{+}}\right]\left(\frac{r}{R}\right)dr\\
 +\int_{0}^{R}\rho_{w}(r)\left[\mbox{ln}\left(\rho_{w}(r)v_{w}\right)-1-\beta\mu_{w}+\beta\pi(r)v_{w}\right]\left(\frac{r}{R}\right)dr\\
-+\int_{0}^{R}\rho_{PC}(r)\left[\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-1+\beta\pi(r)v_{p}+\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)\right]\left(\frac{r}{R}\right)dr\\
-+\int_{0}^{R}\left\langle \rho_{P}(r)\right\rangle \Bigg\{\sum_{e=1}^{m}f_{e}(r)\left[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-e\beta\mu_{H^{+}}^{0}-e\beta\mu_{oH^{-}}^{0}-n_{e,OH^{-}}\beta\mu_{OH^{-}}-n_{e,H^{+}}\beta\mu_{H^{+}}\right]\\
-+\mbox{ln}\left(f_{0}(r)\right)+\beta\mu_{0}^{0}-\beta\chi_{wall}(r)\Bigg\}\left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta\left[\left\langle \rho_{q}(r)\right\rangle \Psi(r)-\frac{1}{2}\varepsilon\left(\nabla_{r}\Psi(r)\right)^{2}\right]\left(\frac{r}{R}\right)dr\\
--\int_{0}^{R}\beta\pi(r)\left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta Z(r)\left(\sum_{\alpha}P(r,\alpha)-1\right)\left(\frac{r}{R}\right)dr\label{eq:Energia_libre_compacta}
++\int_{0}^{R}\left\langle \rho_{P}(r)\right\rangle \Bigg\{\sum_{e=1}^{m}f_{e}(r)\Bigg[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{e,H^{+}}-n_{0,H^{+}}\right)\beta\Delta\mu_{H^{+}}\\
+-\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)\beta\Delta\mu_{oH^{-}}\Bigg]-n_{0,OH^{-}}\beta\mu_{OH^{-}}-n_{0,H^{+}}\beta\mu_{H^{+}}\\
++\mbox{ln}\left(f_{0}(r)\right)+\beta\mu_{0}^{0}-\beta\chi_{wall}(r)+\beta\pi(r)v_{p}\Bigg\}\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\beta\left[\left\langle \rho_{q}(r)\right\rangle \Psi(r)-\frac{1}{2}\varepsilon\left(\nabla_{r}\Psi(r)\right)^{2}\right]\left(\frac{r}{R}\right)dr\\
++\sigma\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)-\int_{0}^{R}\beta\pi(r)\left(\frac{r}{R}\right)dr+\beta Z\left(\sum_{\alpha}P(\alpha)-1\right)\label{eq:Energia_libre_compacta}
 \end{multline}
 
 \end_inset
@@ -3968,7 +4077,24 @@ reference "eq:Energia_libre_compacta"
 \end_layout
 
 \begin_layout Standard
-La expresión completa de la funcional 
+Los términos que involucran al potencial químico de las especies 
+\begin_inset Formula $OH^{-}$
+\end_inset
+
+ y 
+\begin_inset Formula $H\text{⁺}$
+\end_inset
+
+ y el potencial químico standard del estado 
+\begin_inset Formula $0$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{0}^{0}$
+\end_inset
+
+ contribuyen en una constante a la funcional por lo tanto pueden despreciarse.
+ La expresión completa de la funcional 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Energia_libre_completa"
@@ -3992,32 +4118,13 @@ reference "eq:densidad_de_carga_local"
 
 \end_inset
 
- y la densidad de monómeros local en función de las probabilidades de cadena
  
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:densidad_de_monomeros"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \left\langle \rho_{q}(r)\right\rangle =\sum_{i=K^{+},Cl^{-},OH^{-},H^{+}}q_{i}\left\langle \rho_{i}(r)\right\rangle +\sum_{e=1}^{m_{e}}q_{e}f_{e}(r)\left\langle \rho_{p}(r)\right\rangle \:,\:i=Cl^{-},\:OH^{-},K^{+},\:H_{3}O^{+}\label{eq:densidad_de_carga_local}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\left\langle \rho_{P}(r)\right\rangle =\rho_{PC}(r)\int_{0}^{R}\sum_{\alpha}P(r,\alpha)n(r';r,\alpha)dr'\label{eq:densidad_de_monomeros}
 \end{equation}
 
 \end_inset
@@ -4221,7 +4328,7 @@ reference "eq:rho_minimization"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\beta\Delta\mu_{i}=\mbox{ln}\left(\phi_{i}(r)\frac{v_{w}}{v_{i}}\right)+\beta v_{i}\pi(r)+\beta q_{i}\Psi(r)\label{eq:rho_minimization}
+\beta\mu_{i}=\mbox{ln}\left(\phi_{i}(r)\frac{v_{w}}{v_{i}}\right)+\beta v_{i}\pi(r)+\beta q_{i}\Psi(r)\label{eq:rho_minimization}
 \end{equation}
 
 \end_inset
@@ -4242,7 +4349,7 @@ Donde
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\beta\Delta\mu_{w} & = & \mbox{ln}\left(\rho_{w}(r)v_{w}\right)+\beta v_{w}\pi(r)\label{eq:rho_w_minimization-1}
+\beta\mu_{w} & = & \mbox{ln}\left(\rho_{w}(r)v_{w}\right)+\beta v_{w}\pi(r)\label{eq:rho_w_minimization-1}
 \end{eqnarray}
 
 \end_inset
@@ -4253,7 +4360,7 @@ Donde
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\beta\Delta\mu_{K^{+}} & = & \mbox{ln}\left(\phi{}_{K^{+}}(r)\frac{v_{w}}{v_{K^{+}}}\right)+\beta v_{K^{+}}\pi(r)+\beta q_{K^{+}}\Psi(r)\label{eq:rho_minimization-2}
+\beta\mu_{K^{+}} & = & \mbox{ln}\left(\phi{}_{K^{+}}(r)\frac{v_{w}}{v_{K^{+}}}\right)+\beta v_{K^{+}}\pi(r)+\beta q_{K^{+}}\Psi(r)\label{eq:rho_minimization-2}
 \end{eqnarray}
 
 \end_inset
@@ -4261,7 +4368,7 @@ Donde
 
 \begin_inset Formula 
 \begin{eqnarray}
-\beta\Delta\mu_{Cl^{-}} & = & \mbox{ln}\left(\phi{}_{Cl^{-}}(r)\frac{v_{w}}{v_{Cl^{-}}}\right)+\beta v_{Cl^{-}}\pi(r)+\beta q_{Cl^{-}}\Psi(r)\label{eq:rho_minimization-3}
+\beta\mu_{Cl^{-}} & = & \mbox{ln}\left(\phi{}_{Cl^{-}}(r)\frac{v_{w}}{v_{Cl^{-}}}\right)+\beta v_{Cl^{-}}\pi(r)+\beta q_{Cl^{-}}\Psi(r)\label{eq:rho_minimization-3}
 \end{eqnarray}
 
 \end_inset
@@ -4269,7 +4376,7 @@ Donde
 
 \begin_inset Formula 
 \begin{eqnarray}
-\beta\Delta\mu_{H^{+}} & = & \mbox{ln}\left(\phi{}_{H^{+}}(r)\frac{v_{w}}{v_{H^{+}}}\right)+\beta v_{H^{+}}\pi(r)+\beta q_{H^{+}}\Psi(r)\label{eq:rho_minimization-4}
+\beta\mu_{H^{+}} & = & \mbox{ln}\left(\phi{}_{H^{+}}(r)\frac{v_{w}}{v_{H^{+}}}\right)+\beta v_{H^{+}}\pi(r)+\beta q_{H^{+}}\Psi(r)\label{eq:rho_minimization-4}
 \end{eqnarray}
 
 \end_inset
@@ -4277,7 +4384,7 @@ Donde
 
 \begin_inset Formula 
 \begin{eqnarray}
-\beta\Delta\mu_{OH^{-}} & = & \mbox{ln}\left(\phi{}_{OH^{-}}(r)\frac{v_{w}}{v_{OH^{-}}}\right)+\beta v_{OH^{-}}\pi(r)+\beta q_{OH^{-}}\Psi(r)\label{eq:rho_minimization-5}
+\beta\mu_{OH^{-}} & = & \mbox{ln}\left(\phi{}_{OH^{-}}(r)\frac{v_{w}}{v_{OH^{-}}}\right)+\beta v_{OH^{-}}\pi(r)+\beta q_{OH^{-}}\Psi(r)\label{eq:rho_minimization-5}
 \end{eqnarray}
 
 \end_inset
@@ -4386,7 +4493,7 @@ reference "eq:rho_w_minimization-1"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\beta\Delta\mu_{i}^{*}=\text{ln}\left(\phi{}_{i}(r)\frac{v_{w}}{v_{i}}\right)-\frac{v_{i}}{v_{w}}\mbox{ln}\left(\rho_{w}(r)v_{w}\right)+\beta q_{i}\Psi(r)
+\beta\mu_{i}^{*}=\text{ln}\left(\phi{}_{i}(r)\frac{v_{w}}{v_{i}}\right)-\frac{v_{i}}{v_{w}}\mbox{ln}\left(\rho_{w}(r)v_{w}\right)+\beta q_{i}\Psi(r)
 \]
 
 \end_inset
@@ -4415,7 +4522,7 @@ reference "eq:rho_w_minimization-1-1"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\beta\Delta\mu_{i}=\mbox{ln}\left(\phi_{i}^{b}\frac{v_{w}}{v_{i}}\right)-\frac{v_{i}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right),\hphantom{}i=w,Cl^{-},\:OH^{-},K^{+},H^{+}\label{eq:rho_bulk}
+\beta\mu_{i}=\mbox{ln}\left(\phi_{i}^{b}\frac{v_{w}}{v_{i}}\right)-\frac{v_{i}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right),\hphantom{}i=w,Cl^{-},\:OH^{-},K^{+},H^{+}\label{eq:rho_bulk}
 \end{equation}
 
 \end_inset
@@ -4561,7 +4668,7 @@ reference "eq:rho_minimization-5"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\phi_{i}(r)=\frac{v_{i}}{v_{w}}exp\left\{ \beta\Delta\mu_{i}\right\} exp\left\{ -\beta v_{i}\left(\pi(r)-\pi^{b}\right)\right\} exp\left\{ -\beta q_{i}\Psi(r)\right\} \label{eq:vol_frac_with_bulk_values-1}
+\phi_{i}(r)=\frac{v_{i}}{v_{w}}exp\left\{ \beta\mu_{i}\right\} exp\left\{ -\beta v_{i}\left(\pi(r)-\pi^{b}\right)\right\} exp\left\{ -\beta q_{i}\Psi(r)\right\} \label{eq:vol_frac_with_bulk_values-1}
 \end{equation}
 
 \end_inset
@@ -4572,7 +4679,7 @@ reference "eq:rho_minimization-5"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boxed{{\phi_{i}(r)=\frac{v_{i}}{v_{w}}exp\left\{ \beta\Delta\mu_{i}\right\} \left(\frac{\phi_{w}(r)}{\phi_{w}^{b}}\right)^{\nicefrac{v_{i}}{v_{w}}}exp\left\{ -\beta q_{i}\Psi(r)\right\} }}\label{eq:vol_frac_with_bulk_values}
+\boxed{{\phi_{i}(r)=\frac{v_{i}}{v_{w}}exp\left\{ \beta\mu_{i}\right\} \left(\frac{\phi_{w}(r)}{\phi_{w}^{b}}\right)^{\nicefrac{v_{i}}{v_{w}}}exp\left\{ -\beta q_{i}\Psi(r)\right\} }}\label{eq:vol_frac_with_bulk_values}
 \end{equation}
 
 \end_inset
@@ -4581,8 +4688,7 @@ reference "eq:rho_minimization-5"
 \end_layout
 
 \begin_layout Standard
-Conocidos el potencial electrostático y la presión osmótica, las ecuaciones
- 
+Las ecuaciones 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:solvet_vol_frac_with_bulk_value"
@@ -4597,7 +4703,15 @@ reference "eq:vol_frac_with_bulk_values"
 \end_inset
 
  nos permiten calcular las fracciones de volumen de todas las especies químicas
- dentro del nanocanal.
+ dentro del nanocanal una vez conocidos el potencial electrostático 
+\begin_inset Formula $\Psi(r)$
+\end_inset
+
+, la presión osmótica 
+\begin_inset Formula $\pi(r)$
+\end_inset
+
+ y las condiciones del bulk.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4618,9 +4732,10 @@ La expresión general que se obtiene para el grado de disociación
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
--\beta\left(\mu_{_{e}}^{0}-\mu_{0}^{0}-e\mu_{H^{+}}\right)=-\beta\left(q_{e}-q_{0}\right)\Psi(r)+\mbox{ln}\left(\frac{f_{j}(r)}{1-\sum_{e=1}^{m_{e}}f_{e}(r)}\right)\;,e=1,...,m_{e}\label{eq:gral_dissos}
-\end{equation}
+\begin{alignat}{1}
+\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right) & =\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)+\left(n_{H^{+},e}-n_{H^{+},0}\right)\beta\Delta\mu_{H^{+}}\nonumber \\
+ & +\left(n_{OH^{-},e}-n_{OH^{-},0}\right)\beta\Delta\mu_{OH^{-}}-\beta q_{e}\Psi(r)\label{eq:gral_dissos}
+\end{alignat}
 
 \end_inset
 
@@ -4628,7 +4743,16 @@ La expresión general que se obtiene para el grado de disociación
 \end_layout
 
 \begin_layout Standard
-La ecuación 
+con 
+\begin_inset Formula $e=1,...,m_{e}$
+\end_inset
+
+, recordar que 
+\begin_inset Formula $f_{0}(r)=1-\sum_{e=1}^{m_{e}}f_{e}(r)$
+\end_inset
+
+.
+ La ecuación 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:gral_dissos"
@@ -4733,22 +4857,7 @@ En el caso del PAH el grado de disociación es una protonación simple,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
--\beta\left(\mu_{1}^{0}-\mu_{0}^{0}+\mu_{OH^{-}}\right)=\beta q_{1}\Psi(r)+\mbox{ln}\left(\frac{f_{1}(r)}{f_{0}(r)}\right)\label{eq:PAH_fs}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Reescribiendo, 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
--\beta\Delta\mu_{OH^{-}}=\beta q_{1}\Psi(r)+\mbox{ln}\left(\frac{f_{1}(r)}{K_{b}f_{0}(r)}\right)\label{eq:PAH_fs-1}
+\mbox{ln}\left(\frac{f_{1}(r)}{f_{0}(r)}\right)=-\mbox{ln}\left(K_{b}\right)-\beta\Delta\mu_{OH^{-}}-\beta q_{1}\Psi(r)\label{eq:PAH_fs-1}
 \end{equation}
 
 \end_inset
@@ -4913,25 +5022,14 @@ Para el caso del PMEP (doble deprotonación,
 \begin_inset Formula $f_{0}(r)=1-f_{-1}(r)-f_{-2}(r)$
 \end_inset
 
-) resultan en las expresiones: 
+) resultan en las expresiones explícitas 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
--\beta\left(\mu_{e}^{0}-\mu_{0}^{0}-e\mu_{H^{+}}\right)=\beta q_{e}\Psi(r)+\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)\label{eq:fs_minimization}
-\end{equation}
-
-\end_inset
-
-las expresiones explícitas son,
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
--\beta\Delta\mu_{H^{+}}=\beta q_{-1}\Psi(r)+\mbox{ln}\left(\frac{f_{-1}(r)}{K_{1}f_{0}(r)}\right)\label{eq:fs_minimization-1}
-\end{equation}
+\begin{align}
+\mbox{ln}\left(\frac{f_{-1}(r)}{f_{0}(r)}\right) & =\text{ln}\left(K_{1}\right)-\beta\Delta\mu_{H^{+}}-\beta q_{-1}\Psi(r)\label{eq:fs_minimization-1}
+\end{align}
 
 \end_inset
 
@@ -4941,14 +5039,14 @@ las expresiones explícitas son,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
--2\beta\Delta\mu_{H^{+}}=\beta q_{-2}\Psi(r)+\mbox{ln}\left(\frac{f_{-2}(r)}{K_{1}K_{2}f_{0}(r)}\right)\label{eq:fs_minimization-2}
+\mbox{ln}\left(\frac{f_{-2}(r)}{f_{0}(r)}\right)=\text{ln}\left(K_{1}K_{2}\right)-2\beta\Delta\mu_{H^{+}}-\beta q_{-2}\Psi(r)\label{eq:fs_minimization-2}
 \end{equation}
 
 \end_inset
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 NOTA: A la izquierda el potencial químico del protón 
@@ -4964,6 +5062,32 @@ NOTA: A la izquierda el potencial químico del protón
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mbox{ln}\left(\frac{f_{-1}(r)}{f_{0}(r)}\right)=\mbox{ln}\left(K_{1}e^{-\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-1}\Psi(r)}\right)\label{eq:fs_minimization-1-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mbox{ln}\left(\frac{f_{-2}(r)}{f_{0}(r)}\right)=\mbox{ln}\left(K_{1}K_{2}e^{-2\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-2}\Psi(r)}\right)\label{eq:fs_minimization-2-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Las expresiones para los equilibrios químicos toman en cuenta las constantes
  de equilibrio químico 
 \begin_inset Formula $K_{1}$
@@ -4985,7 +5109,7 @@ Las expresiones para los equilibrios químicos toman en cuenta las constantes
  Por definición
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
 K_{i}=e^{-\beta\Delta G_{i}^{0}},i=1,2
@@ -5002,6 +5126,10 @@ con estas ecuaciones:
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
  Expresiones 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5028,43 +5156,7 @@ reference "eq:fs_minimization-2"
 \end_inset
 
 .
- De las ecuaciones 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:fs_minimization-1"
-
-\end_inset
-
- y 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:fs_minimization-2"
-
-\end_inset
-
- se ve que, 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\mbox{ln}\left(\frac{f_{-1}(r)}{f_{0}(r)}\right)=\mbox{ln}\left(K_{1}e^{-\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-1}\Psi(r)}\right)\label{eq:fs_minimization-1-1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\mbox{ln}\left(\frac{f_{-2}(r)}{f_{0}(r)}\right)=\mbox{ln}\left(K_{1}K_{2}e^{-2\beta\Delta\mu_{H^{+}}}e^{-\beta q_{-2}\Psi(r)}\right)\label{eq:fs_minimization-2-1}
-\end{equation}
-
-\end_inset
-
-Si usamos la condición 
+ Si usamos la condición 
 \begin_inset Formula $f_{0}(r)+f_{-1}(r)+f_{-2}(r)=1$
 \end_inset
 
@@ -5423,11 +5515,12 @@ Para la función probabilidad de conformaciones
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-0 & = & \sigma\left[\mbox{ln}\left(P(\alpha)\right)+1\right]-q\\
- &  & +\sigma\int dr\frac{Z(r)}{Z(R)}\Bigg\{\sum_{e}\beta q_{e}f_{e}(r)n_{p}(r;\alpha)\Psi(r)+\beta n_{p}(r;\alpha)v_{p}\pi(r)\\
- &  & +\sum_{e}f_{e}(r)\left[\mbox{ln}(f_{e}(r))+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\Bigg\}
-\end{eqnarray*}
+\begin{multline*}
+0=\sigma\left[\mbox{ln}\left(P(\alpha)\right)+1\right]-Z\\
++\sigma\int_{0}^{R}n_{p}(r;\alpha)\Bigg\{\sum_{e=1}^{m}\beta q_{e}f_{e}(r)\Psi(r)+\beta v_{p}\pi(r)+\mbox{ln}\left(f_{0}(r)\right)-\beta\chi_{wall}(r)\\
++\sum_{e=1}^{m}f_{e}(r)\Bigg[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{e,H^{+}}-n_{0,H^{+}}\right)\beta\Delta\mu_{H^{+}}\\
+-\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)\beta\Delta\mu_{oH^{-}}\Bigg]\Bigg\}\left(\frac{r}{R}\right)dr
+\end{multline*}
 
 \end_inset
 
@@ -5436,11 +5529,11 @@ Para la función probabilidad de conformaciones
 
 \begin_layout Standard
 Es posible, verificar que si 
-\begin_inset Formula $q=\sigma\left(1+\mbox{ln}\left(\frac{1}{Q}\right)\right)$
+\begin_inset Formula $Z=\sigma\left(1+\mbox{ln}\left(\frac{1}{Q}\right)\right)$
 \end_inset
 
  entonces 
-\begin_inset Formula $Q=e^{1-\nicefrac{q}{\sigma}}$
+\begin_inset Formula $Q=e^{1-\nicefrac{Z}{\sigma}}$
 \end_inset
 
  es la función de partición del sistema que normaliza la probabilidad de
@@ -5449,28 +5542,15 @@ Es posible, verificar que si
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-Q & = & \sum_{\alpha}exp\Bigg\{-\int dr\frac{Z(r)}{Z(R)}\bigg\{\sum_{e}\beta q_{e}f_{e}(r)n_{p}(r;\alpha)\Psi(r)\nonumber \\
- &  & +\beta n_{p}(r;\alpha)v_{p}\pi(r)\nonumber \\
- &  & +\sum_{e}f_{e}(r)\left[\mbox{ln}(f_{j}(r))+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\bigg\}\Bigg\}\label{eq:funcion_de_particion}
-\end{eqnarray}
-
-\end_inset
-
-
+ Donde,
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline}
-P(\alpha)=\frac{1}{Q}exp\Bigg(-\int drZ(r)n(r,\alpha)\times\Bigg[\int dr'\left(\frac{r'}{R}\right)\chi(r-r')\left\langle \phi_{P}(r')\right\rangle \\
-+\beta\left(\sum_{e=1}^{m_{e}}q_{e}f_{e}(r)\right)\Psi(r)+\beta\pi(r)v_{p}\\
-+\sum_{e=1}^{m_{e}}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\Bigg]\Bigg)\label{eq:GRAL_P_expression}
+Q=\sum_{\alpha}exp\Bigg(-\int_{0}^{R}n(r;\alpha)\times\Bigg\{\beta\left(\sum_{e=1}^{m_{e}}q_{e}f_{e}(r)\right)\Psi(r)+\beta\pi(r)v_{p}+\mbox{ln}\left(f_{0}(r)\right)-\beta\chi_{wall}(r)\\
++\sum_{e=1}^{m}f_{e}(r)\Bigg[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{e,H^{+}}-n_{0,H^{+}}\right)\beta\Delta\mu_{H^{+}}\\
+-\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)\beta\Delta\mu_{oH^{-}}\Bigg]\Bigg\}\left(\frac{r}{R}\right)dr\label{eq:funcion_de_particion}
 \end{multline}
 
 \end_inset
@@ -5502,9 +5582,31 @@ Si sabemos el grado de disociación independiente (
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline}
-P(\alpha)=\frac{1}{Q}exp\Bigg(-\int drZ(r)n(r,\alpha)\times\Bigg[\beta\left(\sum_{e=1}^{m_{e}}q_{e}f_{e}(r)\right)\Psi(r)\\
-+\beta\pi(r)v_{p}+\sum_{e=1}^{m_{e}}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\Bigg]\Bigg)\label{eq:P(alpha)_for_program}
+P(\alpha)=\frac{1}{Q}exp\Bigg(-\int_{0}^{R}n(r;\alpha)\times\Bigg\{\beta\left(\sum_{e=1}^{m_{e}}q_{e}f_{e}(r)\right)\Psi(r)+\beta\pi(r)v_{p}+\mbox{ln}\left(f_{0}(r)\right)-\beta\chi_{wall}(r)\\
++\sum_{e=1}^{m}f_{e}(r)\Bigg[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{e,H^{+}}-n_{0,H^{+}}\right)\beta\Delta\mu_{H^{+}}\\
+-\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)\beta\Delta\mu_{oH^{-}}\Bigg]\Bigg\}\left(\frac{r}{R}\right)dr\Bigg)\label{eq:GRAL_P_expression}
 \end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{multline}
+P(\alpha)=\frac{1}{Q}exp\Bigg(-\int drZ(r)n(r,\alpha)\times\Bigg[\beta\left(\sum_{e=1}^{m_{e}}q_{e}f_{e}(r)\right)\Psi(r)+\beta\pi(r)v_{p}+\mbox{ln}\left(f_{0}(r)\right)-\beta\chi_{wall}(r)\\
++\sum_{e=1}^{m_{e}}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{OH^{-}}n_{e,OH^{-}}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\Bigg]\Bigg)\label{eq:P(alpha)_for_program}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -5810,14 +5912,14 @@ reference "eq:equ_potential"
 
 \end_inset
 
- y la expresión (
+ y la expresión 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:P(alpha)_for_program"
+reference "eq:GRAL_P_expression"
 
 \end_inset
 
-) deben ser discretizadas para ser resueltas computacionalmente.
+ deben ser discretizadas para ser resueltas computacionalmente.
  Los detalles del procedimiento se encuentran en el apéndice 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5837,13 +5939,6 @@ Si reemplazamos las expresiones obtenidas luego del cálculo variacional
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GRAL_P_expression"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
 reference "eq:solvet_vol_frac_with_bulk_value"
 
 \end_inset
@@ -5855,21 +5950,28 @@ reference "eq:vol_frac_with_bulk_values"
 
 \end_inset
 
- y 
+, 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:gral_dissos"
 
 \end_inset
 
- en la expresión de la energía libre (
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GRAL_P_expression"
+
+\end_inset
+
+, en la expresión de la energía libre 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Energia_libre_completa"
 
 \end_inset
 
-), se obtiene lo que llamamos la energía libre reducida.
+, se obtiene lo que llamamos la energía libre reducida.
  Se interpreta como la energía del sistema en el punto estacionario, estado
  de equilibrio del sistema.
  
@@ -5877,11 +5979,32 @@ reference "eq:Energia_libre_completa"
 
 \begin_layout Standard
 \begin_inset Formula 
+\begin{multline*}
+w=-\sum_{i=w,K^{+},H^{+},OH^{-},Cl^{-}}\int_{0}^{R}\rho_{i}(r)\left(\frac{r}{R}\right)dr+\frac{1}{v_{w}}\int_{0}^{R}\text{ln}\left(\phi_{w}(r)\right)\left(\frac{r}{R}\right)dr\\
+-\frac{1}{2}\int_{0}^{R}\rho_{q}(r)\beta\Psi(r)\left(\frac{r}{R}\right)dr-\sigma\text{ln}\left(Q\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
 \begin{eqnarray*}
 \frac{\beta F}{2\pi RL} & = & \beta\int dr\frac{r}{R}\left[\left\langle \rho_{q}(r)\right\rangle \Psi(r)-\frac{1}{2}\varepsilon\left(\nabla_{r}\Psi(r)\right)^{2}\right]+\sigma\sum_{\alpha}P(\alpha)\mbox{ln}\left(P(\alpha)\right)\\
- &  & +\int dr\frac{Z(r)}{Z(R)}\left\langle \rho_{P}(r)\right\rangle \Big\{\sum_{e=0}^{-2}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\Big\}\\
+ &  & +\int dr\frac{Z(r)}{Z(R)}\left\langle \rho_{P}(r)\right\rangle \Big\{\sum_{e=0}^{-2}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{H^{+}}n_{H^{+},e}\right)\right]\Big\}\\
  &  & +\sum_{i=w,K^{+},Cl^{-},H^{+},OH^{-}}\int dr\frac{Z(r)}{Z(R)}\rho_{i}(r)\left[\mbox{ln}\left(\rho_{i}(r)v_{i}\right)-1+\beta(\mu_{i}^{0}-\mu_{i})\right]
 \end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -5894,7 +6017,7 @@ Para confirmar que los resultados obtenidos computacionalmente son compatibles
  numérico de la expresión general 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:GRAL_P_expression"
+reference "eq:Energia_libre_completa"
 
 \end_inset
 
@@ -5902,11 +6025,68 @@ reference "eq:GRAL_P_expression"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Para la energía reducida es útil recordar que la expresión
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\sum_{e=1}^{m}f_{e}(r)\Bigg[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{e,H^{+}}-n_{0,H^{+}}\right)\beta\Delta\mu_{H^{+}}-\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)\beta\Delta\mu_{oH^{-}}\Bigg]=\sum_{e=1}^{m}f_{e}(r)\left(-\beta q_{e}\Psi(r)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+sale de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gral_dissos"
+
+\end_inset
+
+.
+ Recordar también que 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\int_{0}^{R}\left(\nabla_{r}\Psi(r)\right)^{2}\left(\frac{r}{R}\right)dr=\int_{0}^{R}\frac{\rho_{q}(r)}{\varepsilon}\Psi(r)\left(\frac{r}{R}\right)dr
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+por regla de la cadena.
+ Y las condiciones de contorno (que hacen que el término integrado uv sea
+ cero).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 la forma general para los grados de disociación luego de minimizar la Energía
  Libre es:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
 0=\beta q_{e}\psi(r)+\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)+\beta\left[\mu_{e}^{0}-\mu_{0}^{0}+\left(n_{0,H^{+}}-n_{e,H^{+}}\right)\mu_{H\text{⁺}}^{0}\right]+\beta\left(n_{0,H^{+}}-n_{e,H^{+}}\right)\Delta\mu_{H\text{⁺}}\label{eq:PMEP}
@@ -5917,7 +6097,7 @@ la forma general para los grados de disociación luego de minimizar la Energía
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
 0=\beta q_{e}\psi(r)+\mbox{ln}\left(\frac{f_{1}(r)}{f_{0}(r)}\right)+\beta\left[\mu_{1}^{0}-\mu_{0}^{0}+\left(n_{0,H^{+}}-n_{1,OH^{-}}\right)\mu_{OH^{-}}^{0}\right]+\beta\left(n_{0,H^{+}}-n_{1,OH^{-}}\right)\Delta\mu_{OH^{-}}\label{eq:PAH}
@@ -5993,7 +6173,7 @@ reference "tab:Data-for-chemical"
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float table
 wide false
 sideways false
@@ -6317,7 +6497,7 @@ Resumen del número de partículas
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Deben reemplazarse todas las expresiones en la energía libre del sistema
  
 \begin_inset CommandInset ref
@@ -6329,7 +6509,7 @@ reference "eq:completed_FreeE"
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Es interesante observar que parte de la energía química 
 \begin_inset Formula $U_{chem}$
 \end_inset
@@ -6340,7 +6520,7 @@ Es interesante observar que parte de la energía química
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 La expresión para la probabilidad de conformación 
 \begin_inset Formula $P(\alpha)$
 \end_inset
@@ -6348,7 +6528,7 @@ La expresión para la probabilidad de conformación
  que tiene una exponencial muy parecida a la energía libre del sistema.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Al hacerlo se simplifican los términos con el potencial electrostático (ver
  apuntes 
 \begin_inset ERT
@@ -6378,7 +6558,7 @@ status open
  y queda la expresión:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 \frac{\beta F}{2\pi RL} & = & \int dr\frac{r}{R}\Bigg[-\frac{\beta\varepsilon}{2}\left(\nabla_{r}\Psi(r)\right)^{2}+\left\langle \rho_{P}(r)\right\rangle \left[\mbox{ln}\left(f_{0}(r)\right)+\beta\mu_{_{0}}^{0}\right]\\
@@ -6387,6 +6567,11 @@ status open
  &  & -\mbox{ln}\left(Q\right)+\frac{1}{Q}\int dr\frac{Z(r)}{Z(R)}\Big\{\sum_{e=0}^{-2}f_{e}(r)\left[\mbox{ln}\left(f_{e}(r)\right)+\beta\left(\mu_{_{e}}^{0}-\mu_{H^{+}}n_{e,H^{+}}\right)\right]\Big\}\\
  &  & +\sum_{i=w,K^{+},Cl^{-},H^{+},OH^{-}}\rho_{i}(r)\int dr\frac{Z(r)}{Z(R)}\left[\mbox{ln}\left(\rho_{i}(r)v_{i}\right)-1+\beta(\mu_{i}^{0}-\mu_{i})\right]
 \end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
