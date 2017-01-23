@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass book
 \use_default_options true
 \master tesis_Doc_FMG.lyx
@@ -10,16 +12,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -89,7 +91,15 @@ name "chap:Modelo-de-Capa-homogenea"
 
 \begin_layout Standard
 Para el desarrollo de un modelo sencillo considero una capa homogénea de
- polímero en contacto con una solución con concentración de sal y pH fijo.
+ polímero en contacto con una solución con concentración de sal 
+\begin_inset Formula $C_{salt}$
+\end_inset
+
+ y 
+\begin_inset Formula $pH$
+\end_inset
+
+ fijo.
  La energía libre para la capa homogénea de polímero se escribe: 
 \end_layout
 
@@ -161,7 +171,7 @@ reference "eq:capa_homogenea"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\beta\Delta\mu_{K\text{⁺}}=\mbox{ln}\left(\phi_{K\text{⁺}}\right)+\beta\Psi^{P}+\beta\pi v_{K\text{⁺}}
+\beta\mu_{K\text{⁺}}=\mbox{ln}\left(\phi_{K\text{⁺}}\right)+\beta\Psi^{P}+\beta\pi v_{K\text{⁺}}
 \]
 
 \end_inset
@@ -172,7 +182,7 @@ reference "eq:capa_homogenea"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\beta\Delta\mu_{H\text{⁺}}=\mbox{ln}\left(\phi_{H\text{⁺}}\right)+\beta\Psi^{P}+\beta\pi v_{H\text{⁺}}
+\beta\mu_{H\text{⁺}}=\mbox{ln}\left(\phi_{H\text{⁺}}\right)+\beta\Psi^{P}+\beta\pi v_{H\text{⁺}}
 \]
 
 \end_inset
@@ -183,7 +193,7 @@ reference "eq:capa_homogenea"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\beta\Delta\mu_{Cl^{-}}=\mbox{ln}\left(\phi_{Cl^{-}}\right)+\beta\Psi^{P}+\beta\pi v_{Cl^{-}}
+\beta\mu_{Cl^{-}}=\mbox{ln}\left(\phi_{Cl^{-}}\right)+\beta\Psi^{P}+\beta\pi v_{Cl^{-}}
 \]
 
 \end_inset
@@ -194,7 +204,7 @@ reference "eq:capa_homogenea"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\beta\Delta\mu_{OH^{-}}=\mbox{ln}\left(\phi_{OH^{-}}\right)+\beta\Psi^{P}+\beta\pi v_{OH^{-}}
+\beta\mu_{OH^{-}}=\mbox{ln}\left(\phi_{OH^{-}}\right)+\beta\Psi^{P}+\beta\pi v_{OH^{-}}
 \]
 
 \end_inset
@@ -215,7 +225,7 @@ reference "eq:capa_homogenea"
 
 \begin_layout Standard
 Donde se usó que 
-\begin_inset Formula $\Delta\mu_{w}=0$
+\begin_inset Formula $\mu_{w}=0$
 \end_inset
 
 , y la expresión para los grados de disociación
@@ -261,7 +271,7 @@ Teniendo en cuenta las expresiones de bulk
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\beta\Delta\mu_{K\text{⁺}}=\mbox{ln}\left(\rho_{K\text{⁺}}^{b}\right)-\frac{v_{K\text{⁺}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)\label{eq:capahomogeneao_muK}
+\beta\mu_{K\text{⁺}}=\mbox{ln}\left(\rho_{K\text{⁺}}^{b}\right)-\frac{v_{K\text{⁺}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)\label{eq:capahomogeneao_muK}
 \end{equation}
 
 \end_inset
@@ -272,7 +282,7 @@ Teniendo en cuenta las expresiones de bulk
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\beta\Delta\mu_{H\text{⁺}}=\mbox{ln}\left(\rho_{H\text{⁺}}^{b}\right)-\frac{v_{H\text{⁺}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)\label{eq:capahomogenea_muH}
+\beta\mu_{H\text{⁺}}=\mbox{ln}\left(\rho_{H\text{⁺}}^{b}\right)-\frac{v_{H\text{⁺}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)\label{eq:capahomogenea_muH}
 \end{equation}
 
 \end_inset
@@ -283,7 +293,7 @@ Teniendo en cuenta las expresiones de bulk
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\beta\Delta\mu_{Cl\text{⁻}}=\mbox{ln}\left(\rho_{Cl\text{⁻}}^{b}\right)-\frac{v_{Cl\text{⁻}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)
+\beta\mu_{Cl\text{⁻}}=\mbox{ln}\left(\rho_{Cl\text{⁻}}^{b}\right)-\frac{v_{Cl\text{⁻}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)
 \]
 
 \end_inset
@@ -294,7 +304,7 @@ Teniendo en cuenta las expresiones de bulk
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\beta\Delta\mu_{OH\text{⁻}}=\mbox{ln}\left(\rho_{OH\text{⁻}}^{b}\right)-\frac{v_{OH\text{⁻}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)
+\beta\mu_{OH\text{⁻}}=\mbox{ln}\left(\rho_{OH\text{⁻}}^{b}\right)-\frac{v_{OH\text{⁻}}}{v_{w}}\mbox{ln}\left(\phi_{w}^{b}\right)
 \]
 
 \end_inset
@@ -320,7 +330,7 @@ Podemos escribir:
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\mbox{ln}\left(\frac{\rho_{K^{+}}v_{w}}{\left(\rho_{w}v_{w}\right)^{\nicefrac{v_{k^{+}}}{v_{w}}}}\right)=-\beta\Psi^{p}+\beta\Delta\mu_{K^{+}}
+\mbox{ln}\left(\frac{\rho_{K^{+}}v_{w}}{\left(\rho_{w}v_{w}\right)^{\nicefrac{v_{k^{+}}}{v_{w}}}}\right)=-\beta\Psi^{p}+\beta\mu_{K^{+}}
 \]
 
 \end_inset
@@ -385,7 +395,7 @@ reference "eq:capahomogenea_muH"
 
 \begin_layout Standard
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 (CHEQUEAR QUE EL FACTOR MULTIPLICATIVO SEA EL MISMO!)
@@ -399,7 +409,21 @@ status open
 \begin_layout Standard
 Desde donde derivamos la dependencia de las constantes de equilibrio químico
  con el estado de carga de los monómeros y la fracción de volumen de polímero,
- ver ecuaciones siguientes.
+ ver ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:pKapp_1_capahomogenea"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:pkaapp_2_capa_homogenea"
+
+\end_inset
+
+.
  Para la primera transición aproximamos 
 \begin_inset Formula $f_{-2}=0$
 \end_inset
@@ -422,7 +446,7 @@ Desde donde derivamos la dependencia de las constantes de equilibrio químico
 \begin_inset Formula $\phi_{v}^{b}=1$
 \end_inset
 
-, queriendo significar que en bulk la solución es aproximadamente agua pura.
+, es decir asumimos que en bulk la solución es aproximadamente agua pura.
  Dentro del poro el volumen puede estar ocupado por moléculas de agua o
  monómeros del polímero por ello se asume 
 \begin_inset Formula $\phi_{w}=1-\phi_{p}$
@@ -507,7 +531,18 @@ reference "tab:Tabla-de-volúmenes"
  Estas ecuaciones son importantes por que ofrecen una relación analítica
  entre las constantes de equilibrio aparentes y la concentración de sal,
  además predicen correctamente el ancho de las transiciones (ecuaciones
- (18) y (19) del paper!).
+ (18) y (19) en Gilles 
+\emph on
+et.al
+\emph default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gilles2016"
+
+\end_inset
+
+).
  La dependencia de las constantes de equilibrio aparente con la concentración
  de sal descripta por este modelo analítico es compatible con los valores
  de 
@@ -515,6 +550,7 @@ reference "tab:Tabla-de-volúmenes"
 \end_inset
 
  que predice la teoría molecular.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -527,7 +563,14 @@ Para calcular el ancho de transición del primer equilibrio químico, consideram
 \begin_inset Formula $\left\langle f_{-1}\right\rangle =\frac{10}{11}$
 \end_inset
 
-, (ver figura).
+, (ver figura
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ancho_transicion"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -658,7 +701,14 @@ Con el objetivo de estimar el valor de
 \end_inset
 
 ) como la distancia desde la pared del nanocanal hasta el punto donde la
- densidad de monómeros es un 36.7% del máximo (ver figura).
+ densidad de monómeros es un 36.7% del máximo (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SI_S2"
+
+\end_inset
+
+).
  Habiendo estimado la altura calculamos la fracción de volumen de la capa
  homogénea equivalente: 
 \begin_inset Formula $\phi_{p}^{A}=\frac{\sigma Nv_{p}}{h}=0.1$
@@ -671,7 +721,7 @@ Con el objetivo de estimar el valor de
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
