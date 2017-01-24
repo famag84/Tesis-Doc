@@ -75,18 +75,18 @@
 \begin_layout Chapter
 \begin_inset CommandInset label
 LatexCommand label
-name "chap:Discretización-Poisson"
+name "chap:Discretización"
 
 \end_inset
 
-Discretización de la Ecuación de Poisson
+Discretización de la ecuaciones
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -112,14 +112,19 @@ Gráfico de la discretización del volumen del nanocanal.
 \end_inset
 
  tiene sus bordes entre 
-\begin_inset Formula $\left[\left(j-1\right)\times\delta,j\times\delta\right]$
+\begin_inset Formula $\left(j-1\right)\delta$
 \end_inset
 
- con 
-\begin_inset Formula $j\in\left[1,dimR\right]$
+ y 
+\begin_inset Formula $j\delta$
 \end_inset
 
+, con 
+\begin_inset Formula $j=1,...,dimR$
+\end_inset
 
+.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Graf_discretizacion"
@@ -150,12 +155,37 @@ status open
 
 \end_layout
 
+\begin_layout Section
+Discretización de la Ecuación de Poisson
+\end_layout
+
 \begin_layout Standard
-Tomando 
-\begin_inset Formula $\xi(r)=\xi$
+Para la discretización de las ecuaciones se divide la dirección radial en
+ 
+\begin_inset Formula $dimR$
 \end_inset
 
- y coordenadas cilíndricas en la ecuación 
+ capas de forma tal que, 
+\begin_inset Formula $r_{j}=\left(j-\frac{1}{2}\right)\delta$
+\end_inset
+
+ con 
+\begin_inset Formula $j=1,...,dimR$
+\end_inset
+
+ y 
+\begin_inset Formula $\delta=\frac{R}{dimR}=0.5nm$
+\end_inset
+
+, ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Graf_discretizacion"
+
+\end_inset
+
+.
+ Tomando coordenadas cilíndricas en la ecuación 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:equ_potential"
@@ -168,7 +198,7 @@ reference "eq:equ_potential"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\left(\frac{1}{r}\frac{\partial\psi(r)}{\partial r}+\frac{\partial^{2}\psi(r)}{\partial r^{2}}\right)=-\frac{1}{\xi}\left\langle \rho_{q}(r)\right\rangle 
+\left(\frac{1}{r}\frac{\partial\psi(r)}{\partial r}+\frac{\partial^{2}\psi(r)}{\partial r^{2}}\right)=-\frac{1}{\varepsilon}\left\langle \rho_{q}(r)\right\rangle 
 \end{equation}
 
 \end_inset
@@ -177,16 +207,16 @@ reference "eq:equ_potential"
 \end_layout
 
 \begin_layout Standard
-Para escribir las ecuaciones discretizadas observar que la primera derivada
- se calcula como el promedio entre las derivadas por derecha y por izquierda,
- mientras que la segunda derivada es la diferencia entre ellas.
- En ecuaciones: 
+Para escribir las ecuaciones discretizadas se calcula la primera derivada
+ como el promedio de los cocientes incrementales por derecha y por izquierda.
+ La derivada segunda se calcula como la diferencia entre los mismos cocientes
+ incrementales, 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\frac{\partial\Psi(r)}{\partial r}=\frac{\left(\frac{\partial\Psi}{\partial r}\right)_{rigth}+\left(\frac{\partial\Psi}{\partial r}\right)_{left}}{2}=\frac{1}{2\delta}\left[\Psi(r_{j+1})-\Psi(r_{j-1})\right]
+\frac{\partial\Psi(r)}{\partial r}=\frac{\left(\frac{\partial\Psi}{\partial r}\right)_{der}+\left(\frac{\partial\Psi}{\partial r}\right)_{izq}}{2}=\frac{1}{2\delta}\left[\Psi(r_{j+1})-\Psi(r_{j-1})\right]
 \end{equation}
 
 \end_inset
@@ -197,7 +227,7 @@ Para escribir las ecuaciones discretizadas observar que la primera derivada
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\frac{\partial^{2}\Psi(r)}{\partial r^{2}}=\frac{\left(\frac{\partial\Psi}{\partial r}\right)_{rigth}-\left(\frac{\partial\Psi}{\partial r}\right)_{left}}{r_{j+1}-r_{j}}=\frac{1}{\delta\text{²}}\left[\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})\right]
+\frac{\partial^{2}\Psi(r)}{\partial r^{2}}=\frac{\left(\frac{\partial\Psi}{\partial r}\right)_{der}-\left(\frac{\partial\Psi}{\partial r}\right)_{izq}}{r_{j+1}-r_{j}}=\frac{1}{\delta\text{²}}\left[\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})\right]
 \end{equation}
 
 \end_inset
@@ -206,20 +236,20 @@ Para escribir las ecuaciones discretizadas observar que la primera derivada
 \end_layout
 
 \begin_layout Standard
-con estas consideraciones la ecuación (
+la ecuación de Poisson (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:equ_potential"
 
 \end_inset
 
-) discretizada queda:
+) discretizada nos queda,
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})+\frac{1}{2\left(j-\nicefrac{1}{2}\right)}\left(\Psi(r_{j+1})-\Psi(r_{j-1})\right)=-\frac{\delta^{2}}{\xi}\left\langle \rho_{q}(r_{j})\right\rangle \label{eq:discret_poisson}
+\psi(r_{j+1})-2\psi(r_{j})+\psi(r_{j-1})+\frac{1}{2\left(j-\nicefrac{1}{2}\right)}\left(\psi(r_{j+1})-\psi(r_{j-1})\right)=-\frac{\delta^{2}}{\varepsilon}\left\langle \rho_{q}(r_{j})\right\rangle \label{eq:discret_poisson}
 \end{equation}
 
 \end_inset
@@ -232,18 +262,13 @@ donde
 \begin_inset Formula $r_{j}=\left(j-\nicefrac{1}{2}\right)\delta$
 \end_inset
 
-.
- es el radio evaluado en el centro de la layer 
-\begin_inset Formula $j$
-\end_inset
-
- y 
+ es el radio evaluado en el centro de la capa 
 \begin_inset Formula $j=1,...,N$
 \end_inset
 
 .
  
-\begin_inset Formula $\xi$
+\begin_inset Formula $\varepsilon$
 \end_inset
 
  se obtiene en el programa a partir de la longitud de Bjerrum 
@@ -256,7 +281,7 @@ donde
 \begin_layout Standard
 \begin_inset Formula 
 \[
-4\pi l_{b}=\beta\frac{e^{2}}{\xi_{0}\xi}=\beta\frac{e^{2}}{\xi}
+4\pi l_{B}=\beta\frac{e^{2}}{\varepsilon_{0}\varepsilon}=\beta\frac{e^{2}}{\varepsilon}
 \]
 
 \end_inset
@@ -265,12 +290,12 @@ donde
 \end_layout
 
 \begin_layout Standard
-las unidades son correctas, porque el potencial electrostático está definido
- como: 
+en el programa, el potencial electrostático está definido como: 
 \begin_inset Formula $\Psi(r)=\beta e\psi(r)$
 \end_inset
 
-, si multiplicamos la expresión 
+.
+ Si multiplicamos la expresión 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:discret_poisson"
@@ -287,7 +312,7 @@ reference "eq:discret_poisson"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})+\frac{1}{2\left(j-\nicefrac{1}{2}\right)}\left(\Psi(r_{j+1})-\Psi(r_{j-1})\right)=-\delta^{2}\boxed{\frac{\beta e}{\xi}e}\left\langle \rho_{q}(r_{j})\right\rangle \label{eq:discret_poisson-1}
+\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})+\frac{1}{2\left(j-\nicefrac{1}{2}\right)}\left(\Psi(r_{j+1})-\Psi(r_{j-1})\right)=-\delta^{2}\boxed{\frac{\beta e}{\varepsilon}e}\left\langle \rho_{q}(r_{j})\right\rangle \label{eq:discret_poisson-1}
 \end{equation}
 
 \end_inset
@@ -296,9 +321,10 @@ reference "eq:discret_poisson"
 \end_layout
 
 \begin_layout Standard
-la segunda carga viene del hecho de que la densidad de carga nunca fue multiplic
-ada por la carga fundamental.
- Por lo tanto la expresion 
+la segunda carga viene del hecho de que la densidad de carga en el programa
+ es por unidad de carga por lo que nunca fue multiplicada por la carga fundament
+al.
+ Por lo tanto la expresión 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:discret_poisson-1"
@@ -319,15 +345,422 @@ reference "eq:discret_poisson-1"
 
 \end_layout
 
+\begin_layout Subsection*
+Condiciones de contorno
+\end_layout
+
 \begin_layout Standard
-Aplicando el mismo razonamiento con las condiciones de contorno queda:
+En el centro del canal por simetría axial el campo electrostático debe ser
+ cero (no hay ninguna dirección privilegiada).
+ Por lo tanto es apropiada la condición de contorno: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\Psi(0)}{\partial r}\left(r=0\right)=0\label{eq:cond_poten_centro}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cambio sobre la pared del nanocanal puede haber una distribución de carga
+ que asumimos homogénea en la dirección angular 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+ Por lo tanto el flujo de campo 
+\begin_inset Formula $E$
+\end_inset
+
+ a través de esta superficie se calcula utilización la regla de Gauss: 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Psi(r_{N})=\Psi(r_{N-1})+l_{B}\sigma_{q}
+E_{2}-E_{1}=\frac{\sigma_{q}}{\varepsilon}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como el campo eléctrico en 2 debe ser cero (es una condición que exigimos
+ a priori pero podría no ser cierta ya que el sustrato del nanocanal no
+ es un metal sino que es un polímero).
+ 
+\begin_inset Formula $E_{2}=0$
+\end_inset
+
+.
+ Además como 
+\begin_inset Formula $E_{1}=-\frac{\partial\Psi}{\partial r}=-\frac{\Psi_{N}-\Psi_{N-1}}{\delta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E_{1}=-\frac{\sigma_{q}}{\varepsilon}=-\frac{\Psi_{N}-\Psi_{N-1}}{\delta}
+\]
+
+\end_inset
+
+y por lo tanto nuestra condición de contorno es
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\Psi(R)}{\partial r}\left(r=R\right)=\frac{\sigma_{q}}{\varepsilon}\label{eq:cond_poten_pared}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En sus formas discretizadas las condiciones de contorno 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cond_poten_centro"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cond_poten_pared"
+
+\end_inset
+
+ se escriben, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Figura con el flujo del campo en una superficie con carga superficial homogénea
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(0)=\Psi(1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{ }\Psi(r_{N})=\Psi(r_{N-1})+\delta\frac{\sigma_{q}}{\varepsilon}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+estas condiciones de contorno fueron testeadas con el modelo teórico descripto
+ por Schoch
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schoch2008a"
+
+\end_inset
+
+ y resultan adecuadas para la descripción del potencial electrostático.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+se observo una correspondencia solo funciona para determinadas condiciones
+ (ver )
+\end_layout
+
+\end_inset
+
+ Acomodando las unidades como en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:discret_poisson-2"
+
+\end_inset
+
+ la condición de contorno sobre la pared del nanocanal queda,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(r_{N})=\Psi(r_{N-1})+\delta\left(4\pi l_{b}\right)\sigma_{q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Algunas cosas más que habría que comentar:
+\end_layout
+
+\begin_layout Plain Layout
+Longitud de Debye
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\lambda_{D}=\left(\frac{\varepsilon k_{B}T}{\sum_{j=1}^{N}n_{j}q_{j}^{2}}\right)^{\nicefrac{1}{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+*******
+\end_layout
+
+\begin_layout Plain Layout
+Los valores del potencial electrostático quedan relacionados según,
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\Psi(r_{j+1})-2\Psi(r_{j})+\Psi(r_{j-1})+\frac{1}{2\left(j-\nicefrac{1}{2}\right)}\left(\Psi(r_{j+1})-\Psi(r_{j-1})\right)=-\frac{\delta^{2}}{\varepsilon}\left\langle \rho_{q}(r_{j})\right\rangle \label{eq:discrete_potential}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\Psi(r_{j+1})=\frac{\left(2j-1\right)}{j}\Psi(r_{j})-\Psi(r_{j-1})\frac{\left(j-1\right)}{j}-\frac{\left(2j-1\right)}{2j}\frac{\delta^{2}}{\varepsilon}\left\langle \rho_{q}(r_{j})\right\rangle \label{eq:discrete_potential-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+con las condiciones de contorno:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\Psi(r_{1})=\Psi(r_{0})\label{eq:cond_at_center}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\Psi(r_{N+1})=\Psi(r_{N-1})-\frac{\sigma_{q}2\delta}{\varepsilon}\label{eq:cond_at_wall}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+La componente radial del campo eléctrico debe ser cero debido a la simetría
+ cilíndrica del nanocanal, condición 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cond_at_center"
+
+\end_inset
+
+.
+ La condición 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cond_at_wall"
+
+\end_inset
+
+, surge de considerar una carga superficial sobre la pared del nanocanal,
+ 
+\begin_inset Formula $\sigma_{q}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GRAL_P_expression"
+
+\end_inset
+
+ para la probabilidad de una conformación polimérica debe ser discretizada
+ para ser resuelta computacionalmente.
+ Antes de comenzar con la discretización de la ecuación de 
+\begin_inset Formula $P(\alpha)$
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GRAL_P_expression"
+
+\end_inset
+
+, reemplazamos las expresiones de los grados de disociación obtenidas al
+ minimizar la funcional ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gral_dissos"
+
+\end_inset
+
+.
+ Obtenemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+P(\alpha)=\frac{1}{Q}exp\Bigg(-\int_{0}^{R}n(r;\alpha)\times\Bigg\{\beta\pi(r)v_{p}+\mbox{ln}\left(f_{0}(r)\right)-\beta\chi_{wall}(r)\Bigg\}\left(\frac{r}{R}\right)dr\Bigg)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+la idea es calcular 
+\begin_inset Formula $P(\alpha)$
+\end_inset
+
+ como el producto de las probabilidades de cada capa debido a la conformación
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(\alpha)=\frac{1}{Q}\prod_{j=1}p(r_{j})^{N_{(r_{j};\alpha)}}\label{eq:descomposicion_probabilidad}
+\end{equation}
+
+\end_inset
+
+Es importante observar que 
+\begin_inset Formula $N_{(r_{j};\alpha)}$
+\end_inset
+
+ es el número de monómeros en la capa 
+\begin_inset Formula $r_{j},r_{j}+dr$
+\end_inset
+
+ debido a la conformación 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y este número tiene en cuenta el jacobiano de la integral.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+N_{(r_{j},\alpha)}=n(r_{j};\alpha)\frac{r_{j}}{dimR}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La probabilidad de la capa se calculada como: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p(r_{j})=e^{-\left(\beta\pi(r_{j})v_{p}+\mbox{ln}\left(f_{0}(r_{j})\right)-\beta\chi_{wall}(r_{j})\right)}\label{eq:probability_of_layer_rj}
+\end{equation}
+
+\end_inset
+
+acomodando la expresión nos queda, 
+\begin_inset Formula 
+\begin{equation}
+p(r_{j})=e^{\beta\chi_{wall}(r_{j})}\frac{1}{f_{0}(r_{j})\phi_{w}(r_{j})^{\nicefrac{v_{p}}{v_{w}}}}\label{eq:probability_of_layer_rj-1}
+\end{equation}
 
 \end_inset
 
