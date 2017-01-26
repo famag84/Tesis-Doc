@@ -94,6 +94,12 @@
 \begin_body
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Enfoque-Teórico"
+
+\end_inset
+
 Enfoque Teórico
 \end_layout
 
@@ -115,7 +121,7 @@ En este trabajo se exploran las propiedades estructurales de nanocanales
 El uso de las computadoras durante el siglo XX permitió desarrollar distintas
  estrategias numérico/computacionales para resolver ecuaciones sin solución
  analítica (cálculo numérico), simular la evolución temporal de sistemas
- de pocas partículas (dinámica molecular) y predecir propiedades termodinámicas
+ de pocas partículas (Dinámica Molecular) y predecir propiedades termodinámicas
  encontrando las configuraciones de equilibrio (Métodos Monte Carlo).
  Estas técnicas computacionales mejoraron lo suficiente como para poder
  predecir el comportamiento macroscópico y su conexión con las propiedades
@@ -145,18 +151,36 @@ key "Frenkel"
 
 \end_inset
 
-son útiles para (CITAR AL FRENKEL).
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+son útiles para (CITAR AL FRENKEL)
+\end_layout
+
+\end_inset
+
+.
  Sin embargo la complejidad de sistemas que involucran polielectrolitos
  débiles cuyos equilibrios químicos están regulados por pH, concentración
  de sal y confinamiento, hacen difícil sino inabordable el tratamiento con
- las estrategias antes nombradas.
+ las estrategias mencionadas.
+ 
 \end_layout
 
 \begin_layout Standard
-En este trabajo se utiliza un enfoque teórico que combina viejos y fructíferos
- conceptos de la física [la naturaleza optimiza una funcional, Lanczos?
- principios variacionales en física], una aproximación de campo medio para
- el tratamiento de las probabilidades de cadenas poliméricas
+En este trabajo se utiliza un enfoque teórico que combina un fructífero
+ concepto de la física, como es el hecho de que la naturaleza puede ser
+ descripta a través de una funcional que debe optimizar
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lanczos1986"
+
+\end_inset
+
+, una aproximación de campo medio para el tratamiento de las probabilidades
+ de cadenas poliméricas
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Ben-Shaul85c"
@@ -181,27 +205,21 @@ key "Sundial-Kinsol"
 
 \end_inset
 
-
+.
+ El objetivo es obtener las propiedades macroscópicas del sistema en estado
+ de equilibrio junto con la organización molecular que da origen a aquellas
+ propiedades macroscópicas.
+ Para ello escribimos la energía libre del sistema teniendo en cuenta todas
+ las interacciones relevantes más ciertas restricciones que surgen de la
+ física del problema.
+ Ejemplos de estas restricciones son las condiciones de incomprensibilidad
+ y electroneutralidad global.
+ 
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-[Kinsol?].
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El objetivo es obtener las propiedades macroscópicas del sistema en estado
- de equilibrio junto con la organización molecular que da origen a aquellas
- propiedades macroscópicas.
- Para ello escribimos la energía libre del sistema teniendo en cuenta todas
- las interacciones relevantes más las restricciones del entorno.
- Por ejemplo el 
+Por ejemplo el 
 \begin_inset Formula $pH$
 \end_inset
 
@@ -214,8 +232,12 @@ El objetivo es obtener las propiedades macroscópicas del sistema en estado
 \end_inset
 
  de cada una de las especies, restringen los grados de libertad del sistema.
- La energía libre sometida a las restricciones del entorno constituye un
- funcional que llamaremos 
+\end_layout
+
+\end_inset
+
+ La energía libre sometida a las restricciones constituye un funcional que
+ llamaremos 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -226,7 +248,19 @@ El objetivo es obtener las propiedades macroscópicas del sistema en estado
 
  nos permite hallar las distribuciones de todas las especies, la distribución
  de cargas y el potencial electrostático en cada punto del sistema, en función
- de las variables de acceso experimental: pH, Csalt, Cpol.
+ de las variables accesibles experimentalmente: 
+\begin_inset Formula $pH$
+\end_inset
+
+, 
+\begin_inset Formula $C_{salt}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{pol}$
+\end_inset
+
+ (concentración de polímero).
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -273,14 +307,14 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename figuras/Cap_teoria/CANAL_3d_V01.png
 	lyxscale 20
-	scale 25
+	scale 30
 
 \end_inset
 
@@ -335,7 +369,7 @@ status open
 \begin_inset Graphics
 	filename figuras/Cap_teoria/canal_solo_vB.png
 	lyxscale 20
-	scale 25
+	scale 30
 
 \end_inset
 
@@ -367,7 +401,7 @@ Detalle del nanocanal.
 
 \begin_layout Plain Layout
 Esquema del dispositivo experimental y detalle del nanocanal con simetría
- cilíndrica.
+ azimutal.
  La dirección 
 \begin_inset Formula $\hat{z}$
 \end_inset
@@ -428,7 +462,7 @@ Vamos a considerar nanocanales modificados con polielectrolitos débiles
 \end_layout
 
 \begin_layout Section
-Introducción al Equilibrio Iónico
+Introducción al Equilibrio Químico
 \end_layout
 
 \begin_layout Standard
@@ -513,8 +547,7 @@ donde
 \end_inset
 
 .
- El potencial químico puede entenderse como el nivel de energía de las partícula
-s de una dada especie en solución.
+ El potencial químico puede entenderse como la energía libre por partícula.
  Es una propiedad útil para describir sistemas inhomogéneos dado que, en
  la condición de equilibrio, 
 \begin_inset Formula $\mu_{i}$
@@ -730,9 +763,9 @@ reference "eq:reaccion_de_juguete"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-K_{exp}=\frac{\left[A\right]\left[H\right]}{\left[AH\right]}
-\]
+\begin{equation}
+K_{exp}=\frac{\left[A\right]\left[H\right]}{\left[AH\right]}\label{eq:K_equilibrio_introduccion}
+\end{equation}
 
 \end_inset
 
@@ -795,9 +828,9 @@ f_{A}=\frac{\left[A^{-}\right]}{\left[A^{-}\right]+\left[AH\right]}
 \end_layout
 
 \begin_layout Standard
-estas magnitudes miden el grado de disociación De forma general múltiples
- equilibrios químicos presentes en una unidad monomérica pueden escribirse
- como:
+estas magnitudes miden el grado de disociación.
+ De forma general múltiples equilibrios químicos presentes en una unidad
+ monomérica pueden escribirse como:
 \end_layout
 
 \begin_layout Standard
@@ -991,7 +1024,7 @@ s,
 \end_layout
 
 \begin_layout Itemize
-Interacción de Van der Waal entre dos segmentos de cadenas poliméricas (
+Interacción entre dos segmentos de cadenas poliméricas (
 \begin_inset Formula $U_{inter}$
 \end_inset
 
@@ -1007,8 +1040,8 @@ Interacciones electrostáticas (
 \end_layout
 
 \begin_layout Itemize
-Interacción de Van der Waal entre la pared del nanocanal y los segmentos
- de las cadenas poliméricas (
+Interacción entre la pared del nanocanal y los segmentos de las cadenas
+ poliméricas (
 \begin_inset Formula $U_{wall}$
 \end_inset
 
@@ -1393,27 +1426,6 @@ reference "chap:Adsorción-de-Polielectrolitos"
 
  en cambio, se consideran cadenas libres y por lo tanto se debe considerar
  el término de entropía traslacional debida a las cadenas poliméricas.
- En analogía con los términos anteriores la entropía de mezcla de cadenas
- libres se escribe, 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
--TS_{mix-Pol.}(\boldsymbol{r})=k_{B}T\rho_{PC}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{PC}(\boldsymbol{r})v_{w}\right)-1\right]
-\]
-
-\end_inset
-
-donde 
-\begin_inset Formula $\rho_{PC}(\boldsymbol{r})$
-\end_inset
-
- es la densidad de cadenas en 
-\begin_inset Formula $\boldsymbol{r}$
-\end_inset
-
-.
  En esta introducción teórica nos ocuparemos de cadenas ancladas a la superficie
  interna del nanocanal.
  Los detalles sobre la descripción teórica de cadenas libres se desarrollaron
@@ -1507,49 +1519,7 @@ key "terrell_introduction"
 
 \end_inset
 
-Puede escribirse de forma general la entropía conformacional de cadenas
- poliméricas libres como,
-\end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
--TS_{pol}=\int k_{B}T\rho_{PC}(\boldsymbol{r})\sum_{\alpha}P(\boldsymbol{r},\alpha)\mbox{ln}\left(P(\boldsymbol{r};\alpha)\right)d\boldsymbol{r}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-donde 
-\begin_inset Formula $P(r,\alpha)$
-\end_inset
-
- es la función densidad de probabilidad de la configuración 
-\begin_inset Formula $(\boldsymbol{r},\alpha)$
-\end_inset
-
-.
- Una configuración de cadena quedará identificada con el par 
-\begin_inset Formula $\left(\boldsymbol{r},\alpha\right)$
-\end_inset
-
- indicando la conformación 
-\begin_inset Formula $\alpha$
-\end_inset
-
- cuya posición dentro del nanocanal es 
-\series bold
-
-\begin_inset Formula $r$
-\end_inset
-
-
-\series default
-.
- 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1568,9 +1538,8 @@ La entidad de los polielectrolitos que estemos considerando, estará dada
  por el equilibrio químico presente en cada una de las unidades monoméricas.
  Estos equilibrios químicos tienen dos contribuciones a la energía libre
  del sistema, una contribución entrópica caracterizada por la multiplicidad
- de estados accesibles a cada monómero y una contribución no entrópica (energéti
-ca?) correspondiente al potencial químico estándar del estado en que se
- encuentra el monómero.
+ de estados accesibles a cada monómero y otra contribución debida al potencial
+ químico estándar del estado en que se encuentra el monómero.
  El tercer término en la energía (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1779,8 +1748,8 @@ reference "eq:la_posta_en_mus"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline}
-F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{m}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]\label{eq:Uchem_general-2}\\
-+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
+F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{m}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]\\
++\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}\label{eq:Uchem_general-2}
 \end{multline}
 
 \end_inset
@@ -1916,7 +1885,8 @@ reference "eq:Uchem_general-2"
 
 \end_inset
 
- para dos casos particulares de polielectrolitos: PAH y PMEP.
+ para dos casos particulares de polielectrolitos: poliallylamina (PAH) y
+ poli(2-(metacriloiloxi) etil-fosfato (PMEP).
 \end_layout
 
 \begin_layout Paragraph
@@ -1949,7 +1919,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Estructura y equilibrio ácido-base del monómero de PAH 
+Estructura y equilibrio ácido-base del monómero de poliallylamina (PAH)
+ 
 \end_layout
 
 \end_inset
@@ -2058,8 +2029,7 @@ mientras que la contribución a la energía libre en términos de la constante
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline*}
-F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{ f_{1}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{1}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\text{ln}\left(K_{b}\right)-\beta\mu_{H^{+}}^{0}\right]\\
-+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
+F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{ f_{1}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{1}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\text{ln}\left(K_{b}\right)-\beta\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
 \end{multline*}
 
 \end_inset
@@ -2068,14 +2038,36 @@ F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangl
 \end_layout
 
 \begin_layout Standard
-El valor de la constante de equilibrio para la poliallylamina 
+El valor de la constante de equilibrio para la amina en los monómeros de
+ PAH 
 \begin_inset Formula $pK_{b}=3.4$
 \end_inset
 
- se obtiene de la referencia
+ se corresponde con el 
+\begin_inset Formula $pK_{b}$
+\end_inset
+
+ de una amina primaria
+\begin_inset CommandInset citation
+LatexCommand cite
+key "handbook1991"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+se obtiene de la referencia
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Tagliazucchi2008"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2144,7 +2136,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Estructura y equilibrio ácido-base del monómero de PMEP 
+Estructura y equilibrio ácido-base del monómero de poli(2-(metacriloiloxi)
+ etil-fosfato (PMEP) 
 \end_layout
 
 \end_inset
@@ -2197,11 +2190,11 @@ En el caso del monómero poliprótico 2-(methacriloiloxi) etil fosfato (
 .
  Este monómero tiene dos equilibrios químicos asociados caracterizados por
  las constantes de equilibrio 
-\begin_inset Formula $K_{a1}=e^{-4.5}$
+\begin_inset Formula $K_{a1}=10^{-4,5}$
 \end_inset
 
  y 
-\begin_inset Formula $K_{a2}=e^{-7.7}$
+\begin_inset Formula $K_{a2}=10^{-7,7}$
 \end_inset
 
 .
@@ -2254,9 +2247,10 @@ la contribución a la energía libre en términos de las constantes de equilibri
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{2}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
-\]
+\begin{multline*}
+F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{2}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]\\
++\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
+\end{multline*}
 
 \end_inset
 
@@ -2360,18 +2354,7 @@ reference "chap:Aproximación-MF"
 \end_inset
 
 ).
- El caso más general de cadenas libres se escribe 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\left\langle \rho_{P}(\boldsymbol{r})\right\rangle =\rho_{PC}(\boldsymbol{r})\int d\boldsymbol{r'}\sum_{\alpha}n_{p}(\boldsymbol{r};\boldsymbol{r'},\alpha)P(\boldsymbol{r'},\alpha)\label{eq:mon_density_free_chains}
-\end{equation}
-
-\end_inset
-
-
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -2509,9 +2492,9 @@ La densidad de carga promedio se escribe considerando los estados cargados
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{multline}
+\begin{gather}
 \left\langle \rho_{q}(\boldsymbol{r})\right\rangle =-\left(f_{1}(\boldsymbol{r})+2f_{2}(\boldsymbol{r})\right)\left\langle \rho_{p}(\boldsymbol{r})\right\rangle +\sum_{i=K^{+},Cl^{-},H^{+},OH^{-}}q_{i}\rho_{i}(\boldsymbol{r})\label{eq:charge_density-1-1}
-\end{multline}
+\end{gather}
 
 \end_inset
 
@@ -2537,8 +2520,7 @@ Más en general si un segmento tiene
 \begin_layout Standard
 \begin_inset Formula 
 \begin{gather}
-\left\langle \rho_{q}(\boldsymbol{r})\right\rangle =\left(\sum_{e=0}^{m}f_{e}(\boldsymbol{r})q_{e}\right)\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \nonumber \\
-+q_{H^{+}}\rho_{H^{+}}(\boldsymbol{r})+q_{OH^{-}}\rho_{OH^{-}}(\boldsymbol{r})\nonumber \\
+\left\langle \rho_{q}(\boldsymbol{r})\right\rangle =\left(\sum_{e=0}^{m}f_{e}(\boldsymbol{r})q_{e}\right)\left\langle \rho_{p}(\boldsymbol{r})\right\rangle +q_{H^{+}}\rho_{H^{+}}(\boldsymbol{r})+q_{OH^{-}}\rho_{OH^{-}}(\boldsymbol{r})\nonumber \\
 +q_{K^{+}}\rho_{K^{+}}(\boldsymbol{r})+q_{Cl^{-}}\rho_{Cl^{-}}(\boldsymbol{r})\label{eq:charge_density-2}
 \end{gather}
 
@@ -2569,7 +2551,7 @@ shorter form
 \end_layout
 
 \begin_layout Subsubsection
-Interacción de corto alcance - Van der Waal atractivo
+Interacción de corto alcance - Van der Waals atractivo
 \end_layout
 
 \begin_layout Standard
@@ -2594,7 +2576,7 @@ reference "eq:inter_FreeE"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-U_{inter}(\boldsymbol{r})=\frac{1}{2}k_{B}T\int d\boldsymbol{r}'\left(2\pi r'\right)\chi(\boldsymbol{r}-\boldsymbol{r}')\left\langle \phi_{p}(\boldsymbol{r})\right\rangle \left\langle \phi_{p}(\boldsymbol{r}')\right\rangle \label{eq:inter_FreeE}
+U_{inter}(\boldsymbol{r})=\frac{1}{2}k_{B}T\int d\boldsymbol{r}'\chi(\boldsymbol{r}-\boldsymbol{r}')\left\langle \phi_{p}(\boldsymbol{r})\right\rangle \left\langle \phi_{p}(\boldsymbol{r}')\right\rangle \label{eq:inter_FreeE}
 \end{equation}
 
 \end_inset
@@ -2689,7 +2671,7 @@ status collapsed
 \end_layout
 
 \begin_layout Subsection
-Intercambio de partículas con el entorno: Ensamble gran canónico 
+Intercambio de Partículas con el Entorno: Ensamble Gran Canónico 
 \end_layout
 
 \begin_layout Standard
@@ -2740,8 +2722,8 @@ reference "eq:simple_FreeE"
 \begin_inset Formula 
 \begin{multline}
 A=\int\left[-TS_{mix}(\boldsymbol{r})-TS_{pol}(\boldsymbol{r})+F_{chem}(\boldsymbol{r})+U_{wall}(\boldsymbol{r})+U_{elec}(\boldsymbol{r})+U_{inter}(\boldsymbol{r})\right]d\boldsymbol{r}\\
--\int\Bigg[\mu_{w}\rho_{w}(\boldsymbol{r})+\mu_{Cl^{-}}\rho_{Cl^{-}}(\boldsymbol{r})+\mu_{K^{+}}\rho_{K^{+}}(\boldsymbol{r})\\
-+\mu_{OH^{-}}\left(\rho_{OH^{-}}(\boldsymbol{r})+\sum_{e}n_{e,OH^{-}}f_{e}(\boldsymbol{r})\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)+\mu_{H^{+}}\left(\rho_{H^{+}}(\boldsymbol{r})+\sum_{e}n_{e,H^{+}}f_{e}(\boldsymbol{r})\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\Bigg]d\boldsymbol{r}\label{eq:semiGranCanonical_ensamble}
+-\int\Bigg[\mu_{w}\rho_{w}(\boldsymbol{r})+\mu_{Cl^{-}}\rho_{Cl^{-}}(\boldsymbol{r})+\mu_{K^{+}}\rho_{K^{+}}(\boldsymbol{r})+\mu_{OH^{-}}\left(\rho_{OH^{-}}(\boldsymbol{r})+\sum_{e}n_{e,OH^{-}}f_{e}(\boldsymbol{r})\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\\
++\mu_{H^{+}}\left(\rho_{H^{+}}(\boldsymbol{r})+\sum_{e}n_{e,H^{+}}f_{e}(\boldsymbol{r})\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\Bigg]d\boldsymbol{r}\label{eq:semiGranCanonical_ensamble}
 \end{multline}
 
 \end_inset
@@ -2819,7 +2801,7 @@ reference "tab:Data-for-chemical-1"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -3419,14 +3401,10 @@ name "tab:Data-for-chemical-1"
 
  Tabla de valores y notación para los equilibrios ácido-base presentes en
  los monómeros de PAH y PMEP.
- Estos valores son relevantes al momento de escribir la magnitud 
-\begin_inset Formula $\widetilde{\mu}$
-\end_inset
-
- en la ecuación 
+ Estos valores aparecen en la expresión 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:mu_moño"
+reference "eq:semiGranCanonical_ensamble-1"
 
 \end_inset
 
@@ -3555,8 +3533,7 @@ reference "eq:semiGranCanonical_ensamble"
 \begin_inset Formula 
 \begin{multline}
 A=\int\left[-TS_{mix}(\boldsymbol{r})-TS_{pol}(\boldsymbol{r})+F_{chem}(\boldsymbol{r})+U_{wall}(\boldsymbol{r})+U_{elec}(\boldsymbol{r})+U_{inter}(\boldsymbol{r})\right]d\boldsymbol{r}\\
--\int\Bigg[\mu_{w}\rho_{w}(\boldsymbol{r})+\mu_{Cl^{-}}\rho_{Cl^{-}}(\boldsymbol{r})+\mu_{K^{+}}\rho_{K^{+}}(\boldsymbol{r})\\
-+\mu_{OH^{-}}\left(\rho_{OH^{-}}(\boldsymbol{r})+\left[\sum_{e=1}^{m}\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)f_{e}(\boldsymbol{r})+n_{0,OH^{-}}\right]\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\\
+-\int\Bigg[\mu_{w}\rho_{w}(\boldsymbol{r})+\mu_{Cl^{-}}\rho_{Cl^{-}}(\boldsymbol{r})+\mu_{K^{+}}\rho_{K^{+}}(\boldsymbol{r})+\mu_{OH^{-}}\left(\rho_{OH^{-}}(\boldsymbol{r})+\left[\sum_{e=1}^{m}\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)f_{e}(\boldsymbol{r})+n_{0,OH^{-}}\right]\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\\
 +\mu_{H^{+}}\left(\rho_{H^{+}}(\boldsymbol{r})+\left[\sum_{e=1}^{m}\left(n_{e,H^{+}}-n_{0,H^{+}}\right)f_{e}(\boldsymbol{r})+n_{0,H^{+}}\right]\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\Bigg]d\boldsymbol{r}\label{eq:semiGranCanonical_ensamble-1}
 \end{multline}
 
@@ -3645,7 +3622,7 @@ Para el PAH queda la expresión,
 \end_layout
 
 \begin_layout Subsection
-Restricciones a la energía libre: Empaquetamiento, Electroneutralidad y
+Restricciones a la Energía Libre: Empaquetamiento, Electroneutralidad y
  Normalización de la Probabilidad de Configuraciones 
 \begin_inset Formula $P(\alpha)$
 \end_inset
@@ -3689,13 +3666,13 @@ reference "eq:packing_condition"
 \begin_layout Standard
 Formalmente debemos incorporar también la normalización de la probabilidad
  de las conformaciones de cadena 
-\begin_inset Formula $P(\boldsymbol{r},\alpha)$
+\begin_inset Formula $P(\alpha)$
 \end_inset
 
 .
  Para ello vamos a considerar la normalización local, es decir vamos a pedir
  que la probabilidad 
-\begin_inset Formula $P(\boldsymbol{r},\alpha)$
+\begin_inset Formula $P(\alpha)$
 \end_inset
 
  cumpla con la ecuación 
@@ -3712,7 +3689,7 @@ reference "eq:norm_constraint"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\sum_{\alpha}P(\boldsymbol{r,}\alpha)=1\qquad\text{para cada \ensuremath{\boldsymbol{r}}}\label{eq:norm_constraint}
+\sum_{\alpha}P(\alpha)=1\label{eq:norm_constraint}
 \end{equation}
 
 \end_inset
@@ -3766,7 +3743,7 @@ reference "eq:electroneutrality_condition"
 \end_inset
 
 , 
-\begin_inset Formula $Z(\boldsymbol{r})$
+\begin_inset Formula $Z$
 \end_inset
 
 , y 
@@ -3801,7 +3778,7 @@ reference "eq:semiGranCanonical_ensamble"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-I_{R}=\int d\boldsymbol{r}\beta\pi(\boldsymbol{r})\left[\left\langle \phi_{P}(\boldsymbol{r})\right\rangle +\sum_{i}\phi_{i}(\boldsymbol{r})-1\right]+\lambda\left[\sigma_{q}+\int d\boldsymbol{r}\beta\left\langle \rho_{q}(\boldsymbol{r})\right\rangle \right]+Z(\boldsymbol{r})\left(\sum_{\alpha}P(\boldsymbol{r},\alpha)-1\right)\label{eq:restricciones}
+I_{R}=\int d\boldsymbol{r}\beta\pi(\boldsymbol{r})\left[\left\langle \phi_{P}(\boldsymbol{r})\right\rangle +\sum_{i}\phi_{i}(\boldsymbol{r})-1\right]+\lambda\left[\sigma_{q}+\int d\boldsymbol{r}\beta\left\langle \rho_{q}(\boldsymbol{r})\right\rangle \right]+Z\left(\sum_{\alpha}P(\alpha)-1\right)\label{eq:restricciones}
 \end{equation}
 
 \end_inset
@@ -3851,7 +3828,7 @@ reference "eq:restricciones"
 \begin_inset Formula $k_{B}T$
 \end_inset
 
-, de la superficie funcionalizada.
+, de la superficie modificada.
  En la expresión (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3907,16 +3884,16 @@ Ecuacion completa funcional sin ordenar
 \omega=\int_{0}^{R}\rho_{Cl\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{Cl\text{⁻}}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{K^{+}}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{K^{+}}(\boldsymbol{r})v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
 +\int_{0}^{R}\rho_{OH\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{OH\text{⁻}}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{H\text{⁺}}(r)\left[\mbox{ln}\left(\rho_{H\text{⁺}}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
 +\int_{0}^{R}\rho_{w}(r)\left[\mbox{ln}\left(\rho_{w}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{PC}(r)\left[\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
-+\int_{0}^{R}\rho_{PC}(r)\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)\left(\frac{r}{R}\right)dr\\
++\sigma\sum_{\alpha}P(\alpha)\mbox{ln}\left(P(\alpha)\right)\\
 +\int_{0}^{R}\left\langle \rho_{P}(r)\right\rangle \Big\{\sum_{e=1}^{m}f_{e}(r)\Bigg[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\beta\mu_{H^{+}}^{0}\\
 -\left(n_{OH^{-},0}-n_{OH^{-},e}\right)\beta\mu_{OH^{-}}^{0}\Bigg]+\mbox{ln}\left(f_{0}(r)\right)+\beta\mu_{0}^{0}\Big\}\left(\frac{r}{R}\right)dr\\
 -\int_{0}^{R}\beta\chi_{wall}(r)\left\langle \rho_{P}(r)\right\rangle \left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta\left[\left\langle \rho_{q}(r)\right\rangle \Psi(r)-\frac{1}{2}\varepsilon\left(\nabla_{r}\Psi(r)\right)^{2}\right]\left(\frac{r}{R}\right)dr\\
-+\frac{1}{2}\int_{0}^{R}\int_{0}^{R}dr'\left(2\pi r'\right)\chi(r-r')\left\langle \phi_{p}(r)\right\rangle \left\langle \phi_{p}(r')\right\rangle \left(\frac{r}{R}\right)dr\\
++\frac{1}{2}\int_{0}^{R}\int_{0}^{R}dr'\left(2\pi r'\right)\chi(r,r')\left\langle \phi_{p}(r)\right\rangle \left\langle \phi_{p}(r')\right\rangle \left(\frac{r}{R}\right)dr\\
 -\int_{0}^{R}\beta\Bigg[\mu_{w}\rho_{w}(r)+\mu_{Cl^{-}}\rho_{Cl^{-}}(r)+\mu_{K^{+}}\rho_{K^{+}}(r)\\
 +\mu_{OH^{-}}\left(\rho_{OH^{-}}(r)+\left[\sum_{e=1}^{m}\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)f_{e}(r)+n_{0,OH^{-}}\right]\left\langle \rho_{p}(r)\right\rangle \right)\\
 +\mu_{H^{+}}\left(\rho_{H^{+}}(r)+\left[\sum_{e=1}^{m}\left(n_{e,H^{+}}-n_{0,H^{+}}\right)f_{e}(r)+n_{0,H^{+}}\right]\left\langle \rho_{p}(r)\right\rangle \right)\Bigg]\left(\frac{r}{R}\right)dr\\
 +\int_{0}^{R}\beta\pi(r)\left[\left\langle \phi_{P}(r)\right\rangle +\sum_{i}\phi_{i}(r)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta\lambda\left[\sigma_{q}f_{wall}+\int dr\beta\left\langle \rho_{q}(r)\right\rangle \right]\left(\frac{r}{R}\right)dr\\
-+\int_{0}^{R}\beta Z(r)\left(\sum_{\alpha}P(r,\alpha)-1\right)\left(\frac{r}{R}\right)dr\label{eq:Energia_libre_completa}
++Z\left(\sum_{\alpha}P(\alpha)-1\right)\label{eq:Energia_libre_completa}
 \end{multline}
 
 \end_inset
@@ -3941,7 +3918,7 @@ ico.
 .
  Los casos que consideraremos serán todos bajo la condición de buen solvente
  
-\begin_inset Formula $\chi(\boldsymbol{r}-\boldsymbol{r}')=0$
+\begin_inset Formula $\chi(\boldsymbol{r},\boldsymbol{r}')=0$
 \end_inset
 
 .
@@ -3981,7 +3958,7 @@ status collapsed
 -\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)\beta\Delta\mu_{oH^{-}}\Bigg]-n_{0,OH^{-}}\beta\mu_{OH^{-}}-n_{0,H^{+}}\beta\mu_{H^{+}}\\
 +\mbox{ln}\left(f_{0}(r)\right)+\beta\mu_{0}^{0}-\beta\chi_{wall}(r)+\beta\pi(r)v_{p}\Bigg\}\left(\frac{r}{R}\right)dr\\
 +\int_{0}^{R}\beta\left[\left\langle \rho_{q}(r)\right\rangle \Psi(r)-\frac{1}{2}\varepsilon\left(\nabla_{r}\Psi(r)\right)^{2}\right]\left(\frac{r}{R}\right)dr\\
-+\sigma\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)-\int_{0}^{R}\beta\pi(r)\left(\frac{r}{R}\right)dr+\beta Z\left(\sum_{\alpha}P(\alpha)-1\right)\label{eq:Energia_libre_compacta}
++\sigma\sum_{\alpha}P(\alpha)\mbox{ln}\left(P(\alpha)\right)-\int_{0}^{R}\beta\pi(r)\left(\frac{r}{R}\right)dr+\beta Z\left(\sum_{\alpha}P(\alpha)-1\right)\label{eq:Energia_libre_compacta}
 \end{multline}
 
 \end_inset
@@ -4093,7 +4070,7 @@ Los términos que involucran al potencial químico de las especies
 \begin_inset Formula $\mu_{0}^{0}$
 \end_inset
 
- contribuyen en una constante a la funcional por lo tanto pueden despreciarse.
+ contribuyen en una constante a la funcional por lo tanto pueden omitirse.
  La expresión completa de la funcional 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4221,6 +4198,15 @@ PAH
 \end_layout
 
 \begin_layout Section
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Optimización Analítica
+\end_layout
+
+\end_inset
+
 Optimización Analítica y Expresiones Resultantes
 \end_layout
 
@@ -5931,7 +5917,7 @@ reference "chap:Discretización"
 \end_layout
 
 \begin_layout Subsection
-Expresión para la energía reducida
+Expresión para la Energía Reducida
 \end_layout
 
 \begin_layout Standard
@@ -6009,6 +5995,138 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Las soluciones del sistema, ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rho_w_minimization-1-1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vol_frac_with_bulk_values"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:f1_PAH_program"
+
+\end_inset
+
+(para el PAH), 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:grad_disos_f-1"
+
+\end_inset
+
+y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:grad_disos_f-2"
+
+\end_inset
+
+ (para el PMEP), 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GRAL_P_expression"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:equ_potential"
+
+\end_inset
+
+, se resuelven de forma auto-consistente.
+ Primero discretizamos las expresiones (ver apéndice 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Discretización"
+
+\end_inset
+
+) para luego hallar las soluciones de manera iterativa.
+ El procedimiento consiste en proponer una solución inicial para la fracción
+ de solvente (
+\begin_inset Formula $\phi_{w}^{(0)}(r)=1$
+\end_inset
+
+) y el potencial electrostático (
+\begin_inset Formula $\Psi^{(0)}(r)=0$
+\end_inset
+
+).
+ Luego se calculan las distribuciones de partículas con las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vol_frac_with_bulk_values"
+
+\end_inset
+
+ y los grados de disociación.
+ Finalmente se recalculan el potencial electrostático 
+\begin_inset Formula $\Psi^{(1)}(r)$
+\end_inset
+
+ y la fracción de solvente 
+\begin_inset Formula $\phi_{w}^{(1)}(r)$
+\end_inset
+
+ a través de la ecuación de Poisson 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:equ_potential"
+
+\end_inset
+
+ y la condición de empaquetamiento 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:packing_condition"
+
+\end_inset
+
+.
+ Con 
+\begin_inset Formula $\Psi^{(1)}(r)$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{w}^{(1)}(r)$
+\end_inset
+
+ se calcula la energía libre del sistema.
+ El procedimiento se detiene cuando la distancia entre las soluciones 
+\begin_inset Formula $\Psi^{(n-1)}(r)$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{w}^{(n-1)}(r)$
+\end_inset
+
+ y 
+\begin_inset Formula $\Psi^{(n)}(r)$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{w}^{(n)}(r)$
+\end_inset
+
+ es menor a un valor de corte, típicamente 
+\begin_inset Formula $10^{-8}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
