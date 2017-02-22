@@ -9,6 +9,7 @@
 
 \usepackage[table]{xcolor}
 %\rowcolor{1}{lightgray}{white}
+\definecolor{verde_unlp}{cmyk}{1.0, 0.2, 0.4, 0.5}
 \end_preamble
 \options usenames,dvipsnames
 \use_default_options true
@@ -18,9 +19,9 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
@@ -34,9 +35,20 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing single
-\use_hyperref false
-\papersize default
+\spacing onehalf
+\use_hyperref true
+\pdf_author "Facundo M. Gilles"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=purple"
+\papersize a4paper
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -89,57 +101,102 @@
 status open
 
 \begin_layout Plain Layout
-Adsorción de Polielectrolitos débiles
+Adsorción
 \end_layout
 
 \end_inset
 
-Adsorción de Polielectrolitos Débiles: Efectos de la Fuerza Iónica en la
- Carga Superficial de Nanocanales Modificados
+Adsorción de Polielectrolitos Débiles en Medios Confinados 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+: Efectos de la Fuerza Iónica en la Carga Superficial de Nanocanales Modificados
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Adsorción-de-Polielectrolitos"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Estudiamos el comportamiento de brushes poliméricos confinados en el interior
- de nanocanales y vimos los efectos del confinamiento en los equilibrios
- químicos presentes en el polielectrolito.
- Además desarrollamos una técnica para cuantificar la conductancia de nanocanale
-s no cilíndricos.
- 
-\end_layout
-
-\begin_layout Standard
-Además de los brushes poliméricos se ha intentado funcionalizar la pared
- interna de nanocanales de estado sólido a través de la absorción de polielectro
-litos.
- 
-\end_layout
-
-\begin_layout Standard
-Es frecuente encontrar en la literatura la hipótesis de densidad de carga
- superficial homogénea a lo largo de la pared interna del nanocanal.
- Esto es esperable en el caso de nanocanales cilíndricos.
- Sin embargo cuando la geometría del nanocanal deja de ser cilíndrica no
- queda clara la veracidad de esta hipótesis.
+La adsorción de polielectrolitos sobre la superficie interna de los nanocanales
+ es un método alternativo para la preparación de nanocanales modificados
+ por polímeros que resulta sintéticamente más simple que la polimerización
+ de brushes.
  
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Si se consideran los primeros métodos de funcionalización de nanocanales
- que consisten en hacer crecer una capa de brushes poliméricos 
-\emph on
-in 
-\emph default
-situ
-\emph on
- 
-\emph default
-esta hipótesis es, como primera aproximación, razonable.
+REFERENCIAS
 \end_layout
 
 \end_inset
 
+ Este fenómeno es posible gracias a la existencia de cargas en la superficie
+ interna del nanocanal y una interacción atractiva entre los monómeros del
+ polielectrolito y la pared del nanocanal.
+ La adsorción resulta favorable por la liberación de los contraiones de
+ la pared y del polímero más que por la atracción electrostática entre ellos
+ (es un proceso entrópico, no entálpico)
+\begin_inset Note Note
+status open
 
+\begin_layout Plain Layout
+REFERENCIAS
+\end_layout
+
+\end_inset
+
+ La carga superficial se debe a la presencia de grupos carboxilatos que
+ se presuponen distribuidos de forma homogénea sobre la pared interna del
+ nanocanal.
+ 
+\end_layout
+
+\begin_layout Standard
+Para la modelización teórica es frecuente encontrar en la literatura trabajos
+ donde se considera que la densidad de carga superficial homogénea a lo
+ largo de la pared interna del nanocanal.
+ Por razones geométricas distribuciones homogéneas de carga son esperables
+ en el caso de nanocanales cilíndricos.
+ Sin embargo cuando la geometría del nanocanal deja de ser cilíndrica, por
+ ejemplo geometrías asimétricas como nanocanales cónicos o geometrías tipo
+ bala (
+\emph on
+bullet-like
+\emph default
+), podrían aparecer otro tipo de distribuciones.
+ 
+\end_layout
+
+\begin_layout Standard
+Por el momento no es posible medir distribuciones de carga polimérica dentro
+ de nanocanales
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+REFERENCIAS
+\end_layout
+
+\end_inset
+
+.
+ Los esfuerzos teórico/computacionales de la comunidad de los últimos años
+ se orientaron hacia la descripción de las propiedades de transporte de
+ estos sistemas más que a la organización molecular.
+ Más específicamente a la medición y predicción de las propiedades de rectificac
+ión.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -147,7 +204,7 @@ En este capítulo estudiamos la adsorción de cadenas poliméricas en medios
  confinados ver figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:monolayer_PAH"
+reference "fig:figura_monolayer_PAH"
 
 \end_inset
 
@@ -158,47 +215,58 @@ reference "fig:monolayer_PAH"
 \end_inset
 
 .
- La funcionalización se logra experimentalmente a través de la absorción
- de cadenas poliméricas sobre la superficie interna del nanocanal.
- Las cadenas están inicialmente "libres" y se encuentran con una concentración
- 
+ Consideramos que el sistema alcanza el equilibrio con un entorno que tiene
+ polielectrolitos "libres", en una concentración 
 \begin_inset Formula $C_{pol}$
 \end_inset
 
  en solución.
- Dos nuevos términos deben incorporarse a la energía libre del sistema.
- Un término correspondiente a la entropía traslacional de las cadenas polimérica
-s y el otro considera el potencial químico de las cadenas poliméricas 
+ Dos nuevos términos deben incorporarse a la energía libre del sistema,
+ un término correspondiente a la entropía traslacional de las cadenas polimérica
+s y otro correspondiente al potencial químico de las cadenas poliméricas
+ 
 \begin_inset Formula $\mu_{pol}$
 \end_inset
 
 .
- En el equilibrio el potencial químico de las cadenas libres debe igualarse
- al potencial químico de las cadenas adsorvidas.
- En este capítulo consideramos cadenas de PAH, cada monómero de la cadena
+ La condición de equilibrio termodinámico para los polielectrolitos implica
+ que el potencial químico de las cadenas libres debe igualarse al potencial
+ químico de las cadenas adsorbidas.
+ Consideramos además una interacción de Van der Waals entre los monómeros
+ de PAH y la pared del nanocanal.
+ 
+\end_layout
+
+\begin_layout Standard
+En este capítulo consideramos cadenas de PAH, cada monómero de la cadena
  posee un equilibrio químico simple, ver figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:monolayer_PAH"
+reference "fig:figura_monolayer_PAH"
 
 \end_inset
 
 (B), donde los estados del monómero son dos: con carga nula o carga neta
- +1.
+ 
+\begin_inset Formula $+1e$
+\end_inset
+
+.
  A su vez consideramos grupos carboxilatos sobre la superficie interna del
  nanocanal.
  Estos grupos carboxilatos poseen también su equilibrio químico que conecta
- dos estados: con carga nula 0 carga -1, ver figura 
+ dos estados: con carga nula 0 carga 
+\begin_inset Formula $-1e$
+\end_inset
+
+, ver figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:monolayer_PAH"
+reference "fig:figura_monolayer_PAH"
 
 \end_inset
 
 (B).
- A diferencia del caso con brushes poliméricos en este sistema consideramos
- además una interacción de Van der Waal entre los monómeros de PAH y la
- pared del nanocanal.
  
 \end_layout
 
@@ -206,7 +274,7 @@ reference "fig:monolayer_PAH"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -298,7 +366,7 @@ El sistema en estudio es un nanocanal cilíndrico modificado con una capa
  función del pH de la solución.
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:monolayer_PAH"
+name "fig:figura_monolayer_PAH"
 
 \end_inset
 
@@ -317,8 +385,9 @@ name "fig:monolayer_PAH"
 
 \begin_layout Standard
 Finalmente se estudia el caso de adsorción en nanocanales no-cilíndricos.
- En particular estudiamos nanocanales asimétricos cónicos de amplio interés
- en la comunidad por sus propiedades de rectificación del flujo iónico.
+ En particular estudiamos un ejemplo de nanocanales asimétricos, nanocanales
+ cónicos de amplio interés en la comunidad por sus propiedades de rectificación
+ del flujo iónico.
  Consideraremos simetría en la dirección 
 \begin_inset Formula $\hat{\theta}$
 \end_inset
@@ -332,7 +401,344 @@ Finalmente se estudia el caso de adsorción en nanocanales no-cilíndricos.
 \end_layout
 
 \begin_layout Section
-Resultados
+Energía libre del sistema
+\end_layout
+
+\begin_layout Standard
+La adsorción de polielectrolitos débiles sobre la pared interna de nanocanales
+ cilíndricos implica un cambio en la descripción teórica presentada en el
+ capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Enfoque-Teórico"
+
+\end_inset
+
+.
+ Debemos considerar cadenas poliméricas libres por lo tanto las conformaciones
+ estarán ahora descriptas por un par 
+\begin_inset Formula $\left(\boldsymbol{r},\alpha\right)$
+\end_inset
+
+, un índice 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ que indica la conformación y una coordenada espacial 
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+ que indica la posición en la que se encuentra dicha conformación.
+ Decimos que una conformación 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ se encuentra en la posición 
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+ si es la posición más alejada del eje 
+\begin_inset Formula $\hat{z}$
+\end_inset
+
+, eje principal del nanocanal, en donde se encuentra al menos un monómero
+ de la cadena.
+ En analogía con los términos de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:entropia_traslacional"
+
+\end_inset
+
+, escribimos la entropía de mezcla de cadenas libres como,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-TS_{mix-Pol.}(\boldsymbol{r})=k_{B}T\rho_{PC}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{PC}(\boldsymbol{r})v_{w}\right)-1\right]
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\rho_{PC}(\boldsymbol{r})$
+\end_inset
+
+ es la densidad de cadenas en 
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+.
+ La densidad de cadenas es necesaria para poder escribir el término entrópico
+ de mezcla.
+ La densidad local de monómeros está relacionada con la densidad de cadenas
+ a través de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mon_density_free_chains"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\langle \rho_{P}(\boldsymbol{r})\right\rangle =\rho_{PC}(\boldsymbol{r})\int d\boldsymbol{r'}\sum_{\alpha}n_{p}(\boldsymbol{r};\boldsymbol{r'},\alpha)P(\boldsymbol{r'},\alpha)\label{eq:mon_density_free_chains}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El caso más general de entropía conformacional de cadenas poliméricas libres
+ se escribe como,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-TS_{pol}=\int k_{B}T\rho_{PC}(\boldsymbol{r})\sum_{\alpha}P(\boldsymbol{r},\alpha)\mbox{ln}\left(P(\boldsymbol{r};\alpha)\right)d\boldsymbol{r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $P(\boldsymbol{r},\alpha)$
+\end_inset
+
+ es la función densidad de probabilidad de la configuración 
+\begin_inset Formula $(\boldsymbol{r},\alpha)$
+\end_inset
+
+.
+ Formalmente debemos incorporar también la normalización de la probabilidad
+ de las conformaciones de cadena 
+\begin_inset Formula $P(\boldsymbol{r},\alpha)$
+\end_inset
+
+.
+ Para ello vamos a considerar la normalización local, es decir vamos a pedir
+ que la probabilidad 
+\begin_inset Formula $P(\boldsymbol{r},\alpha)$
+\end_inset
+
+ cumpla con la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:norm_constraint-1"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sum_{\alpha}P(\boldsymbol{r,}\alpha)=1\qquad\text{para cada \ensuremath{\boldsymbol{r}}}\label{eq:norm_constraint-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Para esto se incorpora un termino de entropía traslacional en la energía
+ libre del sistema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Energia_libre_completa"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como el sistema esta en equilibrio con un entorno que contiene polielectrolitos
+ libres en solución, debemos considerar que la cantidad de cadenas del polielect
+rolito dentro del canal estará regulada por el potencial químico del polímero
+ 
+\begin_inset Formula $\mu_{pol}$
+\end_inset
+
+.
+ La expresión general de la energía queda de la forma 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+\omega=\int_{0}^{R}\rho_{Cl\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{Cl\text{⁻}}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{K^{+}}(\boldsymbol{r})\left[\mbox{ln}\left(\rho_{K^{+}}(\boldsymbol{r})v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{OH\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{OH\text{⁻}}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{H\text{⁺}}(r)\left[\mbox{ln}\left(\rho_{H\text{⁺}}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{w}(r)\left[\mbox{ln}\left(\rho_{w}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\rho_{PC}(r)\left[\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-1\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{PC}(r)\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)\left(\frac{r}{R}\right)dr-\mu_{pol}\int_{0}^{R}\rho_{PC}(r)\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\left\langle \rho_{P}(r)\right\rangle \Big\{\sum_{e=1}^{m}f_{e}(r)\Bigg[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\beta\mu_{H^{+}}^{0}\\
+-\left(n_{OH^{-},0}-n_{OH^{-},e}\right)\beta\mu_{OH^{-}}^{0}\Bigg]+\mbox{ln}\left(f_{0}(r)\right)+\beta\mu_{0}^{0}\Big\}\left(\frac{r}{R}\right)dr\\
+-\int_{0}^{R}\beta\chi_{wall}(r)\left\langle \rho_{P}(r)\right\rangle \left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta\left[\left\langle \rho_{q}(r)\right\rangle \Psi(r)-\frac{1}{2}\varepsilon\left(\nabla_{r}\Psi(r)\right)^{2}\right]\left(\frac{r}{R}\right)dr\\
++\frac{1}{2}\int_{0}^{R}\int_{0}^{R}dr'\left(2\pi r'\right)\chi(r-r')\left\langle \phi_{p}(r)\right\rangle \left\langle \phi_{p}(r')\right\rangle \left(\frac{r}{R}\right)dr\\
+-\int_{0}^{R}\beta\Bigg\{\mu_{w}\rho_{w}(r)+\mu_{Cl^{-}}\rho_{Cl^{-}}(r)+\mu_{K^{+}}\rho_{K^{+}}(r)\\
++\mu_{OH^{-}}\left(\rho_{OH^{-}}(r)+\left[\sum_{e=1}^{m}\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)f_{e}(r)+n_{0,OH^{-}}\right]\left\langle \rho_{p}(r)\right\rangle \right)\\
++\mu_{H^{+}}\left(\rho_{H^{+}}(r)+\left[\sum_{e=1}^{m}\left(n_{e,H^{+}}-n_{0,H^{+}}\right)f_{e}(r)+n_{0,H^{+}}\right]\left\langle \rho_{p}(r)\right\rangle \right)\Bigg\}\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\beta\pi(r)\left[\left\langle \phi_{P}(r)\right\rangle +\sum_{i}\phi_{i}(r)-1\right]\left(\frac{r}{R}\right)dr+\int_{0}^{R}\beta\lambda\left[\sigma_{q}f_{wall}+\int dr\beta\left\langle \rho_{q}(r)\right\rangle \right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\beta Z(r)\left(\sum_{\alpha}P(r,\alpha)-1\right)\left(\frac{r}{R}\right)dr\label{eq:Energia_libre_completa-1}
+\end{multline}
+
+\end_inset
+
+Luego de reordenar los términos obtenemos en coordenadas cilíndricas,
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\begin{multline}
+\omega=\int_{0}^{R}\rho_{Cl\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{Cl\text{⁻}}(r)v_{w}\right)-1-\beta\mu_{Cl^{-}}+\beta\pi(r)v_{Cl^{-}}\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{K^{+}}(r)\left[\mbox{ln}\left(\rho_{K^{+}}(r)v_{w}\right)-1-\beta\mu_{K^{+}}+\beta\pi(r)v_{K^{+}}\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{OH\text{⁻}}(r)\left[\mbox{ln}\left(\rho_{OH\text{⁻}}(r)v_{w}\right)-1-\beta\mu_{OH^{-}}+\beta\pi(r)v_{OH^{-}}\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{H\text{⁺}}(r)\left[\mbox{ln}\left(\rho_{H\text{⁺}}(r)v_{w}\right)-1-\beta\mu_{H^{+}}+\beta\pi(r)v_{H^{+}}\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{w}(r)\left[\mbox{ln}\left(\rho_{w}(r)v_{w}\right)-1-\beta\mu_{w}+\beta\pi(r)v_{w}\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\rho_{PC}(r)\left[\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-1-\beta\mu_{pol}+\beta\pi(r)v_{p}+\sum_{\alpha}P(r,\alpha)\mbox{ln}\left(P(r;\alpha)\right)\right]\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\left\langle \rho_{P}(r)\right\rangle \Bigg\{\sum_{e=1}^{m}f_{e}(r)\Bigg[\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{e,H^{+}}-n_{0,H^{+}}\right)\beta\Delta\mu_{H^{+}}\\
+-\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)\beta\Delta\mu_{oH^{-}}\Bigg]-n_{0,OH^{-}}\beta\mu_{OH^{-}}-n_{0,H^{+}}\beta\mu_{H^{+}}\\
++\mbox{ln}\left(f_{0}(r)\right)+\beta\mu_{0}^{0}-\beta\chi_{wall}(r)\Bigg\}\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\beta\left[\left\langle \rho_{q}(r)\right\rangle \Psi(r)-\frac{1}{2}\varepsilon\left(\nabla_{r}\Psi(r)\right)^{2}\right]\left(\frac{r}{R}\right)dr-\int_{0}^{R}\beta\pi(r)\left(\frac{r}{R}\right)dr\\
++\int_{0}^{R}\beta Z(r)\left(\sum_{\alpha}P(r,\alpha)-1\right)\left(\frac{r}{R}\right)dr\label{eq:Energia_libre_compacta-2}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $Z(r)$
+\end_inset
+
+ es el multiplicador de Lagrange que impone la condición de normalización
+ de 
+\begin_inset Formula $P(r,\alpha)$
+\end_inset
+
+ de forma local.
+ Por ello su dependencia con la coordenada radial.
+ La densidad de monómeros local en función de las probabilidades de cadena
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:densidad_de_monomeros"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\langle \rho_{P}(r)\right\rangle =\int_{0}^{R}\rho_{PC}(r')\sum_{\alpha}P(r',\alpha)n(r;r',\alpha)dr'\label{eq:densidad_de_monomeros}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uno de los resultados más importantes es el que se obtiene después de optimizar
+ la funcional 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Energia_libre_compacta-2"
+
+\end_inset
+
+ respecto de la densidad de cadenas de polielectrolito, el potencial químico
+ del polímero:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\mu_{P}=\mbox{ln}\left(\rho_{PC}(r)v_{w}\right)-\mbox{ln}\left(Q(r)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como consideramos que todas las cadenas están adsorbidas en la superficie
+ interna del nanocanal, es posible definir una densidad superficial de cadenas
+ 
+\begin_inset Formula $\sigma_{pol}$
+\end_inset
+
+ cuya relación con la densidad 
+\begin_inset Formula $\rho_{PC}(R)$
+\end_inset
+
+ es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho_{PC}(R)=\rho_{PC}=\frac{\sigma_{pol}}{\delta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+en esta definición se asume que todas las cadenas que están a menos de una
+ distancia 
+\begin_inset Formula $\delta$
+\end_inset
+
+ de la superficie están efectivamente unidas a la misma.
+ En este trabajo usamos 
+\begin_inset Formula $\delta=0,5nm$
+\end_inset
+
+, que es equivalente a la longitud de un segmento del polímero en el modelo
+ molecular utilizado.
+ La elección de 
+\begin_inset Formula $\delta$
+\end_inset
+
+ implica simplemente un termino aditivo fijo entre la diferencia de los
+ potenciales químicos del polímero en solución y en superficie, es decir
+ no modificara nuestros resultados en forma cualitativa.
+\end_layout
+
+\begin_layout Section
+Adsorción en nanocanales cilíndricos
 \end_layout
 
 \begin_layout Standard
@@ -343,7 +749,7 @@ Por consideraciones geométricas sabemos que la distribución de polímero
 \end_inset
 
  del nanocanal.
- En nanocanales largos, la cantidad total de polímero adsorvido depende
+ En nanocanales largos, la cantidad total de polímero adsorbido depende
  de la curvatura y la carga superficial de la pared del nanocanal.
  Estamos interesados en la carga superficial que experimentaría un ion libre
  al atravesar un nanocanal modificado con polielectrolitos.
@@ -366,8 +772,19 @@ olitos en la superficie (
 \end_inset
 
  se contaron el número de cadenas con al menos 1 monómero sobre la superficie
- del nanocanal.
- En la figura mostramos 
+ del nanocanal (es decir, a una distancia menor a 
+\begin_inset Formula $\delta$
+\end_inset
+
+ de la superficie).
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Densidad-de-carga-efectiva"
+
+\end_inset
+
+, mostramos 
 \begin_inset Formula $\sigma_{eff}$
 \end_inset
 
@@ -387,7 +804,15 @@ olitos en la superficie (
 
 ).
  Salvo que se aclare se utilizó pH=7.0 en donde los grupos carboxilatos sobre
- pared y los monómeros del PAH están, ambos, completamente cargados.
+ pared y los monómeros del PAH están, ambos, completamente cargados (ver
+ figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:figura_monolayer_PAH"
+
+\end_inset
+
+).
  La densidad de carga superficial efectiva 
 \begin_inset Formula $\sigma_{eff}$
 \end_inset
@@ -395,6 +820,194 @@ olitos en la superficie (
  puede aumentar o disminuir con el diámetro del nanocanal y en determinadas
  condiciones incluso se observa una inversión en el signo.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+(A)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_10_19_csalt_0.1_sigmaq_0.1_sigmaeff_vs_D.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(B)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_10_19_csalt_0.01_sigmaq_0.1_sigmaeff_vs_D.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(C)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_10_19_csalt_0.0001_sigmaq_0.1_sigmaeff_vs_D.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Densidad de carga efectiva en la superficie del nanocanal, definida como
+ 
+\begin_inset Formula $\sigma_{eff}=N\sigma_{pol}f_{1}+\sigma_{wall}$
+\end_inset
+
+ en función del diámetro del nanocanal.
+ Las curvas pertenecen a distintos valores de la concentración de polímero
+ en solución, desde 
+\begin_inset Formula $C_{pol}=10^{-7}M$
+\end_inset
+
+ hasta 
+\begin_inset Formula $C_{pol}=1M$
+\end_inset
+
+.
+ (A)
+\begin_inset Formula $C_{salt}=10^{-1}M$
+\end_inset
+
+, (B)
+\begin_inset Formula $C_{salt}=10^{-2}M$
+\end_inset
+
+ y (C) 
+\begin_inset Formula $C_{salt}=10^{-4}M$
+\end_inset
+
+.
+ El eje de la derecha muestra la densidad de polímero adsorbido en la superficie.
+ Otros parámetros: 
+\begin_inset Formula $N=50$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{q}=0.1$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Densidad-de-carga-efectiva"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+(A)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_19_csalt_0.00001_sigmaq_0.1_D_6_sigmapol_vs_pH.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(B)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_26_csalt_0.1_sigmaq_0.1_D_6_sigmapol_vs_pH_D6.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(C)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_26_csalt_1.0_sigmaq_0.1_D_6_sigmapol_vs_pH.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Densidad superficial de polímero (número de cadenas por nm2) en función
+ del pH de la solución.
+ La concentración de polímero en solución fija el potencial químico del
+ polímero.(A) 
+\begin_inset Formula $D=6nm$
+\end_inset
+
+, 
+\begin_inset Formula $C_{salt}=10^{-5}M$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{pol}=0.1M$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Densidad-superficial_vs_pH"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -432,8 +1045,8 @@ A corresponden a una densidad de carga sobre la pared de
 \begin_inset Formula $\sigma_{eff}>0$
 \end_inset
 
- la carga de las cadenas adsorvidas es mayor que la carga proveniente de
- la pared del nanocanal.
+ la carga de las cadenas es mayor que la carga proveniente de la pared del
+ nanocanal.
  Es decir ocurre una sobrecompensación de la carga en la pared
 \begin_inset Note Note
 status open
@@ -451,7 +1064,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Debe su causa al potencial químico de las cadenas poliméricas que debe manteners
-e constante (condición de equilibrio) entre su valor para las cadenas adsorvidas
+e constante (condición de equilibrio) entre su valor para las cadenas adsorbidas
  y su valor para las cadenas en el seno de la solución.
  Esto es hay que tener en cuenta la interacción pared-cadena.
  Aunque nuestra investigación considero este caso aquí mostramos una sobrecompen
@@ -510,7 +1123,7 @@ C, la concentración de sal es muy baja
 , por lo que el apantallamiento ocurre exclusivamente por la adsorción de
  polielectrolitos.
  En estas condiciones se observa una sobre compensación de las cargas de
- la pared por parte de las cadenas adsorvidas de polielectrolito (
+ la pared por parte de las cadenas adsorbidas de polielectrolito (
 \begin_inset Formula $\sigma_{eff}>0$
 \end_inset
 
@@ -530,32 +1143,124 @@ C).
 
  condición que ocurre cuando la concentración de polielectrolito es baja)
  entonces diámetros menores implican un aumento en la cantidad de polímero
- adsorvido.
+ adsorbido.
  Finalmente existe una concentración de polímero intermedia para la cual
  
 \begin_inset Formula $\sigma_{eff}\sim0$
 \end_inset
 
- y la cantidad de polímero adsorvido es independiente del diámetro del nanocanal.
+ y la cantidad de polímero adsorbido es independiente del diámetro del nanocanal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/surface_free_energy_sigmaqs.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Energía libre de la superficie en función del diámetro del nanocanal.
+ El sistema tiene carga superficial pero no hay polyelectrolitos.
+ Parámetros: 
+\begin_inset Formula $C_{salt}=0.1M$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{q}=0.1\nicefrac{e}{nm^{2}}$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Energía-libre-vs_D"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Para explicar estos resultados consideremos primero un nanocanal sin polímero
  con densidad de carga superficial constante.
- A medida que achicamos el diámetro del nanocanal ocurre un incremento del
- potencial electrostático cerca de la superficie.
- (ver figura), debido a que la distancia media entre las cargas decrece.
- Si la carga en la pared esta sub compensada por el polielectrolito entonces
- el potencial cerca de la superficie se hace más negativo cuanto más chico
- se hace el diámetro del nanocanal, produciendo un incremento en la densidad
- de polielectrolitos, cargados positivamente.
- Por el otro lado, si hay una sobre compensación de la carga superficial
- entonces tanto el potencial como la carga superficial total sobre la superficie
- son positivos.
- El potencial se hace más positivo cuanto más se reduce el diámetro del
- nanocanal y por lo tanto la densidad de polielectrolitos cargados positivamente
- se reduce.
+ A medida que disminuye el diámetro del nanocanal aumenta la energía libre
+ por unidad de área (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Energía-libre-vs_D"
+
+\end_inset
+
+)
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ocurre un incremento del potencial electrostático cerca de la superficie
  
+\end_layout
+
+\end_inset
+
+debido a que la distancia media entre las cargas en la pared del nanocanal
+ decrece.
+ Si la carga en la pared esta sub compensada por el polielectrolito entonces
+ el sistema compensa el aumento de las repulsiones electrostáticas al disminuir
+ el diámetro aumentando la cantidad de polielectrolito adsorbido, de forma
+ tal de disminuir la magnitud de la carga superficial efectiva.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+entonces el potencial cerca de la superficie se hace más negativo cuanto
+ más chico se hace el diámetro del nanocanal, produciendo un incremento
+ en la densidad de polielectrolitos, cargados positivamente.
+\end_layout
+
+\end_inset
+
+ Por el otro lado, si hay una sobre compensación de la carga superficial
+ entonces la carga superficial total sobre la superficie es positiva, el
+ potencial se hace más positivo cuanto más se reduce el diámetro del nanocanal
+ y por lo tanto, al disminuir el diámetro del canal, la cantidad polielectrolito
+ adsorbido disminuye.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Algo importante es que el aumento de energía libre es de origen entrópico
+ y no energético-electrostático como uno pensaría...*******
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -568,17 +1273,16 @@ reference "fig:Densidad-de-carga-efectiva"
 
 C discutido en el párrafo anterior es útil para entender el mecanismo a
  través del cual el nanoconfinamiento regula la cantidad de polielectrolitos
- adsorvidos.
- Sin embargo como dijimos más arriba la magnitud del efecto es pequeña.
- Consideramos que la magnitud del efecto es pequeña al hecho de que para
- concentraciones de sal bajas, el único mecanismo para compensar la carga
- en la superficie es la adsorción de polielectrolito y, por lo tanto, no
- puede desviarse demasiado de la condición de compensación absoluta de carga
- 
+ adsorbidos.
+ Sin embargo, como dijimos la magnitud del efecto es pequeña.
+ Consideramos que la magnitud del efecto es pequeña porque para concentraciones
+ de sal bajas, el único mecanismo para compensar la carga en la superficie
+ es la adsorción de polielectrolito y, por lo tanto, no puede desviarse
+ demasiado de la condición de compensación absoluta de carga 
 \begin_inset Formula $\sigma_{Eff}\thicksim0$
 \end_inset
 
- sin aumentar significativamente la energía total del sistema.
+ sin aumentar significativamente la energía libre del sistema.
  El caso de soluciones de sal intermedias (
 \begin_inset Formula $C_{salt}=0.1M$
 \end_inset
@@ -601,13 +1305,13 @@ reference "fig:Densidad-de-carga-efectiva"
 
 \end_inset
 
-B), los cationes de la sal compiten con el polielectrolito adsorvido para
+B), los cationes de la sal compiten con el polielectrolito adsorbido para
  apantallar la carga de la pared.
  Esto realza el efecto del confinamiento sobre la adsorción de polielectrolitos.
  Como la carga en la pared esta parcialmente compensada por los cationes
  de la sal, la densidad de carga efectiva (carga de la pared más carga de
- los polielectrolitos adsorvidos) para la cuál no hay cambios en la cantidad
- de polielectrolito adsorvido en función de la curvatura del nanocanal,
+ los polielectrolitos adsorbidos) para la cuál no hay cambios en la cantidad
+ de polielectrolito adsorbido en función de la curvatura del nanocanal,
  no es 
 \begin_inset Formula $\sigma_{eff}=0$
 \end_inset
@@ -622,7 +1326,7 @@ B), los cationes de la sal compiten con el polielectrolito adsorvido para
 
 \begin_layout Standard
 También es interesante observar que el efecto del diámetro en la cantidad
- de polielectrolito adsorvido decae hacia diámetros grandes independientemente
+ de polielectrolito adsorbido decae hacia diámetros grandes independientemente
  del signo de 
 \begin_inset Formula $\sigma_{eff}$
 \end_inset
@@ -645,7 +1349,7 @@ reference "fig:Densidad-de-carga-efectiva"
 \end_inset
 
 C).
- En la practica esto significa que el efecto de la curvatura en la adsorcion
+ En la práctica esto significa que el efecto de la curvatura en la adsorción
  de polielectrolitos será importante para concentraciones de sal intermedias,
  por que para concentraciones de sal bajas el efecto es menor y para concentraci
 ones de sal altas el efecto solo afectará nanocanales angostos.
@@ -661,28 +1365,28 @@ reference "fig:Densidad-superficial_vs_pH"
 
 \end_inset
 
- mostramos la densidad superficial de cadenas de polielectrolitos adsorvidos
+ mostramos la densidad superficial de cadenas de polielectrolitos adsorbidos
  en función del pH de la solución.
  Cuando 
 \begin_inset Formula $2<pH<9$
 \end_inset
 
  , aumentar el pH de la solución incrementa la densidad superficial de cadenas
- adsorvidas por que la pared incrementa su carga eléctrica y la carga del
+ adsorbidas por que la pared incrementa su carga eléctrica y la carga del
  polielectrolito se mantiene constante.
  La densidad superficial de polímero muestra un 
 \emph on
 plateau 
 \emph default
 para valores de pH mayores a 6 y menores que 9.
- Esto esta en completo acuerdo con la figura 
+ Esto está en completo acuerdo con la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Esquema-del-nanocanal"
+reference "fig:figura_monolayer_PAH"
 
 \end_inset
 
-C donde se muestra que en esta región de pH amgos grados de disociación
+C donde se muestra que en esta región de pH ambos grados de disociación
  se mantienen constantes.
 \end_layout
 
@@ -693,7 +1397,7 @@ Para valores de
 
  el grado de disociación del polielectrolito disminuye mientras la densidad
  de carga en la pared se mantiene constante.
- Este comportamiento depende de la concentración de salt 
+ Este comportamiento depende de la concentración de sal 
 \begin_inset Formula $C_{salt}$
 \end_inset
 
@@ -706,8 +1410,18 @@ Para valores de
 \begin_inset Formula $C_{salt}=10^{-5}M$
 \end_inset
 
-) la condición de electroneutralidad ocurre entre las cargas en la pared
- y las cargas en el polielectrolito.
+) 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+VER ACA OJO! EXPLICACIÓN
+\end_layout
+
+\end_inset
+
+las cargas en la pared están principalmente compensadas por las cargas del
+ polielectrolito.
  La densidad superficial de cadenas aumenta con el pH de la solución debido
  al incremento en la carga de la pared y el comportamiento es independiente
  de 
@@ -717,7 +1431,7 @@ Para valores de
 , ver figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Esquema-del-nanocanal"
+reference "fig:Densidad-superficial_vs_pH"
 
 \end_inset
 
@@ -732,27 +1446,20 @@ Para
 , figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Esquema-del-nanocanal"
+reference "fig:Densidad-superficial_vs_pH"
 
 \end_inset
 
-B, hay una competencia entre los iones de la psal y las cadenas de polielectroli
-tos para apantallar el exceso de la carga en la pared.
+B, hay una competencia entre los iones de la sal y las cadenas de polielectrolit
+os para apantallar el exceso de la carga en la pared.
  El sistema intenta minimizar su energía libre y para hacerlo existe un
  balance entre la entropía traslacional de las cadenas libres y los iones.
  Para concentraciones 
 \begin_inset Formula $C_{pol}$
 \end_inset
 
- altas la adsorcion de cadenas poliméricas es energeticamente favorable
- por eso hay un incremento en la adsorción de polímero 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Esquema-del-nanocanal"
-
-\end_inset
-
-B.
+ altas la adsorción de cadenas poliméricas es energeticamente favorable
+ por eso hay un incremento en la adsorción de polímero B.
 \end_layout
 
 \begin_layout Standard
@@ -771,10 +1478,20 @@ Al disminuir
 \begin_inset Formula $C_{pol}$
 \end_inset
 
- se reduce el potencial químico de las cadenas de polielectrolitos y por
- lo tanto ocurre un corrimiento en el balance entre iones libres y el polielectr
-olito haciendo que sea preferible la adsorción de iones para alcanza la
- condición de electroneutralidad.
+ se reduce el potencial químico de las cadenas de polielectrolitos, lo que
+ genera un desbalance energético entre iones libres y el polielectrolito,
+ haciendo que sea preferible la adsorción de iones para alcanzar la condición
+ de electroneutralidad.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+AOTRA NOTA QUE NO AGREGUE NO ENTIENDOOOO
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -833,13 +1550,66 @@ Distribución de polímero dentro del canal
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_avpol_vs_r_cpol_1M_D20.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fracción de volumen ocupada por el polímero en función de la distancia al
+ centro del nanocanal.
+ Las curvas corresponden a los valores de concentración de sal 
+\begin_inset Formula $C_{salt}=1.0M$
+\end_inset
+
+, 
+\begin_inset Formula $C_{salt}=0.1M$
+\end_inset
+
+, 
+\begin_inset Formula $C_{salt}=0.01M$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{salt}=0.001M$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 La distribución radial de los monómeros de las cadenas adsorbidas se muestra
  en la figura 4 para 
 \begin_inset Formula $C_{pol}=1.0M$
 \end_inset
 
 .
- La organización molecular de las cadenas adsorvidas varía con la concentración
+ La organización molecular de las cadenas adsorbidas varía con la concentración
  de sal.
  La capa polimérica sobre la pared del nanocanal se hincha cuando se aumenta
  la concentración de sal.
@@ -847,7 +1617,7 @@ La distribución radial de los monómeros de las cadenas adsorbidas se muestra
 \begin_inset Formula $pH=7$
 \end_inset
 
- las cadenas estan completamente cargadas y tienen conformaciones tipo rodillo
+ las cadenas están completamente cargadas y tienen conformaciones tipo varilla
  (
 \emph on
 rod-like
@@ -898,9 +1668,83 @@ reference "fig:Potencial-electrostático-PAH_adsorcion"
 ).
  El diámetro del nanocanal fija el grado de confinamiento.
  Los iones libres están forzados a interactuar con la doble capa eléctrica
- cerca de la pared dle nanocanal.
+ cerca de la pared del nanocanal.
  La figura 5 sugiere que nanocanales con diferentes diámetros tendrán distinta
  distribución del potencial electrostático.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+(A1)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_csalt_0.001_sigmaq_0.1_D_10_potenz_vs_r.eps
+	lyxscale 80
+	width 50text%
+
+\end_inset
+
+ (A2)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_csalt_0.001_sigmaq_0.1_D_100_potenz_vs_r.eps
+	lyxscale 80
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(B1)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_csalt_1.0_sigmaq_0.1_D_10_potenz_vs_r.eps
+	lyxscale 80
+	width 50text%
+
+\end_inset
+
+ (B2)
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_csalt_1.0_sigmaq_0.1_D_100_potenz_vs_r.eps
+	lyxscale 80
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Potencial electrostático dentro del nanocanal en función de la distancia
+ al centro del nanocanal.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Potencial-electrostático-PAH_adsorcion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -936,7 +1780,7 @@ key "Gilles2016"
 \end_inset
 
 .
- Como mostramos más arriba la cantidad de polielectrolito adsorvido y el
+ Como mostramos más arriba la cantidad de polielectrolito adsorbido y el
  perfil del potencial electrostático dentro del nanocanal dependen del diámetro,
  por eso nosotros esperamos que en el equilibrio la adsorción de polielectrolito
 s dentro de nanocanales no cilíndricos inducirá una carga efectiva 
@@ -948,23 +1792,29 @@ s dentro de nanocanales no cilíndricos inducirá una carga efectiva
 \end_layout
 
 \begin_layout Standard
-Es sabido que nanocanales asimétricos con densidad de carga homogénea o
- nanocananles cilíndricos con distribuciones de carga inhomogéneas pueden
- rectificar la corriente iónica.
+Los nanocanales asimétricos con densidad de carga homogénea o nanocanales
+ cilíndricos con distribuciones de carga homogéneas pueden rectificar la
+ corriente iónica.
  Nos preguntamos ahora como cambiarán las propiedades de transporte de un
- canal no cilíndrico con una adsorción inhomogénea de polielectrolitos.
- En la figura 
+ canal no cilíndrico con una adsorción inhomogenea de polielectrolitos.
+ Utilizamos el software COMSOL para resolver las ecuaciones de Poisson-Nernst-Pl
+anck sin aproximaciones a través del cálculo por elementos finitos (
+\emph on
+EF
+\emph default
+).
+ Mostramos los resultados en la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Corriente-iónica-rectificación"
 
 \end_inset
 
-, mostramos las curvas 
+, las curvas 
 \begin_inset Formula $I-V$
 \end_inset
 
- (corriente-voltaje) que predicen para un nanocananl cónicl con una densidad
+ (corriente-voltaje) que se predicen para un nanocanal cónico con una densidad
  de carga neta 
 \begin_inset Formula $\sigma_{eff}$
 \end_inset
@@ -977,6 +1827,103 @@ reference "fig:Densidad-de-carga-efectiva"
 \end_inset
 
 .
+ Se observa que cuando 
+\begin_inset Formula $C_{pol}=0.1M$
+\end_inset
+
+, si la concentración de sal es 
+\begin_inset Formula $C_{salt}=1.0M$
+\end_inset
+
+ (círculos blancos) la rectificación es en una dirección y si 
+\begin_inset Formula $C_{salt}=0.1M$
+\end_inset
+
+ (cuadrados blancos) se cambia la dirección de la rectificación.
+ Esto evidencia una inversión de carga en la superficie interna del nanocanal.
+ En cambio si 
+\begin_inset Formula $C_{salt}=0.1M$
+\end_inset
+
+ y variamos la concentración de polielectrolitos de 
+\begin_inset Formula $C_{pol}=0.1M$
+\end_inset
+
+ a 
+\begin_inset Formula $C_{pol}=1.0M$
+\end_inset
+
+ (cuadrados obscuros) vemos que aumenta el grado de rectificación desde
+ 
+\begin_inset Formula $\alpha=1.44$
+\end_inset
+
+ a 
+\begin_inset Formula $\alpha=2.32$
+\end_inset
+
+.
+ Estos resultados son compatibles con las observaciones experimentales.
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+REFERENCIAS!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras_PAH_adsorption/16_09_29_poro_conico_rectificacion.eps
+	lyxscale 80
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Corriente iónica en función del voltaje aplicado.
+ Entre los extremos de un nanocanal cónico largo (
+\begin_inset Formula $L\gg D$
+\end_inset
+
+),modificado con una capa de PAH.
+ La distribución de PAH es no uniforme y sigue las predicciones hechas por
+ la teoría molecular.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Corriente-iónica-rectificación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -990,7 +1937,7 @@ status collapsed
 \begin_layout Plain Layout
 Este comportamiento podemos explicarlo a través de la exclusión geométrica
  de las cadenas poliméricas? al achicarse el radio las cadenas quedarán
- adsorvidas sólo si son necesarias para equilibrar las interacciones electrostát
+ adsorbidas sólo si son necesarias para equilibrar las interacciones electrostát
 icas.
  Si existe un exceso entonces al confinar aún más, las cadenas se desorben
  para volver al bulk.
@@ -1008,7 +1955,7 @@ icas.
 
 \begin_layout Plain Layout
 2) Creo que tiene que ver con la conformación de las cadenas es decir al
- reducir el radio hay más cadenas adsorvidas pero se acomodan en una capa
+ reducir el radio hay más cadenas adsorbidas pero se acomodan en una capa
  más ancha.
 \end_layout
 
@@ -1102,7 +2049,7 @@ Al achicar el diámetro del nanocanal, la distancia media entre las partículas
  Si la carga de la pared esta subcompensada por el polielectrolito, entonces
  el potencia cerca de la pared se hace más negativo cuanto más se achica
  el diámetro del nanocanal, produciendo un incremento en la cantidad de
- polielectrolitos adsorvidos, cargados positivamente.
+ polielectrolitos adsorbidos, cargados positivamente.
  
 \end_layout
 
@@ -1111,16 +2058,20 @@ Al achicar el diámetro del nanocanal, la distancia media entre las partículas
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
 \begin_layout Section
 Resultados
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 La forma en que los equilibrios químicos se comportan respecto del pH de
  la solución se muestra en la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:monolayer_PAH"
+reference "fig:figura_monolayer_PAH"
 
 \end_inset
 
@@ -1137,7 +2088,7 @@ ción de las cadenas de PAH produciendo una disminución de la carga total
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 El comportamiento de las cargas netas de polímero y carga superficial del
  nanocanal influye sobre la adsorción de cadenas sobra la superficie.
  En la figura 
@@ -1158,392 +2109,6 @@ reference "fig:Densidad-superficial_vs_pH"
  en función del pH de la solución.
  En todos los casos la adsorción de cadenas poliméricas aumenta a medida
  que aumenta el pH de la solución.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-(A)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_09_19_csalt_0.00001_sigmaq_0.1_D_6_sigmapol_vs_pH.eps
-	lyxscale 80
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-(B)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_09_26_csalt_0.1_sigmaq_0.1_D_6_sigmapol_vs_pH_D6.eps
-	lyxscale 80
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-(C)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_09_26_csalt_1.0_sigmaq_0.1_D_6_sigmapol_vs_pH.eps
-	lyxscale 80
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Densidad superficial de polímero (número de cadenas por nm2) en función
- del pH de la solución.
- La concentración de polímero en solución fija el potencial químico del
- polímero.(A) 
-\begin_inset Formula $D=6nm$
-\end_inset
-
-, 
-\begin_inset Formula $C_{salt}=10^{-5}M$
-\end_inset
-
-, 
-\begin_inset Formula $\sigma_{pol}=0.1M$
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Densidad-superficial_vs_pH"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-(A)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_10_19_csalt_0.1_sigmaq_0.1_sigmaeff_vs_D.eps
-	lyxscale 80
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-(B)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_10_19_csalt_0.01_sigmaq_0.1_sigmaeff_vs_D.eps
-	lyxscale 80
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-(C)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_10_19_csalt_0.0001_sigmaq_0.1_sigmaeff_vs_D.eps
-	lyxscale 80
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Densidad de carga efectiva en la superficie del nanocanal, definida como
- 
-\begin_inset Formula $\sigma_{eff}=N\sigma_{pol}f_{1}+\sigma_{wall}$
-\end_inset
-
- en función del diámetro del nanocanal.
- Las curvas pertenecen a distintos valores de la concentración de polímero
- en solución, desde 
-\begin_inset Formula $C_{pol}=10^{-7}M$
-\end_inset
-
- hasta 
-\begin_inset Formula $C_{pol}=1M$
-\end_inset
-
-.
- (A)
-\begin_inset Formula $C_{salt}=10^{-1}M$
-\end_inset
-
-, (B)
-\begin_inset Formula $C_{salt}=10^{-2}M$
-\end_inset
-
- y (C) 
-\begin_inset Formula $C_{salt}=10^{-4}M$
-\end_inset
-
-.
- El eje de la derecha muestra la densidad de polímero adsorvido en la superficie.
- Otros parámetros: 
-\begin_inset Formula $N=50$
-\end_inset
-
-, 
-\begin_inset Formula $\sigma_{q}=0.1$
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Densidad-de-carga-efectiva"
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Densidad-de-carga-efectiva"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_09_29_avpol_vs_r_cpol_1M_D20.eps
-	lyxscale 80
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fracción de volumen ocupada por el polímero en función de la distancia al
- centro del nanocanal.
- Las curvas corresponden a los valores de concentración de sal 
-\begin_inset Formula $C_{salt}=1.0M$
-\end_inset
-
-, 
-\begin_inset Formula $C_{salt}=0.1M$
-\end_inset
-
-, 
-\begin_inset Formula $C_{salt}=0.01M$
-\end_inset
-
- y 
-\begin_inset Formula $C_{salt}=0.001M$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-(A1)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_09_29_csalt_0.001_sigmaq_0.1_D_10_potenz_vs_r.eps
-	lyxscale 80
-	width 50text%
-
-\end_inset
-
- (A2)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_09_29_csalt_0.001_sigmaq_0.1_D_100_potenz_vs_r.eps
-	lyxscale 80
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-(B1)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_09_29_csalt_1.0_sigmaq_0.1_D_10_potenz_vs_r.eps
-	lyxscale 80
-	width 50text%
-
-\end_inset
-
- (B2)
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_09_29_csalt_1.0_sigmaq_0.1_D_100_potenz_vs_r.eps
-	lyxscale 80
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Potencial electrostático dentro del nanocanal en función de la distancia
- al centro del nanocanal.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Potencial-electrostático-PAH_adsorcion"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras_PAH_adsorption/16_09_29_poro_conico_rectificacion.eps
-	lyxscale 80
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Corriente iónica en función del voltaje aplicado.
- Entre los extremos de un nanocanal cónico largo (
-\begin_inset Formula $L\gg D$
-\end_inset
-
-),modificado con una capa de PAH.
- La distribución de PAH es no uniforme y sigue las predicciones hechas por
- la teoría molecular.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Corriente-iónica-rectificación"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
