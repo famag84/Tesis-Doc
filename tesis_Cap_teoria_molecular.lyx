@@ -118,61 +118,32 @@ En este trabajo se exploran las propiedades estructurales de nanocanales
 \end_layout
 
 \begin_layout Standard
-El uso de las computadoras durante el siglo XX permitió desarrollar distintas
- estrategias numérico/computacionales para resolver ecuaciones sin solución
- analítica (cálculo numérico), simular la evolución temporal de sistemas
- de pocas partículas (Dinámica Molecular) y predecir propiedades termodinámicas
- encontrando las configuraciones de equilibrio (Métodos Monte Carlo).
- Estas técnicas computacionales mejoraron lo suficiente como para poder
- predecir el comportamiento macroscópico y su conexión con las propiedades
- microscópicas de sistemas complejos.
- 
-\end_layout
-
-\begin_layout Standard
-En paralelo las técnicas experimentales se desarrollaron permitiendo tener
- mayor control del detalle molecular.
- El acceso a nueva información hace necesario el desarrollo de nuevas herramient
-as teórico/computacionales.
- Estas herramientas deben explicar desde los aspectos fundamentales el comportam
-iento de sistemas complejos y predecir las respuestas macroscópicas que
- se obtienen experimentalmente.
- 
-\end_layout
-
-\begin_layout Standard
-Existen múltiples estrategias para abordar los sistemas que se engloban
- dentro de lo que se conocen como materia blanda.
- Por ejemplo, algoritmos de dinámica molecular o algoritmos Monte Carlo
- 
+La teoría molecular que se describe a continuación fue desarrollada originalment
+e para tratar el autoensamblado de surfactantes
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Frenkel"
+key "benshaul_chain_1985"
 
 \end_inset
 
+ y más tarde generalizada para estudiar capas de polímeros
+\begin_inset CommandInset citation
+LatexCommand cite
+key "carignano_statistical_1993"
 
-\begin_inset Note Note
-status open
+\end_inset
 
-\begin_layout Plain Layout
-son útiles para (CITAR AL FRENKEL)
-\end_layout
+ y más recientemente capas de polielectrolitos
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nap2006a"
 
 \end_inset
 
 .
- Sin embargo la complejidad de sistemas que involucran polielectrolitos
- débiles cuyos equilibrios químicos están regulados por pH, concentración
- de sal y confinamiento, hacen difícil sino inabordable el tratamiento con
- las estrategias mencionadas.
- 
-\end_layout
-
-\begin_layout Standard
-En este trabajo se utiliza un enfoque teórico que combina un fructífero
- concepto de la física, como es el hecho de que la naturaleza puede ser
- descripta a través de una funcional que debe optimizar
+ Este enfoque teórico combina un fructífero concepto de la física, como
+ es el hecho de que la naturaleza puede ser descripta a través de una funcional
+ que se debe optimizar
 \begin_inset CommandInset citation
 LatexCommand cite
 key "lanczos1986"
@@ -206,12 +177,16 @@ key "Sundial-Kinsol"
 \end_inset
 
 .
- El objetivo es obtener las propiedades macroscópicas del sistema en estado
- de equilibrio junto con la organización molecular que da origen a aquellas
+ 
+\end_layout
+
+\begin_layout Standard
+El objetivo es obtener las propiedades macroscópicas del sistema en estado
+ de equilibrio, junto con la organización molecular que da origen a esas
  propiedades macroscópicas.
  Para ello escribimos la energía libre del sistema teniendo en cuenta todas
- las interacciones relevantes más ciertas restricciones que surgen de la
- física del problema.
+ las interacciones relevantes, incluyendo además ciertas restricciones que
+ surgen de la física del problema.
  Ejemplos de estas restricciones son las condiciones de incomprensibilidad
  y electroneutralidad global.
  
@@ -458,11 +433,11 @@ Vamos a considerar nanocanales modificados con polielectrolitos débiles
  débiles en la forma de un equilibrio ácido-base y tienen su contribución
  a la energía libre del sistema.
  Luego se explica en detalle la teoría molecular desarrollada para describir
- el sistema en estudio.
+ los nanocanales modificados químicamente.
 \end_layout
 
 \begin_layout Section
-Introducción al Equilibrio Químico
+Equilibrio Químico
 \end_layout
 
 \begin_layout Standard
@@ -547,7 +522,15 @@ donde
 \end_inset
 
 .
- El potencial químico puede entenderse como la energía libre por partícula.
+ El potencial químico 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+ puede entenderse como la energía libre por partícula de la especie 
+\begin_inset Formula $i$
+\end_inset
+
+.
  Es una propiedad útil para describir sistemas inhomogéneos dado que, en
  la condición de equilibrio, 
 \begin_inset Formula $\mu_{i}$
@@ -1451,9 +1434,9 @@ reference "eq:simple_FreeE"
 
 \end_inset
 
-) está referido a la entropía configuracional del polímero.
- Luego de realizar la aproximación de campo medio cuyos detalles formales
- se encuentran en el apéndice 
+) está referido a la entropía configuracional del polímero, luego de realizar
+ la aproximación de campo medio cuyos detalles formales se encuentran en
+ el apéndice 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Aproximación-MF"
@@ -1548,7 +1531,7 @@ reference "eq:simple_FreeE"
 \end_inset
 
 ) representa la contribución del polielectrolito que estemos considerando.
- De forma muy general podemos escribir la energía química como:
+ De forma general podemos escribir la energía química como:
 \end_layout
 
 \begin_layout Standard
@@ -1608,12 +1591,11 @@ reference "tab:Tabla-de-volúmenes"
 \begin_inset Formula $e.$
 \end_inset
 
- Para nombrar los estados químicos de una unidad monomérica utilizaremos
- de ahora en más números enteros que denotamos con el símbolo 
+ Salvo que se aclare, utilizamos números enteros, con el símbolo 
 \begin_inset Formula $e$
 \end_inset
 
-.
+, para nombrar los estados químicos de una unidad monomérica.
  Como asumimos equilibrio químico local escribimos la fracción de disociación
  dependiente de las coordenadas espaciales 
 \begin_inset Formula $\boldsymbol{r}$
@@ -1630,7 +1612,14 @@ reference "tab:Tabla-de-volúmenes"
 \end_inset
 
 , identifica (salvo a lo sumo el signo) la carga neta de la especie.
- Por ejemplo, en el caso del PMEP(referencia!), si le asignamos 
+ Por ejemplo, en el caso del PMEP(figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:monomero PMEP"
+
+\end_inset
+
+), si le asignamos 
 \begin_inset Formula $e=0$
 \end_inset
 
@@ -1862,6 +1851,105 @@ La energía química
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/Cap_teoria/arquitectura_de_cadenas.eps
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arquitectura para las cadenas de polielectrolitos, susceptibles de ser incorpora
+das a la teoría molecular mediante el cálculo de la densidad de monómeros
+ local de cada especie de monómero.
+ En este trabajo consideramos sólo las primeras dos arquitecturas de cadenas
+ homogéneas para las especies de PMEP y PAH.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arquitectura-de-las-cadenas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el contexto de la teoría molecular es posible incorporar la arquitectura
+ de las cadenas de polielectrolitos, ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arquitectura-de-las-cadenas"
+
+\end_inset
+
+.
+ Las variaciones en la arquitectura se incorporan a través de la densidad
+ de monómeros 
+\begin_inset Formula $\left\langle \rho_{p}(\boldsymbol{r})\right\rangle $
+\end_inset
+
+.
+ El procedimiento consiste en escribir las contribuciones de los distintos
+ tipos de monómeros a la energía libre: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{chem}(\boldsymbol{r})=k_{B}T\sum_{\zeta}\left\langle \rho_{P}(\boldsymbol{r})\right\rangle _{\zeta}\Big\{\sum_{e=1}^{m}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}_{\zeta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ corre sobre los tipos de monómeros que se consideren y la densidad de monómeros
+ local total es: 
+\begin_inset Formula $\left\langle \rho_{p}(\boldsymbol{r})\right\rangle =\sum_{\zeta}\rho_{p\text{\_\zeta}}(\boldsymbol{r})$
+\end_inset
+
+.
+ En este trabajo se consideran solo arquitecturas homogéneas como las primeras
+ tres de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arquitectura-de-las-cadenas"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 Si se consideran equilibrios ácido base que acoplan con la especie 
 \begin_inset Formula $OH^{-}$
 \end_inset
@@ -1885,23 +1973,23 @@ reference "eq:Uchem_general-2"
 
 \end_inset
 
- para dos casos particulares de polielectrolitos: poliallylamina (PAH) y
+ para dos casos particulares de polielectrolitos: polialilamina (PAH) y
  poli(2-(metacriloiloxi) etil-fosfato (PMEP).
 \end_layout
 
 \begin_layout Paragraph
-Primer Caso 
+Primer Caso Polialilamina (
 \begin_inset Formula $\boldsymbol{PAH}$
 \end_inset
 
-:
+):
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1919,8 +2007,14 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Estructura y equilibrio ácido-base del monómero de poliallylamina (PAH)
- 
+Estructura y equilibrio ácido-base del monómero de polialilamina (PAH) 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:monomero PAH"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2075,18 +2169,18 @@ key "Tagliazucchi2008"
 \end_layout
 
 \begin_layout Paragraph
-Segundo Caso 
+Segundo Caso Poli(2-(metacriloiloxi) etilfosfato (
 \begin_inset Formula $\boldsymbol{PMEP}$
 \end_inset
 
-:
+):
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2138,6 +2232,13 @@ status collapsed
 \begin_layout Plain Layout
 Estructura y equilibrio ácido-base del monómero de poli(2-(metacriloiloxi)
  etil-fosfato (PMEP) 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:monomero PMEP"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2258,7 +2359,7 @@ F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangl
 \end_layout
 
 \begin_layout Standard
-de forma explicita,
+de forma explícita,
 \end_layout
 
 \begin_layout Standard
@@ -2274,11 +2375,11 @@ F_{chem}(\boldsymbol{r}) & =k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\ra
 \end_layout
 
 \begin_layout Standard
-La densidad de polímero promedio 
+La densidad promedio 
 \begin_inset Formula $\left\langle \rho_{P}(\boldsymbol{r})\right\rangle $
 \end_inset
 
- es la densidad de monómeros del polielectrolito por unidad de volumen.
+ representa la densidad de monómeros del polielectrolito por unidad de volumen.
  Su expresión en términos de la densidad de probabilidad de las conformaciones
  de cadena depende del sistema que estemos considerando.
  La expresión (
@@ -3533,7 +3634,8 @@ reference "eq:semiGranCanonical_ensamble"
 \begin_inset Formula 
 \begin{multline}
 A=\int\left[-TS_{mix}(\boldsymbol{r})-TS_{pol}(\boldsymbol{r})+F_{chem}(\boldsymbol{r})+U_{wall}(\boldsymbol{r})+U_{elec}(\boldsymbol{r})+U_{inter}(\boldsymbol{r})\right]d\boldsymbol{r}\\
--\int\Bigg[\mu_{w}\rho_{w}(\boldsymbol{r})+\mu_{Cl^{-}}\rho_{Cl^{-}}(\boldsymbol{r})+\mu_{K^{+}}\rho_{K^{+}}(\boldsymbol{r})+\mu_{OH^{-}}\left(\rho_{OH^{-}}(\boldsymbol{r})+\left[\sum_{e=1}^{m}\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)f_{e}(\boldsymbol{r})+n_{0,OH^{-}}\right]\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\\
+-\int\Bigg[\mu_{w}\rho_{w}(\boldsymbol{r})+\mu_{Cl^{-}}\rho_{Cl^{-}}(\boldsymbol{r})+\mu_{K^{+}}\rho_{K^{+}}(\boldsymbol{r})\\
++\mu_{OH^{-}}\left(\rho_{OH^{-}}(\boldsymbol{r})+\left[\sum_{e=1}^{m}\left(n_{e,OH^{-}}-n_{0,OH^{-}}\right)f_{e}(\boldsymbol{r})+n_{0,OH^{-}}\right]\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\\
 +\mu_{H^{+}}\left(\rho_{H^{+}}(\boldsymbol{r})+\left[\sum_{e=1}^{m}\left(n_{e,H^{+}}-n_{0,H^{+}}\right)f_{e}(\boldsymbol{r})+n_{0,H^{+}}\right]\left\langle \rho_{p}(\boldsymbol{r})\right\rangle \right)\Bigg]d\boldsymbol{r}\label{eq:semiGranCanonical_ensamble-1}
 \end{multline}
 
@@ -3931,8 +4033,27 @@ reference "chap:Adsorción-de-Polielectrolitos"
 \end_inset
 
  para el caso de cadenas libres).
- En la expresión reordenada los términos provenientes de distintas contribucione
-s se mezclan y ya no es posible diferenciar entre las distintas contribuciones.
+ Como hemos visto cada término en la expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Energia_libre_completa"
+
+\end_inset
+
+ tiene significado físico , por lo que es posible diferencias entre las
+ distintas contribuciones a la energía.
+ Luego de la reorganización de los términos en la funcional 
+\begin_inset Formula $\omega$
+\end_inset
+
+, ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Energia_libre_compacta"
+
+\end_inset
+
+, ya no es posible identificar las distintas contribuciones.
  
 \begin_inset Note Note
 status collapsed
@@ -4261,7 +4382,7 @@ reference "chap:Discretización"
 \end_inset
 
 , 
-\begin_inset Formula $H_{3}O^{+}$
+\begin_inset Formula $H^{+}$
 \end_inset
 
 , 
@@ -4323,11 +4444,19 @@ reference "eq:rho_minimization"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Donde 
 \begin_inset Formula $\beta\Delta\mu_{i}=\beta\left(\mu_{i}-\mu_{i}^{0}\right)$
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
  Las expresiones explícitas para las moléculas de solvente y los iones libres,
  son:
 \end_layout
@@ -4404,7 +4533,20 @@ Es posible definir los potenciales químicos del resto de las especies como
 \end_inset
 
 , como 
+\begin_inset Formula $\Delta\mu_{i}^{*}=\mu_{i}-\frac{v_{i}}{v_{w}}\mu_{w}$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Formula $\Delta\mu_{i}^{*}=\Delta\mu_{i}-\frac{v_{i}}{v_{w}}\Delta\mu_{w}$
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -4414,11 +4556,21 @@ key "Gong2004,Nap2006a"
 
 \end_inset
 
-, donde 
+, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+donde 
 \begin_inset Formula $\Delta\mu_{i}=\mu_{i}-\mu_{i}^{0}$
 \end_inset
 
-, para 
+, 
+\end_layout
+
+\end_inset
+
+para 
 \begin_inset Formula $i=K^{+},H^{+},Cl^{-},OH^{-}$
 \end_inset
 
@@ -4617,7 +4769,7 @@ reference "eq:rho_w_minimization-1"
 
 \end_inset
 
-) el lado izquierdo de las ecuaciones (
+), el lado izquierdo de las ecuaciones (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:rho_minimization-2"
@@ -4631,9 +4783,9 @@ reference "eq:rho_minimization-5"
 
 \end_inset
 
-) es constante debido a la condición de equilibrio, estas ecuaciones muestran
- el acoplamiento entre el potencial electrostático, la presión osmótica
- y la densidad de iones libres.
+) es constante debido a la condición de equilibrio.
+ Estas ecuaciones muestran el acoplamiento entre el potencial electrostático,
+ la presión osmótica y la densidad de iones libres.
  Es útil reescribir las fracciones de volumen de iones y la fracciones de
  volumen del solvente como función de las propiedades de bulk, el potencial
  eléctrico y la presión osmótica.
@@ -4726,6 +4878,23 @@ La expresión general que se obtiene para el grado de disociación
 \end_inset
 
 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mbox{ln}\left(\frac{f_{e}(r)}{f_{0}(r)}\right)=\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)+\left(n_{H^{+},e}-n_{H^{+},0}\right)\beta\Delta\mu_{H^{+}}+\left(n_{OH^{-},e}-n_{OH^{-},0}\right)\beta\Delta\mu_{OH^{-}}-\beta q_{e}\Psi(r)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4796,14 +4965,14 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename caricaturas_PAH_adsorption/PAH_chemEq.png
 	lyxscale 20
-	scale 20
+	scale 30
 
 \end_inset
 
@@ -4950,14 +5119,14 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fig_Cap_paper_PMEP/monomer_cartoon_H.png
-	lyxscale 20
-	scale 30
+	filename fig_Cap_paper_PMEP/monomer_dibujo.png
+	lyxscale 60
+	scale 90
 
 \end_inset
 
@@ -4968,7 +5137,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Dibujo con los estados del PMEP
+Transición entre los estados del PMEP en la dirección de aumento del pH
+ de la solución.
 \end_layout
 
 \end_inset
@@ -5014,7 +5184,7 @@ Para el caso del PMEP (doble deprotonación,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\mbox{ln}\left(\frac{f_{-1}(r)}{f_{0}(r)}\right) & =\text{ln}\left(K_{1}\right)-\beta\Delta\mu_{H^{+}}-\beta q_{-1}\Psi(r)\label{eq:fs_minimization-1}
+\beta\Delta\mu_{H^{+}} & =\text{ln}\left(K_{1}\right)-\mbox{ln}\left(\frac{f_{-1}(r)}{f_{0}(r)}\right)-\beta q_{-1}\Psi(r)\label{eq:fs_minimization-1}
 \end{align}
 
 \end_inset
@@ -5025,7 +5195,7 @@ Para el caso del PMEP (doble deprotonación,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mbox{ln}\left(\frac{f_{-2}(r)}{f_{0}(r)}\right)=\text{ln}\left(K_{1}K_{2}\right)-2\beta\Delta\mu_{H^{+}}-\beta q_{-2}\Psi(r)\label{eq:fs_minimization-2}
+2\beta\Delta\mu_{H^{+}}=\text{ln}\left(K_{1}K_{2}\right)-\mbox{ln}\left(\frac{f_{-2}(r)}{f_{0}(r)}\right)-\beta q_{-2}\Psi(r)\label{eq:fs_minimization-2}
 \end{equation}
 
 \end_inset
@@ -5116,7 +5286,7 @@ con estas ecuaciones:
 
 \end_inset
 
- Expresiones 
+ Los términos de la derecha en las expresiones 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:fs_minimization-1"
@@ -5130,9 +5300,9 @@ reference "eq:fs_minimization-2"
 
 \end_inset
 
-, muestran en los términos de la derecha como el potencial eléctrico y los
- grados de disociación están acoplados, de forma tal de mantener constante
- el potencial químico de los protones.
+, muestran que debe existir un balance entre el potencial eléctrico y los
+ grados de disociación debido a la condición de potencial químico de los
+ protones constante.
  Es posible encontrar una expresión para los grados de disociación, 
 \begin_inset Formula $f_{-1}(r)$
 \end_inset
@@ -6026,7 +6196,7 @@ reference "eq:grad_disos_f-1"
 
 \end_inset
 
-y 
+ y 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:grad_disos_f-2"
@@ -6689,30 +6859,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Depués de haber contado las expresiones generales en los equilibrios químicos
- se detallan las expresiones para las especies químicas exploradas PAH y
- PMEP.
- 
-\end_layout
-
-\begin_layout Subsection*
-Expresiones para el PAH 
-\end_layout
-
-\begin_layout Subsection*
-Expresiones para el PMEP
 \end_layout
 
 \end_inset
