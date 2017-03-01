@@ -264,14 +264,22 @@ Para escribir la teoría se utiliza un sistema de coordenadas con el eje
 as cilíndricas.
  El origen de coordenadas se ubica en el centro de la abertura más pequeña
  del canal que llamaremos "punta" del nanocanal.
- 
+ Para consultar los símbolos y valores utilizados en este trabajo, ver las
+ tablas del apéndice 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Tablas-de-Símbolos"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -434,6 +442,7 @@ Vamos a considerar nanocanales modificados con polielectrolitos débiles
  a la energía libre del sistema.
  Luego se explica en detalle la teoría molecular desarrollada para describir
  los nanocanales modificados químicamente.
+ 
 \end_layout
 
 \begin_layout Section
@@ -1918,9 +1927,10 @@ reference "fig:Arquitectura-de-las-cadenas"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-F_{chem}(\boldsymbol{r})=k_{B}T\sum_{\zeta}\left\langle \rho_{P}(\boldsymbol{r})\right\rangle _{\zeta}\Big\{\sum_{e=1}^{m}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}_{\zeta}
-\]
+\begin{align*}
+F_{chem}(\boldsymbol{r}) & =k_{B}T\sum_{\zeta}\left\langle \rho_{P}(\boldsymbol{r})\right\rangle _{\zeta}\Bigg\{\sum_{e=1}^{m}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]\\
+ & +\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Bigg\}_{\zeta}
+\end{align*}
 
 \end_inset
 
@@ -2349,8 +2359,8 @@ la contribución a la energía libre en términos de las constantes de equilibri
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline*}
-F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{\sum_{e=1}^{2}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]\\
-+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
+F_{chem}(\boldsymbol{r})=k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Bigg\{\sum_{e=1}^{2}f_{e}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{e}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\sum_{n=1}^{e}\text{ln}\left(K_{n}\right)-\left(n_{H^{+},0}-n_{H^{+},e}\right)\mu_{H^{+}}^{0}\right]\\
++\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Bigg\}
 \end{multline*}
 
 \end_inset
@@ -2365,8 +2375,8 @@ de forma explícita,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-F_{chem}(\boldsymbol{r}) & =k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Big\{ f_{1}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{1}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\text{ln}\left(K_{a1}\right)-\beta\mu_{H^{+}}^{0}\right]\\
- & +f_{2}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{2}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\text{ln}\left(K_{a1}K_{a2}\right)-2\beta\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Big\}
+F_{chem}(\boldsymbol{r}) & =k_{B}T\left\langle \rho_{P}(\boldsymbol{r})\right\rangle \Bigg\{ f_{1}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{1}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\text{ln}\left(K_{a1}\right)-\beta\mu_{H^{+}}^{0}\right]\\
+ & +f_{2}(\boldsymbol{r})\left[\mbox{ln}\left(\frac{f_{2}(\boldsymbol{r})}{f_{0}(\boldsymbol{r})}\right)-\text{ln}\left(K_{a1}K_{a2}\right)-2\beta\mu_{H^{+}}^{0}\right]+\mbox{ln}\left(f_{0}(\boldsymbol{r})\right)+\beta\mu_{0}^{0}\Bigg\}
 \end{align*}
 
 \end_inset
