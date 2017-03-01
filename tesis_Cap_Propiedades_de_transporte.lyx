@@ -311,8 +311,8 @@ La diferencia de voltaje entre dos electrodos separados por una membrana
 \begin_inset Formula $G$
 \end_inset
 
-) de un nanocanal cilíndrico se puede obtener conociendo las dimensiones
- del nanocanal y la conductividad (
+) de un nanocanal cilíndrico con paredes neutras, se puede obtener conociendo
+ las dimensiones del nanocanal y la conductividad (
 \begin_inset Formula $\kappa$
 \end_inset
 
@@ -374,7 +374,15 @@ reference "tab:conductancias"
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Los valores fueron tomados de productos que se comercializan.
+\end_layout
+
+\end_inset
+
  
 \begin_inset Flex URL
 status open
@@ -416,6 +424,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Los valores que utilizamos para las mobilidades se encuentran en la tabla
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:mobilidades"
@@ -435,7 +444,7 @@ reference "tab:mobilidades"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -769,7 +778,7 @@ Las aproximaciones de campo medio utilizadas son válidas para nanocanales
 )
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Corry2000a"
+key "Corry2000"
 
 \end_inset
 
@@ -830,8 +839,8 @@ key "xie_biomimetic_2016"
 \end_inset
 
  por sus propiedades de rectificación de la corriente iónica.
- En estas geometrías asimétricas la conductancia se define como la pendiente
- de la curva 
+ En estos casos resulta útil definir la conductancia de cuasi equilibrio
+ como la pendiente de la curva 
 \begin_inset Formula $I$
 \end_inset
 
@@ -1047,7 +1056,7 @@ reference "eq:generic_resistance"
 
 \end_inset
 
- en término de una integral respecto del diámetro del nanocanal.
+ en términos de una integral respecto del diámetro del nanocanal.
  Dada una función 
 \begin_inset Formula $D(z)$
 \end_inset
@@ -1294,18 +1303,18 @@ reference "eq:Aprox_Goldman_constanfield"
 \end_layout
 
 \begin_layout Subsubsection
-Nanocanales con forma de bala (Bullet-like Nanochannel)
+Nanocanales con forma de bala ("Bullet-like nanochannels")
 \end_layout
 
 \begin_layout Standard
 Una geometría de interés experimental son las llamadas 
 \emph on
-Bullet-like
+"bullet-like"
 \emph default
  o nanocanales con forma de bala.
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Apel2011"
+key "apel_asymmetric_2011"
 
 \end_inset
 
@@ -1314,7 +1323,7 @@ key "Apel2011"
  más o menos standard
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Apel2016,Apel1998,Apel2011"
+key "Apel2016,Apel1998,apel_asymmetric_2011"
 
 \end_inset
 
@@ -1368,7 +1377,7 @@ esta ecuación considera los radios mínimo
 .
  La familia de geometrías 
 \emph on
-Bullet-Like
+"bullet-like"
 \emph default
  se caracteriza por tener 
 \begin_inset Formula $n=1$
@@ -1391,7 +1400,7 @@ reference "fig:Comparación_parámetro_h"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1416,8 +1425,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-(A) Comparación de la geometría Bullet-Like para distintos valores del parámetro
- de forma 
+(A) Comparación de la geometría 
+\emph on
+"bullet-like"
+\emph default
+ para distintos valores del parámetro de forma 
 \begin_inset Formula $h$
 \end_inset
 
@@ -1435,7 +1447,11 @@ status collapsed
 \end_inset
 
 .
- (B) Ejemplo del perfil de un nanocananl bullet-like.
+ (B) Ejemplo del perfil de un nanocanal 
+\emph on
+"bullet-like"
+\emph default
+.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -1524,7 +1540,7 @@ reference "eq:bullet-like-resistance"
 
  representa la resistencia total de un nanocanal 
 \emph on
-bullet-like
+"bullet-like"
 \emph default
  expresada en términos de la conductancia de nanocanales cilíndricos.
  
@@ -1533,7 +1549,7 @@ bullet-like
 \begin_layout Standard
 
 \series bold
-Sobre la calidad de la Aproximación 
+Sobre la calidad de la aproximación 
 \end_layout
 
 \begin_layout Standard
@@ -1655,7 +1671,7 @@ status open
 \begin_inset Graphics
 	filename figuras/Cap_prop_transporte/G_vs_pH_comparacion_sigmaq_fq.eps
 	lyxscale 50
-	width 50text%
+	width 80text%
 
 \end_inset
 
@@ -1668,7 +1684,7 @@ status open
 \begin_layout Plain Layout
 Comparación de la conductancia de un nanocanal 
 \emph on
-bullet-like
+"bullet-like"
 \emph default
  con carga superficial dependiente del pH de la solución.
  Los datos experimentales fueron medidos en un (
@@ -1684,8 +1700,8 @@ bullet-like
 \end_inset
 
 ) como función del pH.
- Los resultados experimentales corresponden a un nanocanal con forma bullet-like
- con grupos 
+ Los resultados experimentales corresponden a un nanocanal con forma "bullet-lik
+e" con grupos 
 \begin_inset Formula $COOH$
 \end_inset
 
@@ -1722,7 +1738,7 @@ name "fig:Comparación-bullet-like-aprox"
 
 \begin_layout Standard
 En segundo lugar consideramos los resultados de la caracterización experimental
- de un nanocanal con geometría bullet-like mediante curvas 
+ de un nanocanal con geometría "bullet-like" mediante curvas 
 \begin_inset Formula $I$
 \end_inset
 
@@ -1734,7 +1750,7 @@ En segundo lugar consideramos los resultados de la caracterización experimental
  Los resultados experimentales corresponden a un nanocanal con geometría
  
 \emph on
-bullet-like
+"bullet-like"
 \emph default
  y con grupos carboxilato (
 \begin_inset Formula $COOH$
@@ -1795,6 +1811,10 @@ bullet-like
 \begin_inset Formula $\sigma_{q}=0.4$
 \end_inset
 
+
+\begin_inset Formula $\left[\frac{e}{nm^{2}}\right]$
+\end_inset
+
 .
  En la figura 
 \begin_inset CommandInset ref
@@ -1803,11 +1823,8 @@ reference "fig:Comparación-bullet-like-aprox"
 
 \end_inset
 
-, mostramos la conductancia de un nanocanal tipo 
-\emph on
-bullet-like
-\emph default
- con sitios responsivos al pH de la solución.
+, mostramos la conductancia de un nanocanal tipo  con sitios responsivos
+ al pH de la solución.
  Las conductancias calculadas mediante la expresión 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1829,6 +1846,10 @@ reference "eq:bullet-like-resistance"
 \begin_inset Formula $\sigma_{q}=0.4$
 \end_inset
 
+
+\begin_inset Formula $\left[\frac{e}{nm^{2}}\right]$
+\end_inset
+
  están en completo acuerdo con lo reportado por Apel et.al 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1840,7 +1861,7 @@ key "apel_asymmetric_2011"
  Los parámetros geométricos que mejor caracterizan estos nanocanales de
  geometría 
 \emph on
-bullet-like
+"bullet-like"
 \emph default
  fueron calculados mediante la resolución de las ecuaciones de PNP
 \begin_inset CommandInset citation
@@ -1905,7 +1926,7 @@ Si consideramos el contorno
  el radio con la discretización del canal.
  Por ejemplo, para el caso de una geometría 
 \emph on
-bullet-like
+"bullet-like"
 \emph default
  
 \end_layout
