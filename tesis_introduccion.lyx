@@ -112,12 +112,41 @@ Introducción
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Greyedout
-status collapsed
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
-Introducción: Exponer claramente los antecedentes del tema en cuestión incluyend
-o la hipótesis derivada de los mismos y los objetivos del trabajo,
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Estas son las sugerencias de la Universidad: 
+\end_layout
+
+\begin_layout Plain Layout
+DEBERÁ INCLUIR un capítulo introductorio donde se expongan claramente los
+ antecedentes del tema en cuestión incluyendo la hipótesis derivada de los
+ mismos y los objetivos del trabajo,
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -126,627 +155,171 @@ o la hipótesis derivada de los mismos y los objetivos del trabajo,
 \end_layout
 
 \begin_layout Standard
-Este trabajo se realizó en las instalaciones del Instituto Nacional de Investiga
-ciones Fisicoquímicas Teóricas y Aplicas (INIFTA) en el Laboratorio de Materia
- Blanda
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-https://softmatter.quimica.unlp.edu.ar/
-\end_layout
-
-\end_inset
-
- a cargo de Omar Azzaroni, es un trabajo teórico/computacional desarrollado
- en un grupo eminentemente experimental.
- Los recursos computacionales utilizados fueron provistos por el grupo de
- Modelado Molecular de Biomateriales
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://szleifer-group.bme.northwestern.edu/
-\end_layout
-
-\end_inset
-
- a cargo del Dr.
- Szleifer, en donde F.
- M.
- Gilles realizó dos estadías con el objetivo de trabajar con quienes desarrollar
-on la teoría molecular durante más de 20 años.
- 
-\end_layout
-
-\begin_layout Standard
-El contraste entre las herramientas de trabajo, metodología y lenguaje que
- suelen utilizarse en el laboratorio y las utilizadas en este trabajo, es
- un ejemplo de la heterogeneidad con la que se trabaja en el grupo en particular
- y en el ámbito de la Materia Blanda en general.
- Sea en el laboratorio con equipamiento o en la computadora con líneas de
- código propio o software específico, en ambos espacios se estudian sistemas
- complejos que deben abarcarse de forma interdisciplinaria.
- 
+Durante el siglo pasado la física ha avanzado en tres grandes frentes: lo
+ grande, lo pequeño y lo complejo.
+ Mientras que el estudio de lo grande y de lo pequeño (aquello que concierne
+ la evolución del universo como un todo 
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-Los recursos computacionales utilizados fueron provistos por el grupo de
- modelado molecular de biomateriales
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://szleifer-group.bme.northwestern.edu/
+e involucra escalas temporales y espaciales del orden de la edad y el tamaño
+ del universo 
 \end_layout
 
 \end_inset
 
-, en donde F.
- M.
- Gilles realizó dos estadías con el objetivo de trabajar con quienes desarrollar
-on la teoría.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-Objeto de estudio
-\end_layout
-
-\begin_layout Standard
-Guiados por esta filosofía en este trabajo estudiamos las propiedades de
- capas poliméricas confinadas dentro de un nanocanal que atraviesa una membrana
- de polietilentereftalato (PET) haciendo uso de recursos multidisciplinarios.
- El interés en las propiedades de polielectrolitos confinados surge de la
- necesidad de controlar el transporte iónico a través de nanocanales modificados
- químicamente.
- En el laboratorio es posible realizar tratamientos químicos para modificar
- la geometría e incorporar capas de polielectrolitos en la superficie interna
- del nanocanal.
- Para medir el impacto de la modificación superficial sobre el transporte
- iónico, se realizan experimentos que consisten en 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Explicar el set experimental!
-\end_layout
-
-\end_inset
-
-medir la corriente iónica (
-\begin_inset Formula $I$
-\end_inset
-
-) en función del potencial externo aplicado (
-\begin_inset Formula $V$
-\end_inset
-
-).
- Estas corrientes iónicas constituyen la respuesta macroscópica del sistema
- aunque dependen también de las propiedades geométricas y químicas del nanocanal.
- Son estas corrientes las que se intentan controlar mediante la funcionalización
- de la pared interna del nanocanal.
+ y aquello que concierne a la estructura subatómica de la materia, respectivamen
+te), involucra el descubrimiento de las leyes fundamentales de la naturaleza,
+ el estudio de lo complejo implica comprender como se combinan las leyes
+ de la naturaleza conocidas.
+ Haciendo un paralelismo con la biología moderna que ha evolucionado desde
+ el estudio de organismos unicelulares simples (como las bacterias) hacia
+ el estudio de organismos complejos pluricelulares (como las plantas, los
+ invertebrados y vertebrados), durante la segunda mitad del siglo XX la
+ física ha evolucionado desde el estudio de las interacciones entre partículas
+ hacia el estudio de fluidos complejos.
  
 \end_layout
 
 \begin_layout Standard
-Desde el punto de vista teórico/computacional, por otro lado, se reportan
- distintas teorías para abordar el transporte en nanocanales.
- 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figuras/Cap_introduccion/arbol_teorias.png
-	lyxscale 50
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Mapa de los distintos modelos utilizados para el estudio de nanoporos y
- nanocanales.
- La aproximación teórica utilizada en esta tesis corresponde al grupo de
- las teorías moleculares.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Mapa-de-Modelos"
-
-\end_inset
-
-Figura tomada del Libro 
+Los fluidos complejos tienen localmente la mobilidad de líquidos pero están
+ constituidos por polímeros, surfactantes, cristales líquidos, coloides,
+ etc; Algunos ejemplos podrían ser: la mayonesa, la crema de afeitar o el
+ gel para el pelo.
+ En general, estos fluidos complejos se denominan con el nombre de 
+\series bold
+materia blanda
+\series default
+.
+ En 1991 durante la ceremonia de entrega de su premio Nobel, Pierre-Gilles
+ de Gennes
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Libro_MT_IS"
+key "Gilles_DeGennes_1991"
 
 \end_inset
 
+, quién forjó el concepto materia blanda, comentó en su discurso el caso
+ de indígenas de la cuenca del amazonas que construían una especie de botas
+ a partir de la savia del árbol Hevea brasiliensis (más comúnmente llamado
+ árbol del caucho).
+ Este es un ejemplo de sistema de materia blanda porque frente a pequeños
+ cambios químicos, el material responde con notables cambios macroscópicos.
+ En la actualidad el concepto de materia blanda engloba una infinidad de
+ sistemas tanto sintéticos como biológicos
+\begin_inset Note Note
+status open
 
+\begin_layout Plain Layout
+CITAS!
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-Consideremos los diferentes modelos que pueden usarse para describir el
- transporte en nanoporos y nanocanales (ver figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Mapa-de-Modelos"
-
-\end_inset
-
-).
- Por un lado, tenemos las 
-\series bold
-teorías basadas en partículas
-\series default
-, como por ejemplo las simulaciones de dinámica molecular y dinámica Browniana,
- que pueden describir sistemas de forma atomística (todos los átomos del
- sistema son considerados explícitamente) o mediante modelos de grano grueso
- (conjuntos de átomos se describen agrupados en partículas de grano grueso).
- Las simulaciones de dinámica molecular atomística son la herramienta más
- detallada para estudiar el transporte de iones en nanoporos.
- Esta aproximación ha sido aplicada a nanoporos biológicos y nanocanales.
- Sin embargo, las longitudes y los tiempos de interés en nanoporos y nanocanales
- de estado sólido modificados químicamente son más grandes que aquellos
- que pueden estudiarse con las simulaciones de dinámica molecular atomística.
- Por ejemplo, el poro biológico típico, 
-\begin_inset Formula $\alpha$
-\end_inset
-
--hemolisina, tiene un radio de 
-\begin_inset Formula $\sim1.3nm$
-\end_inset
-
- y una longitud de 
-\begin_inset Formula $10nm$
 \end_inset
 
 .
- Está lleno con una solución de electrolitos 
-\begin_inset Formula $1M$
+ Una definición de materia blanda debe incluir que las escalas espaciales
+ relevantes son del orden de los nanómetros y las energías son del orden
+ de la energía térmica (
+\begin_inset Formula $\sim k_{B}T$
 \end_inset
 
-; la 
-\begin_inset Formula $\alpha$
+), además las propiedades más interesantes de los sistemas de materia blanda
+ resultan de un sutil balance entre la energía y la entropía.
+ Expliquemos esto con un ejemplo clásico: las interacciones entálpicas entre
+ las moléculas de polímeros que se encuentran entrecruzadas en el material
+ de una banda elástica, dependen fuertemente de la configuración de las
+ cadenas, y las propiedades elásticas se deben casi enteramente a los cambios
+ en la entropía configuracional de las cadenas estiradas.
+ Por ejemplo, si se considera una cadena polimérica ideal y se la estira
+ hasta una longitud determinada, el trabajo realizado es el mismo que se
+ hubiera hecho si se confinaba la cadena ideal (por ejemplo presionándola
+ sobre una superficie) hasta obtener la misma longitud
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gennes_scaling_1979"
+
 \end_inset
 
--hemolisina contiene 
-\begin_inset Formula $\sim60$
+.
+ Los efectos entrópicos y de confinamiento aparecen en simultáneo a través
+ de la imposición de una interfaz o un confinamiento geométrico, que disminuye
+ los grados de libertad a la vez que incorpora nuevas interacciones moleculares.
+ Estos fenómenos pueden tener múltiples consecuencias, por ejemplo el desplazami
+ento del equilibrio hacia estructuras más ordenadas.
+ 
+\end_layout
+
+\begin_layout Standard
+Los sistemas cargados en medios acuosos también derivan muchas de sus propiedade
+s de los efectos entrópicos y de confinamiento.
+ Por ejemplo, las repulsiones entre dos superficies de igual carga separadas
+ por una solución iónica puede comprenderse en términos de la presión osmótica
+ que proviene del confinamiento de contraiones en el espacio entre las placas
+\begin_inset CommandInset citation
+LatexCommand citep
+key "perkin_dynamic_2009"
+
 \end_inset
 
- iones de sal y 
-\begin_inset Formula $\sim700$
+.
+ De la misma forma la adsorción de polielectrolitos sobre una superficie
+ cargada proviene no de la interacción electrostática entre el polielectrolito
+ y la superficie, sino de la ganancia entrópica de los contraiones que se
+ liberan al seno de la solución mientras la cadena es confinada/adsorbida
+ sobre la superficie
+\begin_inset CommandInset citation
+LatexCommand citep
+key "joanny_polyelectrolyte_1999"
+
 \end_inset
 
- moléculas de agua.
- Por otro lado un nanoporo con un radio de 
-\begin_inset Formula $6nm$
-\end_inset
+.
+\end_layout
 
- y una longitud de 
-\begin_inset Formula $50nm$
-\end_inset
-
- lleno con una solución 
-\begin_inset Formula $1M$
-\end_inset
-
- de 
-\begin_inset Formula $KCl$
-\end_inset
-
- contiene 
-\begin_inset Formula $\sim2\times10^{5}$
-\end_inset
-
- moléculas de agua y 
-\begin_inset Formula $7\times10^{4}$
-\end_inset
-
- iones provenientes de la sal (y la situación empeora para nanocanales más
- largos 
+\begin_layout Standard
+Menos de tres décadas después de "la fundación" del concepto de materia
+ blanda, la posibilidad de construir sistemas con 
+\series bold
+materia blanda en confinamiento
+\series default
+ surge como una estrategia para el desarrollo de micro y nanotecnología
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-como los que consideramos en este trabajo, 
-\begin_inset Formula $L=12\mu m$
-\end_inset
-
-, 
-\begin_inset Formula $D=20nm$
-\end_inset
-
-
+CITAS!
 \end_layout
 
 \end_inset
 
-).
- Las simulaciones atomísticas de un sistema con tantas partículas consumen
- mucho tiempo, incluso disponiendo de supercomputadoras.
+.
+ Por ejemplo, la construcción de nanocanales de estado sólido, permite estudiar
+ sistemas de materia blanda en
+\series bold
+ nanoconfinamiento
+\series default
+, con potenciales aplicaciones en biosensado o secuenciación de ADN.
+ Debemos distinguir entre materiales blandos cuyas escalas espaciales se
+ encuentran en el orden del micrón (
+\begin_inset Formula $10^{-6}m$
+\end_inset
+
+) como pueden ser los coloides y aquellos cuyas escalas espaciales son las
+ dimensiones moleculares (
+\begin_inset Formula $10^{-9}m$
+\end_inset
+
+): soluciones poliméricas, surfactantes, cristales líquidos.
+ En estos últimos las escalas espaciales son nanoscópicas y es allí donde
+ el nanoconfinamiento compite con las interacciones intermoleculares.
  
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Cita requerida
-\end_layout
-
-\end_inset
-
- Alternativamente, los nanocanales de estado sólido pueden describirse en
- el límite del continuo utilizando 
-\series bold
-métodos de campo medio
-\series default
-.
- Por ejemplo, las ecuaciones de Poisson-Boltzmann (PB) para sistemas en
- equilibrio y las ecuaciones de Poisson-Nernst-Planck y Navier-Stokes (PNP-NS)
- para condiciones de no equilibrio.
- Estas aproximaciones en el continuo han mostrado ser válidas en canales
- con radios mayores a 
-\begin_inset Formula $2$
-\end_inset
-
- longitudes de Debye
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Corry2000_35,Corry2000"
-
-\end_inset
-
- y son relativamente sencillas de resolver en una variedad de condiciones.
- Sin embargo, estos abordajes modelan los iones como partículas puntuales
- con carga y no incorporan ningún detalle molecular, por lo que no pueden
- describir el comportamiento de polielectrolitos o proteínas dentro de los
- nanocanales modificados.
- Con el objetivo de analizar sistemas moleculares específicos y capturar
- los acoplamientos existentes entre la organización molecular, las interacciones
- físicas y los estados químicos, se ha desarrollado una teoría que provee
- una descripción continua de los campos de interacción, así como de las
- distribuciones de densidad de las distintas especies, y explícitamente
- considera el tamaño, forma, distribución de cargas, estados químicos y
- conformaciones de todas las especies moleculares en el sistema.
- Esta 
-\series bold
-teoría molecular
-\series default
- permite estudiar los nanocanales de estado sólido modificados químicamente
- porque incluye el detalle químico de las moléculas en el sistema, puede
- lidiar con las escalas temporales y espaciales apropiadas, y puede ser
- derivada en un marco teórico formal, lo que permite generalizar la teoría
- a otros casos de interés.
- Esta teoría molecular se reduce a las ecuaciones de PNP cuando se consideran
- únicamente las interacciones electrostáticas y no hay moléculas con grados
- de libertad conformacionales
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Libro_MT_IS"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Los fenómenos de transporte a través de nanocanales modificados no se limitan
- al flujo de iones, existen estudios donde se investiga el transporte de
- estructuras más complejas, como por ejemplo moléculas de ADN, proteínas,
- o liposomas
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Goyal2015_lipo"
-
-\end_inset
-
-.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-También es posible variar la fuerza impulsora por ejemplo, diferencias de
- concentración (ósmosis), diferencia de presiones, etc.
- 
-\end_layout
-
-\end_inset
-
- Se pueden utilizar estímulos físicos (luz
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Zhang2013,Wen2010a,Zhang2016"
-
-\end_inset
-
-, temperatura, diferencias de voltaje
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Siwy2010"
-
-\end_inset
-
-,etc), químicos (concentración de sal, pH) o biológicos (presencia de biorecepto
-res específicos
-\begin_inset CommandInset citation
-LatexCommand citep
-key "wei_stochastic_2012,Ali2008a"
-
-\end_inset
-
-), para controlar el transporte a través de nanocanales.
- Desde el punto de vista del comportamiento bioquímico, la capacidad de
- regular las propiedades de transporte de los nanocanales a través de estímulos
- externos es importante para el desarrollo de tecnología.
- 
-\end_layout
-
-\begin_layout Standard
-Resulta interesante el paradigma en el cual se intenta enmarcar los futuros
- avances en el control del transporte iónico.
- Así como la electrónica ha desarrollado estrategias de control del flujo
- de electrones, primero con bloques simples como capacitores, resistencias
- o inductancias, luego con bloques más sofisticados como son los diodos
- o los transistores hasta llegar a la integración de estos bloques en estructura
-s mucho más complejas, como por ejemplo circuitos integrados, chips y microchips
-, así se espera evolucionar en el 
-\series bold
-control de corrientes de iones
-\series default
-.
- Es por eso que en los últimos años se ha estado forjando dentro de la comunidad
- científica el concepto de: 
-\series bold
-iontrónica
-\series default
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "chun_iontronics_2015,iontronics_Omar,iontronics_book_2016"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Aunque los fundamentos de la iontrónica puedan hallarse en los primeros
- años de la década del '50 con la técnica de Coulter-counting
-\begin_inset CommandInset citation
-LatexCommand citep
-key "coulter_counting_patent"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Plain Layout
-Esta tecnología emerge del desarrollo de técnicas y dispositivos para el
- control de iones entendidos como "mensajeros".
- De alguna manera se intenta utilizar el paradigma de la electrónica 
-\end_layout
-
-\begin_layout Plain Layout
-El abordaje interdisciplinario es necesario para entender, diseñar e implementar
- desde sus aspectos fundamentales nuevos dispositivos iontrónicos y biomiméticos.
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Paragraph*
-Objetivo del trabajo
-\end_layout
-
-\begin_layout Standard
-Es de interés contar con una herramienta teórico/computacional para entender
- la respuesta macroscópica en función de las características moleculares
- involucradas y predecir alguno de los resultados experimentales.
- Los objetivos planteados en el plan de trabajo fueron: desarrollar la Teoría
- Molecular para la descripción de la organización molecular y propiedades
- de las macromoléculas con las que se modifican los nanocanales de estado
- sólido (capítulo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Enfoque-Teórico"
-
-\end_inset
-
-), descripción teórica de la conductancia iónica de los nanoporos modificados
- con “polymer brushes” (capítulo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Propiedades-de-Transporte"
-
-\end_inset
-
-), correlacionar las predicciones teóricas y los observables macroscópicos
- experimentales a fin de interpretar el rol de las diferentes variables
- del sistema: a) diámetro de poro, b) fuerza iónica, c) pH, d) peso molecular
- o grado de polimerización de los “polymer brushes” (capítulos 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Adsorción-de-Polielectrolitos"
-
-\end_inset
-
- y 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Efectos-de-Confinamiento"
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Los modelos utilizados para la descripción de estos sistemas se nutren de
- resultados teóricos obtenidos en distintas disciplinas.
- como por ejemplo la sarasa, sarasa, sarasa.
- 
-\end_layout
-
-\end_inset
-
 A continuación se realiza una exposición de las ideas relevantes en el ámbito
- de la materia sometida al confinamiento de nanocanales.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-El uso de las computadoras durante el siglo XX permitió desarrollar distintas
- estrategias numérico/computacionales para resolver ecuaciones sin solución
- analítica (cálculo numérico), simular la evolución temporal de sistemas
- de pocas partículas (Dinámica Molecular) y predecir propiedades termodinámicas
- encontrando las configuraciones de equilibrio (Métodos Monte Carlo).
- Estas técnicas computacionales mejoraron lo suficiente como para poder
- predecir el comportamiento macroscópico y su conexión con las propiedades
- microscópicas de sistemas complejos.
- 
-\end_layout
-
-\begin_layout Plain Layout
-En paralelo las técnicas experimentales se desarrollaron permitiendo tener
- mayor control del detalle molecular.
- El acceso a nueva información hace necesario el desarrollo de nuevas herramient
-as teórico/computacionales.
- Estas herramientas deben explicar desde los aspectos fundamentales el comportam
-iento de sistemas complejos y predecir las respuestas macroscópicas que
- se obtienen experimentalmente.
- 
-\end_layout
-
-\begin_layout Plain Layout
-Existen múltiples estrategias para abordar los sistemas que se engloban
- dentro de lo que se conocen como materia blanda.
- Por ejemplo, algoritmos de dinámica molecular o algoritmos Monte Carlo
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Frenkel"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-son útiles para (CITAR AL FRENKEL)
-\end_layout
-
-\end_inset
-
-.
- Sin embargo la complejidad de sistemas que involucran polielectrolitos
- débiles cuyos equilibrios químicos están regulados por pH, concentración
- de sal y confinamiento, hacen difícil sino inabordable el tratamiento con
- las estrategias mencionadas.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Los fenómenos de transporte a través de nanocanales han sido estudiados
- en distintos campos de la ciencia.
- Podemos encontrar en la bibliografía antecedentes que provienen del estudio
- de membranas porosas, poros y canales biológicos, materiales porosos, micro/nan
-o-fluídica, etc.
- En los últimos años se han desarrollado técnicas de construcción de nanocanales
- artificiales, técnicas experimentales para su caracterización y herramientas
- teórico/computacionales para la comprensión y predicción de nuevas propiedades.
- 
-\end_layout
-
-\begin_layout Plain Layout
-****
-\end_layout
-
-\begin_layout Plain Layout
-Si bien mucha de la fenomenología de estos sistemas fue estudiada en diversos
- campos del conocimiento teórico y aplicado.
- Hoy tenemos la posibilidad de medir en el laboratorios
-\end_layout
-
-\begin_layout Plain Layout
-(Orígenes del conocimiento que hace de base para lo que desarrollamos nosotros)
-\end_layout
-
-\begin_layout Plain Layout
-El flujo de corriente iónica a través de nanocanales se investiga desde
- hace mucho tiempo en campos tales como ingeniería de membranas, física
- de coloides, nanofluídica, transporte de sistemas confinados, es un tema
- que se viene estudiando desde distintos ámbitos del conocimiento hace muchos
- años.
- Nosotros nos propusimos el desafío de explicar los resultados experimentales
- bajo la luz de una teoría que permita describir nuestro sistema con detalle
- molecular.
- 
-\end_layout
-
-\begin_layout Plain Layout
-El nombre materia blanda fue acuñado por Pierre-Gilles De Gennes en el discurso
- que dió con motivo de su premio Nobel.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-DEBERÁ INCLUIR: introductorio donde se expongan claramente los antecedentes
- del tema en cuestión incluyendo la hipótesis derivada de los mismos
+ de la materia blanda confinada dentro de nanocanales.
 \end_layout
 
 \end_inset
@@ -755,7 +328,85 @@ DEBERÁ INCLUIR: introductorio donde se expongan claramente los antecedentes
 \end_layout
 
 \begin_layout Section
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Antecedentes
+\end_layout
+
+\end_inset
+
 Antecedentes e hipótesis derivadas de los mismos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/Cap_introduccion/ejemplos_canales_MT_IS_Book.png
+	lyxscale 20
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Imágenes de microscopía para distintos tipos de nanocanales: (A) Microscopía
+ electrónica de barrido (SEM) de nanocanales construidos en membranas de
+ (PET) con la técnica de track-etched; (B) Microscopía electrónica de transmisió
+n (TEM) de una membrana ultra fina de óxido de silicio con un único nanoporo;
+ (C) Imágen SEM de una membrana coloidal porosa (panel superior: vista superior,
+ panel inferior: vista lateral, el detalle en el panel superior muestra
+ que los nanoporos están formados por los espacios en la estructura fcc
+ del arreglo coloidal); (D) Imagen SEM de una membrana mesoporosa de silica;
+ (E) Imagen óptica (panel superior) e imagen SEM (panel inferior) de una
+ nanopipeta de borosilicato; (F) Imagen SEM de una membrana microporosa
+ de silicona; (G) Imagen SEM de un nanocanal en una membrana de alumina.
+ La imagen fue tomada de la rer.
+ : Mario Tagliazucchi Igal Szleifer, ed., Chemically Modified Nanopores and
+ Nanochannels (Elsevier, 2016).
+ A su vez las imágenes fueron adaptadas de las siguientes fuentes: (A) Wen,
+ L.; Tian, Y.; Ma, J.; Zhai, J.; Jiang, L., Construction of Biomimetic Smart
+ Nanochannels with Polymer Membranes and Application in Energy Conversion
+ Systems.
+ Phys.
+ Chem.
+ Chem.
+ Phys.
+ 2012, 14, 4027À4042, (B) Storm, A.J.; Chen, J.H.; Ling, X.S.; Zandbergen, H.W.;
+ Dekker, C., Fabrication of Solid-State Nanopores with Single-Nanometre Precision.
+ Nat.
+ Mater.
+ 2003, 2, 537À540, (E) An, S.; Stambaugh, C.; Kim, G.; Lee, M.; Kim, Y.; Lee,
+ K., et al., Low-Volume Liquid Delivery and Nanolithography Using a Nanopipette
+ Combined with a Quartz Tuning Fork-Atomic Force Microscope.
+ Nanoscale 2012, 4, 6493À6500, (F) Velleman, L.; Shearer, C.J.; Ellis, A.V.;
+ Losic, D.; Voelcker, N.H.; Shapter, J.G., Fabrication of Self- Supporting Porous
+ Silicon Membranes and Tuning Transport Properties by Surface Functionalization.
+ Nanoscale 2010, 2, 1756À1761, y (G) Lee, W.; Ji, R.; Gosele, U.; Nielsch,
+ K., Fast Fabrication of Long-Range Ordered Porous Alumina Membranes by Hard
+ Anodization.
+ Nat.
+ Mater.
+ 2006, 5, 741À747; (D) G.
+ Soler-Illia’s Lab.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -769,27 +420,30 @@ s.
  
 \end_layout
 
-\begin_layout Standard
-(1) Es posible construir membranas con multiporos o con un único poro cuyos
+\begin_layout Enumerate
+Es posible construir membranas con multiporos o con un único poro cuyos
  diámetros se encuentran entre 1 y 1000 nm.
  
 \end_layout
 
-\begin_layout Standard
-(2) Pueden ser modificados químicamente de forma tal de otorgar funcionalidad
+\begin_layout Enumerate
+Pueden ser modificados químicamente de forma tal de otorgar funcionalidad
  y sensibilidad a estímulos externos.
 \end_layout
 
-\begin_layout Standard
-(3) Sirven como medio para el transporte selectivo en distintas aplicaciones
+\begin_layout Enumerate
+Sirven como medio para el transporte selectivo en distintas aplicaciones
  (filtración, separación, sensado).
 \end_layout
 
 \begin_layout Standard
 Ejemplos de sistemas que cumplen estas características son: canales de estado
- sólido construidos a con rayos de iones o electrones, películas nanoporosas
- coloidales, materiales mesoporosos, nanopipetas de vidrio, membranas polimérica
-s ¨
+ sólido construidos con haces de iones o electrones (
+\emph on
+ion/electron sculpting
+\emph default
+), películas nanoporosas coloidales, materiales mesoporosos, nanopipetas
+ de vidrio y membranas poliméricas ¨
 \emph on
 track-etched
 \emph default
@@ -801,16 +455,16 @@ track-etched
 \emph default
 es una de las más utilizadas para la confección de nanocanales.
  Esta técnica consiste en preparar las membranas por irradiación con iones
- pesados de alta energia (como por ejemplo uranio y bismuto).
+ pesados de alta energía (como por ejemplo uranio y bismuto).
  Debido a su alta energía estos iones no son detenidos por la membrana y
  la atraviesan completamente, produciendo una degradación de la membrana
  en su trayectoria.
  La zona debilitada es tratada químicamente (proceso de 
 \emph on
-etching
+"etching
 \emph default
-) en una solución alcalina para producir nanocanales cuya longitud es más
- grande que los diámetros internos
+") para producir nanocanales cuya longitud es más grande que los diámetros
+ internos
 \begin_inset CommandInset citation
 LatexCommand citep
 key "spohr2013ion,prep_nanochannels_97"
@@ -845,21 +499,17 @@ key "ali_single_2012"
 \end_inset
 
 , etc).
- Las membranas multiporo se utilizan para filtrado y están disponibles comercial
-mente, por ejemplo, Whatman (Nucleopore and Cyclopore) y PC, comercializan
- membranas de policarbonato (PC).
- Iteip (ipPore) comercializa membranas de PC, polyamida (PI) y poliester.
  
 \end_layout
 
 \begin_layout Standard
-La técnica de bombardeo con iones pesados, por su parte, permite detener
+Las membranas multiporo se utilizan para filtrado y están disponibles comercialm
+ente, por ejemplo, Whatman (Nucleopore and Cyclopore) y PC, comercializan
+ membranas de policarbonato (PC).
+ Iteip (ipPore) comercializa membranas de PC, polyamida (PI) y poliester.
+ La técnica de bombardeo con iones pesados, por su parte, permite detener
  el flujo de iones luego del primer ion impactado sobre la membrana.
- Esto permite la fabricación de 
-\series bold
-membranas con un único canal pasante
-\series default
-
+ Esto permite la fabricación de membranas con un único canal pasante
 \begin_inset CommandInset citation
 LatexCommand citep
 key "chtanko_etched_2004"
@@ -868,6 +518,39 @@ key "chtanko_etched_2004"
 
 .
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Variedad de polielectrolitos que se utilizan para la modificicación química
+ de los nanocanales.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -886,21 +569,20 @@ La funcionalización química de los nanocanales es habitualmente un proceso
 wetting
 \emph default
 ), carga superficial, sensibilidad ante estímulos externos, actividad catalítica
-, afinidad biológica.
+ o afinidad biológica.
  
 \end_layout
 
 \begin_layout Standard
 Los materiales típicos de las membranas poliméricas que se utilizan para
- la confección de nanocanales son: poli(etilen tereftalato) PET, poliamida
- PI y policarbonato PC.
- Estos polímeros contienen imidas, carbonatos y grupos éster, respectivamente,
+ la confección de nanocanales son: poli(tereftalato de etileno) (PET), poli-imid
+a (PI) y policarbonato (PC).
+ Estos polímeros contienen grupos éster, imidas y carbonatos, respectivamente,
  que pueden hidrolizarse durante el proceso de 
 \emph on
-etching 
+etching
 \emph default
-de la trayectoria del ion, dejando diferentes grupos funcionales sobre la
- superficie.
+, dejando diferentes grupos funcionales sobre la superficie.
  Por ejemplo, la superficies de PET hidrolizadas exhiben grupos carboxilatos
  y grupos alcohol
 \begin_inset CommandInset citation
@@ -937,7 +619,7 @@ key "perrot_hydrolytic_2011"
 \begin_inset Formula $CO_{2}$
 \end_inset
 
- 
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "dauginet_surface_2001"
@@ -958,8 +640,8 @@ status collapsed
  Estos grupos formados durante el proceso de etching, determinan la reactividad
  química y la carga superficial de la membrana.
  En el caso de las membranas de PET y PI, los grupos carboxilatos de la
- superficie tienen una constante de equilibrio químico 
-\begin_inset Formula $pK_{q}\sim5$
+ superficie tienen una constante de equilibrio ácido-base 
+\begin_inset Formula $pK_{a}\sim5$
 \end_inset
 
 , por lo que para 
@@ -1025,15 +707,15 @@ key "Yameen2009"
 
 \end_inset
 
- (los cuales permiten el crecimiento de brushes polimérics en la pared interna
- del canal), oligomeros de ADN con grupos terminales amino
+ (los cuales permiten el crecimiento de brushes poliméricos en la pared
+ interna del canal), oligómeros de ADN con grupos terminales amino
 \begin_inset CommandInset citation
 LatexCommand citep
 key "hou_biomimetic_2009,hou_ph-gating_2010"
 
 \end_inset
 
- y pequeños aminas funcionales sustituidas con ácidos fosfóricos
+ y aminas sustituidas con ácidos fosfóricos
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ali_logic_2009"
@@ -1077,7 +759,7 @@ Una alternativa para funcionalizar las membranas está basada en la generación
  de radicales en la superficie de la membrana polimérica por exposición
  a plasma.
  Se introducen los monómeros del polímero que se quiere utilizar en una
- cámara de plasma para la formación de brushes poliméricos via polimerización
+ cámara de plasma para la formación de brushes poliméricos vía polimerización
  por radicales libres
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1099,13 +781,16 @@ key "Zhang2013b,hou_biomimetic_2010"
 \end_layout
 
 \begin_layout Standard
-Modificaciones no-covalentes (autoensamblado electrostático) Una alternativa
- para la modificación química de nanocanales es la adsorción electrostática
- de polielectrolitos.
- Esta metodología implica sumergir la membrana con el nanocananl en una
- solución de polielectrolitos con una carga opuesta a la carga presente
- en las paredes del nanocanal.
- La deposición de polielectrolitos en las superficies planas es un proceso
+
+\series bold
+Modificaciones no-covalentes (autoensamblado electrostático)
+\series default
+ Una alternativa para la modificación química de nanocanales es la adsorción
+ electrostática de polielectrolitos.
+ Esta metodología implica sumergir la membrana con el nanocanal en una solución
+ de polielectrolitos con una carga opuesta a la carga presente en las paredes
+ del nanocanal.
+ La modificación con polielectrolitos en superficies planas es un proceso
  muy estudiado
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1113,18 +798,18 @@ key "Netz2003"
 
 \end_inset
 
-, sin embargo, la adsorción en nanocanales y nanoporos (
+, más que la adsorción en nanocanales y nanoporos (
 \begin_inset Formula $R\le10nm$
 \end_inset
 
-) más compleja debido a los efectos del nanoconfinamiento y la difusión
- que debe realizar el polielectrolito para permear dentro del canal.
+), proceso más complejo debido a los efectos del nanoconfinamiento y la
+ difusión que debe realizar el polielectrolito para permear dentro del canal.
  Para una funcionalización exitosa con el método de adsorción electrostática
  es necesario considerar cuidadosamente variables tales como: el pH de la
  solución, el diámetro del nanocanal, el peso molecular de los polielectrolitos
  y la fuerza iónica de la solución.
  Caruso estudio la adsorción de monocapas de polialilaminoa PAH, cargada
- positivamente, en la superficie interna cargada negativamente de mesopores
+ positivamente, en la superficie interna cargada negativamente de meso-poros
  de silica
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1133,7 +818,7 @@ key "wang_templated_2008"
 \end_inset
 
 , así como la adsorción de ácido poliacrilico PAA (cargado negativamente)
- sobre la superficie positiva de mesoporos de partículas de aminosílica.
+ sobre la superficie positiva de meso-poros de partículas de amino silica.
  Estos experimentos muestran un decrecimiento en la adsorción cuando se
  incrementa el peso molecular de los polielectrolitos o una disminución
  en el tamaño del poro, lo que demuestra limitaciones a la funcionalización
@@ -1149,12 +834,10 @@ key "wang_infiltration_2007"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Luego de la adsorción de la primera capa de polielectrolitos, la carga neta
- en la superficie se invierte y adquiere el mismo signo que la carga del
- polielectrolito adsorbido, este fenómeno se conoce como inversión de carga
+ Luego de la adsorción de la primera capa de polielectrolitos, la carga
+ neta en la superficie se invierte y adquiere el mismo signo que la carga
+ del polielectrolito adsorbido, este fenómeno se conoce como inversión de
+ carga
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Decher1232"
@@ -1481,10 +1164,11 @@ Mediciones de conductancia
 \end_layout
 
 \begin_layout Standard
-Se introduce la membrana polimérica con un único nanocanal en una celda
- de dos compartimentos construida con material inerte.
+Para las mediciones de conductancia iónica, se introduce la membrana polimérica
+ con un único nanocanal en una celda de dos compartimentos, construida con
+ material inerte.
  Cada lado de la celda se llena con la misma solución (típicamente soluciones
- de KCl, por que ambos iones 
+ de KCl, donde ambos iones 
 \begin_inset Formula $K^{+}$
 \end_inset
 
@@ -1516,22 +1200,30 @@ AgCl+e^{-}\rightleftharpoons Ag(s)+Cl^{-}(aq)
 \end_layout
 
 \begin_layout Standard
-En esta reacción, el 
+En esta reacción, el cloruro de plata 
 \begin_inset Formula $AgCl$
 \end_inset
 
  es consumido en un electrodo y producido en el otro.
  La corriente eléctrica es medida mientras circula de un electrodo al otro
  a través de un circuito externo.
- Las corrientes en un sistema de nanocanal único son del orden de los picoamper
- y suelen medirse con amplificadores patch clamp
+ Las corrientes en un sistema de nanocanal único son del orden de los nanoamper
+ (
+\begin_inset Formula $10^{-9}A$
+\end_inset
+
+) y suelen medirse con amplificadores 
+\emph on
+patch clamp
+\emph default
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Siwy2005a"
 
 \end_inset
 
-, como los que se utilizan en electrofisiologia, o con pico/femtoamperómetros
+, como los que se utilizan en electrofisiologia, o con pico/femtoamperímetros
 \begin_inset CommandInset citation
 LatexCommand citep
 key "karnik_effects_2005"
@@ -1570,17 +1262,291 @@ Para entender el transporte iónico en nanocanales, es útil entender las
  longitudes características presentes en estos sistemas.
  Las longitudes características dependen de los cambios en las fuerzas intermole
 culares en las cercanías de una superficie sólida.
- Estos cambios pueden atribuirse a interacciones histéricas/hidratación
- (las que se encuentran en un rango de entre 1 y 2 nanómetros), interacciones
- de Van der Waals (
+ Estos cambios pueden atribuirse a interacciones hidratación (las que se
+ encuentran en un rango de entre 1 y 2 nanómetros), interacciones de Van
+ der Waals (
 \begin_inset Formula $\sim1-50nm$
 \end_inset
 
-), interacciones electrostáticas (longitud de Debye 
+), o interacciones electrostáticas (longitud de Debye 
 \begin_inset Formula $\lambda_{D}\sim1-100nm$
 \end_inset
 
-) que serán descritas en mayor detalle más abajo.
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="middle" width="66text%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dimensiones moleculares
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim0.3nm$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Diámetro de átomos y/o moléculas presentes en el sistema
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Longitud de Bjerrum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{B}=\frac{\left(Ze\right)^{2}}{4\pi\varepsilon k_{B}T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Equilibrio entre la energía electrostática de la interacción ion-ion y la
+ energía térmica.
+ (
+\begin_inset Formula $\sim0.7nm$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Longitud de Debye
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{D}=(8\pi\lambda_{B}C_{salt})^{-1/2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Caracteriza el apantallamiento electrostático en el seno de una solución
+ de electrolitos.
+ Representa el ancho de la doble capa eléctrica y dependen de la concentración
+ de sal en el bulk.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Longitud de 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{GC}=\frac{1}{2\pi\sigma_{q}\lambda_{B}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{Du}=\frac{\left|\sigma_{q}\right|}{C_{salt}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cuadro con las longitudes características más relevantes en los sistemas
+ de materia blanda confinada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1622,11 +1588,11 @@ REFERENCIA!
 \begin_inset Formula $4mm$
 \end_inset
 
-, no siempre es monotómica debajo de los 
+, no siempre es monotónica, debajo de los 
 \begin_inset Formula $1,5nm$
 \end_inset
 
- sino que se observa una oscilación cuyo período medio es 
+ se observa una oscilación cuyo período medio es 
 \begin_inset Formula $0,25\pm0,03nm$
 \end_inset
 
@@ -1653,15 +1619,62 @@ Las
 \series bold
 interacciones electrostáticas
 \series default
- por su parte ocurren en soluciones iónicas en las proximidades de superficies
- cargadas.
- Los contra-iones son atraídos electrostáticamente, mientras que los co-iones
- son repelidos, haciendo que la solución no sea neutra en las proximidades
- de la superficie.
- La difusión de estos iones más las fuerzas electrostáticas crean una región
- en donde el potencial electrostático decae exponencialmente, con una longitud
- característica llamada longitud de Debye 
-\begin_inset Formula $\lambda_{D}=\sqrt{\nicefrac{\varepsilon\varepsilon_{0}k_{B}T}{2n_{bulk}\left(ze\right)^{2}}}$
+ ocurren en soluciones iónicas y en las proximidades de superficies cargadas.
+ Para caracterizar la interacción ion-ion, se define la longitud de Bjerrum
+ 
+\begin_inset Formula $\lambda_{B}=\frac{\left(Ze\right)^{2}}{4\pi\varepsilon k_{B}T}$
+\end_inset
+
+ , la distancia entre iones para la cual se alcanza el equilibrio entre
+ la energía electrostática de la interacción ion-ion y la energía térmica.
+ Para iones de valencia 
+\begin_inset Formula $Z=1$
+\end_inset
+
+ en una solución acuosa a temperatura ambiente 
+\begin_inset Formula $\lambda_{B}\sim0.7nm$
+\end_inset
+
+.
+ Por definición, para longitudes menores a 
+\begin_inset Formula $\lambda_{B}$
+\end_inset
+
+ gobiernan las interacciones electrostáticas por sobre los efectos térmicos.
+ 
+\end_layout
+
+\begin_layout Standard
+Una solución de electrolitos en las proximidades de una superficie cargada
+ forma una región donde la carga superficial es neutralizada por una nube
+ de contraiones.
+ Esta región se denomina capa electrostática difusa (EDL, por sus siglas
+ en inglés).
+ Allí la concentración de iones es distinta a la concentración en el seno
+ de la solución debido a la atracción de los contra-iones y la repulsión
+ de los co-iones.
+ En este contexto, a partir de la teoría de Poisson-Boltzmann emerge de
+ forma natural la longitud de Debye (
+\begin_inset Formula $\lambda_{D}$
+\end_inset
+
+) que caracteriza el apantallamiento electrostático.
+ La longitud de Debye está definida en función de la concentración de sal
+ de la solución, de acuerdo con la expresión: 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{D}=\sqrt{\frac{\varepsilon k_{B}T}{\sum_{j}n_{j}q_{j}^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lambda_{D}=\sqrt{\left(\nicefrac{\varepsilon\varepsilon_{0}k_{B}T}{2n_{bulk}\left(ze\right)^{2}}\right)}$
 \end_inset
 
  , donde 
@@ -1689,23 +1702,281 @@ interacciones electrostáticas
 \end_inset
 
  es la valencia del ión y e la carga del electrón.
- Esta región no neutral de la solución iónica es llamada la doble capa eléctrica
-, cuyo ancho es aproximadamente 
+ Los valores de 
 \begin_inset Formula $\lambda_{D}$
 \end_inset
 
- (1–100 nm).
- 
+ oscilan entre las decenas de nanómetros hasta unos 
+\begin_inset Formula $3\AA$
+\end_inset
+
+, ver tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Longitud-de-Debye-tabla"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Las dimensiones de los nanocanales que se pueden construir hoy en día están
- en el rango de las longitudes características de cada interacción.
- Si las soluciones acuosas son confinadas en el rango 1-100nm, entonces
- podrían observarse cambios de comportamiento y podrían desarrollarse estrategia
-s para la manipulación de las propiedades de transporte iónico, haciendo
- uso de la química de polímeros con el objetivo de realizar aplicaciones
- ingenieriles.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{salt}$
+\end_inset
+
+
+\begin_inset Formula $[M]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{D}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $30.4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9.6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.04$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.96$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.150$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.78$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.304$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Longitud de Debye (
+\begin_inset Formula $\lambda_{D}$
+\end_inset
+
+) en nanómetros para distintos valores de la concentración de sal en una
+ solución acuosa a 
+\begin_inset Formula $25^{o}C$
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muthukumar_polymer_2016"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Longitud-de-Debye-tabla"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las dimensiones de los nanocanales que se pueden construir en la actualidad
+ están en el rango de las longitudes características de cada interacción.
+ Si las soluciones acuosas están confinadas en el rango 
+\begin_inset Formula $1-100nm$
+\end_inset
+
+, entonces podrían observarse cambios de comportamiento y podrían desarrollarse
+ estrategias para la manipulación de las propiedades de transporte iónico,
+ haciendo uso de la química de polímeros con el objetivo de realizar aplicacione
+s ingenieriles.
  
 \begin_inset Note Note
 status collapsed
@@ -1964,13 +2235,425 @@ bulk
 
 \end_layout
 
-\begin_layout Subsection
-Sistema de estudio:
+\begin_layout Section
+
+\series bold
+Teoría en nanocanales
 \end_layout
 
 \begin_layout Standard
-En este trabajo nos enfocamos en la organización de capas poliméricas en
- el interior de un orificio que atraviesa una membrana de lado a lado.
+Desde el punto de vista teórico/computacional, se reportan distintas teorías
+ para abordar el transporte en nanocanales.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/Cap_introduccion/arbol_teorias.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mapa de los distintos modelos utilizados para el estudio de nanoporos y
+ nanocanales.
+ La aproximación teórica utilizada en esta tesis corresponde al grupo de
+ las teorías moleculares.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Mapa-de-Modelos"
+
+\end_inset
+
+ Figura reproducida de la referencia 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Libro_MT_IS"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Consideremos los diferentes modelos que pueden usarse para describir el
+ transporte en nanoporos y nanocanales (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Mapa-de-Modelos"
+
+\end_inset
+
+).
+ Por un lado, tenemos las 
+\series bold
+teorías basadas en partículas
+\series default
+, como por ejemplo las simulaciones de dinámica molecular y dinámica Browniana,
+ que pueden describir sistemas de forma atomística (todos los átomos del
+ sistema son considerados explícitamente) o mediante modelos de grano grueso
+ (conjuntos de átomos se describen agrupados en partículas de grano grueso).
+ Las simulaciones de dinámica molecular atomística son la herramienta más
+ detallada para estudiar el transporte de iones en nanoporos.
+ Esta aproximación ha sido aplicada a nanoporos biológicos y nanocanales.
+ Sin embargo, las longitudes y los tiempos de interés en nanoporos y nanocanales
+ de estado sólido modificados químicamente son más grandes que aquellos
+ que pueden estudiarse con las simulaciones de dinámica molecular atomística.
+ Por ejemplo, el poro biológico típico, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-hemolisina, tiene un radio de 
+\begin_inset Formula $\sim1.3nm$
+\end_inset
+
+ y una longitud de 
+\begin_inset Formula $10nm$
+\end_inset
+
+.
+ Está lleno con una solución de electrolitos 
+\begin_inset Formula $1M$
+\end_inset
+
+; la 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-hemolisina contiene 
+\begin_inset Formula $\sim60$
+\end_inset
+
+ iones de sal y 
+\begin_inset Formula $\sim700$
+\end_inset
+
+ moléculas de agua.
+ Por otro lado un nanoporo con un radio de 
+\begin_inset Formula $6nm$
+\end_inset
+
+ y una longitud de 
+\begin_inset Formula $50nm$
+\end_inset
+
+ lleno con una solución 
+\begin_inset Formula $1M$
+\end_inset
+
+ de 
+\begin_inset Formula $KCl$
+\end_inset
+
+ contiene 
+\begin_inset Formula $\sim2\times10^{5}$
+\end_inset
+
+ moléculas de agua y 
+\begin_inset Formula $7\times10^{4}$
+\end_inset
+
+ iones provenientes de la sal (y la situación empeora para nanocanales más
+ largos 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+como los que consideramos en este trabajo, 
+\begin_inset Formula $L=12\mu m$
+\end_inset
+
+, 
+\begin_inset Formula $D=20nm$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+).
+ Las simulaciones atomísticas de un sistema con tantas partículas consumen
+ mucho tiempo, incluso disponiendo de supercomputadoras.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Cita requerida
+\end_layout
+
+\end_inset
+
+ Alternativamente, los nanocanales de estado sólido pueden describirse en
+ el límite del continuo utilizando 
+\series bold
+métodos de campo medio
+\series default
+.
+ Por ejemplo, las ecuaciones de Poisson-Boltzmann (PB) para sistemas en
+ equilibrio y las ecuaciones de Poisson-Nernst-Planck y Navier-Stokes (PNP-NS)
+ para condiciones de no equilibrio.
+ Estas aproximaciones en el continuo han mostrado ser válidas en canales
+ con radios mayores a 
+\begin_inset Formula $2$
+\end_inset
+
+ longitudes de Debye
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Corry2000_35,Corry2000"
+
+\end_inset
+
+ y son relativamente sencillas de resolver en una variedad de condiciones.
+ Sin embargo, estos abordajes modelan los iones como partículas puntuales
+ con carga y no incorporan ningún detalle molecular, por lo que no pueden
+ describir el comportamiento de polielectrolitos o proteínas dentro de los
+ nanocanales modificados.
+ Con el objetivo de analizar sistemas moleculares específicos y capturar
+ los acoplamientos existentes entre la organización molecular, las interacciones
+ físicas y los estados químicos, se ha desarrollado una teoría que provee
+ una descripción continua de los campos de interacción, así como de las
+ distribuciones de densidad de las distintas especies, y explícitamente
+ considera el tamaño, forma, distribución de cargas, estados químicos y
+ conformaciones de todas las especies moleculares en el sistema.
+ Esta 
+\series bold
+teoría molecular
+\series default
+ permite estudiar los nanocanales de estado sólido modificados químicamente
+ porque incluye el detalle químico de las moléculas en el sistema, puede
+ lidiar con las escalas temporales y espaciales apropiadas, y puede ser
+ derivada en un marco teórico formal, lo que permite generalizar la teoría
+ a otros casos de interés.
+ Esta teoría molecular se reduce a las ecuaciones de PNP cuando se consideran
+ únicamente las interacciones electrostáticas y no hay moléculas con grados
+ de libertad conformacionales
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Libro_MT_IS"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los fenómenos de transporte a través de nanocanales modificados no se limitan
+ al flujo de iones, existen estudios donde se investiga el transporte de
+ estructuras más complejas, como por ejemplo moléculas de ADN, proteínas,
+ o liposomas
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Goyal2015_lipo"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+También es posible variar la fuerza impulsora por ejemplo, diferencias de
+ concentración (ósmosis), diferencia de presiones, etc.
+ 
+\end_layout
+
+\end_inset
+
+ Se pueden utilizar estímulos físicos (luz
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Zhang2013,Wen2010a,Zhang2016"
+
+\end_inset
+
+, temperatura, diferencias de voltaje
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Siwy2010"
+
+\end_inset
+
+, etc), químicos (concentración de sal, pH) o biológicos (presencia de biorecept
+ores específicos
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wei_stochastic_2012,Ali2008a"
+
+\end_inset
+
+), para controlar el transporte a través de nanocanales.
+ Desde el punto de vista del comportamiento bioquímico, la capacidad de
+ regular las propiedades de transporte de los nanocanales a través de estímulos
+ externos es importante para el desarrollo de tecnología.
+ 
+\end_layout
+
+\begin_layout Standard
+Resulta interesante el paradigma en el cual se intenta enmarcar los futuros
+ avances en el control del transporte iónico.
+ Así como la electrónica ha desarrollado estrategias de control del flujo
+ de electrones, primero con bloques simples como capacitores, resistencias
+ o inductancias, luego con bloques más sofisticados como son los diodos
+ o los transistores hasta llegar a la integración de estos bloques en estructura
+s mucho más complejas, como por ejemplo circuitos integrados, chips y microchips
+, así se espera evolucionar en el 
+\series bold
+control de corrientes de iones
+\series default
+.
+ No para reemplazar a la electrónica, sino mas bien para integrar de forma
+ natural sensores químicos basados en nanocanales.
+ Es por eso que en los últimos años se ha estado forjando dentro de la comunidad
+ científica el concepto de: 
+\series bold
+iontrónica
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "chun_iontronics_2015,iontronics_Omar,iontronics_book_2016"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Aunque los fundamentos de la iontrónica puedan hallarse en los primeros
+ años de la década del '50 con la técnica de Coulter-counting
+\begin_inset CommandInset citation
+LatexCommand citep
+key "coulter_counting_patent"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Esta tecnología emerge del desarrollo de técnicas y dispositivos para el
+ control de iones entendidos como "mensajeros".
+ De alguna manera se intenta utilizar el paradigma de la electrónica 
+\end_layout
+
+\begin_layout Plain Layout
+El abordaje interdisciplinario es necesario para entender, diseñar e implementar
+ desde sus aspectos fundamentales nuevos dispositivos iontrónicos y biomiméticos.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Sobre este Trabajo 
+\end_layout
+
+\begin_layout Standard
+Este trabajo se realizó en las instalaciones del Instituto Nacional de Investiga
+ciones Fisicoquímicas Teóricas y Aplicas (INIFTA) en el Laboratorio de Materia
+ Blanda
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+https://softmatter.quimica.unlp.edu.ar/
+\end_layout
+
+\end_inset
+
+ a cargo de Omar Azzaroni, es un trabajo teórico/computacional desarrollado
+ en un grupo eminentemente experimental.
+ Los recursos computacionales utilizados fueron provistos por el grupo de
+ Modelado Molecular de Biomateriales
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://szleifer-group.bme.northwestern.edu/
+\end_layout
+
+\end_inset
+
+ a cargo del Dr.
+ Szleifer, en donde F.
+ M.
+ Gilles realizó dos estadías.
+ 
+\end_layout
+
+\begin_layout Standard
+El contraste entre las herramientas de trabajo, metodología y lenguaje que
+ suelen utilizarse en el laboratorio y las utilizadas en este trabajo, es
+ un ejemplo de la heterogeneidad con la que se trabaja en el grupo en particular
+ y en el ámbito de la Materia Blanda en general.
+ Sea en el laboratorio con equipamiento o en la computadora con líneas de
+ código propio o software específico, en ambos espacios se estudian sistemas
+ complejos que deben abarcarse de forma interdisciplinaria.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Los recursos computacionales utilizados fueron provistos por el grupo de
+ modelado molecular de biomateriales
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://szleifer-group.bme.northwestern.edu/
+\end_layout
+
+\end_inset
+
+, en donde F.
+ M.
+ Gilles realizó dos estadías con el objetivo de trabajar con quienes desarrollar
+on la teoría.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Objeto de estudio
+\end_layout
+
+\begin_layout Standard
+En este trabajo estudiamos las propiedades de capas poliméricas confinadas
+ dentro de un nanocanal que atraviesa una membrana de polietilentereftalato
+ (PET) de lado a lada.
  En la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2003,12 +2686,8 @@ reference "fig:Esquema-del-nanocanal"
 .
  Bajo estas condiciones estos orificios se denominan en la literatura nanocanale
 s de estado sólido.
- 
-\end_layout
-
-\begin_layout Standard
-El ejemplo experimental de referencia son aquellos nanocanales que se construyen
- mediante irradiación iónica sobre películas de PET (polietilenetereftalato).
+ El ejemplo experimental de referencia son aquellos nanocanales que se construye
+n mediante irradiación iónica sobre películas de PET (polietilenetereftalato).
  Estas membranas tienen un grosor de 
 \begin_inset Formula $12\mu m$
 \end_inset
@@ -2046,9 +2725,192 @@ key "Yameen2009,Yameen2009a,Yameen2009c,Yameen2010,Perez-Mitta2015"
 \end_inset
 
 .
- A continuación se detalla la base teórica a partir de la cuál se estudian
- estos sistemas.
+\end_layout
+
+\begin_layout Standard
+El interés en las propiedades de polielectrolitos confinados surge de la
+ necesidad de controlar el transporte iónico a través de nanocanales modificados
+ químicamente.
+ En el laboratorio es posible realizar tratamientos químicos para modificar
+ la geometría e incorporar capas de polielectrolitos en la superficie interna
+ del nanocanal.
+ Para medir el impacto de la modificación superficial sobre el transporte
+ iónico, se realizan experimentos que consisten en 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Explicar el set experimental!
+\end_layout
+
+\end_inset
+
+medir la corriente iónica (
+\begin_inset Formula $I$
+\end_inset
+
+) en función del potencial externo aplicado (
+\begin_inset Formula $V$
+\end_inset
+
+).
+ Estas corrientes iónicas constituyen la respuesta macroscópica del sistema
+ aunque dependen también de las propiedades geométricas y químicas del nanocanal.
+ Son estas corrientes las que se intentan controlar mediante la funcionalización
+ de la pared interna del nanocanal.
+\end_layout
+
+\begin_layout Paragraph*
+Objetivos del trabajo
+\end_layout
+
+\begin_layout Standard
+Es de interés contar con una herramienta teórico/computacional para explicar
+ la respuesta macroscópica en función de las características moleculares
+ involucradas y predecir resultados contrastables.
+ Los objetivos planteados en el plan de trabajo fueron: desarrollar la Teoría
+ Molecular para la descripción de la organización molecular y propiedades
+ de las macromoléculas con las que se modifican los nanocanales de estado
+ sólido (capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Enfoque-Teórico"
+
+\end_inset
+
+), descripción teórica de la conductancia iónica de los nanocanales modificados
+ con “polymer brushes” (capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Propiedades-de-Transporte"
+
+\end_inset
+
+), relacionar las predicciones teóricas y los observables macroscópicos
+ experimentales a fin de interpretar el rol de las diferentes variables
+ del sistema: a) diámetro de poro, b) fuerza iónica, c) pH, d) peso molecular
+ o grado de polimerización de los “polymer brushes” (capítulos 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Adsorción-de-Polielectrolitos"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Efectos-de-Confinamiento"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+El uso de las computadoras durante el siglo XX permitió desarrollar distintas
+ estrategias numérico/computacionales para resolver ecuaciones sin solución
+ analítica (cálculo numérico), simular la evolución temporal de sistemas
+ de pocas partículas (Dinámica Molecular) y predecir propiedades termodinámicas
+ encontrando las configuraciones de equilibrio (Métodos Monte Carlo).
+ Estas técnicas computacionales mejoraron lo suficiente como para poder
+ predecir el comportamiento macroscópico y su conexión con las propiedades
+ microscópicas de sistemas complejos.
  
+\end_layout
+
+\begin_layout Plain Layout
+En paralelo las técnicas experimentales se desarrollaron permitiendo tener
+ mayor control del detalle molecular.
+ El acceso a nueva información hace necesario el desarrollo de nuevas herramient
+as teórico/computacionales.
+ Estas herramientas deben explicar desde los aspectos fundamentales el comportam
+iento de sistemas complejos y predecir las respuestas macroscópicas que
+ se obtienen experimentalmente.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Existen múltiples estrategias para abordar los sistemas que se engloban
+ dentro de lo que se conocen como materia blanda.
+ Por ejemplo, algoritmos de dinámica molecular o algoritmos Monte Carlo
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Frenkel"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+son útiles para (CITAR AL FRENKEL)
+\end_layout
+
+\end_inset
+
+.
+ Sin embargo la complejidad de sistemas que involucran polielectrolitos
+ débiles cuyos equilibrios químicos están regulados por pH, concentración
+ de sal y confinamiento, hacen difícil sino inabordable el tratamiento con
+ las estrategias mencionadas.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Los fenómenos de transporte a través de nanocanales han sido estudiados
+ en distintos campos de la ciencia.
+ Podemos encontrar en la bibliografía antecedentes que provienen del estudio
+ de membranas porosas, poros y canales biológicos, materiales porosos, micro/nan
+o-fluídica, etc.
+ En los últimos años se han desarrollado técnicas de construcción de nanocanales
+ artificiales, técnicas experimentales para su caracterización y herramientas
+ teórico/computacionales para la comprensión y predicción de nuevas propiedades.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+****
+\end_layout
+
+\begin_layout Plain Layout
+Si bien mucha de la fenomenología de estos sistemas fue estudiada en diversos
+ campos del conocimiento teórico y aplicado.
+ Hoy tenemos la posibilidad de medir en el laboratorios
+\end_layout
+
+\begin_layout Plain Layout
+(Orígenes del conocimiento que hace de base para lo que desarrollamos nosotros)
+\end_layout
+
+\begin_layout Plain Layout
+El flujo de corriente iónica a través de nanocanales se investiga desde
+ hace mucho tiempo en campos tales como ingeniería de membranas, física
+ de coloides, nanofluídica, transporte de sistemas confinados, es un tema
+ que se viene estudiando desde distintos ámbitos del conocimiento hace muchos
+ años.
+ Nosotros nos propusimos el desafío de explicar los resultados experimentales
+ bajo la luz de una teoría que permita describir nuestro sistema con detalle
+ molecular.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
