@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass book
 \use_default_options true
 \master tesis_Doc_FMG.lyx
@@ -10,23 +12,23 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing single
+\spacing onehalf
 \use_hyperref false
 \papersize default
 \use_geometry true
@@ -81,10 +83,93 @@ Agradecimientos
 \end_layout
 
 \begin_layout Standard
-Esta tesis representa el final de mí trabajo para obtener el grado de doctor
- en ciencias, título que representa la culminación de los sueños del chico
- de 12 años que fui.
- Mí investigación 
+Esta tesis representa el final de mi trabajo para obtener el grado de doctor
+ en ciencias, título que representa la culminación de un sueño del chico
+ de 12 años que alguna vez fui.
+ Aunque soy el autor del trabajo, de los resultados y del escrito, todo
+ esto no hubiese sido posible sin un contexto favorable para su desarrollo.
+ Ese contexto complejo por su propia naturaleza involucra aspectos técnicos/cien
+tíficos, aspectos personales/emocionales y aspectos socio-políticos, que
+ se mezclan e interfieren entre sí.
+ 
+\end_layout
+
+\begin_layout Standard
+Fueron imprescindibles mis mentores Omar e Igal, porque durante estos años
+ me han guiado, acompañado y aconsejado, tanto en lo profesional como en
+ lo personal.
+ Agradezco especialmente a Mario Tagliazucchi quién desde el desafortunado
+ incidente que sufrió Igal, ha asumido un rol fundamental para la generación
+ y comprobación de los resultados de esta tesis, así como para la corrección
+ del escrito final.
+ Las discusiones que hemos tenido respecto de la teoría, el código fuente
+ y la ciencia en general fueron y son de gran valor para mí.
+ Quiero agradecer a todo el equipo de trabajo del Laboratorio de Materia
+ Blanda, donde he desarrollado mis actividades.
+ A los investigadores, Walde, Lore y Juan, porque me acompañaron y me alentaron
+ para que termine este proyecto.
+ A los que estuvieron antes que yo, Apu y Marcos, y los integrantes que
+ se fueron sumando después: Agus Lorentz, Esteban, Gonza PM, Gonza F, Nico
+ M., Juan A., Gustavo, Seba A., Jime T., Eliana M., Giya D..
+ A Alberto Albesa, 
+\begin_inset Quotes fld
+\end_inset
+
+Beto
+\begin_inset Quotes frd
+\end_inset
+
+, por las discusiones científicas, por la amistad y por su ayuda en los
+ momentos difíciles.
+ A Mariana T.
+ por sus consejos durante los últimos meses y por haberme ayudado en la
+ corrección del texto.
+ También quiero agradecer a todos los integrantes del grupo de Modelado
+ Molecular de Biomateriales, por que hicieron agradable mi estadía en Chicago.
+\end_layout
+
+\begin_layout Standard
+En los aspectos personales/emocionales, agradezco a mis padres porque ellos
+ me dieron dos herramientas que considero valiosas: la tenacidad y el optimismo
+ (aunque algunas veces fui un tenaz pesimista y otras un optimista inconstante,
+ me sigo esforzando).
+ A mi hermana porque siempre estuvo atenta a su hermano 
+\begin_inset Quotes fld
+\end_inset
+
+el científico
+\begin_inset Quotes frd
+\end_inset
+
+ (con todas las cosas malas de tener un hermano científico), para ella también
+ van mis agradecimientos.
+ A mis amigos de siempre Gonza, Leo y Renzo, la 
+\begin_inset Quotes fld
+\end_inset
+
+familia macana
+\begin_inset Quotes frd
+\end_inset
+
+: Ariel, Damián, Cynthia y Javi.
+ Quiero agradecer a Brenda B.
+ por sus consejos certeros, por su escucha activa, por su huella indeleble,
+ por su bendición de dragón.
+ 
+\end_layout
+
+\begin_layout Standard
+Finalmente, debo agradecer al Estado argentino por financiar mi educación
+ desde el nivel primario hasta el posgrado.
+ A las instituciones del Estado argentino: el CONICET, institución que me
+ ha beneficiado con una beca de doctorado, cuyo estipendio me ha permitido
+ vivir dignamente, la UNLP y el INIFTA por aceptar el plan de trabajo y
+ brindarme un lugar de trabajo limpio, seguro y confortable.
+ Gracias a la comunidad científica en particular y la sociedad argentina
+ en general por ser los benefactores de mi formación y mi trabajo.
+ Espero poder retribuir con mis esfuerzos las oportunidades que me han dado.
+ A continuación los frutos...
+ 
 \end_layout
 
 \end_body
