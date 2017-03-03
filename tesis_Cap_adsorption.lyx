@@ -839,8 +839,16 @@ reference "fig:figura_monolayer_PAH"
 
 \end_inset
 
-).
- La densidad de carga superficial efectiva 
+), y una densidad de carga sobre la pared de 
+\begin_inset Formula $\sigma_{q}=0.1\nicefrac{e}{nm^{2}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La densidad de carga superficial efectiva 
 \begin_inset Formula $\sigma_{eff}$
 \end_inset
 
@@ -1048,26 +1056,48 @@ name "fig:Densidad-superficial_vs_pH"
 \end_layout
 
 \begin_layout Standard
-Las curvas de la figura 
+Las curvas en la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Densidad-de-carga-efectiva"
 
 \end_inset
 
-A corresponden a una densidad de carga sobre la pared de 
-\begin_inset Formula $\sigma_{q}=0.1\nicefrac{e}{nm^{2}}$
-\end_inset
-
- y una concentración de sal en solución de 
+A corresponden a una concentración de sal en solución de 
 \begin_inset Formula $C_{salt}=0.1M$
 \end_inset
 
-, allí el signo de 
+.
+ Se observa que el comportamiento de 
 \begin_inset Formula $\sigma_{eff}$
 \end_inset
 
- cambia para alguna combinación de 
+ en función del diámetro del canal cambia con la concentración de polielectrolit
+os en solución (
+\begin_inset Formula $C_{pol}$
+\end_inset
+
+).
+ Cuando 
+\begin_inset Formula $C_{pol}=10^{-3}M$
+\end_inset
+
+ la densidad de carga efectiva tiene signo negativo 
+\begin_inset Formula $\sigma_{eff}<0$
+\end_inset
+
+ (
+\begin_inset Formula $\sigma_{eff}\sim-0.03e\times nm^{-2}$
+\end_inset
+
+) y es independiente del diámetro del canal.
+ Si 
+\begin_inset Formula $C_{pol}>1mM$
+\end_inset
+
+ entonces la densidad de polielectrolitos adsorbidos aumenta al aumentar
+ el diámetro del nanocanal, además, se observa una inversión en el signo
+ de la carga efectiva para alguna combinación de 
 \begin_inset Formula $C_{pol}$
 \end_inset
 
@@ -1141,62 +1171,74 @@ reference "fig:Densidad-de-carga-efectiva"
 
 \end_inset
 
-C, observar el cambio en las escalas de 
+C.
+ Si bien las cargas en la pared del nanocanal pueden ser apantalladas con
+ los iones proveniente de la sal o con las cadenas de polielectrolitos,
+ al disminuir la concentración de sal también ocurre una disminución de
+ la adsorción, observar el cambio en las escalas de 
 \begin_inset Formula $\sigma_{eff}$
 \end_inset
 
  con la concentración de sal.
- Las cargas en la pared del nanocanal pueden ser apantalladas con los iones
- proveniente de la sal o con las cadenas de polielectrolitos.
- En el caso de la figura 
+ 
+\end_layout
+
+\begin_layout Standard
+Resulta interesante investigar el caso de la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Densidad-de-carga-efectiva"
 
 \end_inset
 
-C, la concentración de sal es muy baja 
+C, donde la concentración de sal es muy baja 
 \begin_inset Formula $C_{salt}=10^{-4}M$
 \end_inset
 
-, por lo que el apantallamiento ocurre exclusivamente por la adsorción de
- polielectrolitos.
- En estas condiciones se observa una sobre compensación de las cargas de
- la pared por parte de las cadenas adsorbidas de polielectrolito (
+.
+ En estas condiciones los desbalances en la densidad de carga sobre la superfici
+e son pequeños (
+\begin_inset Formula $\sim10^{-4}$
+\end_inset
+
+) y el apantallamiento ocurre exclusivamente por la adsorción de polielectrolito
+s.
+ Cuando la concentración de polielectrolito es alta, 
+\begin_inset Formula $C_{pol}\geq1mM$
+\end_inset
+
+, se observa una sobre compensación de las cargas de la pared (
 \begin_inset Formula $\sigma_{eff}>0$
 \end_inset
 
- cuando la concentración de polielectrolito es alta ver figura 
+) y diámetros menores implican una disminución en la cantidad de polielectrolito
+s adsorbidos.
+ Cuando la carga de la pared esta sub-compensada (
+\begin_inset Formula $\sigma_{eff}<0$
+\end_inset
+
+), condición que ocurre si la concentración de polielectrolito es baja (
+\begin_inset Formula $C_{pol}<10^{-4}M$
+\end_inset
+
+), entonces diámetros menores implican un aumento en la cantidad de polímero
+ adsorbido.
+ Finalmente en los tres gráficos de la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Densidad-de-carga-efectiva"
 
 \end_inset
 
-C).
- Notar que la sobrecompensación es chica en estas condiciones.
- Diámetros menores implican una disminución en la cantidad de polielectrolitos
- adsorbidos.
- Si la carga de la pared esta sub-compensada (
-\begin_inset Formula $\sigma_{eff}<0$
-\end_inset
-
- condición que ocurre cuando la concentración de polielectrolito es baja)
- entonces diámetros menores implican un aumento en la cantidad de polímero
- adsorbido.
- Finalmente existe una concentración de polímero intermedia para la cual
- 
-\begin_inset Formula $\sigma_{eff}\sim0$
-\end_inset
-
- y la cantidad de polímero adsorbido es independiente del diámetro del nanocanal.
+, existe una concentración de polímero intermedia para la cual la cantidad
+ de polímero adsorbido es independiente del diámetro del nanocanal.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1214,7 +1256,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Energía libre de la superficie en función del diámetro del nanocanal.
- El sistema tiene carga superficial pero no hay polyelectrolitos.
+ El sistema tiene carga superficial pero no hay polielectrolitos adsorbidos.
  Parámetros: 
 \begin_inset Formula $C_{salt}=0.1M$
 \end_inset
@@ -1223,7 +1265,11 @@ Energía libre de la superficie en función del diámetro del nanocanal.
 \begin_inset Formula $\sigma_{q}=0.1\nicefrac{e}{nm^{2}}$
 \end_inset
 
+, 
+\begin_inset Formula $pH=7.0$
+\end_inset
 
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Energía-libre-vs_D"
@@ -1246,7 +1292,7 @@ name "fig:Energía-libre-vs_D"
 \begin_layout Standard
 Para explicar estos resultados consideremos primero un nanocanal sin polímero
  con densidad de carga superficial constante.
- A medida que disminuye el diámetro del nanocanal aumenta la energía libre
+ A medida que disminuye el diámetro del nanocanal, aumenta la energía libre
  por unidad de área (ver figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1265,12 +1311,13 @@ ocurre un incremento del potencial electrostático cerca de la superficie
 
 \end_inset
 
-debido a que la distancia media entre las cargas en la pared del nanocanal
+debido a que la distancia media entre las cargas sobre la pared del nanocanal
  decrece.
- Si la carga en la pared esta sub compensada por el polielectrolito entonces
- el sistema compensa el aumento de las repulsiones electrostáticas al disminuir
- el diámetro aumentando la cantidad de polielectrolito adsorbido, de forma
- tal de disminuir la magnitud de la carga superficial efectiva.
+ Al incorporar polielectrolitos pueden ocurrir dos cosas: si la carga en
+ la pared esta subcompensada por la carga proveniente de los polielectrolitos
+ entonces, al disminuir el diámetro el sistema compensa el aumento de las
+ repulsiones electrostáticas aumentando la cantidad de polielectrolito adsorbido
+, de forma tal de disminuir la magnitud de la carga superficial efectiva.
 \begin_inset Note Note
 status collapsed
 
@@ -1282,11 +1329,11 @@ entonces el potencial cerca de la superficie se hace más negativo cuanto
 
 \end_inset
 
- Por el otro lado, si hay una sobre compensación de la carga superficial
- entonces la carga superficial total sobre la superficie es positiva, el
- potencial se hace más positivo cuanto más se reduce el diámetro del nanocanal
- y por lo tanto, al disminuir el diámetro del canal, la cantidad polielectrolito
- adsorbido disminuye.
+ Por otro lado, si hay una sobre compensación de la carga superficial entonces,
+ la carga superficial efectiva sobre la superficie es positiva.
+ Este caso es análogo al anterior, cuanto más se reduce el diámetro del
+ nanocanal la cantidad polielectrolito adsorbido disminuye, con el fin de
+ disminuir las repulsiones electrostáticas debido al exceso de carga.
 \end_layout
 
 \begin_layout Standard
@@ -1323,7 +1370,7 @@ C discutido en el párrafo anterior es útil para entender el mecanismo a
 \end_inset
 
  sin aumentar significativamente la energía libre del sistema.
- El caso de soluciones de sal intermedias (
+ En el caso de soluciones de sal intermedias (
 \begin_inset Formula $C_{salt}=0.1M$
 \end_inset
 
