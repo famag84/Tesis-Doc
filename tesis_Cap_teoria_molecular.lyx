@@ -126,14 +126,14 @@ key "benshaul_chain_1985"
 
 \end_inset
 
- y más tarde generalizada para estudiar capas de polímeros
+, más tarde generalizada para estudiar capas de polímeros
 \begin_inset CommandInset citation
 LatexCommand cite
 key "carignano_statistical_1993"
 
 \end_inset
 
- y más recientemente capas de polielectrolitos
+ y más recientemente se incorporó el tratamiento de capas de polielectrolitos
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Nap2006a"
@@ -893,7 +893,7 @@ donde
 \end_layout
 
 \begin_layout Standard
-Una expresión que se obtiene por recurrencia es la siguiente
+Utilizando propiedades de recurrencia puede hallarse la siguiente expresión,
 \end_layout
 
 \begin_layout Standard
@@ -933,7 +933,23 @@ donde
 \end_inset
 
 ).
- O lo que es lo mismo,
+ Despejando la diferencias de potenciales químicos y reemplazando 
+\begin_inset Formula $\mu\text{⁰}_{AH_{m}}$
+\end_inset
+
+ por 
+\begin_inset Formula $\mu_{0}$
+\end_inset
+
+, y en general 
+\begin_inset Formula $\mu\text{⁰}_{AH_{m-j}^{j-}}$
+\end_inset
+
+ por 
+\begin_inset Formula $\mu_{e}$
+\end_inset
+
+, obtenemos, 
 \end_layout
 
 \begin_layout Standard
