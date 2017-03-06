@@ -113,7 +113,7 @@ Introducción
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Box Shadowbox
@@ -204,6 +204,13 @@ key "Gilles_DeGennes_1991"
  de indígenas de la cuenca del amazonas que construían una especie de botas
  a partir de la savia del árbol Hevea brasiliensis (más comúnmente llamado
  árbol del caucho).
+ El procedimiento consiste en untar la savia sobre los pies y dejar secar
+ durante un tiempo relativamente corto para obtener unas botas.
+ Desde el punto de vista microscópico al comienzo se tiene un conjunto de
+ cadenas poliméricas flexibles todas independientes entre sí.
+ Luego el oxígeno del aire forma enlaces entre las cadenas lo que trae aparejado
+ un cambio macroscópico sorprendente: el pasaje de un líquido a una red
+ estructurada capaz de resistir tensiones, material que denominamos caucho.
  Este es un ejemplo de sistema de materia blanda porque frente a pequeños
  cambios químicos, el material responde con notables cambios macroscópicos.
  En la actualidad el concepto de materia blanda engloba una infinidad de
@@ -232,8 +239,8 @@ CITAS!
  cadenas, y las propiedades elásticas se deben casi enteramente a los cambios
  en la entropía configuracional de las cadenas estiradas.
  Por ejemplo, si se considera una cadena polimérica ideal y se la estira
- hasta una longitud determinada, el trabajo realizado es el mismo que se
- hubiera hecho si se confinaba la cadena ideal (por ejemplo presionándola
+ hasta una longitud determinada, el trabajo realizado es igual al trabajo
+ que se hubiera hecho si se confinaba la cadena ideal (por ejemplo presionándola
  sobre una superficie) hasta obtener la misma longitud
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1758,6 +1765,10 @@ status open
 \end_inset
 
 
+\begin_inset Formula $[nm]$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2248,12 +2259,12 @@ Desde el punto de vista teórico/computacional, se reportan distintas teorías
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figuras/Cap_introduccion/arbol_teorias.png
+	filename figuras/Cap_introduccion/scheme1_MT_mod.png
 	lyxscale 50
 	width 100text%
 
@@ -2266,24 +2277,19 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Mapa de los distintos modelos utilizados para el estudio de nanoporos y
- nanocanales.
- La aproximación teórica utilizada en esta tesis corresponde al grupo de
- las teorías moleculares.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Mapa-de-Modelos"
 
 \end_inset
 
- Figura reproducida de la referencia 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Libro_MT_IS"
-
-\end_inset
-
-
+Mapa de los distintos modelos utilizados para el estudio de nanoporos y
+ nanocanales.
+ La aproximación teórica utilizada en esta tesis corresponde al grupo de
+ las teorías moleculares.
+ Cortesía de M.
+ Tagliazucchi.
+ 
 \end_layout
 
 \end_inset
@@ -2522,8 +2528,8 @@ s mucho más complejas, como por ejemplo circuitos integrados, chips y microchip
 control de corrientes de iones
 \series default
 .
- No para reemplazar a la electrónica, sino mas bien para integrar de forma
- natural sensores químicos basados en nanocanales.
+ Donde el objetivo no es reemplazar la electrónica, sino mas bien integrar
+ de forma natural sensores químicos basados en nanocanales.
  Es por eso que en los últimos años se ha estado forjando dentro de la comunidad
  científica el concepto de: 
 \series bold
