@@ -84,7 +84,19 @@ name "chap:Método-Variacional"
 \end_layout
 
 \begin_layout Standard
-De forma general si, 
+Dada la funcional 
+\begin_inset Formula $S$
+\end_inset
+
+ dependiente de las variables independientes 
+\begin_inset Formula $q$
+\end_inset
+
+ y sus derivadas primeras 
+\begin_inset Formula $\overset{.}{q}$
+\end_inset
+
+,
 \end_layout
 
 \begin_layout Standard
@@ -99,7 +111,7 @@ S=\int L(q,\overset{.}{q},t)dt
 \end_layout
 
 \begin_layout Standard
-El mínimo de la acción, la función 
+El mínimo de la función 
 \begin_inset Formula $S$
 \end_inset
 
@@ -107,7 +119,11 @@ El mínimo de la acción, la función
 \begin_inset Formula $\delta S=0)$
 \end_inset
 
- implica las ecuaciones de Euler-Lagrange: 
+ implica las ecuaciones de Euler-Lagrange para la función 
+\begin_inset Formula $L(q,\overset{.}{q},t)$
+\end_inset
+
+: 
 \end_layout
 
 \begin_layout Standard
@@ -122,30 +138,26 @@ El mínimo de la acción, la función
 \end_layout
 
 \begin_layout Standard
-La teoría de fondo para la optimización de la energía libre del sistema
- es similar a las ecuaciones de Euler-Lagrange.
+La optimización de la funcional 
+\begin_inset Formula $\omega$
+\end_inset
+
+, que describe nuestro sistema, consiste en utilizar las ecuaciones de Euler-Lag
+range.
  La ecuación 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:free_energy"
+reference "eq:Energia_libre_completa"
 
 \end_inset
 
- es una ecuación funcional donde que no depende de la primer derivada de
- las variables independientes (en general las variables independientes y
- su derivada primera se escriben como 
-\begin_inset Formula $q$
+ es una ecuación funcional que, salvo la derivada del potencial electrostático,
+ no depende de la primer derivada del resto de las variables independientes,
+ es decir: 
+\begin_inset Formula $\omega=\omega(q,t)$
 \end_inset
 
- y 
-\begin_inset Formula $\overset{.}{q}$
-\end_inset
-
-) es decir: 
-\begin_inset Formula $\omega=\omega(\zeta,r)\sim\omega(q,t)$
-\end_inset
-
- .
+.
  En la teoría molecular que se presenta las variables independientes son:
  
 \begin_inset Formula $P(\alpha)$
@@ -156,11 +168,15 @@ reference "eq:free_energy"
 \end_inset
 
  con 
-\begin_inset Formula $i=Cl^{-},OH^{-},K^{+},H_{3}O^{+}$
+\begin_inset Formula $i=Cl^{-},OH^{-},K^{+},H^{+}$
 \end_inset
 
 , 
 \begin_inset Formula $f_{e}(r)$
+\end_inset
+
+ con 
+\begin_inset Formula $e=1,..,m$
 \end_inset
 
  y 
@@ -511,7 +527,7 @@ Por lo tanto,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\omega=\int W(P(\alpha),\rho_{Cl^{-}}(r),\rho_{K^{+}}(r),\rho_{OH^{-}}(r),\rho_{H^{+}}(r),f_{e}(r),\Psi(r),\nabla_{r}\Psi(r),r)drd\theta dz
+\omega=\int W(P(\alpha),\rho_{Cl^{-}}(\boldsymbol{r}),\rho_{K^{+}}(\boldsymbol{r}),\rho_{OH^{-}}(\boldsymbol{r}),\rho_{H^{+}}(\boldsymbol{r}),f_{e}(\boldsymbol{r}),\Psi(\boldsymbol{r}),\nabla_{r}\Psi(\boldsymbol{r}),\boldsymbol{r})d\boldsymbol{r}
 \end{equation}
 
 \end_inset
@@ -520,7 +536,7 @@ Por lo tanto,
 \end_layout
 
 \begin_layout Standard
-usando la ecuación 
+se pueden hallar sus puntos estacionarios utilizando la ecuación 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:E-L equation"
@@ -541,7 +557,13 @@ reference "eq:E-L equation"
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+Si bien los mínimos, máximos y puntos de ensilladura cumplen estas condiciones,
+ nosotros sabemos (empíricamente) que nuestros métodos numéricos localizan
+ los mínimos locales.
 \end_layout
 
 \end_body
