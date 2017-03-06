@@ -1469,8 +1469,12 @@ reference "chap:Aproximación-MF"
 \end_inset
 
 .
- En el caso de brushes poliméricos las cadenas están pegadas por un extremo
- a la pared del nanocanal, la entropía configuracional se escribe,
+ En el caso de 
+\emph on
+brushes
+\emph default
+ poliméricos las cadenas están pegadas por un extremo a la pared del nanocanal,
+ la entropía configuracional se escribe,
 \end_layout
 
 \begin_layout Standard
@@ -2415,8 +2419,11 @@ reference "eq:mon_density_brushes"
 
 \end_inset
 
-) es la densidad de monómeros en el caso de un brush polimérico, en dónde
- 
+) es la densidad de monómeros en el caso de un 
+\emph on
+brush
+\emph default
+ polimérico, en dónde 
 \begin_inset Formula $N_{p}$
 \end_inset
 
