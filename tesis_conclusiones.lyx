@@ -326,15 +326,11 @@ En el caso de
 \emph on
 brushes
 \emph default
- poliméricos en confinamiento, 
-\end_layout
-
-\begin_layout Standard
-los equilibrios ácido-base presentes en las unidades monoméricas del PMEP
- (poli(2-(metacriloiloxi) etil-fosfato) en confinamiento no sólo exhiben
- un desplazamiento respecto del comportamiento en el seno de la solución,
- sino que también muestran transiciones más anchas de las que se encuentran
- en solución.
+ poliméricos, los equilibrios ácido-base presentes en las unidades monoméricas
+ del PMEP (poli(2-(metacriloiloxi) etil-fosfato) en confinamiento no sólo
+ exhiben un desplazamiento respecto del comportamiento en el seno de la
+ solución, sino que también muestran transiciones más anchas de las que
+ se encuentran en solución.
  Por eso, mostramos que para una descripción completa deben considerarse
  no sólo las constantes de equilibrio 
 \begin_inset Formula $pK_{a}$
@@ -362,7 +358,7 @@ brushes
  Observamos que a medida que disminuye el diámetro del nanocanal, el nivel
  de acuerdo entre la teoría molecular y el modelo de capa homogénea también
  disminuye.
- Para nanocanales pequeños 
+ Para nanocanales angostos 
 \begin_inset Formula $D<40nm$
 \end_inset
 
@@ -450,9 +446,10 @@ reference "chap:Adsorción-de-Polielectrolitos"
 
 \end_inset
 
-, dependiendo de la concentración de sal, a medida que el diámetro disminuye
- (aumenta la curvatura y el confinamiento) la densidad de cadenas por unidad
- de superficie puede aumentar, disminuir o permanecer constante.
+, dependiendo de la concentración de sal y la concentración del polielectrolito,
+ a medida que el diámetro disminuye (aumenta la curvatura y el confinamiento)
+ la densidad de cadenas por unidad de superficie puede aumentar, disminuir
+ o permanecer constante.
  Este abanico de posibilidades es el resultado del balance entre la energía
  electrostática y la entropía traslacional total de los iones y el polielectroli
 to.
@@ -611,7 +608,7 @@ Es importante mencionar algunas limitaciones de la teoría así como discutir
 \end_layout
 
 \begin_layout Standard
-Una de las limitaciones de este marco teórico es la perdida de los efectos
+Una de las limitaciones de este marco teórico es la pérdida de los efectos
  hidrodinámicos, como el flujo electro-osmótico.
  En condiciones de cuasi-equilibrio, como las consideradas en el estudio
  de nanocanales largos, las corrientes iónicas son pequeñas y las contribuciones
