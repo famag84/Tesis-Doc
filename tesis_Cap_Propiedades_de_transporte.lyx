@@ -944,7 +944,7 @@ reference "eq:resistencias"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\Omega_{tot}=\sum_{i}\Omega_{i}\label{eq:resistencias}
+\Omega_{tot}=\sum_{i=1}^{N}\Omega_{i}\label{eq:resistencias}
 \end{equation}
 
 \end_inset
@@ -963,7 +963,7 @@ status open
 \begin_inset Graphics
 	filename figuras/resistance_model_omega.jpg
 	lyxscale 10
-	width 90text%
+	width 60text%
 
 \end_inset
 
@@ -1407,14 +1407,16 @@ status open
 (A)
 \begin_inset Graphics
 	filename figuras/Cap_prop_transporte/comparacion_geometrias.eps
-	width 80text%
+	lyxscale 60
+	width 60text%
 
 \end_inset
 
  (B)
 \begin_inset Graphics
 	filename figuras/bullet-like.eps
-	width 80text%
+	lyxscale 60
+	width 60text%
 
 \end_inset
 
@@ -1556,14 +1558,14 @@ Sobre la calidad de la aproximación
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename fig_Cap_paper_PMEP/fig3_comparacion_con_experimentos_G_vs_surface_charge.png
 	lyxscale 30
-	width 50text%
+	width 80text%
 
 \end_inset
 
