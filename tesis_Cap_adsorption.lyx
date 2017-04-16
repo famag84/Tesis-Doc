@@ -925,7 +925,7 @@ status open
 \begin_layout Plain Layout
 Densidad de carga efectiva en la superficie del nanocanal, definida como
  
-\begin_inset Formula $\sigma_{eff}=N\sigma_{pol}f_{1}+\sigma_{wall}$
+\begin_inset Formula $\sigma_{eff}=N\sigma_{pol}f_{1}-\sigma_{wall}$
 \end_inset
 
  en función del diámetro del nanocanal.
@@ -1888,7 +1888,7 @@ A1, el potencial puede considerarse constante si la distancia a la pared
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1977,6 +1977,8 @@ Potencial electrostático dentro del nanocanal en función de la distancia
 \end_inset
 
 .
+ El grado de confinamiento (tamaño del diámetro) modifica el potencial en
+ el centro del canal.
  
 \begin_inset CommandInset label
 LatexCommand label
