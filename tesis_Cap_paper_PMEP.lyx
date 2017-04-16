@@ -18,11 +18,11 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
 \font_math "auto" "auto"
-\font_default_family default
+\font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -34,9 +34,9 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing single
+\spacing onehalf
 \use_hyperref false
-\papersize default
+\papersize a4paper
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -95,11 +95,18 @@ Brushes Polipróticos
 \end_inset
 
 Efectos de Confinamiento en Nanocanales Modificados Con Brushes Polipróticos
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Efectos-de-Confinamiento"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Greyedout
-status open
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
 Conductancia Iónica De Nanocanales Modificados con Polielectrolitos: Efectos
@@ -136,7 +143,6 @@ La teoría molecular es una teoría de campo medio que ha logrado describir
  A través de ciertas aproximaciones permite relacionar el detalle molecular
  con alguna propiedad macroscópica dependiente de las características del
  sistema en equilibrio.
- Por ejemplo la conductancia.
  En este capítulo se utiliza la teoría molecular extendida a nanocanales
  largos, no cilíndricos.
  El objetivo es obtener el comportamiento macroscópico de la conductancia
@@ -149,8 +155,18 @@ a y composición de la capa polimérica anclada en la superficie interna de
 ) con geometría arbitraria.
  Esta metodología se utiliza para explorar el acoplamiento entre el equilibrio
  ácido-base y la geometría en nanocanales cilíndricos, cónicos y con forma
- de trompeta, modificados con un brush polimérico de poly(2-(methacryloyloxy)eth
-yl-phosphate) (PMEP), un ácido diprótico.
+ de trompeta, modificados con un brush polimérico de poli(2-(metacriloiloxi)
+ etil-fosfato 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+poly(2-(methacryloyloxy)ethyl-phosphate)
+\end_layout
+
+\end_inset
+
+ (PMEP), un ácido diprótico.
  
 \end_layout
 
@@ -175,12 +191,12 @@ n (la fracción de segmentos deprotonados, monoprotonados y diprotonados)
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fig_Cap_paper_PMEP/fig1_system_2016.png
+	filename fig_Cap_paper_PMEP/fig1_sistema_2016.png
 	lyxscale 40
 	width 50page%
 
@@ -193,20 +209,19 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Esquema de una sección del nanocanal modificado con un poliácido débil (poly(2-(
-methacryloyloxy)- ethyl-phosphate)), PMEP, anclado a la pared interna del
- nanocanal.
+Esquema de una sección del nanocanal modificado con un poliácido débil (poli(2-(
+metacriloiloxi)etil-fosfato), PMEP, anclado a la pared interna del nanocanal.
  La solución dentro del nanocanal contiene moléculas de agua, cationes (círculos
  azules) y aniones (círculos rojos) provenientes de la sal 
 \begin_inset Formula $KCl$
 \end_inset
 
 , aniones 
-\begin_inset Formula $OH-$
+\begin_inset Formula $OH^{-}$
 \end_inset
 
  y cationes 
-\begin_inset Formula $H_{3}O+$
+\begin_inset Formula $H_{3}O^{+}$
 \end_inset
 
 .
@@ -346,7 +361,7 @@ Conductancia de Nanocanales
 
 \end_inset
 
-Conductancia de Nanocanales con geometrías Cilíndricas y No-Cilíndricas
+Conductancia de Nanocanales con Geometrías Cilíndricas y No-Cilíndricas
 \end_layout
 
 \begin_layout Standard
@@ -354,7 +369,12 @@ Conductancia de Nanocanales con geometrías Cilíndricas y No-Cilíndricas
 placement H
 wide false
 sideways false
-status collapsed
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -368,37 +388,26 @@ status collapsed
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Cap_paper_PMEP/fig3_comparacion_con_expermentos_comsol_G_vs_pH.png
+	lyxscale 20
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-(a) Comparación de la conductancia de un nanocanal cónico (
-\begin_inset Formula $D_{min}=10nm$
-\end_inset
-
-, 
-\begin_inset Formula $D_{max}=290nm$
-\end_inset
-
-, 
-\begin_inset Formula $L=12\mu m$
-\end_inset
-
-) como función de la carga superficial.
- Los círculos muestran la conductancia obtenida con nuestra metodología
- teórica y los triángulos muestran la solución de las ecuaciones de Poisson-Nern
-st-Planck obtenida por cálculo de elementos finitos, ver la información
- suplementaria de la referencia 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Tagliazucchi2013a"
-
-\end_inset
-
-.
- (b) Con símbolo y barras de error curva experimental de conductancia en
- función del pH, para un nanocanal modificado con PMEP, en línea llena se
- muestra el ajuste teórico.
+Con símbolo y barras de error curva experimental de conductancia en función
+ del pH, para un nanocanal modificado con PMEP, en línea llena se muestra
+ el ajuste teórico.
  La conductancia experimental se obtuvo de las curvas de corriente 
 \begin_inset Formula $I$
 \end_inset
@@ -446,7 +455,7 @@ name "fig:testeo_modelo_slices"
 
 \begin_layout Standard
 El modelo desarrollado anteriormente nos permite calcular la conductancia
- (
+ en condiciones de cuasi-equilibrio (
 \emph on
 low-bias
 \emph default
@@ -456,7 +465,7 @@ low-bias
  El primer escenario consiste en un nanocanal cónico con densidad de carga
  superficial constante (sin la presencia de polielectrolitos adheridos a
  la superficie).
- Elegimos este sistema por que puede ser modelizado con las ecuaciones de
+ Elegimos este sistema por que puede ser descripto con las ecuaciones de
  Poisson-Nernst-Planck y resuelto sin aproximaciones a través del cálculo
  por elementos finitos (
 \emph on
@@ -481,11 +490,11 @@ algo sobre elementos finitos.
  La figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:testeo_modelo_slices"
+reference "fig:Comparación-cono-COMSOL"
 
 \end_inset
 
-(a) muestra que la conductancia predicha por el modelo de particiones está
+ muestra que la conductancia predicha por el modelo de particiones está
  en completo acuerdo con los resultados obtenidos por el método de 
 \emph on
 EF
@@ -529,7 +538,7 @@ reference "fig:testeo_modelo_slices"
 
 \end_inset
 
-(b), representan las conductancias experimentales determinadas como la pendiente
+, representan las conductancias experimentales determinadas como la pendiente
  de las curvas 
 \begin_inset Formula $I-V$
 \end_inset
@@ -654,10 +663,10 @@ reference "fig:testeo_modelo_slices"
 cia de nanocanales cilíndricos y no cilíndricos, largos.
  El comportamiento macroscópico del sistema surge naturalmente de sus propiedade
 s microscópicas.
- ¿Cuáles son las propiedades microscópicas compatibles con los comportamientos
- macroscópicos que podemos medir? ¿Son éstas propiedades indiferentes al
- confinamiento? a continuación describimos al sistema a nivel microscópico
- con la lupa que nos brinda la teoría.
+ ¿Cómo es la organización molecular compatible con los comportamientos macroscóp
+icos que podemos medir? ¿Son éstas propiedades indiferentes al confinamiento?
+ A continuación describimos la organzación microscópica del sistema con
+ la lupa que nos brinda la teoría.
 \end_layout
 
 \begin_layout Section
@@ -677,7 +686,7 @@ Equilibrios Ácido-base y Conductancia en Nanocanales Cilíndricos
 El marco teórico que utilizamos nos brinda una descripción microscópica
  compatible con el comportamiento macroscópico del sistema.
  A continuación se muestra la descripción microscópica que se obtiene como
- resultado de la minimización de la funcional que describe el sistema.
+ resultado de la minimización de la energía libre que describe al sistema.
 \end_layout
 
 \begin_layout Standard
@@ -713,11 +722,11 @@ status open
 Comportamiento de un nanocanal cilíndrico modificado con PMEP en la superficie
  interna.
  
-\begin_inset Formula $pKa_{1}^{bulkl}=4.5$
+\begin_inset Formula $pKa_{1}^{bulk}=4.5$
 \end_inset
 
 , 
-\begin_inset Formula $pKa_{2}^{bulkl}=7.7$
+\begin_inset Formula $pKa_{2}^{bulk}=7.7$
 \end_inset
 
 .
@@ -813,7 +822,7 @@ name "fig:fig4_pmep"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -896,7 +905,8 @@ reference "fig:fig4_pmep"
 \end_inset
 
  muestra las predicciones para un nanocanal cilíndrico modificado con un
- polielectrolito El diámetro del nanocanal es 
+ polielectrolito poli(2-(metacriloiloxi)etil-fosfato.
+ El diámetro del nanocanal es 
 \begin_inset Formula $D=16nm$
 \end_inset
 
@@ -986,7 +996,7 @@ PAPER DONDE SE MIDE ESTO!?
 La teoría desarrollada considera el detalle molecular de las especies involucrad
 as y realiza una descripción microscópica local, por lo tanto incorpora
  los efectos locales del entorno sobre la transición entre estados.
- Esta descripción teórcia da lugar a constantes de equilibrio aparentes
+ Esta descripción teórica da lugar a constantes de equilibrio aparentes
  dentro del nanocanal cuyos valores resultan distintos a los valores de
  bulk.
  A continuación discutiremos no sólo el corrimiento de estos valores respecto
@@ -1069,7 +1079,7 @@ reference "fig:fig4_pmep"
  Este efecto es debido al incremento en la concentración de contra-iones
  dentro del canal, necesario para compensar la creciente carga del polielectroli
 to.
- Estos contra iones son cargas móviles y por lo tanto aumentan la conductancia
+ Estos contra-iones son cargas móviles y por lo tanto aumentan la conductancia
  del nanocanal de acuerdo con la ecuación 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1108,8 +1118,8 @@ Las constantes de equilibrio químico
 \begin_inset Formula $pK_{a}$
 \end_inset
 
-están definidas cómo los valores de pH donde la fracción de monómeros de
- los dos estados involucrados son iguales.
+están definidas iguales a los valores de pH donde la fracción de monómeros
+ de los dos estados involucrados son iguales.
  Esta es la definición habitual de las constantes aparentes en solución.
  En confinamiento utilizamos el mismo criterio, definimos la primera y la
  segunda constante de equilibrio químico aparente como los valores de pH
@@ -1213,11 +1223,11 @@ más referencias!
 \end_inset
 
 .
- (Los superíndices 
+ Usaremos los superíndices 
 \emph on
 "cond"
 \emph default
- indican las constantes de equilibrio estimadas a partir de la conductancia).
+ para indicar las constantes de equilibrio estimadas a partir de la conductancia.
  Las líneas punteadas verticales en la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1248,7 +1258,7 @@ reference "fig:fig4_pmep"
 \begin_inset Formula $pK_{a1}^{app}=5.81$
 \end_inset
 
- debido a una pequeña contribución de contraiones a la conductancia total,
+ debido a una pequeña contribución de contra-iones a la conductancia total,
  relacionados con la electroneutralidad de la especie 
 \begin_inset Formula $R-PO_{4}^{2-}$
 \end_inset
@@ -1277,8 +1287,7 @@ reference "fig:fig4_pmep"
 \begin_inset Formula $pK_{a2}^{app}$
 \end_inset
 
-, depende de la geometría.
- 
+, empeora ligeramente.
 \end_layout
 
 \begin_layout Standard
@@ -1288,7 +1297,7 @@ El exceso de carga en las cadenas poliméricas provoca cambios en la organizaci�
 \end_layout
 
 \begin_layout Subsubsection
-Distribución de Polímero
+Distribución de polímero
 \end_layout
 
 \begin_layout Standard
@@ -1299,7 +1308,7 @@ Las cadenas poliméricas totalmente extendidas tienen una longitud de
 , esta longitud es la que debe compararse con el radio del nanocanal para
  obtener una estimación cualitativa del grado de confinamiento.
  Por otro lado debemos considerar la longitud de Debye 
-\begin_inset Formula $\lambda_{D}=\sqrt{\frac{\xi k_{B}T}{\sum_{j}n_{j}q_{j}^{2}}}$
+\begin_inset Formula $\lambda_{D}=\sqrt{\frac{\varepsilon k_{B}T}{\sum_{j}n_{j}q_{j}^{2}}}$
 \end_inset
 
  que mide el alcance de la interacción electrostática en un medio con cargas
@@ -1336,8 +1345,7 @@ b con
 \end_inset
 
 .
- Esto ocurre como estrategia conformacional para disminuir la repulsión
- electrostática.
+ Este cambio conformacional ocurre para disminuir la repulsión electrostática.
  Las cadenas de polielectrolito adoptan conformaciones más extendidas a
  medida que se cargan sus unidades monoméricas.
 \end_layout
@@ -1437,7 +1445,7 @@ reference "fig:fig4_pmep"
 
 \end_inset
 
-a para canales muy anchos (
+a para canales suficientemente anchos (
 \begin_inset Formula $D=290nm$
 \end_inset
 
@@ -1512,7 +1520,7 @@ c muestra la fracción de volumen de polímero dentro del nanocanal con diámetr
 \end_layout
 
 \begin_layout Subsubsection
-Efectos de confinamiento en los Equilibrios Químicos
+Efectos de confinamiento en los equilibrios químicos
 \end_layout
 
 \begin_layout Standard
@@ -1605,13 +1613,7 @@ name "fig:6(b)"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:6(a)"
-
-\end_inset
-
- 
+(a) 
 \begin_inset Formula $pKa^{app}$
 \end_inset
 
@@ -1637,13 +1639,7 @@ reference "fig:6(a)"
 \end_inset
 
 .
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:6(b)"
-
-\end_inset
-
- Ancho de la transición (
+ (b) Ancho de la transición (
 \begin_inset Formula $\Delta$
 \end_inset
 
@@ -1807,13 +1803,13 @@ reference "fig:fig4_pmep"
 \begin_inset Formula $pK_{a2}^{app}=9.67$
 \end_inset
 
-, que son más grandes que las correspondientes a los equilibrios químicos
- en solución: 
-\begin_inset Formula $pK_{a1}^{sol}=4.5$
+, estos valores son más grandes que las correspondientes a los equilibrios
+ químicos en solución: 
+\begin_inset Formula $pK_{a1}^{bulk}=4.5$
 \end_inset
 
  y 
-\begin_inset Formula $pK_{a2}^{sol}=7.7$
+\begin_inset Formula $pK_{a2}^{bulk}=7.7$
 \end_inset
 
 .
@@ -1821,14 +1817,15 @@ reference "fig:fig4_pmep"
  entre las interacciones y la organización molecular para minimizar la energía
  libre del sistema.
  A medida que aumenta el pH de la solución la carga neta de los polielectrolitos
- aumenta y la repulsión electrostática entre los monómeros se incrementa.
+ aumenta, haciendo que la repulsión electrostática entre los monómeros también
+ aumente.
  Esta repulsión electrostática puede ser reducida mediante tres estrategias:
- incorporando contraiones al seno del nanocanal (cuyo costo es la reducción
- de la entropía traslacional de estos iones), mediante el estiramiento de
- los polímeros (cuyo costo es la reducción de la entropía conformacional
- de las cadenas) o produciendo un corrimiento en los equilibrios químicos
- hacia las especies menos cargadas (cuyo costo es un incremento en la energía
- libre de los equilibrio químicos).
+ incorporando contra-iones en el seno del nanocanal (cuyo costo energético
+ es la reducción de la entropía traslacional de estos iones), mediante el
+ estiramiento de los polímeros (cuyo costo energético es la reducción de
+ la entropía conformacional de las cadenas) o produciendo un corrimiento
+ en los equilibrios químicos hacia las especies menos cargadas (cuyo costo
+ energético es un incremento en la energía libre de los equilibrios químicos).
  El tercero de estos mecanismos (desplazamiento del equilibrio químico)
  implica que la constante de equilibrio aparente 
 \begin_inset Formula $pK_{a}^{app}$
@@ -1874,9 +1871,10 @@ a.
 \end_layout
 
 \begin_layout Standard
-Los equilibrios químicos en confinamiento también muestran transiciones
- más anchas de las que se encuentran en solución; por eso, para una descripción
- completa deben considerarse no sólo las constantes de equilibrio 
+Los equilibrios químicos en confinamiento no sólo están desplazados sino
+ que también muestran transiciones más anchas de las que se encuentran en
+ solución; por eso, para una descripción completa deben considerarse no
+ sólo las constantes de equilibrio 
 \begin_inset Formula $pK_{a}$
 \end_inset
 
@@ -1923,19 +1921,18 @@ reference "fig:ancho_transicion"
 
 \end_inset
 
-Esta definición fue elegida de forma tal que un equilibrio químico ácido-base
- en solución tenga un ancho de transición 
+Con esta definición un equilibrio ácido-base en solución tiene un ancho
+ de transición 
 \begin_inset Formula $\Delta=2$
 \end_inset
 
 .
- En el caso del monómero MEP, el ancho de las transiciones será levemente
- distinto al ideal.
- Para ambas transiciones el ancho será 
+ En el caso del monómero MEP en solución, ambas transiciones tendrán un
+ ancho 
 \begin_inset Formula $\Delta=2.03$
 \end_inset
 
-.
+, levemente distinto al ideal.
  Esto se debe a la presencia de la segunda transición en el mismo monómero.
  Las constantes de equilibrio distan entre si, 
 \begin_inset Formula $pK_{a2}-pK_{a1}=3.2$
@@ -1948,8 +1945,8 @@ key "Skoog1995"
 
 \end_inset
 
- unidades de pH, por lo tanto es esperable un acoplamiento entre los dos
- equilibrios ácido-base.
+ unidades de pH, por lo tanto es esperable un acoplamiento pequeño entre
+ los dos equilibrios ácido-base.
 \end_layout
 
 \begin_layout Standard
@@ -2068,7 +2065,11 @@ reference "eq:pH_f2"
 
 , para el primer y segundo equilibrio requieren los parámetros de entrada:
  
-\begin_inset Formula $f_{-1},f_{-2}$
+\begin_inset Formula $f_{-1}$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{-2}$
 \end_inset
 
 .
@@ -2178,7 +2179,7 @@ reference "fig:SI_S3"
 
 \begin_layout Standard
 Para radios menores a la longitud máxima de estiramiento de las cadenas
- poliméricas (10nm en nuestro caso), el modelo simple falla en la reproducción
+ poliméricas (~10nm en nuestro caso), el modelo simple falla en la reproducción
  de las predicciones realizadas por la teoría molecular porque el modelo
  sencillo no toma en cuenta los efectos de la curvatura de la superficie.
  En conclusión, para nanocanales angostos donde los equilibrios químicos
@@ -2275,7 +2276,7 @@ reference "fig:SI_S2"
 
 \end_inset
 
- ).
+).
  El ancho de la segunda transición 
 \begin_inset Formula $\Delta_{2}$
 \end_inset
@@ -2335,13 +2336,13 @@ Acá falta un párrafo del paper que me parece intrascendente lineas 569-579
 \end_layout
 
 \begin_layout Standard
-Como se discutió más arriba el costo en la energía libre del proceso de
- protonación de los monómeros de PMEP es mayor dentro del nanocanal que
- en el seno de la solución debido a las repulsiones electrostáticas entre
- las cargas negativas de los monómeros.
+Como se discutió, el costo en la energía libre del proceso de protonación
+ de los monómeros de PMEP es mayor dentro del nanocanal que en el seno de
+ la solución debido a las repulsiones electrostáticas entre las cargas negativas
+ de los monómeros.
  Este costo energético depende de la organización molecular de la capa poliméric
 a, como por ejemplo las conformaciones del polielectrolito o el número de
- contraiones dentro del canal.
+ contra-iones dentro del canal.
  La organización molecular cambia a medida que varía el pH de la solución
  (ver figuras 
 \begin_inset CommandInset ref
@@ -2384,16 +2385,17 @@ key "Gillespie2001,Ohshima1985,Wang2009,Higa1998"
 \end_inset
 
 .
- (Es posible pensar este efecto como un titulación ácido-base donde el 
+ (Es posible pensar este efecto como una titulación ácido-base donde el
+ 
 \begin_inset Formula $pK_{a}$
 \end_inset
 
  efectivo se desplaza con el pH).
  Es interesante observar también que el ancho de la segunda transición es
  siempre menor que el ancho de la primera transición.
- Este resultado se explica por el hecho de que la reorganización del sistema
+ Este resultado se explica con el hecho de que la reorganización del sistema
  durante la transición 0/-1 es más dramática que durante la transición -1/-2.
- (ver la concentración de contra iones en la figura 
+ (ver la concentración de contra-iones en la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:fig4_pmep"
@@ -2421,7 +2423,7 @@ Nanocanales No Cilíndricos
 
 \end_inset
 
-Equilibrio Ácido-Base y Conductancia en nanocanales no cilíndricos
+Equilibrio Ácido-Base y Conductancia en Nanocanales no Cilíndricos
 \end_layout
 
 \begin_layout Standard
@@ -2549,11 +2551,19 @@ name "fig:fig7_PMEP"
 \end_layout
 
 \begin_layout Standard
-En esta sección se muestran los resultados para nanocanales que no son cilindros.
- Las geometrías exploradas corresponden a formas que asemejan un cono truncado
- y perfiles con forma de trompeta.
- En todos los casos se investigan nanocanales modificados con brushes poliprótic
-os (PMEP).
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+HABLAR DE LAS MOTIVACIONES PARA EXPLORAR GEOMETRIAS NO CILINDRICAS
+\end_layout
+
+\end_inset
+
+En esta sección se comparan los resultados obtenidos para nanocanales cilíndrico
+s con los resultados para canales no cilíndricos.
+ Las geometrías exploradas corresponden a nanocanales que asemejan un cono
+ truncado y nanocanales con perfiles parabólicos con forma de trompeta.
  Los cálculos para estas geometrías fueron hechos con valores experimentales
  reportados en la bibliografía: 
 \begin_inset Formula $D_{min}=10nm$
@@ -2568,6 +2578,8 @@ os (PMEP).
 \end_inset
 
  longitud del nanocanal.
+ En todos los casos se investigan nanocanales modificados con brushes poliprótic
+os (PMEP).
 \end_layout
 
 \begin_layout Standard
@@ -2701,26 +2713,31 @@ reference "tab:tabla1_PMEP"
 \end_inset
 
  también muestra que las constantes aparentes 
-\begin_inset Formula $pK_{a}$
+\begin_inset Formula $pK_{a}^{app}$
 \end_inset
 
- para los nanocanales tipo trompeta son más grandes (el corrimiento es mayor
- respecto de los valores en el seno de la solución) que en el caso de los
+ para los nanocanales tipo trompeta son más grandes (el corrimiento respecto
+ de los valores en el seno de la solución es mayor) que en el caso de los
  nanocanales cónicos.
- Esto puede explicarse considerando el hecho de que las geometrías tipo
- trompeta son más angostas que las geometrías cónicas para todo valor de
- 
+ Esto puede explicarse con el hecho de que las geometrías tipo trompeta
+ son más angostas que las geometrías cónicas para todo valor de 
 \begin_inset Formula $z$
 \end_inset
 
- y como mostramos en la figura 
+ por lo que el peso relativo de los diámetros pequeños es mayor en las geometría
+s tipo trompeta.
+ Como mostramos en la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:6(a)"
 
 \end_inset
 
- el corrimiento se incrementa al disminuir el radio del nanocanal.
+ los valores de las constantes 
+\begin_inset Formula $pK_{a}^{app}$
+\end_inset
+
+ se incrementan al disminuir el radio del nanocanal.
 \end_layout
 
 \begin_layout Standard
@@ -2747,7 +2764,7 @@ Resumen de las constantes de equilibrio
 
 ) transición, determinados a partir de dos métodos distintos: a partir de
  las curvas de especiación (
-\begin_inset Formula $pKA_{ai}^{app}$
+\begin_inset Formula $pK_{ai}^{app}$
 \end_inset
 
 ) y a partir de los puntos de inflexión de las curvas de conductancia 
@@ -2764,7 +2781,7 @@ Resumen de las constantes de equilibrio
 
 ).
  Se muestra también la diferencia 
-\begin_inset Formula $\Delta pK_{ai}^{app}=pK_{ai}^{cond}-pKA_{ai}^{app}$
+\begin_inset Formula $\Delta pK_{ai}^{app}=pK_{ai}^{cond}-pK_{ai}^{app}$
 \end_inset
 
 .
@@ -2924,7 +2941,7 @@ trompeta
 </cell>
 </row>
 <row bottomspace="default" interlinespace="default">
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2936,7 +2953,7 @@ trompeta
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2945,7 +2962,7 @@ trompeta
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2954,7 +2971,7 @@ trompeta
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
