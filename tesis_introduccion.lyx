@@ -171,23 +171,22 @@ e involucra escalas temporales y espaciales del orden de la edad y el tamaño
 
  y aquello que concierne a la estructura subatómica de la materia, respectivamen
 te), involucra el descubrimiento de las leyes fundamentales de la naturaleza,
- el estudio de lo complejo implica comprender como se combinan las leyes
- de la naturaleza conocidas.
+ el estudio de lo complejo implica comprender como se combinan estas leyes.
  Haciendo un paralelismo con la biología moderna que ha evolucionado desde
  el estudio de organismos unicelulares simples (como las bacterias) hacia
  el estudio de organismos complejos pluricelulares (como las plantas, los
  invertebrados y vertebrados), durante la segunda mitad del siglo XX la
  física ha evolucionado desde el estudio de las interacciones entre partículas
  hacia el estudio de fluidos complejos.
- 
+ Algunos ejemplos podrían ser: la mayonesa, la crema de afeitar o el gel
+ para el pelo.
+ Los fluidos complejos tienen localmente la mobilidad de líquidos pero están
+ constituidos por polímeros, surfactantes, cristales líquidos, coloides,
+ etc.
 \end_layout
 
 \begin_layout Standard
-Los fluidos complejos tienen localmente la mobilidad de líquidos pero están
- constituidos por polímeros, surfactantes, cristales líquidos, coloides,
- etc; Algunos ejemplos podrían ser: la mayonesa, la crema de afeitar o el
- gel para el pelo.
- En general, estos fluidos complejos se denominan con el nombre de 
+En general, estos fluidos complejos se denominan con el nombre de 
 \series bold
 materia blanda
 \series default
@@ -204,16 +203,22 @@ key "Gilles_DeGennes_1991"
  de indígenas de la cuenca del amazonas que construían una especie de botas
  a partir de la savia del árbol Hevea brasiliensis (más comúnmente llamado
  árbol del caucho).
- El procedimiento consiste en untar la savia sobre los pies y dejar secar
- durante un tiempo relativamente corto para obtener unas botas.
- Desde el punto de vista microscópico al comienzo se tiene un conjunto de
- cadenas poliméricas flexibles todas independientes entre sí.
- Luego el oxígeno del aire forma enlaces entre las cadenas lo que trae aparejado
- un cambio macroscópico sorprendente: el pasaje de un líquido a una red
- estructurada capaz de resistir tensiones, material que denominamos caucho.
+ El procedimiento de aquella comunidad consiste en untar la savia sobre
+ sus pies y dejar secar durante un tiempo relativamente corto para que el
+ ungüento se transforme en una especie de botas.
+ Esta transformación puede explicarse desde el punto de vista microscópico.
+ Al comienzo se tiene un conjunto de cadenas poliméricas flexibles todas
+ independientes entre sí, luego, el oxígeno del aire forma enlaces entre
+ las cadenas lo que trae aparejado un cambio macroscópico sorprendente:
+ el pasaje de un líquido a una red estructurada capaz de resistir tensiones,
+ material que denominamos caucho.
  Este es un ejemplo de sistema de materia blanda porque frente a pequeños
  cambios químicos, el material responde con notables cambios macroscópicos.
- En la actualidad el concepto de materia blanda engloba una infinidad de
+ 
+\end_layout
+
+\begin_layout Standard
+En la actualidad el concepto de materia blanda engloba una infinidad de
  sistemas tanto sintéticos como biológicos
 \begin_inset Note Note
 status open
@@ -225,9 +230,9 @@ CITAS!
 \end_inset
 
 .
- Una definición de materia blanda debe incluir que las escalas espaciales
- relevantes son del orden de los nanómetros y las energías son del orden
- de la energía térmica (
+ En sistemas de materia blanda las escalas espaciales relevantes son del
+ orden de los nanómetros y las energías son del orden de la energía térmica
+ (
 \begin_inset Formula $\sim k_{B}T$
 \end_inset
 
@@ -2670,12 +2675,6 @@ reference "fig:Esquema-del-nanocanal"
 , se representa gráficamente el orificio que goza de simetría cilíndrica,
  es decir, sus propiedades geométricas son invariantes ante una rotación
  respecto de su eje principal.
- Los diámetros característicos están en el rango de las decenas de nanómetros
- 
-\begin_inset Formula $1-100nm$
-\end_inset
-
-.
  En los sistemas que abordamos la relación de aspecto entre la longitud
  del canal 
 \begin_inset Formula $L$
@@ -2722,8 +2721,12 @@ Estos sistemas son realizables experimentalmente mediante la irradiación
 \end_inset
 
 .
- Típicamente se logran aberturas cuyos radios están en la decena o centena
- de nanómetros
+ Típicamente se logran aberturas cuyos diámetros característicos están en
+ el rango de las decenas de nanómetros 
+\begin_inset Formula $1-100nm$
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Yameen2009,Yameen2009a,Yameen2009c,Yameen2010,Perez-Mitta2015"
@@ -2814,7 +2817,7 @@ reference "chap:Efectos-de-Confinamiento"
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 El uso de las computadoras durante el siglo XX permitió desarrollar distintas
@@ -2874,7 +2877,7 @@ son útiles para (CITAR AL FRENKEL)
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Los fenómenos de transporte a través de nanocanales han sido estudiados
