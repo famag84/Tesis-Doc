@@ -117,7 +117,40 @@ Para el desarrollo de un modelo sencillo considero una capa homogénea de
 \end_layout
 
 \begin_layout Standard
-Dónde conocemos las relaciones
+donde 
+\begin_inset Formula $\Psi^{P}$
+\end_inset
+
+ es el potencial electrostático y 
+\begin_inset Formula $\rho_{q}$
+\end_inset
+
+ es la densidad de carga en la capa polimérica, 
+\begin_inset Formula $\rho_{i}$
+\end_inset
+
+ la densidad de las especies presentes en la capa polimérica 
+\begin_inset Formula $i=w,K^{+},Cl^{-},H^{+},OH^{-},P$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f_{e}$
+\end_inset
+
+ representa el grado de disociación para el estado 
+\begin_inset Formula $e=0,-1,-2$
+\end_inset
+
+.
+ y 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+ los potenciales químicos de las especies correspondientes.
+ Como estamos considerando capa polimérica homogénea todas las propiedades
+ son independientes de la posición dentro de la capa polimérica.
+ Conocemos las relaciones
 \end_layout
 
 \begin_layout Standard
@@ -254,7 +287,7 @@ Donde se usó que
 \end_layout
 
 \begin_layout Standard
-Teniendo en cuenta las expresiones de bulk
+Teniendo en cuenta las relaciones de bulk
 \end_layout
 
 \begin_layout Standard
@@ -765,9 +798,9 @@ name "fig:SI_S2"
 \end_layout
 
 \begin_layout Standard
-El ancho de la segunda transición fue calculado asumiendo que no hay cambios
- conformacionales en la capa polimérica.
- El cálculo del segundo ancho de transición es directo,
+Durante la segunda transición, la densidad y el ancho de la capa polimérica
+ permanecen constantes dado que no hay cambios conformaciones de las cadenas.
+ El ancho de la segunda transición se calcula como,
 \end_layout
 
 \begin_layout Standard

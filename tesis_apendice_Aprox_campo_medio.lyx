@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass book
 \use_default_options true
 \master tesis_Doc_FMG.lyx
@@ -10,23 +12,23 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing single
+\spacing onehalf
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -86,12 +88,9 @@ A continuación se explica la aproximación de campo medio que permite desacopla
  la probabilidad de la conformación de una dada cadena de la conformación
  de las cadenas vecinas.
  Esto se hace reemplazando la interacción con las cadenas vecinas por un
- campo promedio que se obtiene luego de la aproximación.
- 
-\end_layout
-
-\begin_layout Standard
-La densidad de monómeros puede escribirse como 
+ campo promedio.
+ Para realizar la aproximación escribimos la densidad de monómeros en función
+ de la distancia a una superficie plana, 
 \end_layout
 
 \begin_layout Standard
@@ -132,10 +131,7 @@ significa la suma sobre todos los posibles estados de cada conformación.
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Supongamos que se generan con el modelo de RIS dos millones de conformaciones
+ Supongamos que se generan con el modelo de RIS dos millones de conformaciones
  de cadenas.
  La expresión 
 \begin_inset CommandInset ref
@@ -248,8 +244,9 @@ donde
 \end_layout
 
 \begin_layout Standard
-Para incorporar la traslación de las cadenas, la aproximación cambia un
- poco.
+Consideremos una geometría cilíndrica donde incorporamos la posibilidad
+ de traslación para las cadenas poliméricas.
+ En este caso, la aproximación cambia un poco.
  Ahora la densidad de monómeros en 
 \begin_inset Formula $r$
 \end_inset
@@ -294,7 +291,7 @@ donde
 
  significa la suma sobre todos los posibles estados de cada conformación
  
-\begin_inset Formula $()$
+\begin_inset Formula $(r',\alpha)$
 \end_inset
 
 .
@@ -311,7 +308,11 @@ donde
 \end_inset
 
  sumatorias 
-\begin_inset Formula $\left(\sum_{\alpha_{1}}\int_{0}^{R}2\pi r_{1}'dr_{1}'\right)\left(\sum_{\alpha_{2}}\int_{0}^{R}2\pi r_{2}'dr_{2}'\right)...\left(\sum_{\alpha_{N_{p}}}\int_{0}^{R}2\pi r_{N_{p}}'dr_{N_{p}}'\right)$
+\begin_inset Formula $\left(\sum_{\alpha_{1}}\int_{0}^{R}2\pi r_{1}'dr_{1}'\right)$
+\end_inset
+
+
+\begin_inset Formula $\left(\sum_{\alpha_{2}}\int_{0}^{R}2\pi r_{2}'dr_{2}'\right)...\left(\sum_{\alpha_{N_{p}}}\int_{0}^{R}2\pi r_{N_{p}}'dr_{N_{p}}'\right)$
 \end_inset
 
 .
@@ -340,9 +341,9 @@ reference "eq:expresion_gral"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-n_{m}(r)=\frac{N_{P}}{\pi R^{2}}\left(\pi R^{2}\right)^{N_{p}}\left(\sum_{\alpha}\int_{0}^{R}P(r',\alpha)n_{m}(r;r',\alpha)\left(2\pi r'\right)dr'\right)
-\]
+\begin{equation}
+n_{m}(r)=\frac{N_{P}}{\pi R^{2}}\left(\pi R^{2}\right)^{N_{p}}\left(\sum_{\alpha}\int_{0}^{R}P(r',\alpha)n_{m}(r;r',\alpha)\left(2\pi r'\right)dr'\right)\label{eq:resulado_nm_exp1}
+\end{equation}
 
 \end_inset
 
@@ -359,9 +360,9 @@ si el número de monómeros por cadena es
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-2\pi\int_{0}^{R}n_{m}(r)rdr=N_{p}\times N_{long}
-\]
+\begin{equation}
+2\pi\int_{0}^{R}n_{m}(r)rdr=N_{p}\times N_{long}\label{eq:resultado_1}
+\end{equation}
 
 \end_inset
 
@@ -369,11 +370,21 @@ si el número de monómeros por cadena es
 \end_layout
 
 \begin_layout Standard
-a ver...
- 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+veamos integrando en ambos lados la expresión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:resulado_nm_exp1"
+
+\end_inset
+
+,
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 2\pi\int_{0}^{R}n_{m}(r)rdr=\frac{N_{P}}{\pi R^{2}}\left(\pi R^{2}\right)^{N_{p}}\left(\sum_{\alpha}\int_{0}^{R}P(r',\alpha)\left(\int_{0}^{^{R}}n_{m}(r;r',\alpha)rdr2\pi\right)\left(2\pi r'\right)dr'\right)
@@ -384,7 +395,7 @@ a ver...
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 la integral en 
 \begin_inset Formula $r$
 \end_inset
@@ -405,7 +416,7 @@ la integral en
  (normalización local)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 2\pi\int_{0}^{R}n_{m}(r)rdr=\frac{N_{P}}{\pi R^{2}}\left(\pi R^{2}\right)^{N_{p}}N_{long}\left(\int_{0}^{R}\left(2\pi r'\right)dr'\right)
@@ -416,11 +427,11 @@ la integral en
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 y entonces, 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 2\pi\int_{0}^{R}n_{m}(r)rdr=N_{p}\left(\pi R^{2}\right)^{N_{p}}N_{long}
@@ -431,7 +442,7 @@ y entonces,
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Estas cuentas podrían ser ciertas sin embargo en ningún momento se hace
  necesario calcular la cantidad 
 \begin_inset Formula $n_{m}(r)$
@@ -443,9 +454,242 @@ Estas cuentas podrían ser ciertas sin embargo en ningún momento se hace
 \end_inset
 
  dimensional.
- 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Subsubsection*
+\begin_inset Formula $n(r;r',\alpha)$
+\end_inset
+
+ Sobre la definición de esta magnitud: 
+\end_layout
+
+\begin_layout Plain Layout
+Las propiedades de 
+\begin_inset Formula $n(r;r',\alpha)$
+\end_inset
+
+ son tres:
+\end_layout
+
+\begin_layout Enumerate
+La suma sobre todas las posición 
+\begin_inset Formula $r$
+\end_inset
+
+, debería dar el número total de monómeros de la cadena polimérica 
+\begin_inset Formula $\left(r',\alpha\right)$
+\end_inset
+
+ que será 
+\begin_inset Formula $N_{mon}$
+\end_inset
+
+ por que considero todas las cadenas igual de largas.
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{R}n(r;r',\alpha)rdr=\frac{N_{mon}(r',\alpha)}{2\pi L}=\frac{N_{mon}}{2\pi L}\label{eq:prop_1n}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La suma sobre l
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+a variable continua de la conformación 
+\begin_inset Formula $\boldsymbol{r}'$
+\end_inset
+
+, es el número total de monómeros en 
+\begin_inset Formula $\ensuremath{r}$
+\end_inset
+
+, debido a todas las conformaciones 
+\begin_inset Formula $\ensuremath{\alpha}$
+\end_inset
+
+.
+ (cómo si estuviera la misma conformación 
+\begin_inset Formula $\ensuremath{\alpha}$
+\end_inset
+
+ en todas las posiciones)
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{gather*}
+\int_{0}^{R}n(r;r',\alpha)\left(2\pi r'\right)dr'=n(r;\alpha)
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Entonces 
+\begin_inset Formula 
+\begin{gather*}
+\int_{0}^{R}\left(\int_{0}^{R}n(r;r',\alpha)rdr\right)\left(2\pi r'\right)dr'=\frac{N_{mon}}{2\pi L}\left(\pi R^{2}L\right)=N_{mon}\frac{R^{2}}{2}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La suma sobre la
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ variable discreta de las conformaciones 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, es el número de monómeros en 
+\begin_inset Formula $\ensuremath{r}$
+\end_inset
+
+ debido a todas las conformaciones 
+\begin_inset Formula $\left\{ \alpha\right\} $
+\end_inset
+
+ posicionadas en 
+\begin_inset Formula $\ensuremath{r'}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\[
+\sum_{\alpha}n(r;r',\alpha)=n(r;r')
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Colapsando todos los índices
+\begin_inset Formula 
+\[
+\sum_{\alpha}\int_{0}^{R}\left(\int_{0}^{R}n(r;r',\alpha)rdr\right)\left(2\pi r'\right)dr'=\frac{N_{mon}}{2\pi L}\left(\pi R^{2}L\right)N_{\alpha's}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Note Note
-status open
+status collapsed
+
+\begin_layout Plain Layout
+Al momento de programarlo esto podría traer inconsistencias.
+ 
+\end_layout
+
+\end_inset
+
+En el código del programa utilizado la magnitud 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $n(r;r',\alpha)$
+\end_inset
+
+ se redefine para contener el jacobiano de las coordenadas: 
+\begin_inset Formula $n(r;r',\alpha)=rr'n(r;r',\alpha)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
 DUDA: Como escribir la suma sobre la variable continua?

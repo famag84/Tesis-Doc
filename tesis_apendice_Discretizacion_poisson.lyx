@@ -73,13 +73,23 @@
 \begin_body
 
 \begin_layout Chapter
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Discretización
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Discretización"
 
 \end_inset
 
-Discretización de la ecuaciones
+Discretización de las ecuaciones
 \end_layout
 
 \begin_layout Standard
@@ -156,7 +166,7 @@ status open
 \end_layout
 
 \begin_layout Section
-Discretización de la Ecuación de Poisson
+Ecuación de Poisson
 \end_layout
 
 \begin_layout Standard
@@ -290,7 +300,8 @@ donde
 \end_layout
 
 \begin_layout Standard
-en el programa, el potencial electrostático está definido como: 
+en el código del programa, el potencial electrostático está definido como:
+ 
 \begin_inset Formula $\Psi(r)=\beta e\psi(r)$
 \end_inset
 
@@ -321,9 +332,9 @@ reference "eq:discret_poisson"
 \end_layout
 
 \begin_layout Standard
-la segunda carga viene del hecho de que la densidad de carga en el programa
- es por unidad de carga por lo que nunca fue multiplicada por la carga fundament
-al.
+la segunda carga viene del hecho de que la densidad de carga en el código
+ del programa es por unidad de carga por lo que nunca fue multiplicada por
+ la carga fundamental.
  Por lo tanto la expresión 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -377,7 +388,7 @@ En cambio sobre la pared del nanocanal puede haber una distribución de carga
 \begin_inset Formula $E$
 \end_inset
 
- a través de esta superficie se calcula utilización la regla de Gauss: 
+ a través de esta superficie se calcula utilizando la ley de Gauss: 
 \end_layout
 
 \begin_layout Standard
@@ -392,9 +403,21 @@ E_{2}-E_{1}=\frac{\sigma_{q}}{\varepsilon}
 \end_layout
 
 \begin_layout Standard
-Como el campo eléctrico en 2 debe ser cero (es una condición que exigimos
- a priori pero podría no ser cierta ya que el sustrato del nanocanal no
- es un metal sino que es un polímero).
+donde 2 es dentro de la membrana polimérica y 1 es dentro del nanocanal.
+ Como en el seno de la membrana no hay cargas y el potencial electrostático
+ en el bulk debe converger a un potencial constante, el campo eléctrico
+ en 2 debe ser cero 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(es una condición que exigimos a priori pero podría no ser cierta ya que
+ el sustrato del nanocanal no es un metal sino que es un polímero)
+\end_layout
+
+\end_inset
+
+.
  
 \begin_inset Formula $E_{2}=0$
 \end_inset
@@ -652,6 +675,27 @@ reference "eq:cond_at_wall"
 
 \end_layout
 
+\begin_layout Section
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Densidad de probabilidad 
+\begin_inset Formula $P(\alpha)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Discretización de la función densidad de probabilidad 
+\begin_inset Formula $P(\alpha)$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 La ecuación 
 \begin_inset CommandInset ref
@@ -701,8 +745,8 @@ la idea es calcular
 \begin_inset Formula $P(\alpha)$
 \end_inset
 
- como el producto de las probabilidades de cada capa debido a la conformación
- 
+ como el producto de las probabilidad de Boltzmann de tener un segmento
+ en una capa dada, debido a la conformación 
 \begin_inset Formula $\alpha$
 \end_inset
 

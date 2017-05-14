@@ -521,7 +521,7 @@ Potencial químico estándar de la especie indicada en el subíndice en unidades
 \begin_layout Plain Layout
 Fracción de volumen de la especie indicada con subíndice
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 , en la capa 
@@ -630,12 +630,22 @@ Geometría
 \end_inset
 
  y luego se integra para calcular el área interna de nanocanales no cilíndricos.
- (Ver las expresiones para las magnitudes 
-\begin_inset Formula $\rho_{P}(f)$
+ (Ver las expresiones 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mon_density_brushes"
+
 \end_inset
 
- y 
-\begin_inset Formula $\left\langle \rho_{P}\right\rangle $
+, y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mon_density_free_chains"
+
+\end_inset
+
+, para 
+\begin_inset Formula $\left\langle \rho_{P}(r)\right\rangle $
 \end_inset
 
 )

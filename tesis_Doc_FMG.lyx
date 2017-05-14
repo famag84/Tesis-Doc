@@ -7,6 +7,7 @@
 \textclass book
 \begin_preamble
 % Poniendo la fecha! NO esta por defecto!
+
 %\date{\today}
 % Se define un comando \mathcolor{color}{variables}
 % Permite poner colores dentro de una ecuacion. TRE - MEN - DO
@@ -38,7 +39,18 @@ figs-within-sections
 \begin_includeonly
 tesis_Cap_teoria_molecular.lyx
 tesis_apendiceA_Soluciones_de_Bulk.lyx
+tesis_caratula.lyx
+tesis_introduccion.lyx
 tesis_Cap_paper_PMEP.lyx
+tesis_apendice_metodo_variacional.lyx
+tesis_cuadros.lyx
+tesis_apendice_capa_polimerica_homogenea.lyx
+tesis_apendice_Discretizacion_poisson.lyx
+tesis_apendice_Aprox_campo_medio.lyx
+tesis_Cap_adsorption.lyx
+tesis_Cap_Propiedades_de_transporte.lyx
+tesis_conclusiones.lyx
+tesis_agradecimientos.lyx
 \end_includeonly
 \maintain_unincluded_children true
 \language spanish
@@ -63,16 +75,17 @@ tesis_Cap_paper_PMEP.lyx
 \paperfontsize default
 \spacing onehalf
 \use_hyperref true
-\pdf_title "Estudio de las Propiedades de Nanocanales de estado Sólido"
-\pdf_author "Facundo M. Gilles"
+\pdf_title "Estudio Teórico de las Propiedades de Nanocanales de Estado Sólido Modificados"
+\pdf_author "Facundo Matías Gilles"
+\pdf_keywords "Materia Blanda, Confinamiento, nanocanales modificados"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
 \pdf_pdfborder true
-\pdf_colorlinks true
-\pdf_backref false
+\pdf_colorlinks false
+\pdf_backref page
 \pdf_pdfusetitle true
 \pdf_quoted_options "linkcolor=blue, plainpages=false, pdfpagelabels"
 \papersize a4paper
@@ -170,7 +183,10 @@ filename "tesis_caratula.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace vfill
+\begin_inset CommandInset include
+LatexCommand include
+filename "tesis_agradecimientos.lyx"
+
 \end_inset
 
 
@@ -184,20 +200,37 @@ has_inner_box 1
 inner_pos "c"
 use_parbox 0
 use_makebox 0
-width "100col%"
+width "100text%"
 special "none"
-height "66page%"
+height "100theight%"
 height_special "none"
 thickness "0.4pt"
 separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align right
-"La verdad surge más fácilmente del error que de la confusión." Francis Bacon
+"La verdad surge más fácilmente del error que de la confusión." 
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+Francis Bacon
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+"La teoría es cuando creés saber algo pero no funciona.
+ La práctica es cuando algo funciona pero no sabés porqué.
+ Algunos logran combinar ambas cosas: nada anda y no saben porqué." Anónimo
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -206,26 +239,18 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace vfill
-\end_inset
+\begin_inset Note Note
+status collapsed
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "tesis_agradecimientos.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "tesis_resumen.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -262,9 +287,18 @@ filename "tesis_Cap_teoria_molecular.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "tesis_modelo_RIS_conformaciones_de_cadena.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -312,12 +346,31 @@ filename "tesis_Cap_paper_PMEP.lyx"
 \end_inset
 
 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Faltan agregar en PMEP detalles marcados por omar!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "tesis_Pol_chem_potential_completo_1.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -404,7 +457,8 @@ filename "tesis_apendice_metodo_variacional.lyx"
 \end_inset
 
 
-\end_layout
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Chapter
 Pasos para Obtener la Ecuación (
@@ -417,7 +471,7 @@ reference "eq:GRAL_P_expression"
 )
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Usando la ecuación (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -435,7 +489,7 @@ reference "eq:f_2"
 ), se obtiene la relación 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
 \beta q_{P}\psi(r)+\mbox{ln}\left(f_{2}(r)\right)+\beta\mu_{A^{--}}=\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\label{eq:elec_field_and_fraction_charge_pol}
@@ -446,7 +500,7 @@ reference "eq:f_2"
 Trabajando con la expresión se obtiene: 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{multline*}
 \Bigg\{ f_{1}(r)\left[\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right]+f_{2}(r)\left[\mbox{ln}\left(f_{2}(r)\right)+\beta\mu_{A^{--}}\right]\\
@@ -458,7 +512,7 @@ Trabajando con la expresión se obtiene:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 usando (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -480,7 +534,7 @@ reference "eq:elec_field_and_fraction_charge_pol"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{multline*}
 \Bigg\{ f_{1}(r)\left[\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right]+f_{2}(r)\left[\mbox{ln}(f_{1}(r))+\beta\mu_{AH^{-}}-q_{P}\psi(r)\beta\right]\\
@@ -492,11 +546,11 @@ reference "eq:elec_field_and_fraction_charge_pol"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 simplicando y reordenando términos,
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
 \Bigg\{\left[1-\left(f_{1}(r)+2f_{2}(r)\right)\right]\beta q_{P}\psi(r)+\left(\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right)\Bigg\}
@@ -507,11 +561,11 @@ simplicando y reordenando términos,
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Entonces: 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{multline}
 f_{1}(r)\left[\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right]+f_{2}(r)\left[\mbox{ln}\left(f_{2}(r)\right)+\beta\mu_{A^{--}}\right]\\
@@ -524,7 +578,7 @@ f_{1}(r)\left[\mbox{ln}\left(f_{1}(r)\right)+\beta\mu_{AH^{-}}\right]+f_{2}(r)\l
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Las ecuaciones (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -540,6 +594,11 @@ reference "eq:GRAL_P_expression"
 \end_inset
 
 ).
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

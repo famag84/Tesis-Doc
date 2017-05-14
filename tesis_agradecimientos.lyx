@@ -78,6 +78,22 @@
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter*
 Agradecimientos
 \end_layout
@@ -153,7 +169,16 @@ familia macana
 
 : Ariel, Damián, Cynthia y Javi.
  Quiero agradecer a Brenda B.
- por sus consejos certeros, por su escucha activa, por su huella indeleble,
+ por sus consejos certeros, por su escucha activa,
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+por su huella indeleble,
+\end_layout
+
+\end_inset
+
  por su bendición de dragón.
  
 \end_layout
